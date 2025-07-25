@@ -155,7 +155,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     const { theme, systemTheme } = useTheme();
     const currentTheme = theme === "system" ? systemTheme : theme;
     const isDark = currentTheme === "dark";
-    const iconSize = iconSizeMap[size];
+    const iconSize = iconSizeMap[size ?? "sm"];
 
     const renderIcon = (position: "left" | "right") => {
       if (disabled) return <DisabledIcon {...iconSize} />;
