@@ -1,0 +1,58 @@
+@import "tailwindcss";
+@import "https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-ring: var(--ring);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --font-variation-420: "opsz" 24, "wght" 420;
+  --font-sans: "Inter", "Adjusted Arial Fallback", "sans-serif";
+
+  /* Font Variation Settings */
+  --font-variation-420: "opsz" 24, "wght" 420;
+  --font-variation-500: "opsz" 24, "wght" 500;
+  --font-variation-500-30: "opsz" 30, "wght" 500;
+
+  /* Box Shadow */
+  --focus-light: 0px 0px 0px 2px rgba(201, 201, 201, 0.9);
+}
+
+:root {
+  --inkwhite: #ffffff;
+  --gray1: #e2e2e2;
+  --gray2: #f3f3f3;
+  --gray3: #ededed;
+  --gray4: #999999;
+  --gray5: #525252;
+  --gray6: #383838;
+  --gray7: #171717;
+  --gray8: #c7c7c7;
+}
+
+.dark {
+  --inkwhite: #0f0f0f;
+  --gray1: #424242;
+  --gray2: #2b2b2b;
+  --gray3: #343434;
+  --gray4: #717171;
+  --gray5: #afafaf;
+  --gray6: #d9d9d9;
+  --gray7: #f8f8f8;
+}
+
+@utility shadow-focus-light {
+  box-shadow: var(--focus-light);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
