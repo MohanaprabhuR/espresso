@@ -5,27 +5,28 @@ import { Slot } from "@radix-ui/react-slot";
 import { cva, type VariantProps } from "class-variance-authority";
 import { useTheme } from "next-themes";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 const buttonVariants = cva(
-  "inline-flex focus:shadow-[var(--focus-light)] items-center gap-[0_8px] justify-center whitespace-nowrap transition-all ease-in-out disabled:bg-[var(--gray2)] disabled:text-[var(--gray4)] disabled:pointer-events-none ",
+  "inline-flex focus:shadow-[var(--focus-light)] items-center gap-[0_8px] justify-center whitespace-nowrap transition-all ease-in-out disabled:bg-[var(--gray2)] disabled:text-[var(--gray4)] disabled:pointer-events-none",
   {
     variants: {
       variant: {
         solid:
           "bg-[var(--gray7)] hover:bg-[var(--gray6)] active:bg-[var(--gray5)] text-[var(--inkwhite)] outline-none",
         subtle:
-          "bg-[var(--gray2)] text-bg-[var(--gray7)]  hover:bg-[var(--gray3)] active:bg-[var(--gray1)] outline-none",
+          "bg-[var(--gray2)] text-[var(--gray7)] hover:bg-[var(--gray3)] active:bg-[var(--gray1)] outline-none",
         outline:
           "border border-[var(--gray1)] active:bg-[var(--gray1)] text-[var(--gray6)] focus:bg-[var(--gray2)]",
-        ghost: "hover:bg-accent hover:text-accent-foreground",
-        link: "text-primary underline-offset-4 hover:underline",
+        ghost:
+          "bg-transparent hover:bg-[var(--gray3)] active:bg-[var(--gray1)] focus:bg-[var(--gray2)]",
       },
       size: {
         sm: "h-7 rounded-lg text-sm font-[var(--font-variation-420)]",
         md: "h-8 rounded-lg text-sm font-[var(--font-variation-500)]",
         lg: "h-10 rounded-[10px] text-base font-[var(--font-variation-500)]",
-        xl: "h-[46px] rounded-xl text-lg rounded-[10px] font-[var(--font-variation-500-30)]",
-        xxl: "h-[52px] rounded-[14px] text-xl ffont-[var(--font-variation-500-30)]",
+        xl: "h-[46px] rounded-[10px] text-lg font-[var(--font-variation-500-30)]",
+        xxl: "h-[52px] rounded-[14px] text-xl font-[var(--font-variation-500-30)]",
       },
       iconOnly: {
         true: "",
@@ -37,7 +38,7 @@ const buttonVariants = cva(
       { size: "sm", iconOnly: true, className: "p-1.5" },
 
       { size: "md", iconOnly: false, className: "py-[7px] px-2.5" },
-      { size: "md", iconOnly: true, className: "p-[7px] " },
+      { size: "md", iconOnly: true, className: "p-[7px]" },
 
       { size: "lg", iconOnly: false, className: "py-2.5 px-3" },
       { size: "lg", iconOnly: true, className: "p-2.5" },
@@ -46,7 +47,7 @@ const buttonVariants = cva(
       { size: "xl", iconOnly: true, className: "p-[11px]" },
 
       { size: "xxl", iconOnly: false, className: "py-[14px] px-[16px]" },
-      { size: "xxl", iconOnly: true, className: "p-[14px] " },
+      { size: "xxl", iconOnly: true, className: "p-[14px]" },
     ],
     defaultVariants: {
       variant: "solid",
@@ -62,6 +63,8 @@ export interface ButtonProps
   asChild?: boolean;
   children?: React.ReactNode;
   loading?: boolean;
+  leftIcon?: React.ReactNode;
+  rightIcon?: React.ReactNode;
 }
 
 const iconSizeMap: Record<
@@ -87,33 +90,13 @@ const SvgIcon = ({ width, height }: { width: number; height: number }) => (
 );
 
 const Spinner = ({ width, height }: { width: number; height: number }) => (
-  <svg
+  <Image
+    src="/images/spinner-gray.png"
     width={width}
     height={height}
-    viewBox="0 0 16 16"
-    fill="none"
+    alt="Spinner"
     className="animate-spin"
-  >
-    <path
-      fillRule="evenodd"
-      clipRule="evenodd"
-      d="M8 1.333a6.667 6.667 0 1 0 6.667 6.667.667.667 0 1 1 1.333 0 8 8 0 1 1-8-8 .667.667 0 0 1 0 1.333Z"
-      fill="url(#spinner-gradient)"
-    />
-    <defs>
-      <linearGradient
-        id="spinner-gradient"
-        x1="8"
-        y1="0"
-        x2="8"
-        y2="16"
-        gradientUnits="userSpaceOnUse"
-      >
-        <stop stopColor="#888" />
-        <stop offset="1" stopColor="transparent" />
-      </linearGradient>
-    </defs>
-  </svg>
+  />
 );
 
 const DisabledIcon = ({ width, height }: { width: number; height: number }) => (
@@ -147,6 +130,8 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       children,
       disabled,
       loading,
+      leftIcon,
+      rightIcon,
       ...props
     },
     ref
@@ -160,33 +145,36 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     const renderIcon = (position: "left" | "right") => {
       if (disabled) return <DisabledIcon {...iconSize} />;
 
-      // Right Icon
-      if (position === "left") {
-        if (loading) return <Spinner {...iconSize} />;
-        if (variant === "solid")
+      const getVariantIcon = () => {
+        if (variant === "solid") {
           return isDark ? (
             <DarkModeIcon {...iconSize} />
           ) : (
             <SvgIcon {...iconSize} />
           );
+        }
         return isDark ? (
           <SvgIcon {...iconSize} />
         ) : (
           <DarkModeIcon {...iconSize} />
+        );
+      };
+
+      if (position === "left" && loading) {
+        return variant === "solid" ? (
+          <Image
+            src="/images/spinner.png"
+            width={iconSize.width}
+            height={iconSize.height}
+            alt="Spinner"
+            className="animate-spin"
+          />
+        ) : (
+          <Spinner {...iconSize} />
         );
       }
-      //Left icon
-      if (variant === "solid")
-        return isDark ? (
-          <DarkModeIcon {...iconSize} />
-        ) : (
-          <SvgIcon {...iconSize} />
-        );
-      return isDark ? (
-        <SvgIcon {...iconSize} />
-      ) : (
-        <DarkModeIcon {...iconSize} />
-      );
+
+      return getVariantIcon();
     };
 
     return (
@@ -196,9 +184,9 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         disabled={disabled}
         {...props}
       >
-        {renderIcon("left")}
+        {leftIcon ?? renderIcon("left")}
         {!iconOnly && children}
-        {!iconOnly && renderIcon("right")}
+        {!iconOnly && (rightIcon ?? renderIcon("right"))}
       </Comp>
     );
   }
