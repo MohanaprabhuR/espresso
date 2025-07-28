@@ -19,10 +19,17 @@
 
   /* Box Shadow */
   --focus-light: 0px 0px 0px 2px rgba(201, 201, 201, 0.9);
+  --focus-red: 0px 0px 0px 3px #eb9091;
 }
 
 :root {
+  /* Text Color */
   --inkwhite: #ffffff;
+  --inkred1: #fff7f7;
+  --inkred2: #f79596;
+  --inkred4: #b52a2a;
+
+  /* Gray Colors */
   --gray1: #e2e2e2;
   --gray2: #f3f3f3;
   --gray3: #ededed;
@@ -31,10 +38,23 @@
   --gray6: #383838;
   --gray7: #171717;
   --gray8: #c7c7c7;
+
+  /* Red Colors */
+  --outlinered2: #fdc2c2;
+  --outlinered3: #f79596;
+  --red2: #ffe7e7;
+  --red3: #ffd8d8;
+  --red4: #fdc2c2;
+  --red5: #cc2929;
+  --red6: #b52a2a;
+  --red7: #941f1f;
 }
 
 .dark {
+  /* Text Color */
   --inkwhite: #0f0f0f;
+  --inkred2: #661717;
+  /* Gray Colors */
   --gray1: #424242;
   --gray2: #2b2b2b;
   --gray3: #343434;
@@ -42,6 +62,16 @@
   --gray5: #afafaf;
   --gray6: #d9d9d9;
   --gray7: #f8f8f8;
+
+  /* Red Colors */
+  --outlinered2: #521515;
+  --outlinered3: #661717;
+  --red2: #3c1316;
+  --red3: #521515;
+  --red4: #661717;
+  --red5: #b01f1f;
+  --red6: #d73232;
+  --red7: #862020;
 }
 
 @utility shadow-focus-light {

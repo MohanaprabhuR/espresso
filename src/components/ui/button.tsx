@@ -8,25 +8,33 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 
 const buttonVariants = cva(
-  "inline-flex focus:shadow-[var(--focus-light)] items-center gap-[0_8px] justify-center whitespace-nowrap transition-all ease-in-out disabled:bg-[var(--gray2)] disabled:text-[var(--gray4)] disabled:pointer-events-none",
+  "inline-flex  items-center gap-[0_8px] justify-center whitespace-nowrap transition-all ease-in-out  disabled:pointer-events-none",
   {
     variants: {
       variant: {
         solid:
-          "bg-[var(--gray7)] hover:bg-[var(--gray6)] active:bg-[var(--gray5)] text-[var(--inkwhite)] outline-none",
+          "bg-[var(--gray7)] hover:bg-[var(--gray6)] active:bg-[var(--gray5)] text-[var(--inkwhite)] outline-none disabled:bg-[var(--gray2)] disabled:text-[var(--gray4)] focus:shadow-[var(--focus-light)]",
         subtle:
-          "bg-[var(--gray2)] text-[var(--gray7)] hover:bg-[var(--gray3)] active:bg-[var(--gray1)] outline-none",
+          "bg-[var(--gray2)]  hover:bg-[var(--gray3)] active:bg-[var(--gray1)] outline-none text-[var(--gray6)] disabled:bg-[var(--gray2)] disabled:text-[var(--gray4)] focus:shadow-[var(--focus-light)]",
         outline:
-          "border border-[var(--gray1)] active:bg-[var(--gray1)] text-[var(--gray6)] focus:bg-[var(--gray2)]",
+          "border bg-transparent border-[var(--gray1)] hover:border-[var(--gray8)] active:bg-[var(--gray1)] text-[var(--gray6)] focus:bg-[var(--gray2)] text-[var(--gray6)] disabled:bg-[var(--gray2)] disabled:text-[var(--gray4)] focus:shadow-[var(--focus-light)]",
         ghost:
-          "bg-transparent hover:bg-[var(--gray3)] active:bg-[var(--gray1)] focus:bg-[var(--gray2)]",
+          "bg-transparent hover:bg-[var(--gray3)] active:bg-[var(--gray1)] focus:bg-[var(--gray2)] text-[var(--gray6)]  disabled:text-[var(--gray4)] focus:shadow-[var(--focus-light)]",
+        "red-solid":
+          "bg-[var(--red5)] hover:bg-[var(--red6)] active:bg-[var(--red7)] text-[var(--inkred1)] outline-none disabled:text-[var(--inkred2)] disabled:bg-[var(--red2)] focus:shadow-[var(--focus-red)]",
+        "red-subtle":
+          "bg-[var(--red2)] hover:bg-[var(--red3)] active:bg-[var(--red4)] text-[var(--red6)] outline-none disabled:text-[var(--inkred2)] disabled:bg-[var(--red2)] focus:shadow-[var(--focus-red)]",
+        "red-outline":
+          "bg-transparent border border-[var(--outlinered2)] hover:border-[var(--outlinered3)] active:bg-[var(--red4)] text-[var(--red6)] focus:bg-[var(--red2)] disabled:text-[var(--inkred2)] disabled:bg-[var(--red2)] focus:shadow-[var(--focus-red)]",
+        "red-ghost":
+          "bg-transparent hover:bg-[var(--red3)] active:bg-[var(--red4)] focus:bg-[var(--red2)] text-[var(--inkred4)]  disabled:text-[var(--inkred4)] focus:shadow-[var(--focus-red)]",
       },
       size: {
-        sm: "h-7 rounded-lg text-sm font-[var(--font-variation-420)]",
-        md: "h-8 rounded-lg text-sm font-[var(--font-variation-500)]",
-        lg: "h-10 rounded-[10px] text-base font-[var(--font-variation-500)]",
-        xl: "h-[46px] rounded-[10px] text-lg font-[var(--font-variation-500-30)]",
-        xxl: "h-[52px] rounded-[14px] text-xl font-[var(--font-variation-500-30)]",
+        sm: "h-7 rounded-lg text-sm font-[var(--font-variation-420)]  tracking-[0.28px]",
+        md: "h-8 rounded-lg text-sm font-[var(--font-variation-500)]  tracking-[0.28px] ",
+        lg: "h-10 rounded-[10px] text-base font-[var(--font-variation-500)]  tracking-[0.24px]",
+        xl: "h-[46px] rounded-[10px] text-lg font-[var(--font-variation-500-30)]  tracking-[0.18px]",
+        xxl: "h-[52px] rounded-[14px] text-xl font-[var(--font-variation-500-30)]  tracking-[0.2px] ",
       },
       iconOnly: {
         true: "",
@@ -78,18 +86,42 @@ const iconSizeMap: Record<
   xxl: { width: 24, height: 24 },
 };
 
-const SvgIcon = ({ width, height }: { width: number; height: number }) => (
-  <svg width={width} height={height} viewBox="0 0 16 16" fill="none">
+const SvgIcon = ({
+  width,
+  height,
+  fill = "white",
+}: {
+  width: number;
+  height: number;
+  fill?: string;
+}) => (
+  <svg
+    width={width}
+    height={height}
+    viewBox="0 0 16 16"
+    fill="none"
+    style={{ fill }}
+  >
     <path
       fillRule="evenodd"
       clipRule="evenodd"
       d="M7.504 0.787a.7.7 0 0 1 .99 0l6.717 6.717a.7.7 0 0 1 0 .99l-6.717 6.717a.7.7 0 0 1-.99 0L0.787 8.494a.7.7 0 0 1 0-.99L7.504 0.787zm.495.919L1.706 7.999l6.293 6.293L14.292 7.999 7.999 1.706z"
-      fill="white"
+      fill={fill}
     />
   </svg>
 );
 
 const Spinner = ({ width, height }: { width: number; height: number }) => (
+  <Image
+    src="/images/spinner.png"
+    width={width}
+    height={height}
+    alt="Spinner"
+    className="animate-spin"
+  />
+);
+
+const SpinnerGray = ({ width, height }: { width: number; height: number }) => (
   <Image
     src="/images/spinner-gray.png"
     width={width}
@@ -98,25 +130,14 @@ const Spinner = ({ width, height }: { width: number; height: number }) => (
     className="animate-spin"
   />
 );
-
-const DisabledIcon = ({ width, height }: { width: number; height: number }) => (
-  <svg width={width} height={height} viewBox="0 0 16 16" fill="none">
-    <path
-      fillRule="evenodd"
-      clipRule="evenodd"
-      d="M7.504 0.787a.7.7 0 0 1 .99 0l6.717 6.717a.7.7 0 0 1 0 .99l-6.717 6.717a.7.7 0 0 1-.99 0L0.787 8.494a.7.7 0 0 1 0-.99L7.504 0.787zm.495.919L1.706 7.999l6.293 6.293L14.292 7.999 7.999 1.706z"
-      fill="#999999"
-    />
-  </svg>
-);
-
-const DarkModeIcon = ({ width, height }: { width: number; height: number }) => (
-  <svg width={width} height={height} viewBox="0 0 16 16" fill="none">
-    <path
-      d="M7.504 0.787a.7.7 0 0 1 .99 0l6.717 6.717a.7.7 0 0 1 0 .99l-6.717 6.717a.7.7 0 0 1-.99 0L0.787 8.494a.7.7 0 0 1 0-.99L7.504 0.787zM1.706 8 8 14.292 14.292 8 8 1.707 1.706 8z"
-      fill="#0F0F0F"
-    />
-  </svg>
+const SpinnerRed = ({ width, height }: { width: number; height: number }) => (
+  <Image
+    src="/images/spinner-red.png"
+    width={width}
+    height={height}
+    alt="Spinner"
+    className="animate-spin"
+  />
 );
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
@@ -143,34 +164,59 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     const iconSize = iconSizeMap[size ?? "sm"];
 
     const renderIcon = (position: "left" | "right") => {
-      if (disabled) return <DisabledIcon {...iconSize} />;
+      if (disabled) {
+        if (
+          variant === "red-solid" ||
+          variant === "red-subtle" ||
+          variant === "red-outline" ||
+          variant === "red-ghost"
+        ) {
+          return <SvgIcon {...iconSize} fill="var(--inkred2)" />;
+        }
+        return <SvgIcon {...iconSize} fill="var(--gray4)" />;
+      }
 
       const getVariantIcon = () => {
         if (variant === "solid") {
-          return isDark ? (
-            <DarkModeIcon {...iconSize} />
-          ) : (
-            <SvgIcon {...iconSize} />
+          return (
+            <SvgIcon
+              {...iconSize}
+              fill={isDark ? "var(--inkwhite)" : "var(--inkwhite)"}
+            />
           );
         }
-        return isDark ? (
-          <SvgIcon {...iconSize} />
+        if (variant === "red-solid") {
+          return (
+            <SvgIcon
+              {...iconSize}
+              fill={isDark ? "var(--inkred1)" : "var(--inkwhite)"}
+            />
+          );
+        }
+        return variant === "red-subtle" ||
+          variant === "red-outline" ||
+          variant === "red-ghost" ? (
+          <SvgIcon
+            {...iconSize}
+            fill={isDark ? "var(--inkred4)" : "var(--red6)"}
+          />
         ) : (
-          <DarkModeIcon {...iconSize} />
+          <SvgIcon
+            {...iconSize}
+            fill={isDark ? "var(--gray6)" : "var(--gray6)"}
+          />
         );
       };
 
       if (position === "left" && loading) {
-        return variant === "solid" ? (
-          <Image
-            src="/images/spinner.png"
-            width={iconSize.width}
-            height={iconSize.height}
-            alt="Spinner"
-            className="animate-spin"
-          />
-        ) : (
+        return variant === "solid" || variant === "red-solid" ? (
           <Spinner {...iconSize} />
+        ) : variant === "red-subtle" ||
+          variant === "red-outline" ||
+          variant === "red-ghost" ? (
+          <SpinnerRed {...iconSize} />
+        ) : (
+          <SpinnerGray {...iconSize} />
         );
       }
 
