@@ -115,7 +115,7 @@ const SvgIcon = ({
 
 const Spinner = ({ width, height }: { width: number; height: number }) => (
   <Image
-    src="/images/spinner.png"
+    src="/images/spinner-white.png"
     width={width}
     height={height}
     alt="Spinner"
