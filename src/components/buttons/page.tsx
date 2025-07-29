@@ -4,128 +4,186 @@ export default function Home() {
   return (
     <>
       <div>
-        <h1 className="text-xl text-center font-bold text-gray-900 dark:text-white pb-10">
+        <h1 className="text-xl text-center font-bold text-gray-900 dark:text-white pb-4">
           Solid Button Component
         </h1>
         <div className="flex flex-col justify-center items-center gap-[10px_0]">
           <div className="flex gap-[0_20px]">
-            <Button variant="solid" size="sm">
+            <Button variant="primary" size="sm">
               Discover
             </Button>
-            <Button variant="solid" size="sm" disabled>
+            <Button variant="primary" size="sm" disabled>
               Discover
             </Button>
-            <Button variant="solid" size="sm" iconOnly>
-              Discover
-            </Button>
-          </div>
-
-          <div className="flex gap-[0_20px]">
-            <Button variant="solid" size="md">
-              Discover
-            </Button>
-            <Button variant="solid" size="md" disabled>
-              Discover
-            </Button>
-            <Button variant="solid" size="md" iconOnly>
-              Discover
-            </Button>
-          </div>
-
-          <div className="flex gap-[0_20px]">
-            <Button variant="solid" size="lg">
-              Discover
-            </Button>
-            <Button variant="solid" size="lg" disabled>
-              Discover
-            </Button>
-            <Button variant="solid" size="lg" iconOnly>
+            <Button variant="primary" size="sm" iconOnly>
               Discover
             </Button>
           </div>
           <div className="flex gap-[0_20px]">
-            <Button variant="solid" size="xl">
+            <Button variant="primary" size="md">
               Discover
             </Button>
-            <Button variant="solid" size="xl" disabled>
+            <Button variant="primary" size="md" disabled>
               Discover
             </Button>
-            <Button variant="solid" size="xl" iconOnly>
+            <Button variant="primary" size="md" iconOnly>
               Discover
             </Button>
           </div>
           <div className="flex gap-[0_20px]">
-            <Button variant="solid" size="xxl" loading>
+            <Button variant="primary" size="lg">
               Discover
             </Button>
-            <Button variant="solid" size="xxl" disabled>
+            <Button variant="primary" size="lg" disabled>
               Discover
             </Button>
-            <Button variant="solid" size="xxl" iconOnly loading>
+            <Button variant="primary" size="lg" iconOnly>
+              Discover
+            </Button>
+          </div>
+          <div className="flex gap-[0_20px]">
+            <Button variant="primary" size="xl">
+              Discover
+            </Button>
+            <Button variant="primary" size="xl" disabled>
+              Discover
+            </Button>
+            <Button variant="primary" size="xl" iconOnly>
+              Discover
+            </Button>
+          </div>
+          <div className="flex gap-[0_20px]">
+            <Button variant="primary" size="xxl" loading>
+              Discover
+            </Button>
+            <Button variant="primary" size="xxl" disabled>
+              Discover
+            </Button>
+            <Button variant="primary" size="xxl" loading iconOnly disabled>
               Discover
             </Button>
           </div>
         </div>
       </div>
       <div className="pt-10 text-center">
-        <h1 className="text-xl font-bold text-gray-900 dark:text-white pb-10">
-          Subtle Button Component
+        <h1 className="text-xl font-bold text-gray-900 dark:text-white pb-4">
+          Secondary Button Component
         </h1>
         <div className="flex flex-col justify-center items-center gap-[10px_0]">
           <div className="flex gap-[0_20px]">
-            <Button variant="subtle" size="sm">
+            <Button variant="secondary" size="sm">
               Discover
             </Button>
-            <Button variant="subtle" size="sm" disabled>
+            <Button variant="secondary" size="sm" disabled>
               Discover
             </Button>
-            <Button variant="subtle" size="sm" iconOnly>
-              Discover
-            </Button>
-          </div>
-
-          <div className="flex gap-[0_20px]">
-            <Button variant="subtle" size="md">
-              Discover
-            </Button>
-            <Button variant="subtle" size="md" disabled>
-              Discover
-            </Button>
-            <Button variant="subtle" size="md" iconOnly>
-              Discover
-            </Button>
-          </div>
-
-          <div className="flex gap-[0_20px]">
-            <Button variant="subtle" size="lg">
-              Discover
-            </Button>
-            <Button variant="subtle" size="lg" disabled>
-              Discover
-            </Button>
-            <Button variant="subtle" size="lg" iconOnly>
+            <Button variant="secondary" size="sm" iconOnly>
               Discover
             </Button>
           </div>
           <div className="flex gap-[0_20px]">
-            <Button variant="subtle" size="xl">
+            <Button variant="secondary" size="md">
               Discover
             </Button>
-            <Button variant="subtle" size="xl" disabled>
+            <Button variant="secondary" size="md" disabled>
               Discover
             </Button>
-            <Button variant="subtle" size="xl" iconOnly>
+            <Button variant="secondary" size="md" iconOnly>
               Discover
             </Button>
           </div>
           <div className="flex gap-[0_20px]">
-            <Button variant="subtle" size="xxl" loading>
+            <Button variant="secondary" size="lg">
               Discover
             </Button>
-            <Button variant="subtle" size="xxl" disabled>
+            <Button variant="secondary" size="lg" disabled>
               Discover
             </Button>
-            <Button variant="subtle" size="xxl" iconOnly loading>
+            <Button variant="secondary" size="lg" iconOnly>
+              Discover
+            </Button>
+          </div>
+          <div className="flex gap-[0_20px]">
+            <Button variant="secondary" size="xl">
+              Discover
+            </Button>
+            <Button variant="secondary" size="xl" disabled>
+              Discover
+            </Button>
+            <Button variant="secondary" size="xl" iconOnly>
+              Discover
+            </Button>
+          </div>
+          <div className="flex gap-[0_20px]">
+            <Button variant="secondary" size="xxl">
+              Discover
+            </Button>
+            <Button variant="secondary" size="xxl" disabled>
+              Discover
+            </Button>
+            <Button variant="secondary" size="xxl" iconOnly>
+              Discover
+            </Button>
+          </div>
+        </div>
+      </div>
+      <div className="pt-10 text-center">
+        <h1 className="text-xl font-bold text-gray-900 dark:text-white pb-4">
+          Outline Button Component
+        </h1>
+        <div className="flex flex-col justify-center items-center gap-[10px_0]">
+          <div className="flex gap-[0_20px]">
+            <Button variant="outline" size="sm">
+              Discover
+            </Button>
+            <Button variant="outline" size="sm" disabled>
+              Discover
+            </Button>
+            <Button variant="outline" size="sm" iconOnly>
+              Discover
+            </Button>
+          </div>
+          <div className="flex gap-[0_20px]">
+            <Button variant="outline" size="md">
+              Discover
+            </Button>
+            <Button variant="outline" size="md" disabled>
+              Discover
+            </Button>
+            <Button variant="outline" size="md" iconOnly>
+              Discover
+            </Button>
+          </div>
+          <div className="flex gap-[0_20px]">
+            <Button variant="outline" size="lg">
+              Discover
+            </Button>
+            <Button variant="outline" size="lg" disabled>
+              Discover
+            </Button>
+            <Button variant="outline" size="lg" iconOnly>
+              Discover
+            </Button>
+          </div>
+          <div className="flex gap-[0_20px]">
+            <Button variant="outline" size="xl">
+              Discover
+            </Button>
+            <Button variant="outline" size="xl" disabled>
+              Discover
+            </Button>
+            <Button variant="outline" size="xl" iconOnly>
+              Discover
+            </Button>
+          </div>
+          <div className="flex gap-[0_20px]">
+            <Button variant="outline" size="xxl">
+              Discover
+            </Button>
+            <Button variant="outline" size="xxl" disabled>
+              Discover
+            </Button>
+            <Button variant="outline" size="xxl" iconOnly>
               Discover
             </Button>
           </div>
@@ -133,6 +191,131 @@ export default function Home() {
       </div>
 
       <div className="pt-10 text-center">
+        <h1 className="text-xl font-bold text-gray-900 dark:text-white pb-4">
+          destructive Button Component
+        </h1>
+        <div className="flex flex-col justify-center items-center gap-[10px_0]">
+          <div className="flex gap-[0_20px]">
+            <Button variant="destructive" size="sm">
+              Discover
+            </Button>
+            <Button variant="destructive" size="sm" disabled>
+              Discover
+            </Button>
+            <Button variant="destructive" size="sm" iconOnly>
+              Discover
+            </Button>
+          </div>
+          <div className="flex gap-[0_20px]">
+            <Button variant="destructive" size="md">
+              Discover
+            </Button>
+            <Button variant="destructive" size="md" disabled>
+              Discover
+            </Button>
+            <Button variant="destructive" size="md" iconOnly>
+              Discover
+            </Button>
+          </div>
+          <div className="flex gap-[0_20px]">
+            <Button variant="destructive" size="lg">
+              Discover
+            </Button>
+            <Button variant="destructive" size="lg" disabled>
+              Discover
+            </Button>
+            <Button variant="destructive" size="lg" iconOnly>
+              Discover
+            </Button>
+          </div>
+          <div className="flex gap-[0_20px]">
+            <Button variant="destructive" size="xl">
+              Discover
+            </Button>
+            <Button variant="destructive" size="xl" disabled>
+              Discover
+            </Button>
+            <Button variant="destructive" size="xl" iconOnly>
+              Discover
+            </Button>
+          </div>
+          <div className="flex gap-[0_20px]">
+            <Button variant="destructive" size="xxl">
+              Discover
+            </Button>
+            <Button variant="destructive" size="xxl" disabled>
+              Discover
+            </Button>
+            <Button variant="destructive" size="xxl" iconOnly>
+              Discover
+            </Button>
+          </div>
+        </div>
+      </div>
+      <div className="pt-10 text-center">
+        <h1 className="text-xl font-bold text-gray-900 dark:text-white pb-4">
+          Ghost Button Component
+        </h1>
+        <div className="flex flex-col justify-center items-center gap-[10px_0]">
+          <div className="flex gap-[0_20px]">
+            <Button variant="ghost" size="sm">
+              Discover
+            </Button>
+            <Button variant="ghost" size="sm" disabled>
+              Discover
+            </Button>
+            <Button variant="ghost" size="sm" iconOnly>
+              Discover
+            </Button>
+          </div>
+          <div className="flex gap-[0_20px]">
+            <Button variant="ghost" size="md">
+              Discover
+            </Button>
+            <Button variant="ghost" size="md" disabled>
+              Discover
+            </Button>
+            <Button variant="ghost" size="md" iconOnly>
+              Discover
+            </Button>
+          </div>
+          <div className="flex gap-[0_20px]">
+            <Button variant="ghost" size="lg">
+              Discover
+            </Button>
+            <Button variant="ghost" size="lg" disabled>
+              Discover
+            </Button>
+            <Button variant="ghost" size="lg" iconOnly>
+              Discover
+            </Button>
+          </div>
+          <div className="flex gap-[0_20px]">
+            <Button variant="ghost" size="xl">
+              Discover
+            </Button>
+            <Button variant="ghost" size="xl" disabled>
+              Discover
+            </Button>
+            <Button variant="ghost" size="xl" iconOnly>
+              Discover
+            </Button>
+          </div>
+          <div className="flex gap-[0_20px]">
+            <Button variant="ghost" size="xxl">
+              Discover
+            </Button>
+            <Button variant="ghost" size="xxl" disabled>
+              Discover
+            </Button>
+            <Button variant="ghost" size="xxl" iconOnly>
+              Discover
+            </Button>
+          </div>
+        </div>
+      </div>
+
+      {/* <div className="pt-10 text-center">
         <h1 className="text-xl font-bold text-gray-900 dark:text-white pb-10">
           Outline Button Component
         </h1>
@@ -516,7 +699,7 @@ export default function Home() {
             </Button>
           </div>
         </div>
-      </div>
+      </div> */}
     </>
   );
 }

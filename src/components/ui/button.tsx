@@ -8,18 +8,20 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 
 const buttonVariants = cva(
-  "inline-flex  items-center gap-[0_8px] justify-center whitespace-nowrap transition-all ease-in-out  disabled:pointer-events-none",
+  "inline-flex items-center gap-[0_8px] justify-center whitespace-nowrap transition-all ease-in-out disabled:pointer-events-none pointer-events-auto",
   {
     variants: {
       variant: {
-        solid:
-          "bg-[var(--gray7)] hover:bg-[var(--gray6)] active:bg-[var(--gray5)] text-[var(--inkwhite)] outline-none disabled:bg-[var(--gray2)] disabled:text-[var(--gray4)] focus:shadow-[var(--focus-light)]",
-        subtle:
-          "bg-[var(--gray2)]  hover:bg-[var(--gray3)] active:bg-[var(--gray1)] outline-none text-[var(--gray6)] disabled:bg-[var(--gray2)] disabled:text-[var(--gray4)] focus:shadow-[var(--focus-light)]",
+        primary:
+          "bg-primary text-primary-foreground hover:bg-primary-85 active:bg-primary-75 focus:ring-primary-20 disabled:text-secondary-foreground disabled:bg-secondary",
+        secondary:
+          "bg-secondary outline-none hover:bg-accent text-accent-foreground active:bg-accent-active focus:ring-primary-20 disabled:bg-secondary disabled:text-secondary-foreground",
         outline:
-          "border bg-transparent border-[var(--gray1)] hover:border-[var(--gray8)] active:bg-[var(--gray1)] text-[var(--gray6)] focus:bg-[var(--gray2)] text-[var(--gray6)] disabled:bg-[var(--gray2)] disabled:text-[var(--gray4)] focus:shadow-[var(--focus-light)]",
+          "border border-border bg-background text-accent-foreground active:bg-accent-active focus:ring-primary-20 focus:bg-accent disabled:bg-secondary disabled:text-secondary-foreground",
+        destructive:
+          "bg-destructive text-destructive-foreground focus:ring-primary-20",
         ghost:
-          "bg-transparent hover:bg-[var(--gray3)] active:bg-[var(--gray1)] focus:bg-[var(--gray2)] text-[var(--gray6)]  disabled:text-[var(--gray4)] focus:shadow-[var(--focus-light)]",
+          "bg-transparent hover:bg-accent text-accent-foreground active:bg-accent-active focus:ring-primary-20 focus:bg-accent",
         "red-solid":
           "bg-[var(--red5)] hover:bg-[var(--red6)] active:bg-[var(--red7)] text-[var(--inkred1)] outline-none disabled:text-[var(--inkred2)] disabled:bg-[var(--red2)] focus:shadow-[var(--focus-red)]",
         "red-subtle":
@@ -27,14 +29,14 @@ const buttonVariants = cva(
         "red-outline":
           "bg-transparent border border-[var(--outlinered2)] hover:border-[var(--outlinered3)] active:bg-[var(--red4)] text-[var(--red6)] focus:bg-[var(--red2)] disabled:text-[var(--inkred2)] disabled:bg-[var(--red2)] focus:shadow-[var(--focus-red)]",
         "red-ghost":
-          "bg-transparent hover:bg-[var(--red3)] active:bg-[var(--red4)] focus:bg-[var(--red2)] text-[var(--inkred4)]  disabled:text-[var(--inkred4)] focus:shadow-[var(--focus-red)]",
+          "bg-transparent hover:bg-[var(--red3)] active:bg-[var(--red4)] focus:bg-[var(--red2)] text-[var(--inkred4)] disabled:text-[var(--inkred4)] focus:shadow-[var(--focus-red)]",
       },
       size: {
-        sm: "h-7 rounded-lg text-sm font-[var(--font-variation-420)]  tracking-[0.28px]",
-        md: "h-8 rounded-lg text-sm font-[var(--font-variation-500)]  tracking-[0.28px] ",
-        lg: "h-10 rounded-[10px] text-base font-[var(--font-variation-500)]  tracking-[0.24px]",
-        xl: "h-[46px] rounded-[10px] text-lg font-[var(--font-variation-500-30)]  tracking-[0.18px]",
-        xxl: "h-[52px] rounded-[14px] text-xl font-[var(--font-variation-500-30)]  tracking-[0.2px] ",
+        sm: "h-7 rounded-lg text-base font-var-420 tracking-[0.28px]",
+        md: "h-8 rounded-lg text-base font-var-420 tracking-[0.28px]",
+        lg: "h-10 rounded-[10px] text-lg font-var-500 tracking-[0.24px]",
+        xl: "h-[46px] rounded-[10px] text-xl font-var-500-30 tracking-[0.18px]",
+        xxl: "h-[52px] rounded-[14px] text-2xl font-var-500-30 tracking-[0.2px]",
       },
       iconOnly: {
         true: "",
@@ -58,7 +60,7 @@ const buttonVariants = cva(
       { size: "xxl", iconOnly: true, className: "p-[14px]" },
     ],
     defaultVariants: {
-      variant: "solid",
+      variant: "primary",
       size: "sm",
       iconOnly: false,
     },
@@ -130,6 +132,7 @@ const SpinnerGray = ({ width, height }: { width: number; height: number }) => (
     className="animate-spin"
   />
 );
+
 const SpinnerRed = ({ width, height }: { width: number; height: number }) => (
   <Image
     src="/images/spinner-red.png"
@@ -164,6 +167,20 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     const iconSize = iconSizeMap[size ?? "sm"];
 
     const renderIcon = (position: "left" | "right") => {
+      if (loading && position === "left") {
+        if (variant === "primary" || variant === "red-solid") {
+          return <Spinner {...iconSize} />;
+        } else if (
+          variant === "red-subtle" ||
+          variant === "red-outline" ||
+          variant === "red-ghost"
+        ) {
+          return <SpinnerRed {...iconSize} />;
+        } else {
+          return <SpinnerGray {...iconSize} />;
+        }
+      }
+
       if (disabled) {
         if (
           variant === "red-solid" ||
@@ -173,17 +190,21 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         ) {
           return <SvgIcon {...iconSize} fill="var(--inkred2)" />;
         }
-        return <SvgIcon {...iconSize} fill="var(--gray4)" />;
+        return (
+          <SvgIcon
+            {...iconSize}
+            fill={
+              isDark
+                ? "var(--color-dark-gray-600)"
+                : "var(--color-light-gray-500)"
+            }
+          />
+        );
       }
 
       const getVariantIcon = () => {
-        if (variant === "solid") {
-          return (
-            <SvgIcon
-              {...iconSize}
-              fill={isDark ? "var(--inkwhite)" : "var(--inkwhite)"}
-            />
-          );
+        if (variant === "primary") {
+          return <SvgIcon {...iconSize} fill="var(--background)" />;
         }
         if (variant === "red-solid") {
           return (
@@ -193,32 +214,20 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
             />
           );
         }
-        return variant === "red-subtle" ||
+        if (
+          variant === "red-subtle" ||
           variant === "red-outline" ||
-          variant === "red-ghost" ? (
-          <SvgIcon
-            {...iconSize}
-            fill={isDark ? "var(--inkred4)" : "var(--red6)"}
-          />
-        ) : (
-          <SvgIcon
-            {...iconSize}
-            fill={isDark ? "var(--gray6)" : "var(--gray6)"}
-          />
-        );
+          variant === "red-ghost"
+        ) {
+          return (
+            <SvgIcon
+              {...iconSize}
+              fill={isDark ? "var(--inkred4)" : "var(--red6)"}
+            />
+          );
+        }
+        return <SvgIcon {...iconSize} fill="var(--foreground)" />;
       };
-
-      if (position === "left" && loading) {
-        return variant === "solid" || variant === "red-solid" ? (
-          <Spinner {...iconSize} />
-        ) : variant === "red-subtle" ||
-          variant === "red-outline" ||
-          variant === "red-ghost" ? (
-          <SpinnerRed {...iconSize} />
-        ) : (
-          <SpinnerGray {...iconSize} />
-        );
-      }
 
       return getVariantIcon();
     };
