@@ -8,20 +8,20 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 
 const buttonVariants = cva(
-  "inline-flex items-center gap-[0_8px] justify-center whitespace-nowrap transition-all ease-in-out disabled:pointer-events-none pointer-events-auto",
+  "inline-flex items-center gap-[0_8px] justify-center whitespace-nowrap transition-all ease-in-out disabled:pointer-events-none pointer-events-auto focus:ring-2",
   {
     variants: {
       variant: {
         primary:
-          "bg-primary text-primary-foreground hover:bg-primary-85 active:bg-primary-75 focus:ring-primary-20 disabled:text-secondary-foreground disabled:bg-secondary",
+          "bg-primary text-primary-foreground hover:bg-primary/85 active:bg-primary/75  focus:ring-primary/20  disabled:text-secondary-foreground disabled:bg-secondary",
         secondary:
-          "bg-secondary outline-none hover:bg-accent text-accent-foreground active:bg-accent-active focus:ring-primary-20 disabled:bg-secondary disabled:text-secondary-foreground",
+          "bg-secondary outline-none hover:bg-accent text-accent-foreground active:bg-accent-active focus:ring-primary/20  disabled:bg-secondary disabled:text-secondary-foreground",
         outline:
-          "border border-border bg-background text-accent-foreground active:bg-accent-active focus:ring-primary-20 focus:bg-accent disabled:bg-secondary disabled:text-secondary-foreground",
+          "border border-border bg-background text-accent-foreground hover:border-40 active:bg-accent-active focus:ring-primary/20  focus:bg-accent disabled:bg-secondary disabled:text-secondary-foreground",
         destructive:
-          "bg-destructive text-destructive-foreground focus:ring-primary-20",
+          "bg-destructive text-destructive-foreground focus:ring-destructive/20  disabled:bg-destructive/15 disabled:text-destructive/60",
         ghost:
-          "bg-transparent hover:bg-accent text-accent-foreground active:bg-accent-active focus:ring-primary-20 focus:bg-accent",
+          "bg-transparent hover:bg-accent text-accent-foreground active:bg-accent-active focus:ring-primary/20 focus:bg-accent",
         "red-solid":
           "bg-[var(--red5)] hover:bg-[var(--red6)] active:bg-[var(--red7)] text-[var(--inkred1)] outline-none disabled:text-[var(--inkred2)] disabled:bg-[var(--red2)] focus:shadow-[var(--focus-red)]",
         "red-subtle":
@@ -168,7 +168,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 
     const renderIcon = (position: "left" | "right") => {
       if (loading && position === "left") {
-        if (variant === "primary" || variant === "red-solid") {
+        if (variant === "primary" || variant === "destructive") {
           return <Spinner {...iconSize} />;
         } else if (
           variant === "red-subtle" ||
@@ -182,8 +182,19 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       }
 
       if (disabled) {
+        if (variant === "destructive") {
+          return (
+            <SvgIcon
+              {...iconSize}
+              fill={
+                isDark
+                  ? "var(--color-dark-red-300)"
+                  : "var(--color-light-red-400)"
+              }
+            />
+          );
+        }
         if (
-          variant === "red-solid" ||
           variant === "red-subtle" ||
           variant === "red-outline" ||
           variant === "red-ghost"
@@ -206,13 +217,8 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         if (variant === "primary") {
           return <SvgIcon {...iconSize} fill="var(--background)" />;
         }
-        if (variant === "red-solid") {
-          return (
-            <SvgIcon
-              {...iconSize}
-              fill={isDark ? "var(--inkred1)" : "var(--inkwhite)"}
-            />
-          );
+        if (variant === "destructive") {
+          return <SvgIcon {...iconSize} fill="var(--color-light-red-50)" />;
         }
         if (
           variant === "red-subtle" ||

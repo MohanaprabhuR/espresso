@@ -576,6 +576,10 @@
     .hover\:bg-primary-85:hover {
       background-color: color-mix(in oklab, var(--primary) 85%, transparent);
     }
+    .hover\:border-40:hover {
+      border-color: color-mix(in oklab, var(--primary) 40%, transparent);
+      border-width: 1px;
+    }
   }
   .active\:bg-primary-75:active {
     background-color: color-mix(in oklab, var(--primary) 75%, transparent);
