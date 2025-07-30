@@ -13,15 +13,15 @@ const buttonVariants = cva(
     variants: {
       variant: {
         primary:
-          "bg-primary text-primary-foreground hover:bg-primary/85 active:bg-primary/75  focus:ring-primary/20  disabled:text-secondary-foreground disabled:bg-secondary",
+          "bg-primary rounded-lg text-primary-foreground hover:bg-primary/85 active:bg-primary/75  focus:ring-primary/20  disabled:text-secondary-foreground disabled:bg-secondary",
         secondary:
-          "bg-secondary outline-none hover:bg-accent text-accent-foreground active:bg-accent-active focus:ring-primary/20  disabled:bg-secondary disabled:text-secondary-foreground",
+          "bg-secondary rounded-lg outline-none hover:bg-accent text-accent-foreground active:bg-accent-active focus:ring-primary/20  disabled:bg-secondary disabled:text-secondary-foreground",
         outline:
-          "border border-border bg-background text-accent-foreground hover:border-40 active:bg-accent-active focus:ring-primary/20  focus:bg-accent disabled:bg-secondary disabled:text-secondary-foreground",
+          "border border-border rounded-lg bg-background text-accent-foreground hover:border-40 active:bg-accent-active focus:ring-primary/20  focus:bg-accent disabled:bg-secondary disabled:text-secondary-foreground",
         destructive:
-          "bg-destructive text-destructive-foreground focus:ring-destructive/20  disabled:bg-destructive/15 disabled:text-destructive/60",
+          "bg-destructive  rounded-lg text-destructive-foreground focus:ring-destructive/20  disabled:bg-destructive/15 disabled:text-destructive/60",
         ghost:
-          "bg-transparent hover:bg-accent text-accent-foreground active:bg-accent-active focus:ring-primary/20 focus:bg-accent",
+          "bg-transparent rounded-lg hover:bg-accent text-accent-foreground active:bg-accent-active focus:ring-primary/20 focus:bg-accent",
         "red-solid":
           "bg-[var(--red5)] hover:bg-[var(--red6)] active:bg-[var(--red7)] text-[var(--inkred1)] outline-none disabled:text-[var(--inkred2)] disabled:bg-[var(--red2)] focus:shadow-[var(--focus-red)]",
         "red-subtle":
@@ -32,7 +32,7 @@ const buttonVariants = cva(
           "bg-transparent hover:bg-[var(--red3)] active:bg-[var(--red4)] focus:bg-[var(--red2)] text-[var(--inkred4)] disabled:text-[var(--inkred4)] focus:shadow-[var(--focus-red)]",
       },
       size: {
-        sm: "h-7 rounded-lg text-base font-var-420 tracking-[0.28px]",
+        sm: "h-7  text-base font-var-420 tracking-[0.28px]",
         md: "h-8 rounded-lg text-base font-var-420 tracking-[0.28px]",
         lg: "h-10 rounded-[10px] text-lg font-var-500 tracking-[0.24px]",
         xl: "h-[46px] rounded-[10px] text-xl font-var-500-30 tracking-[0.18px]",
@@ -43,22 +43,22 @@ const buttonVariants = cva(
         false: "",
       },
     },
-    compoundVariants: [
-      { size: "sm", iconOnly: false, className: "px-2 py-1.5" },
-      { size: "sm", iconOnly: true, className: "p-1.5" },
+    // compoundVariants: [
+    //   { size: "sm", iconOnly: false, className: "px-2 py-1.5" },
+    //   { size: "sm", iconOnly: true, className: "p-1.5" },
 
-      { size: "md", iconOnly: false, className: "py-[7px] px-2.5" },
-      { size: "md", iconOnly: true, className: "p-[7px]" },
+    //   { size: "md", iconOnly: false, className: "py-[7px] px-2.5" },
+    //   { size: "md", iconOnly: true, className: "p-[7px]" },
 
-      { size: "lg", iconOnly: false, className: "py-2.5 px-3" },
-      { size: "lg", iconOnly: true, className: "p-2.5" },
+    //   { size: "lg", iconOnly: false, className: "py-2.5 px-3" },
+    //   { size: "lg", iconOnly: true, className: "p-2.5" },
 
-      { size: "xl", iconOnly: false, className: "py-[11px] px-[14px]" },
-      { size: "xl", iconOnly: true, className: "p-[11px]" },
+    //   { size: "xl", iconOnly: false, className: "py-[11px] px-[14px]" },
+    //   { size: "xl", iconOnly: true, className: "p-[11px]" },
 
-      { size: "xxl", iconOnly: false, className: "py-[14px] px-[16px]" },
-      { size: "xxl", iconOnly: true, className: "p-[14px]" },
-    ],
+    //   { size: "xxl", iconOnly: false, className: "py-[14px] px-[16px]" },
+    //   { size: "xxl", iconOnly: true, className: "p-[14px]" },
+    // ],
     defaultVariants: {
       variant: "primary",
       size: "sm",
@@ -213,29 +213,27 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         );
       }
 
-      const getVariantIcon = () => {
-        if (variant === "primary") {
-          return <SvgIcon {...iconSize} fill="var(--background)" />;
-        }
-        if (variant === "destructive") {
-          return <SvgIcon {...iconSize} fill="var(--color-light-red-50)" />;
-        }
-        if (
-          variant === "red-subtle" ||
-          variant === "red-outline" ||
-          variant === "red-ghost"
-        ) {
-          return (
-            <SvgIcon
-              {...iconSize}
-              fill={isDark ? "var(--inkred4)" : "var(--red6)"}
-            />
-          );
-        }
-        return <SvgIcon {...iconSize} fill="var(--foreground)" />;
-      };
-
-      return getVariantIcon();
+      // const getVariantIcon = () => {
+      //   if (variant === "primary") {
+      //     return <SvgIcon {...iconSize} fill="var(--background)" />;
+      //   }
+      //   if (variant === "destructive") {
+      //     return <SvgIcon {...iconSize} fill="var(--color-light-red-50)" />;
+      //   }
+      //   if (
+      //     variant === "red-subtle" ||
+      //     variant === "red-outline" ||
+      //     variant === "red-ghost"
+      //   ) {
+      //     return (
+      //       <SvgIcon
+      //         {...iconSize}
+      //         fill={isDark ? "var(--inkred4)" : "var(--red6)"}
+      //       />
+      //     );
+      //   }
+      //   return <SvgIcon {...iconSize} fill="var(--foreground)" />;
+      // };
     };
 
     return (
