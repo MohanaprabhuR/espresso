@@ -5,7 +5,7 @@ import { Slot } from "@radix-ui/react-slot";
 import { cva, type VariantProps } from "class-variance-authority";
 import { useTheme } from "next-themes";
 import { cn } from "@/lib/utils";
-import Image from "next/image";
+// import Image from "next/image";
 
 const buttonVariants = cva(
   "inline-flex items-center rounded-lg gap-[0_8px] justify-center whitespace-nowrap transition-all ease-in-out disabled:pointer-events-none pointer-events-auto focus:ring-2",
@@ -77,71 +77,71 @@ export interface ButtonProps
   rightIcon?: React.ReactNode;
 }
 
-const iconSizeMap: Record<
-  NonNullable<ButtonProps["size"]>,
-  { width: number; height: number }
-> = {
-  sm: { width: 16, height: 16 },
-  md: { width: 18, height: 18 },
-  lg: { width: 20, height: 20 },
-  xl: { width: 24, height: 24 },
-  xxl: { width: 24, height: 24 },
-};
+// const iconSizeMap: Record<
+//   NonNullable<ButtonProps["size"]>,
+//   { width: number; height: number }
+// > = {
+//   sm: { width: 16, height: 16 },
+//   md: { width: 18, height: 18 },
+//   lg: { width: 20, height: 20 },
+//   xl: { width: 24, height: 24 },
+//   xxl: { width: 24, height: 24 },
+// };
 
-const SvgIcon = ({
-  width,
-  height,
-  fill = "white",
-}: {
-  width: number;
-  height: number;
-  fill?: string;
-}) => (
-  <svg
-    width={width}
-    height={height}
-    viewBox="0 0 16 16"
-    fill="none"
-    style={{ fill }}
-  >
-    <path
-      fillRule="evenodd"
-      clipRule="evenodd"
-      d="M7.504 0.787a.7.7 0 0 1 .99 0l6.717 6.717a.7.7 0 0 1 0 .99l-6.717 6.717a.7.7 0 0 1-.99 0L0.787 8.494a.7.7 0 0 1 0-.99L7.504 0.787zm.495.919L1.706 7.999l6.293 6.293L14.292 7.999 7.999 1.706z"
-      fill={fill}
-    />
-  </svg>
-);
+// const SvgIcon = ({
+//   width,
+//   height,
+//   fill = "white",
+// }: {
+//   width: number;
+//   height: number;
+//   fill?: string;
+// }) => (
+//   <svg
+//     width={width}
+//     height={height}
+//     viewBox="0 0 16 16"
+//     fill="none"
+//     style={{ fill }}
+//   >
+//     <path
+//       fillRule="evenodd"
+//       clipRule="evenodd"
+//       d="M7.504 0.787a.7.7 0 0 1 .99 0l6.717 6.717a.7.7 0 0 1 0 .99l-6.717 6.717a.7.7 0 0 1-.99 0L0.787 8.494a.7.7 0 0 1 0-.99L7.504 0.787zm.495.919L1.706 7.999l6.293 6.293L14.292 7.999 7.999 1.706z"
+//       fill={fill}
+//     />
+//   </svg>
+// );
 
-const Spinner = ({ width, height }: { width: number; height: number }) => (
-  <Image
-    src="/images/spinner-white.png"
-    width={width}
-    height={height}
-    alt="Spinner"
-    className="animate-spin"
-  />
-);
+// const Spinner = ({ width, height }: { width: number; height: number }) => (
+//   <Image
+//     src="/images/spinner-white.png"
+//     width={width}
+//     height={height}
+//     alt="Spinner"
+//     className="animate-spin"
+//   />
+// );
 
-const SpinnerGray = ({ width, height }: { width: number; height: number }) => (
-  <Image
-    src="/images/spinner-gray.png"
-    width={width}
-    height={height}
-    alt="Spinner"
-    className="animate-spin"
-  />
-);
+// const SpinnerGray = ({ width, height }: { width: number; height: number }) => (
+//   <Image
+//     src="/images/spinner-gray.png"
+//     width={width}
+//     height={height}
+//     alt="Spinner"
+//     className="animate-spin"
+//   />
+// );
 
-const SpinnerRed = ({ width, height }: { width: number; height: number }) => (
-  <Image
-    src="/images/spinner-red.png"
-    width={width}
-    height={height}
-    alt="Spinner"
-    className="animate-spin"
-  />
-);
+// const SpinnerRed = ({ width, height }: { width: number; height: number }) => (
+//   <Image
+//     src="/images/spinner-red.png"
+//     width={width}
+//     height={height}
+//     alt="Spinner"
+//     className="animate-spin"
+//   />
+// );
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   (
@@ -153,9 +153,9 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       asChild = false,
       children,
       disabled,
-      loading,
-      leftIcon,
-      rightIcon,
+      // loading,
+      // leftIcon,
+      // rightIcon,
       ...props
     },
     ref
@@ -163,8 +163,8 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     const Comp = asChild ? Slot : "button";
     const { theme, systemTheme } = useTheme();
     const currentTheme = theme === "system" ? systemTheme : theme;
-    const isDark = currentTheme === "dark";
-    const iconSize = iconSizeMap[size ?? "sm"];
+    // const isDark = currentTheme === "dark";
+    // const iconSize = iconSizeMap[size ?? "sm"];
 
     // const renderIcon = (position: "left" | "right") => {
     //   if (loading && position === "left") {

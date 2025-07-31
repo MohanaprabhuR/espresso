@@ -25,7 +25,6 @@ import {
 } from "@/components/ui/tooltip";
 import {
   Breadcrumb,
-  BreadcrumbEllipsis,
   BreadcrumbItem,
   BreadcrumbLink,
   BreadcrumbList,
@@ -42,8 +41,7 @@ import { Slider } from "@/components/ui/slider";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Switch } from "@/components/ui/switch";
 import { useState } from "react";
-import { Tag, TagInput } from "emblor";
-import { PlusIcon, Tags } from "lucide-react";
+import { Tag } from "emblor";
 import { TriangleAlert } from "lucide-react";
 import {
   AlertDialog,
@@ -59,11 +57,6 @@ import {
 
 import { useToast } from "@/hooks/use-toast";
 import { DateField, DateInput } from "@/components/ui/datefield-rac";
-
-import { getLocalTimeZone, today } from "@internationalized/date";
-import type { DateValue } from "react-aria-components";
-
-// import { Calendars } from "@/components/ui/calendar-rac";
 import { addDays } from "date-fns";
 import { DateRange } from "react-day-picker";
 import { Calendar } from "@/components/ui/calendar";
@@ -104,10 +97,6 @@ const items = [
 ];
 
 export default function Home() {
-  const [exampleTags, setExampleTags] = useState<Tag[]>(Tags);
-  const [activeTagIndex, setActiveTagIndex] = useState<number | null>(null);
-  const { toast } = useToast();
-
   const today = new Date();
   const [date, setDate] = useState<DateRange | undefined>({
     from: today,
