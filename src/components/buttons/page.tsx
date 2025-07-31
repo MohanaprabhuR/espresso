@@ -1,5 +1,6 @@
 "use client";
 import { Button } from "@/components/ui/button";
+import { ChartPieSimple } from "@/components/chart";
 import {
   ChevronDownIcon,
   ChevronLeftIcon,
@@ -8,6 +9,7 @@ import {
   CircleAlert,
   CircleAlertIcon,
   CircleIcon,
+  CreditCardIcon,
 } from "lucide-react";
 import {
   Accordion,
@@ -54,7 +56,7 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
-
+import { usePaymentInputs } from "react-payment-inputs";
 import { useToast } from "@/hooks/use-toast";
 import { DateField, DateInput } from "@/components/ui/datefield-rac";
 import { addDays } from "date-fns";
@@ -68,6 +70,142 @@ import {
   DropdownMenuRadioItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { CheckIcon } from "lucide-react";
+
+import { cn } from "@/lib/utils";
+import {
+  Command,
+  CommandEmpty,
+  CommandGroup,
+  CommandInput,
+  CommandItem,
+  CommandList,
+} from "@/components/ui/command";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableFooter,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
+import { toast } from "sonner";
+
+const tableList = [
+  {
+    id: "1",
+    name: "Alex Thompson",
+    email: "alex.t@company.com",
+    location: "San Francisco, US",
+    status: "Active",
+    balance: "$1,250.00",
+  },
+  {
+    id: "2",
+    name: "Sarah Chen",
+    email: "sarah.c@company.com",
+    location: "Singapore",
+    status: "Active",
+    balance: "$600.00",
+  },
+  {
+    id: "3",
+    name: "James Wilson",
+    email: "j.wilson@company.com",
+    location: "London, UK",
+    status: "Inactive",
+    balance: "$650.00",
+  },
+  {
+    id: "4",
+    name: "Maria Garcia",
+    email: "m.garcia@company.com",
+    location: "Madrid, Spain",
+    status: "Active",
+    balance: "$0.00",
+  },
+  {
+    id: "5",
+    name: "David Kim",
+    email: "d.kim@company.com",
+    location: "Seoul, KR",
+    status: "Active",
+    balance: "-$1,000.00",
+  },
+];
+
+const frameworks = [
+  {
+    value: "next.js",
+    label: "Next.js",
+  },
+  {
+    value: "sveltekit",
+    label: "SvelteKit",
+  },
+  {
+    value: "nuxt.js",
+    label: "Nuxt.js",
+  },
+  {
+    value: "remix",
+    label: "Remix",
+  },
+  {
+    value: "astro",
+    label: "Astro",
+  },
+  {
+    value: "angular",
+    label: "Angular",
+  },
+  {
+    value: "vue",
+    label: "Vue.js",
+  },
+  {
+    value: "react",
+    label: "React",
+  },
+  {
+    value: "ember",
+    label: "Ember.js",
+  },
+  {
+    value: "gatsby",
+    label: "Gatsby",
+  },
+  {
+    value: "eleventy",
+    label: "Eleventy",
+  },
+  {
+    value: "solid",
+    label: "SolidJS",
+  },
+  {
+    value: "preact",
+    label: "Preact",
+  },
+  {
+    value: "qwik",
+    label: "Qwik",
+  },
+  {
+    value: "alpine",
+    label: "Alpine.js",
+  },
+  {
+    value: "lit",
+    label: "Lit",
+  },
+];
 
 const items = [
   {
@@ -103,7 +241,9 @@ export default function Home() {
     to: addDays(today, 25),
   });
   const [framework, setFramework] = useState("nextjs");
-
+  const { getCardNumberProps } = usePaymentInputs();
+  const [open, setOpen] = useState<boolean>(false);
+  const [value, setValue] = useState<string>("");
   return (
     <>
       <div className="pt-10 text-center">
@@ -160,10 +300,10 @@ export default function Home() {
             <Button variant="destructive" size="xxl">
               Discover
             </Button>
-            <Button variant="destructive" size="xxl">
+            <Button variant="destructive" size="xxl" disabled>
               Discover
             </Button>
-            <Button variant="destructive" size="xxl" iconOnly>
+            <Button variant="destructive" size="xxl">
               Discover
             </Button>
           </div>
@@ -626,6 +766,194 @@ export default function Home() {
               </DropdownMenuRadioGroup>
             </DropdownMenuContent>
           </DropdownMenu>
+        </div>
+      </div>
+
+      <div className="pt-10 text-center">
+        <h1 className="text-xl font-bold text-gray-900 dark:text-white pb-4 ">
+          Input Component
+        </h1>
+        <div className="flex  justify-center flex-col items-center gap-[10px]">
+          <div className="*:not-first:mt-2">
+            <Label>Card Number</Label>
+            <div className="relative">
+              <Input
+                {...getCardNumberProps()}
+                className="peer ps-9 [direction:inherit]"
+              />
+              <div className="text-muted-foreground/80 pointer-events-none absolute inset-y-0 start-0 flex items-center justify-center ps-3 peer-disabled:opacity-50">
+                <CreditCardIcon size={16} aria-hidden="true" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="pt-10 text-center">
+        <h1 className="text-xl font-bold text-gray-900 dark:text-white pb-4 ">
+          Modal Component
+        </h1>
+        <div className="flex  justify-center flex-col items-center gap-[10px]">
+          <AlertDialog>
+            <AlertDialogTrigger asChild>
+              <Button variant="outline">Alert dialog with icon</Button>
+            </AlertDialogTrigger>
+            <AlertDialogContent>
+              <div className="flex flex-col gap-2 max-sm:items-center sm:flex-row sm:gap-4">
+                <div
+                  className="flex size-9 shrink-0 items-center justify-center rounded-full border"
+                  aria-hidden="true"
+                >
+                  <CircleAlertIcon className="opacity-80" size={16} />
+                </div>
+                <AlertDialogHeader>
+                  <AlertDialogTitle>Are you sure?</AlertDialogTitle>
+                  <AlertDialogDescription>
+                    Are you sure you want to delete your account? All your data
+                    will be removed.
+                  </AlertDialogDescription>
+                </AlertDialogHeader>
+              </div>
+              <AlertDialogFooter>
+                <AlertDialogCancel>Cancel</AlertDialogCancel>
+                <AlertDialogAction>Confirm</AlertDialogAction>
+              </AlertDialogFooter>
+            </AlertDialogContent>
+          </AlertDialog>
+        </div>
+      </div>
+      <div className="pt-10 text-center">
+        <h1 className="text-xl font-bold text-gray-900 dark:text-white pb-4 ">
+          Popover Component
+        </h1>
+        <div className="flex  justify-center flex-col items-center gap-[10px]">
+          <div className="*:not-first:mt-2">
+            <Label>Select with search</Label>
+            <Popover open={open} onOpenChange={setOpen}>
+              <PopoverTrigger asChild>
+                <Button
+                  variant="outline"
+                  role="combobox"
+                  aria-expanded={open}
+                  className="bg-background hover:bg-background border-input w-full justify-between px-3 font-normal outline-offset-0 outline-none focus-visible:outline-[3px]"
+                >
+                  <span
+                    className={cn(
+                      "truncate",
+                      !value && "text-muted-foreground"
+                    )}
+                  >
+                    {value
+                      ? frameworks.find(
+                          (framework) => framework.value === value
+                        )?.label
+                      : "Select framework"}
+                  </span>
+                  <ChevronDownIcon
+                    size={16}
+                    className="text-muted-foreground/80 shrink-0"
+                    aria-hidden="true"
+                  />
+                </Button>
+              </PopoverTrigger>
+              <PopoverContent
+                className="border-input w-full min-w-[var(--radix-popper-anchor-width)] p-0"
+                align="start"
+              >
+                <Command>
+                  <CommandInput placeholder="Search framework..." />
+                  <CommandList>
+                    <CommandEmpty>No framework found.</CommandEmpty>
+                    <CommandGroup>
+                      {frameworks.map((framework) => (
+                        <CommandItem
+                          key={framework.value}
+                          value={framework.value}
+                          onSelect={(currentValue) => {
+                            setValue(
+                              currentValue === value ? "" : currentValue
+                            );
+                            setOpen(false);
+                          }}
+                        >
+                          {framework.label}
+                          {value === framework.value && (
+                            <CheckIcon size={16} className="ml-auto" />
+                          )}
+                        </CommandItem>
+                      ))}
+                    </CommandGroup>
+                  </CommandList>
+                </Command>
+              </PopoverContent>
+            </Popover>
+          </div>
+        </div>
+      </div>
+      <div className="pt-10 text-center">
+        <h1 className="text-xl font-bold text-gray-900 dark:text-white pb-4 ">
+          Table Component
+        </h1>
+        <div className="flex  justify-center flex-col items-center gap-[10px]">
+          <div>
+            <Table>
+              <TableHeader>
+                <TableRow className="hover:bg-transparent">
+                  <TableHead>Name</TableHead>
+                  <TableHead>Email</TableHead>
+                  <TableHead>Location</TableHead>
+                  <TableHead>Status</TableHead>
+                  <TableHead className="text-right">Balance</TableHead>
+                </TableRow>
+              </TableHeader>
+              <TableBody>
+                {tableList.map((item) => (
+                  <TableRow key={item.id}>
+                    <TableCell className="font-medium">{item.name}</TableCell>
+                    <TableCell>{item.email}</TableCell>
+                    <TableCell>{item.location}</TableCell>
+                    <TableCell>{item.status}</TableCell>
+                    <TableCell className="text-right">{item.balance}</TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+              <TableFooter className="bg-transparent">
+                <TableRow className="hover:bg-transparent">
+                  <TableCell colSpan={4}>Total</TableCell>
+                  <TableCell className="text-right">$2,500.00</TableCell>
+                </TableRow>
+              </TableFooter>
+            </Table>
+          </div>
+        </div>
+      </div>
+      <div className="pt-10 text-center">
+        <h1 className="text-xl font-bold text-gray-900 dark:text-white pb-4 ">
+          Table Component
+        </h1>
+        <div className="flex  justify-center flex-col items-center gap-[10px]">
+          <ChartPieSimple />
+        </div>
+      </div>
+
+      <div className="pt-10 text-center">
+        <h1 className="text-xl font-bold text-gray-900 dark:text-white pb-4 ">
+          Table Component
+        </h1>
+        <div className="flex  justify-center flex-col items-center gap-[10px]">
+          <Button
+            variant="outline"
+            onClick={() =>
+              toast("Event has been created", {
+                description: "Sunday, December 03, 2023 at 9:00 AM",
+                action: {
+                  label: "Undo",
+                  onClick: () => console.log("Undo"),
+                },
+              })
+            }
+          >
+            Show Toast
+          </Button>
         </div>
       </div>
     </>

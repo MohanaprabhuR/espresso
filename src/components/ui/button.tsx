@@ -19,17 +19,9 @@ const buttonVariants = cva(
         outline:
           "border bg-background text-accent-foreground hover:border-primary/30 active:bg-accent/80 focus:ring-primary/20  focus:bg-accent disabled:bg-secondary disabled:text-secondary-foreground",
         destructive:
-          "bg-destructive text-destructive-foreground focus:ring-destructive/20  disabled:bg-destructive/15 disabled:text-destructive/60",
+          "bg-destructive text-destructive-foreground focus:ring-destructive/20 hover:bg-destructive/90 active:bg-destructive/90   disabled:bg-destructive/25 disabled:text-destructive/50",
         ghost:
-          "bg-transparent hover:bg-accent text-accent-foreground active:bg-accent/80 focus:ring-primary/20 focus:bg-accent",
-        "red-solid":
-          "bg-[var(--red5)] hover:bg-[var(--red6)] active:bg-[var(--red7)] text-[var(--inkred1)] outline-none disabled:text-[var(--inkred2)] disabled:bg-[var(--red2)] focus:shadow-[var(--focus-red)]",
-        "red-subtle":
-          "bg-[var(--red2)] hover:bg-[var(--red3)] active:bg-[var(--red4)] text-[var(--red6)] outline-none disabled:text-[var(--inkred2)] disabled:bg-[var(--red2)] focus:shadow-[var(--focus-red)]",
-        "red-outline":
-          "bg-transparent border border-[var(--outlinered2)] hover:border-[var(--outlinered3)] active:bg-[var(--red4)] text-[var(--red6)] focus:bg-[var(--red2)] disabled:text-[var(--inkred2)] disabled:bg-[var(--red2)] focus:shadow-[var(--focus-red)]",
-        "red-ghost":
-          "bg-transparent hover:bg-[var(--red3)] active:bg-[var(--red4)] focus:bg-[var(--red2)] text-[var(--inkred4)] disabled:text-[var(--inkred4)] focus:shadow-[var(--focus-red)]",
+          "bg-transparent hover:bg-accent text-accent-foreground active:bg-accent/80 focus:ring-primary/20 focus:bg-accent disabled:opacity-60",
       },
       size: {
         sm: "h-7 rounded-lg text-base font-var-420 tracking-[0.28px]",
@@ -161,8 +153,8 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     ref
   ) => {
     const Comp = asChild ? Slot : "button";
-    const { theme, systemTheme } = useTheme();
-    const currentTheme = theme === "system" ? systemTheme : theme;
+    // const { theme, systemTheme } = useTheme();
+    // const currentTheme = theme === "system" ? systemTheme : theme;
     // const isDark = currentTheme === "dark";
     // const iconSize = iconSizeMap[size ?? "sm"];
 

@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap";
+@import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
 @layer base {
@@ -64,6 +65,7 @@
   --color-popover-foreground: var(--popover-foreground);
 
   /* Font Weights */
+
   --font-weight-normal: 400;
   --font-weight-medium: 500;
   --font-weight-semibold: 600;
@@ -506,7 +508,7 @@
 }
 
 :root {
-  --border: oklch(92.2% 0 0);
+  --border: var(--color-light-gray-300);
   --background: var(--color-white);
   --foreground: var(--color-black);
   --primary: var(--color-light-gray-900);
@@ -530,21 +532,21 @@
   --popover-foreground: var(--color-light-gray-700);
   --sidebar: var(--color-light-gray-50);
   --sidebar-foreground: var(--color-light-gray-700);
-  --sidebar-primary: var(--color-light-gray-900);
-  --sidebar-primary-foreground: var(--color-white);
-  --sidebar-accent: var(--background);
+  --sidebar-primary: var(--color-light-gray-50);
+  --sidebar-primary-foreground: var(--color-light-gray-900);
+  --sidebar-accent: var(--color-white);
   --sidebar-accent-foreground: var(--color-light-gray-900);
   --sidebar-border: var(--color-light-gray-200);
   --sidebar-ring: var(--color-light-gray-500);
-  --chart-1: var(--color-light-orange-400);
-  --chart-2: var(--color-light-orange-500);
-  --chart-3: var(--color-light-orange-600);
-  --chart-4: var(--color-light-orange-700);
-  --chart-5: var(--color-light-orange-800);
+  --chart-1: var(--color-light-blue-400);
+  --chart-2: var(--color-light-blue-500);
+  --chart-3: var(--color-light-blue-600);
+  --chart-4: var(--color-light-blue-700);
+  --chart-5: var(--color-light-blue-800);
 }
 
 .dark {
-  --border: oklch(27.4% 0.006 286.033);
+  --border: var(--color-dark-gray-50);
   --background: var(--color-black);
   --foreground: var(--color-white);
   --primary: var(--color-dark-gray-950);
@@ -569,17 +571,17 @@
   --popover-foreground: var(--color-dark-gray-800);
   --sidebar: var(--color-dark-gray-950);
   --sidebar-foreground: var(--color-dark-gray-800);
-  --sidebar-primary: var(--color-light-gray-900);
-  --sidebar-primary-foreground: var(--color-white);
+  --sidebar-primary: var(--color-dark-gray-950);
+  --sidebar-primary-foreground: var(--color-light-gray-900);
   --sidebar-accent: var(--color-dark-gray-400);
-  --sidebar-accent-foreground: var(--color-light-gray-900);
-  --sidebar-border: var(--color-dark-gray-950);
+  --sidebar-accent-foreground: var(--color-dark-gray-950);
+  --sidebar-border: var(--color-dark-gray-200);
   --sidebar-ring: var(--color-light-gray-500);
-  --chart-1: var(--color-light-orange-900);
-  --chart-2: var(--color-light-orange-800);
-  --chart-3: var(--color-light-orange-700);
-  --chart-4: var(--color-light-orange-600);
-  --chart-5: var(--color-light-orange-500);
+  --chart-1: var(--color-light-blue-900);
+  --chart-2: var(--color-light-blue-800);
+  --chart-3: var(--color-light-blue-700);
+  --chart-4: var(--color-light-blue-600);
+  --chart-5: var(--color-light-blue-500);
 }
 
 @utility shadow-focus-light {
@@ -598,5 +600,14 @@
   .font-var-500-30 {
     font-family: var(--font-inter);
     font-variation-settings: var(--font-variation-500-30);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
   }
 }

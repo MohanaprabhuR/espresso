@@ -7,11 +7,7 @@ const Header = () => {
   const { theme, setTheme } = useTheme();
 
   return (
-    <header className="flex justify-between items-center px-6 py-4 bg-white dark:bg-gray-900 shadow fixed top-0 w-full">
-      <h1 className="text-xl font-bold text-gray-900 dark:text-white">
-        My App
-      </h1>
-
+    <header className="flex justify-between items-center px-6 py-4 bg-white dark:bg-gray-900  fixed top-0 w-full">
       <button
         onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
         className="p-2 rounded bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-100"
