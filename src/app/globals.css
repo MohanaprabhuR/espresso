@@ -2,7 +2,12 @@
 @import "https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap";
 
 @custom-variant dark (&:is(.dark *));
-
+@layer base {
+  * {
+    border-color: var(--border);
+    outline-color: var(--ring);
+  }
+}
 @theme inline {
   --tw-leading: 1rem;
   /* Fonts */
@@ -23,18 +28,19 @@
   --color-accent-active: var(--accent-active);
   --color-border: var(--border);
 
+  /* Input */
+  --color-input: var(--input);
+
   /* Tabs */
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
 
   /* Input Focus */
   --color-ring: var(--ring);
+
   /* Card */
   --color-card: var(--card);
   --color-card-foreground: var(--card-foreground);
-  /* Dropdown */
-  --color-popover: var(--popover);
-  --color-popover-foreground: var(--popover-foreground);
 
   /* Sidebar */
   --color-sidebar: var(--sidebar);
@@ -52,6 +58,10 @@
   --color-chart-3: var(--chart-3);
   --color-chart-4: var(--chart-4);
   --color-chart-5: var(--chart-5);
+
+  /* Popover */
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
 
   /* Font Weights */
   --font-weight-normal: 400;
@@ -156,6 +166,9 @@
   --radius-5xl: 6.25rem; /* 100px */
 
   /* colors */
+
+  --color-white: #ffffff;
+  --color-black: #000000;
 
   /* Light Gray Shades */
   --color-light-gray-50: #f8f8f8;
@@ -493,8 +506,9 @@
 }
 
 :root {
-  --background: #ffffff;
-  --foreground: #000000;
+  --border: oklch(92.2% 0 0);
+  --background: var(--color-white);
+  --foreground: var(--color-black);
   --primary: var(--color-light-gray-900);
   --primary-foreground: var(--color-white);
   --primary-hover: var(--color-light-gray-800);
@@ -505,16 +519,14 @@
   --destructive-foreground: var(--color-light-red-50);
   --accent: var(--color-light-gray-200);
   --accent-foreground: var(--color-light-gray-800);
-  --accent-active: var(--color-light-gray-300);
   --border: var(--color-light-gray-300);
   --muted: var(--color-light-gray-100);
   --muted-foreground: var(--color-light-gray-600);
-  --input: var(--color-light-gray-100);
-  --input: oklch(0.922 0 0);
+  --input: var(--color-light-gray-300);
   --ring: var(--color-light-gray-500);
   --card: var(--background);
   --card-foreground: var(--color-light-gray-600);
-  --popover: var(--background);
+  --popover: var(--color-white);
   --popover-foreground: var(--color-light-gray-700);
   --sidebar: var(--color-light-gray-50);
   --sidebar-foreground: var(--color-light-gray-700);
@@ -532,14 +544,15 @@
 }
 
 .dark {
-  --background: #000000;
-  --foreground: #ffffff;
+  --border: oklch(27.4% 0.006 286.033);
+  --background: var(--color-black);
+  --foreground: var(--color-white);
   --primary: var(--color-dark-gray-950);
   --primary-foreground: var(--color-dark-gray-50);
   --primary-hover: var(--color-dark-gray-900);
   --primary-active: var(--color-dark-gray-800);
   --secondary: var(--color-dark-gray-300);
-  --secondary-foreground: var(--color-dark-gray-600);
+  --secondary-foreground: var(--color-dark-gray-800);
   --destructive: var(--color-dark-red-500);
   --destructive-foreground: var(--color-light-red-50);
   --accent: var(--color-dark-gray-400);
@@ -548,7 +561,7 @@
   --border: var(--color-dark-gray-400);
   --muted: var(--color-dark-gray-300);
   --muted-foreground: var(--color-dark-gray-700);
-  --input: var(--color-dark-gray-300);
+  --input: var(--color-dark-gray-500);
   --ring: var(--color-dark-gray-550);
   --card: var(--color-dark-gray-200);
   --card-foreground: var(--color-dark-gray-700);
@@ -573,24 +586,6 @@
   box-shadow: var(--focus-light);
 }
 
-@layer utilities {
-  @media (hover: hover) {
-    .hover\:bg-primary-85:hover {
-      background-color: color-mix(in oklab, var(--primary) 85%, transparent);
-    }
-    .hover\:border-40:hover {
-      border-color: color-mix(in oklab, var(--primary) 40%, transparent);
-      border-width: 1px;
-    }
-  }
-  .active\:bg-primary-75:active {
-    background-color: color-mix(in oklab, var(--primary) 75%, transparent);
-  }
-  .focus\:ring-primary-20:focus {
-    box-shadow: 0 0 0 2px color-mix(in oklab, var(--primary) 20%, transparent);
-    outline: none;
-  }
-}
 @layer utilities {
   .font-var-420 {
     font-family: var(--font-inter);
