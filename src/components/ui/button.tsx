@@ -3,32 +3,33 @@
 import * as React from "react";
 import { Slot } from "@radix-ui/react-slot";
 import { cva, type VariantProps } from "class-variance-authority";
-import { useTheme } from "next-themes";
 import { cn } from "@/lib/utils";
-// import Image from "next/image";
+import { CommandIcon } from "../../../public/images/svg/commandIcon";
+import Image from "next/image";
 
 const buttonVariants = cva(
-  "inline-flex items-center rounded-lg gap-[0_8px] justify-center whitespace-nowrap transition-all ease-in-out disabled:pointer-events-none pointer-events-auto focus:ring-2",
+  "inline-flex items-center rounded-lg gap-[0_8px] justify-center whitespace-nowrap transition-all ease-in-out disabled:pointer-events-none pointer-events-auto focus:outline-none focus:ring-2 focus:ring-[var(--shadow-shadow)]",
   {
     variants: {
       variant: {
         primary:
-          "bg-primary text-primary-foreground hover:bg-primary/85 active:bg-primary/75  focus:ring-primary/20   disabled:text-secondary-foreground disabled:bg-secondary",
+          "bg-primary text-primary-foreground hover:bg-accent-foreground active:bg-secondary-foreground disabled:bg-secondary disabled:text-ring",
         secondary:
-          "bg-secondary outline-none hover:bg-accent text-accent-foreground active:bg-accent/80 focus:ring-primary/20  disabled:bg-secondary disabled:text-secondary-foreground",
+          "bg-secondary text-accent-foreground outline-none hover:bg-accent active:bg-accent/80 disabled:bg-secondary disabled:text-ring",
         outline:
-          "border bg-background text-accent-foreground hover:border-primary/30 active:bg-accent/80 focus:ring-primary/20  focus:bg-accent disabled:bg-secondary disabled:text-secondary-foreground",
+          "border bg-background text-accent-foreground hover:border-primary/25 active:bg-accent/80 focus:bg-accent/90 focus:border-none disabled:bg-secondary disabled:text-ring",
         destructive:
-          "bg-destructive text-destructive-foreground focus:ring-destructive/20 hover:bg-destructive/90 active:bg-destructive/90   disabled:bg-destructive/25 disabled:text-destructive/50",
+          "bg-destructive text-destructive-foreground focus:ring-destructive/20 hover:bg-destructive/85 active:bg-destructive/90 disabled:bg-destructive/25 disabled:text-destructive/50",
         ghost:
-          "bg-transparent hover:bg-accent text-accent-foreground active:bg-accent/80 focus:ring-primary/20 focus:bg-accent disabled:opacity-60",
+          "bg-transparent hover:bg-accent text-accent-foreground active:bg-accent active:bg-accent/80 focus:bg-accent/90 disabled:bg-transparent disabled:text-ring",
       },
       size: {
-        sm: "h-7 rounded-lg text-base font-var-420 tracking-[0.28px]",
-        md: "h-8 rounded-lg text-base font-var-420 tracking-[0.28px]",
-        lg: "h-10 rounded-[10px] text-lg font-var-500 tracking-[0.24px]",
-        xl: "h-[46px] rounded-[10px] text-xl font-var-500-30 tracking-[0.18px]",
-        xxl: "h-[52px] rounded-[14px] text-2xl font-var-500-30 tracking-[0.2px]",
+        sm: "h-7 rounded-lg text-base font-normal tracking-[0.28px]",
+        md: "h-8 rounded-lg text-base font-normal tracking-[0.28px]",
+        lg: "h-10 rounded-[10px] text-lg font-medium tracking-[0.24px]",
+        xl: "h-[46px] rounded-[10px] text-xl font-medium-30 tracking-[0.18px]",
+        "2xl":
+          "h-[52px] rounded-[14px] text-2xl font-medium-30 tracking-[0.2px]",
       },
       iconOnly: {
         true: "",
@@ -48,8 +49,8 @@ const buttonVariants = cva(
       { size: "xl", iconOnly: false, className: "py-[11px] px-[14px]" },
       { size: "xl", iconOnly: true, className: "p-[11px]" },
 
-      { size: "xxl", iconOnly: false, className: "py-[14px] px-[16px]" },
-      { size: "xxl", iconOnly: true, className: "p-[14px]" },
+      { size: "2xl", iconOnly: false, className: "py-[14px] px-[16px]" },
+      { size: "2xl", iconOnly: true, className: "p-[14px]" },
     ],
     defaultVariants: {
       variant: "primary",
@@ -67,73 +68,19 @@ export interface ButtonProps
   loading?: boolean;
   leftIcon?: React.ReactNode;
   rightIcon?: React.ReactNode;
+  showIcon?: boolean;
 }
 
-// const iconSizeMap: Record<
-//   NonNullable<ButtonProps["size"]>,
-//   { width: number; height: number }
-// > = {
-//   sm: { width: 16, height: 16 },
-//   md: { width: 18, height: 18 },
-//   lg: { width: 20, height: 20 },
-//   xl: { width: 24, height: 24 },
-//   xxl: { width: 24, height: 24 },
-// };
-
-// const SvgIcon = ({
-//   width,
-//   height,
-//   fill = "white",
-// }: {
-//   width: number;
-//   height: number;
-//   fill?: string;
-// }) => (
-//   <svg
-//     width={width}
-//     height={height}
-//     viewBox="0 0 16 16"
-//     fill="none"
-//     style={{ fill }}
-//   >
-//     <path
-//       fillRule="evenodd"
-//       clipRule="evenodd"
-//       d="M7.504 0.787a.7.7 0 0 1 .99 0l6.717 6.717a.7.7 0 0 1 0 .99l-6.717 6.717a.7.7 0 0 1-.99 0L0.787 8.494a.7.7 0 0 1 0-.99L7.504 0.787zm.495.919L1.706 7.999l6.293 6.293L14.292 7.999 7.999 1.706z"
-//       fill={fill}
-//     />
-//   </svg>
-// );
-
-// const Spinner = ({ width, height }: { width: number; height: number }) => (
-//   <Image
-//     src="/images/spinner-white.png"
-//     width={width}
-//     height={height}
-//     alt="Spinner"
-//     className="animate-spin"
-//   />
-// );
-
-// const SpinnerGray = ({ width, height }: { width: number; height: number }) => (
-//   <Image
-//     src="/images/spinner-gray.png"
-//     width={width}
-//     height={height}
-//     alt="Spinner"
-//     className="animate-spin"
-//   />
-// );
-
-// const SpinnerRed = ({ width, height }: { width: number; height: number }) => (
-//   <Image
-//     src="/images/spinner-red.png"
-//     width={width}
-//     height={height}
-//     alt="Spinner"
-//     className="animate-spin"
-//   />
-// );
+const iconSizeMap: Record<
+  NonNullable<ButtonProps["size"]>,
+  { width: number; height: number }
+> = {
+  sm: { width: 16, height: 16 },
+  md: { width: 18, height: 18 },
+  lg: { width: 20, height: 20 },
+  xl: { width: 24, height: 24 },
+  "2xl": { width: 24, height: 24 },
+};
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   (
@@ -143,104 +90,59 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       size = "sm",
       iconOnly = false,
       asChild = false,
+      loading = false,
+      leftIcon,
+      rightIcon,
       children,
-      disabled,
-      // loading,
-      // leftIcon,
-      // rightIcon,
+      showIcon = false,
       ...props
     },
     ref
   ) => {
     const Comp = asChild ? Slot : "button";
-    // const { theme, systemTheme } = useTheme();
-    // const currentTheme = theme === "system" ? systemTheme : theme;
-    // const isDark = currentTheme === "dark";
-    // const iconSize = iconSizeMap[size ?? "sm"];
+    const iconSize = iconSizeMap[size];
 
-    // const renderIcon = (position: "left" | "right") => {
-    //   if (loading && position === "left") {
-    //     if (variant === "primary" || variant === "destructive") {
-    //       return <Spinner {...iconSize} />;
-    //     } else if (
-    //       variant === "red-subtle" ||
-    //       variant === "red-outline" ||
-    //       variant === "red-ghost"
-    //     ) {
-    //       return <SpinnerRed {...iconSize} />;
-    //     } else {
-    //       return <SpinnerGray {...iconSize} />;
-    //     }
-    //   }
+    const renderCommandIcon = () => <CommandIcon {...iconSize} />;
+    const renderLoader = () => {
+      const isWhiteSpinner = variant === "primary" || variant === "destructive";
+      return (
+        <Image
+          src={
+            isWhiteSpinner
+              ? "/images/spinner-white.png"
+              : "/images/spinner-gray.png"
+          }
+          width={iconSize.width}
+          height={iconSize.height}
+          alt="Spinner"
+          className="animate-spin"
+        />
+      );
+    };
 
-    //   if (disabled) {
-    //     if (variant === "destructive") {
-    //       return (
-    //         <SvgIcon
-    //           {...iconSize}
-    //           fill={
-    //             isDark
-    //               ? "var(--color-dark-red-300)"
-    //               : "var(--color-light-red-400)"
-    //           }
-    //         />
-    //       );
-    //     }
-    //     if (
-    //       variant === "red-subtle" ||
-    //       variant === "red-outline" ||
-    //       variant === "red-ghost"
-    //     ) {
-    //       return <SvgIcon {...iconSize} fill="var(--inkred2)" />;
-    //     }
-    //     return (
-    //       <SvgIcon
-    //         {...iconSize}
-    //         fill={
-    //           isDark
-    //             ? "var(--color-dark-gray-600)"
-    //             : "var(--color-light-gray-500)"
-    //         }
-    //       />
-    //     );
-    //   }
+    const showLeft =
+      showIcon &&
+      (loading
+        ? renderLoader()
+        : leftIcon ??
+          (!iconOnly && children
+            ? renderCommandIcon()
+            : iconOnly
+            ? renderCommandIcon()
+            : null));
 
-    //   const getVariantIcon = () => {
-    //     if (variant === "primary") {
-    //       return <SvgIcon {...iconSize} fill="var(--background)" />;
-    //     }
-    //     if (variant === "destructive") {
-    //       return <SvgIcon {...iconSize} fill="var(--color-light-red-50)" />;
-    //     }
-    //     if (
-    //       variant === "red-subtle" ||
-    //       variant === "red-outline" ||
-    //       variant === "red-ghost"
-    //     ) {
-    //       return (
-    //         <SvgIcon
-    //           {...iconSize}
-    //           fill={isDark ? "var(--inkred4)" : "var(--red6)"}
-    //         />
-    //       );
-    //     }
-    //     return <SvgIcon {...iconSize} fill="var(--foreground)" />;
-    //   };
-
-    //   return getVariantIcon();
-    // };
+    const showRight =
+      showIcon && !iconOnly && !loading && (rightIcon ?? renderCommandIcon());
 
     return (
       <Comp
         className={cn(buttonVariants({ variant, size, iconOnly }), className)}
         ref={ref}
-        disabled={disabled}
         {...props}
       >
-        {children}
-        {/* {leftIcon ?? renderIcon("left")}
+        {showLeft}
         {!iconOnly && children}
-        {!iconOnly && (rightIcon ?? renderIcon("right"))} */}
+        {showRight}
       </Comp>
     );
   }

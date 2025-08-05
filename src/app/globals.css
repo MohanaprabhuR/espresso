@@ -12,7 +12,7 @@
 @theme inline {
   --tw-leading: 1rem;
   /* Fonts */
-  --font-inter: "Inter", sans-serif;
+  --font-sans: "Inter", sans-serif;
   /* Theme colors */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -64,12 +64,51 @@
   --color-popover: var(--popover);
   --color-popover-foreground: var(--popover-foreground);
 
+  /* Bage Styles - Blue */
+  --color-blue-primary: var(--badge-blue-primary);
+  --color-blue-primary-foreground: var(--badge-blue-primary-foreground);
+  --color-blue-secondary: var(--badge-blue-secondary);
+  --color-blue-secondary-foreground: var(--badge-blue-secondary-foreground);
+  --color-blue-border: var(--badge-blue-border);
+
+  /* Bage Styles - Green */
+  --color-green-primary: var(--badge-green-primary);
+  --color-green-primary-foreground: var(--badge-green-primary-foreground);
+  --color-green-secondary: var(--badge-green-secondary);
+  --color-green-secondary-foreground: var(--badge-green-secondary-foreground);
+  --color-green-border: var(--badge-green-border);
+
+  /* Bage Styles - Amber */
+  --color-amber-primary: var(--badge-amber-primary);
+  --color-amber-primary-foreground: var(--badge-amber-primary-foreground);
+  --color-amber-secondary: var(--badge-amber-secondary);
+  --color-amber-secondary-foreground: var(--badge-amber-secondary-foreground);
+  --color-amber-border: var(--badge-amber-border);
+
+  /* Bage Styles - RED */
+  --color-red-primary: var(--badge-red-primary);
+  --color-red-primary-foreground: var(--badge-red-primary-foreground);
+  --color-red-secondary: var(--badge-red-secondary);
+  --color-red-secondary-foreground: var(--badge-red-secondary-foreground);
+  --color-red-border: var(--badge-red-border);
+
+  /* Bage Styles - Violet */
+  --color-violet-primary: var(--badge-violet-primary);
+  --color-violet-primary-foreground: var(--badge-violet-primary-foreground);
+  --color-violet-secondary: var(--badge-violet-secondary);
+  --color-violet-secondary-foreground: var(--badge-violet-secondary-foreground);
+  --color-violet-border: var(--badge-violet-border);
+
   /* Font Weights */
 
+  --font-weight-thin: 100;
+  --font-weight-extralight: 200;
+  --font-weight-light: 300;
   --font-weight-normal: 400;
   --font-weight-medium: 500;
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
   --font-weight-black: 900;
   /* Font Variation Settings */
   --font-variation-420: "opsz" 24, "wght" 420;
@@ -140,21 +179,23 @@
   /* Letter Spacing */
   --tracking-0: 0em; /* 0px */
   --tracking-1: 0.01em; /* 0.16px */
-  --tracking-2: 0.02em; /* 0.32px */
-  --tracking-3: 0.03em; /* 0.48px */
-  --tracking-4: 0.04em; /* 0.64px */
-  --tracking-5: 0.05em; /* 0.8px */
-  --tracking-6: 0.06em; /* 0.96px */
-  --tracking-7: 0.07em; /* 1.12px */
-  --tracking-8: 0.08em; /* 1.28px */
-  --tracking-9: 0.09em; /* 1.44px */
-  --tracking-10: 0.1em; /* 1.6px */
-  --tracking-11: 0.11em; /* 1.76px */
-  --tracking-12: 0.12em; /* 1.92px */
-  --tracking-13: 0.14em; /* 2.24px */
-  --tracking-14: 0.16em; /* 2.56px */
-  --tracking-15: 0.2em; /* 3.2px */
-  --tracking-16: 0.26em; /* 4.16px */
+  --tracking-2: 0.016em; /* 0.24px */
+  --tracking-3: 0.02em; /* 0.32px */
+  --tracking-4: 0.03em; /* 0.48px */
+  --tracking-5: 0.04em; /* 0.64px */
+  --tracking-6: 0.05em; /* 0.8px */
+  --tracking-7: 0.06em; /* 0.96px */
+  --tracking-8: 0.07em; /* 1.12px */
+  --tracking-9: 0.08em; /* 1.28px */
+  --tracking-10: 0.09em; /* 1.44px */
+  --tracking-11: 0.1em; /* 1.6px */
+  --tracking-12: 0.11em; /* 1.76px */
+  --tracking-13: 0.12em; /* 1.92px */
+  --tracking-14: 0.14em; /* 2.24px */
+  --tracking-15: 0.16em; /* 2.56px */
+  --tracking-16: 0.2em; /* 3.2px */
+  --tracking-17: 0.24em; /* 3.8px */
+  --tracking-18: 0.26em; /* 4.16px */
 
   /* Radius */
   --radius-xs: 0.25rem; /* 4px */
@@ -477,46 +518,45 @@
   --color-dark-pink-950: #ffbbe4;
 
   /* Light Violet Shades */
-  --color-light-pink-50: #fbfaff;
-  --color-light-pink-100: #eee8ff;
-  --color-light-pink-200: #dbd5ff;
-  --color-light-pink-300: #c9bafb;
-  --color-light-pink-400: #a68efe;
-  --color-light-pink-500: #7757ee;
-  --color-light-pink-600: #664ecc;
-  --color-light-pink-700: #4f3da1;
-  --color-light-pink-800: #392980;
-  --color-light-pink-900: #251959;
+  --color-light-violet-50: #fbfaff;
+  --color-light-violet-100: #eee8ff;
+  --color-light-violet-200: #dbd5ff;
+  --color-light-violet-300: #c9bafb;
+  --color-light-violet-400: #a68efe;
+  --color-light-violet-500: #7757ee;
+  --color-light-violet-600: #664ecc;
+  --color-light-violet-700: #4f3da1;
+  --color-light-violet-800: #392980;
+  --color-light-violet-900: #251959;
 
   /* Dark Violet Shades */
-  --color-dark-pink-50: #17132c;
-  --color-dark-pink-100: #1f1841;
-  --color-dark-pink-200: #291d64;
-  --color-dark-pink-300: #3d3286;
-  --color-dark-pink-400: #403397;
-  --color-dark-pink-500: #5a3eba;
-  --color-dark-pink-600: #8363f1;
-  --color-dark-pink-700: #9478f8;
-  --color-dark-pink-800: #9f87ed;
-  --color-dark-pink-900: #bca9fc;
-  --color-dark-pink-950: #cdbeff;
+  --color-dark-violet-50: #17132c;
+  --color-dark-violet-100: #1f1841;
+  --color-dark-violet-200: #291d64;
+  --color-dark-violet-300: #3d3286;
+  --color-dark-violet-400: #403397;
+  --color-dark-violet-500: #5a3eba;
+  --color-dark-violet-600: #8363f1;
+  --color-dark-violet-700: #9478f8;
+  --color-dark-violet-800: #9f87ed;
+  --color-dark-violet-900: #bca9fc;
+  --color-dark-violet-950: #cdbeff;
 
   /* Box Shadow */
-  --icon-status: 0px 0px 0px 2px #ffffff;
-  --focus-light: 0px 0px 0px 2px rgba(201, 201, 201, 0.9);
-  --focus-red: 0px 0px 0px 3px #eb9091;
+  --shadow-white: 0px 0px 0px 2px #ffffff;
+  --shadow-shadow: rgba(201, 201, 201, 0.9);
 }
 
 :root {
   --border: var(--color-light-gray-300);
   --background: var(--color-white);
-  --foreground: var(--color-black);
+  --foreground: var(--color-light-gray-900);
   --primary: var(--color-light-gray-900);
   --primary-foreground: var(--color-white);
   --primary-hover: var(--color-light-gray-800);
   --primary-active: var(--color-light-gray-700);
   --secondary: var(--color-light-gray-100);
-  --secondary-foreground: var(--color-light-gray-500);
+  --secondary-foreground: var(--color-light-gray-700);
   --destructive: var(--color-light-red-600);
   --destructive-foreground: var(--color-light-red-50);
   --accent: var(--color-light-gray-200);
@@ -543,12 +583,49 @@
   --chart-3: var(--color-light-blue-600);
   --chart-4: var(--color-light-blue-700);
   --chart-5: var(--color-light-blue-800);
+
+  /* Badge Styles - Blue */
+  --badge-blue-primary: var(--color-light-blue-600);
+  --badge-blue-primary-foreground: var(--color-light-blue-50);
+  --badge-blue-secondary: var(--color-light-blue-100);
+  --badge-blue-secondary-foreground: var(--color-light-blue-700);
+  --badge-blue-border: var(--color-light-blue-300);
+
+  /* Badge Styles - Green */
+  --badge-green-primary: var(--color-light-green-600);
+  --badge-green-primary-foreground: var(--color-light-green-50);
+  --badge-green-secondary: var(--color-light-green-100);
+  --badge-green-secondary-foreground: var(--color-light-green-700);
+  --badge-green-border: var(--color-light-green-300);
+
+  /* Badge Styles - Amber */
+  --badge-amber-primary: var(--color-light-amber-600);
+  --badge-amber-primary-foreground: var(--color-light-amber-50);
+  --badge-amber-secondary: var(--color-light-amber-100);
+  --badge-amber-secondary-foreground: var(--color-light-amber-700);
+  --badge-amber-border: var(--color-light-amber-300);
+
+  /* Badge Styles - Red */
+  --badge-red-primary: var(--color-light-red-600);
+  --badge-red-primary-foreground: var(--color-light-red-50);
+  --badge-red-secondary: var(--color-light-red-100);
+  --badge-red-secondary-foreground: var(--color-light-red-700);
+  --badge-red-border: var(--color-light-red-300);
+
+  /* Badge Styles - Violet */
+  --badge-violet-primary: var(--color-light-violet-600);
+  --badge-violet-primary-foreground: var(--color-light-violet-50);
+  --badge-violet-secondary: var(--color-light-violet-100);
+  --badge-violet-secondary-foreground: var(--color-light-violet-700);
+  --badge-violet-border: var(--color-light-violet-300);
+
+  --shadow-shadow: rgba(201, 201, 201, 0.9);
 }
 
 .dark {
   --border: var(--color-dark-gray-50);
   --background: var(--color-black);
-  --foreground: var(--color-white);
+  --foreground: var(--color-dark-gray-950);
   --primary: var(--color-dark-gray-950);
   --primary-foreground: var(--color-dark-gray-50);
   --primary-hover: var(--color-dark-gray-900);
@@ -564,7 +641,7 @@
   --muted: var(--color-dark-gray-300);
   --muted-foreground: var(--color-dark-gray-700);
   --input: var(--color-dark-gray-500);
-  --ring: var(--color-dark-gray-550);
+  --ring: var(--color-dark-gray-600);
   --card: var(--color-dark-gray-200);
   --card-foreground: var(--color-dark-gray-700);
   --popover: var(--color-dark-gray-200);
@@ -582,6 +659,43 @@
   --chart-3: var(--color-light-blue-700);
   --chart-4: var(--color-light-blue-600);
   --chart-5: var(--color-light-blue-500);
+
+  /* Badge Styles - Blue */
+  --badge-blue-primary: var(--color-dark-blue-500);
+  --badge-blue-primary-foreground: var(--color-white);
+  --badge-blue-secondary: var(--color-dark-blue-100);
+  --badge-blue-secondary-foreground: var(--color-dark-blue-700);
+  --badge-blue-border: var(--color-dark-blue-200);
+
+  /* Badge Styles - Green */
+  --badge-green-primary: var(--color-dark-green-500);
+  --badge-green-primary-foreground: var(--color-white);
+  --badge-green-secondary: var(--color-dark-green-100);
+  --badge-green-secondary-foreground: var(--color-dark-green-700);
+  --badge-green-border: var(--color-dark-green-200);
+
+  /* Badge Styles - Amber */
+  --badge-amber-primary: var(--color-dark-amber-500);
+  --badge-amber-primary-foreground: var(--color-white);
+  --badge-amber-secondary: var(--color-dark-amber-100);
+  --badge-amber-secondary-foreground: var(--color-dark-amber-700);
+  --badge-amber-border: var(--color-dark-amber-200);
+
+  /* Badge Styles - Red */
+  --badge-red-primary: var(--color-dark-red-500);
+  --badge-red-primary-foreground: var(--color-white);
+  --badge-red-secondary: var(--color-dark-red-100);
+  --badge-red-secondary-foreground: var(--color-dark-red-700);
+  --badge-red-border: var(--color-dark-red-200);
+
+  /* Badge Styles - Violet */
+  --badge-violet-primary: var(--color-dark-violet-500);
+  --badge-violet-primary-foreground: var(--color-white);
+  --badge-violet-secondary: var(--color-dark-violet-100);
+  --badge-violet-secondary-foreground: var(--color-dark-violet-700);
+  --badge-violet-border: var(--color-dark-violet-200);
+
+  --shadow-shadow: rgba(201, 201, 201, 1);
 }
 
 @utility shadow-focus-light {
@@ -589,16 +703,13 @@
 }
 
 @layer utilities {
-  .font-var-420 {
-    font-family: var(--font-inter);
+  .font-normal {
     font-variation-settings: var(--font-variation-420);
   }
-  .font-var-500 {
-    font-family: var(--font-inter);
+  .font-medium {
     font-variation-settings: var(--font-variation-500);
   }
-  .font-var-500-30 {
-    font-family: var(--font-inter);
+  .font-medium-30 {
     font-variation-settings: var(--font-variation-500-30);
   }
 }
@@ -608,6 +719,6 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground  font-sans;
   }
 }

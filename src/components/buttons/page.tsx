@@ -314,10 +314,18 @@ export default function Home() {
           Badge Component
         </h1>
         <div className="flex  justify-center items-center gap-[10px_10px]">
-          <Badge variant="default">Badge</Badge>
-          <Badge variant="outline">Badge</Badge>
-          <Badge variant="secondary">Badge</Badge>
-          <Badge variant="destructive">Badge</Badge>
+          <Badge variant="default" size="sm">
+            Badge
+          </Badge>
+          <Badge variant="outline" size="md">
+            Badge
+          </Badge>
+          <Badge variant="secondary" size="lg">
+            Badge
+          </Badge>
+          <Badge variant="destructive" size="lg">
+            Badge
+          </Badge>
         </div>
       </div>
       <div className="pt-10 text-center">
@@ -386,7 +394,11 @@ export default function Home() {
         <div className="flex  justify-center items-center gap-[10px_0]">
           <div className="*:not-first:mt-2">
             <Label>Simple input</Label>
-            <Input placeholder="Email" type="email" />
+            <Input
+              placeholder="Email"
+              type="email"
+              className="bg-muted shadow-none border-transparent"
+            />
           </div>
         </div>
       </div>
@@ -768,7 +780,6 @@ export default function Home() {
           </DropdownMenu>
         </div>
       </div>
-
       <div className="pt-10 text-center">
         <h1 className="text-xl font-bold text-gray-900 dark:text-white pb-4 ">
           Input Component
@@ -934,7 +945,6 @@ export default function Home() {
           <ChartPieSimple />
         </div>
       </div>
-
       <div className="pt-10 text-center">
         <h1 className="text-xl font-bold text-gray-900 dark:text-white pb-4 ">
           Table Component

@@ -1,46 +1,115 @@
-import * as React from "react"
-import { Slot } from "@radix-ui/react-slot"
-import { cva, type VariantProps } from "class-variance-authority"
+import * as React from "react";
+import { Slot } from "@radix-ui/react-slot";
+import { cva, type VariantProps } from "class-variance-authority";
+import { CommandIcon } from "../../../public/images/svg/commandIcon";
+import { cn } from "@/lib/utils";
 
-import { cn } from "@/lib/utils"
-
+// Badge style variants using theme CSS variables
 const badgeVariants = cva(
-  "inline-flex items-center justify-center rounded-md border px-2 py-0.5 text-xs font-medium w-fit whitespace-nowrap shrink-0 [&>svg]:size-3 gap-1 [&>svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden",
+  "inline-flex items-center justify-center rounded-5xl transition-all ease-in-out border text-xs font-medium w-fit whitespace-nowrap shrink-0 [&>svg]:size-3 gap-1 [&>svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden",
   {
     variants: {
       variant: {
         default:
-          "border-transparent bg-primary text-primary-foreground [a&]:hover:bg-primary/90",
+          "bg-[var(--theme-primary)] text-[var(--theme-primary-foreground)] border-transparent",
         secondary:
-          "border-transparent bg-secondary text-secondary-foreground [a&]:hover:bg-secondary/90",
-        destructive:
-          "border-transparent bg-destructive text-white [a&]:hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 dark:bg-destructive/60",
+          "bg-[var(--theme-secondary)] text-[var(--theme-secondary-foreground)] border-transparent",
+        destructive: "bg-destructive text-white border-transparent",
         outline:
-          "text-foreground [a&]:hover:bg-accent [a&]:hover:text-accent-foreground",
+          "text-[var(--theme-secondary-foreground)] border-[var(--theme-border)]",
+        ghost: "text-[var(--theme-secondary-foreground)] border-transparent",
+      },
+      size: {
+        sm: "px-1.5 py-px text-xs font-normal tracking-3 [&>svg]:size-2.5",
+        md: "px-1.5 py-[3px] text-xs font-normal tracking-3 [&>svg]:size-3",
+        lg: "px-2 py-[4.5px] text-sm font-normal tracking-3 [&>svg]:size-3",
       },
     },
     defaultVariants: {
       variant: "default",
+      size: "sm",
     },
   }
-)
+);
+
+// Theme override styles using CSS custom properties
+const themeVars: Record<
+  "default" | "blue" | "green" | "amber" | "red" | "violet",
+  React.CSSProperties
+> = {
+  default: {
+    "--theme-primary": "var(--color-primary)",
+    "--theme-primary-foreground": "var(--color-primary-foreground)",
+    "--theme-secondary": "var(--color-secondary)",
+    "--theme-secondary-foreground": "var(--color-secondary-foreground)",
+    "--theme-border": "var(--color-border)",
+  } as React.CSSProperties,
+  blue: {
+    "--theme-primary": "var(--color-blue-primary)",
+    "--theme-primary-foreground": "var(--color-blue-primary-foreground)",
+    "--theme-secondary": "var(--color-blue-secondary)",
+    "--theme-secondary-foreground": "var(--color-blue-secondary-foreground)",
+    "--theme-border": "var(--color-blue-border)",
+  } as React.CSSProperties,
+  green: {
+    "--theme-primary": "var(--color-green-primary)",
+    "--theme-primary-foreground": "var(--color-green-primary-foreground)",
+    "--theme-secondary": "var(--color-green-secondary)",
+    "--theme-secondary-foreground": "var(--color-green-secondary-foreground)",
+    "--theme-border": "var(--color-green-border)",
+  } as React.CSSProperties,
+  amber: {
+    "--theme-primary": "var(--color-amber-primary)",
+    "--theme-primary-foreground": "var(--color-amber-primary-foreground)",
+    "--theme-secondary": "var(--color-amber-secondary)",
+    "--theme-secondary-foreground": "var(--color-amber-secondary-foreground)",
+    "--theme-border": "var(--color-amber-border)",
+  } as React.CSSProperties,
+  red: {
+    "--theme-primary": "var(--color-red-primary)",
+    "--theme-primary-foreground": "var(--color-red-primary-foreground)",
+    "--theme-secondary": "var(--color-red-secondary)",
+    "--theme-secondary-foreground": "var(--color-red-secondary-foreground)",
+    "--theme-border": "var(--color-red-border)",
+  } as React.CSSProperties,
+  violet: {
+    "--theme-primary": "var(--color-violet-primary)",
+    "--theme-primary-foreground": "var(--color-violet-primary-foreground)",
+    "--theme-secondary": "var(--color-violet-secondary)",
+    "--theme-secondary-foreground": "var(--color-violet-secondary-foreground)",
+    "--theme-border": "var(--color-violet-border)",
+  } as React.CSSProperties,
+};
 
 function Badge({
   className,
   variant,
+  size,
+  theme = "default",
   asChild = false,
+  showIcon = false,
+  children,
   ...props
 }: React.ComponentProps<"span"> &
-  VariantProps<typeof badgeVariants> & { asChild?: boolean }) {
-  const Comp = asChild ? Slot : "span"
+  VariantProps<typeof badgeVariants> & {
+    theme?: keyof typeof themeVars;
+    asChild?: boolean;
+    showIcon?: boolean;
+  }) {
+  const Comp = asChild ? Slot : "span";
 
   return (
     <Comp
       data-slot="badge"
-      className={cn(badgeVariants({ variant }), className)}
+      style={theme ? themeVars[theme] : undefined}
+      className={cn(badgeVariants({ variant, size }), className)}
       {...props}
-    />
-  )
+    >
+      {showIcon && <CommandIcon />}
+      {children}
+      {showIcon && <CommandIcon />}
+    </Comp>
+  );
 }
 
-export { Badge, badgeVariants }
+export { Badge, badgeVariants };
