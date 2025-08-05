@@ -8,7 +8,7 @@ import {
 const AvatarDemo = () => {
   return (
     <>
-      <div className="flex flex-col justify-center items-center py-20 gap-[30px_0]">
+      <div className="flex flex-col justify-center items-center py-10 gap-[30px_0]">
         <h1>Avatar Component</h1>
 
         <div className="flex gap-[0_20px] items-start">
