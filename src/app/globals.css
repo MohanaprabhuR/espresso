@@ -543,8 +543,10 @@
   --color-dark-violet-950: #cdbeff;
 
   /* Box Shadow */
-  --shadow-white: 0px 0px 0px 2px #ffffff;
+  --shadow-xs: 0px 0px 0px 2px #ffffff;
   --shadow-shadow: rgba(201, 201, 201, 0.9);
+  --shadow-sm: 0px 0px 1px rgba(0, 0, 0, 0.2),
+    0px 0px 10px 2px rgba(0, 0, 0, 0.04), 0px 24px 30px -8px rgba(0, 0, 0, 0.1);
 }
 
 :root {
@@ -618,8 +620,6 @@
   --badge-violet-secondary: var(--color-light-violet-100);
   --badge-violet-secondary-foreground: var(--color-light-violet-700);
   --badge-violet-border: var(--color-light-violet-300);
-
-  --shadow-shadow: rgba(201, 201, 201, 0.9);
 }
 
 .dark {
@@ -645,7 +645,7 @@
   --card: var(--color-dark-gray-200);
   --card-foreground: var(--color-dark-gray-700);
   --popover: var(--color-dark-gray-200);
-  --popover-foreground: var(--color-dark-gray-800);
+  --popover-foreground: var(--color-dark-gray-900);
   --sidebar: var(--color-dark-gray-950);
   --sidebar-foreground: var(--color-dark-gray-800);
   --sidebar-primary: var(--color-dark-gray-950);

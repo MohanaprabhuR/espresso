@@ -13,31 +13,31 @@ const AvatarDemo = () => {
 
         <div className="flex gap-[0_20px] items-start">
           <Avatar size="xs">
-            <AvatarImage src="https://mighty.tools/mockmind-api/content/human/80.jpg" />
+            <AvatarImage src="https://mockmind-api.uifaces.co/content/human/80.jpg" />
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>
           <Avatar size="sm">
-            <AvatarImage src="https://mighty.tools/mockmind-api/content/human/80.jpg" />
+            <AvatarImage src="https://mockmind-api.uifaces.co/content/human/104.jpg" />
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>
           <Avatar size="md">
-            <AvatarImage src="https://mighty.tools/mockmind-api/content/human/80.jpg" />
+            <AvatarImage src="https://mockmind-api.uifaces.co/content/human/92.jpg" />
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>
           <Avatar size="lg">
-            <AvatarImage src="https://mighty.tools/mockmind-api/content/human/80.jpg" />
+            <AvatarImage src="https://mockmind-api.uifaces.co/content/human/96.jpg" />
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>
           <Avatar size="xl">
-            <AvatarImage src="https://mighty.tools/mockmind-api/content/human/80.jpg" />
+            <AvatarImage src="https://mockmind-api.uifaces.co/content/human/99.jpg" />
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>
           <Avatar size="2xl">
-            <AvatarImage src="https://mighty.tools/mockmind-api/content/human/80.jpg" />
+            <AvatarImage src="https://mockmind-api.uifaces.co/content/human/116.jpg" />
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>
           <Avatar size="3xl">
-            <AvatarImage src="https://mighty.tools/mockmind-api/content/human/80.jpg" />
+            <AvatarImage src="https://mockmind-api.uifaces.co/content/human/98.jpg" />
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>
         </div>
@@ -104,31 +104,31 @@ const AvatarDemo = () => {
 
         <div className="flex gap-[0_20px] items-start">
           <Avatar shape="square" size="xs">
-            <AvatarImage src="https://mighty.tools/mockmind-api/content/human/80.jpg" />
+            <AvatarImage src="https://mockmind-api.uifaces.co/content/human/80.jpg" />
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>
           <Avatar shape="square" size="sm">
-            <AvatarImage src="https://mighty.tools/mockmind-api/content/human/80.jpg" />
+            <AvatarImage src="https://mockmind-api.uifaces.co/content/human/104.jpg" />
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>
           <Avatar shape="square" size="md">
-            <AvatarImage src="https://mighty.tools/mockmind-api/content/human/80.jpg" />
+            <AvatarImage src="https://mockmind-api.uifaces.co/content/human/92.jpg" />
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>
           <Avatar shape="square" size="lg">
-            <AvatarImage src="https://mighty.tools/mockmind-api/content/human/80.jpg" />
+            <AvatarImage src="https://mockmind-api.uifaces.co/content/human/96.jpg" />
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>
           <Avatar shape="square" size="xl">
-            <AvatarImage src="https://mighty.tools/mockmind-api/content/human/80.jpg" />
+            <AvatarImage src="https://mockmind-api.uifaces.co/content/human/99.jpg" />
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>
           <Avatar shape="square" size="2xl">
-            <AvatarImage src="https://mighty.tools/mockmind-api/content/human/80.jpg" />
+            <AvatarImage src="https://mockmind-api.uifaces.co/content/human/116.jpg" />
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>
           <Avatar shape="square" size="3xl">
-            <AvatarImage src="https://mighty.tools/mockmind-api/content/human/80.jpg" />
+            <AvatarImage src="https://mockmind-api.uifaces.co/content/human/98.jpg" />
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>
         </div>
@@ -196,31 +196,31 @@ const AvatarDemo = () => {
 
         <div className="flex gap-[0_20px] items-start">
           <Avatar size="xs" shape="square" status="active">
-            <AvatarImage src="https://mighty.tools/mockmind-api/content/human/80.jpg" />
+            <AvatarImage src="https://mockmind-api.uifaces.co/content/human/80.jpg" />
             <AvatarFallback></AvatarFallback>
           </Avatar>
           <Avatar size="sm" shape="square" status="away">
-            <AvatarImage src="https://mighty.tools/mockmind-api/content/human/104.jpg" />
+            <AvatarImage src="https://mockmind-api.uifaces.co/content/human/104.jpg" />
             <AvatarFallback></AvatarFallback>
           </Avatar>
           <Avatar size="md" shape="square" status="sleep">
-            <AvatarImage src="https://mighty.tools/mockmind-api/content/human/92.jpg" />
+            <AvatarImage src="https://mockmind-api.uifaces.co/content/human/92.jpg" />
             <AvatarFallback></AvatarFallback>
           </Avatar>
           <Avatar size="lg" shape="square" status="pin">
-            <AvatarImage src="https://mighty.tools/mockmind-api/content/human/96.jpg" />
+            <AvatarImage src="https://mockmind-api.uifaces.co/content/human/96.jpg" />
             <AvatarFallback></AvatarFallback>
           </Avatar>
           <Avatar size="xl" shape="square" status="pinned">
-            <AvatarImage src="https://mighty.tools/mockmind-api/content/human/99.jpg" />
+            <AvatarImage src="https://mockmind-api.uifaces.co/content/human/99.jpg" />
             <AvatarFallback></AvatarFallback>
           </Avatar>
           <Avatar size="2xl" shape="square" status="checked">
-            <AvatarImage src="https://mighty.tools/mockmind-api/content/human/116.jpg" />
+            <AvatarImage src="https://mockmind-api.uifaces.co/content/human/116.jpg" />
             <AvatarFallback></AvatarFallback>
           </Avatar>
           <Avatar size="3xl" shape="square" status="close">
-            <AvatarImage src="https://mighty.tools/mockmind-api/content/human/98.jpg" />
+            <AvatarImage src="https://mockmind-api.uifaces.co/content/human/98.jpg" />
             <AvatarFallback></AvatarFallback>
           </Avatar>
         </div>
@@ -289,211 +289,211 @@ const AvatarDemo = () => {
           <div className=" flex flex-col gap-[20px_0]">
             <AvatarGroup size="xs" max={3}>
               <Avatar size="xs">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/80.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/80.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
               <Avatar size="xs">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/104.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/104.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
               <Avatar size="xs">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/92.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/92.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
               <Avatar size="xs">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/96.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/96.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
               <Avatar size="xs">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/99.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/99.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
               <Avatar size="xs">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/116.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/116.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
               <Avatar size="xs">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/98.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/98.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
             </AvatarGroup>
             <AvatarGroup size="sm" max={3}>
               <Avatar size="sm">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/80.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/80.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
               <Avatar size="sm">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/104.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/104.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
               <Avatar size="sm">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/92.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/92.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
               <Avatar size="sm">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/96.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/96.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
               <Avatar size="sm">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/99.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/99.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
               <Avatar size="sm">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/116.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/116.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
               <Avatar size="sm">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/98.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/98.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
             </AvatarGroup>
             <AvatarGroup size="md" max={3}>
               <Avatar size="md">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/80.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/80.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
               <Avatar size="md">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/104.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/104.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
               <Avatar size="md">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/92.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/92.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
               <Avatar size="md">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/96.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/96.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
               <Avatar size="md">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/99.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/99.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
               <Avatar size="md">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/116.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/116.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
               <Avatar size="md">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/98.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/98.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
             </AvatarGroup>
             <AvatarGroup size="lg" max={3}>
               <Avatar size="lg">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/80.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/80.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
               <Avatar size="lg">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/104.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/104.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
               <Avatar size="lg">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/92.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/92.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
               <Avatar size="lg">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/96.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/96.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
               <Avatar size="lg">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/99.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/99.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
               <Avatar size="lg">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/116.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/116.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
               <Avatar size="lg">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/98.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/98.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
             </AvatarGroup>
             <AvatarGroup size="xl" max={3}>
               <Avatar size="xl">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/80.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/80.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
               <Avatar size="xl">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/104.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/104.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
               <Avatar size="xl">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/92.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/92.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
               <Avatar size="xl">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/96.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/96.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
               <Avatar size="xl">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/99.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/99.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
               <Avatar size="xl">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/116.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/116.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
               <Avatar size="xl">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/98.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/98.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
             </AvatarGroup>
             <AvatarGroup size="2xl" max={3}>
               <Avatar size="2xl">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/80.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/80.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
               <Avatar size="2xl">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/104.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/104.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
               <Avatar size="2xl">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/92.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/92.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
               <Avatar size="2xl">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/96.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/96.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
               <Avatar size="2xl">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/99.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/99.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
               <Avatar size="2xl">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/116.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/116.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
               <Avatar size="2xl">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/98.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/98.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
             </AvatarGroup>
             <AvatarGroup size="3xl" max={3}>
               <Avatar size="3xl">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/80.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/80.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
               <Avatar size="3xl">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/104.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/104.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
               <Avatar size="3xl">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/92.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/92.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
               <Avatar size="3xl">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/96.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/96.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
               <Avatar size="3xl">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/99.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/99.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
               <Avatar size="3xl">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/116.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/116.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
               <Avatar size="3xl">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/98.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/98.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
             </AvatarGroup>
@@ -927,211 +927,211 @@ const AvatarDemo = () => {
           <div className=" flex flex-col gap-[20px_0]">
             <AvatarGroup size="xs" max={3} label={true}>
               <Avatar size="xs">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/80.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/80.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
               <Avatar size="xs">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/104.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/104.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
               <Avatar size="xs">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/92.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/92.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
               <Avatar size="xs">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/96.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/96.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
               <Avatar size="xs">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/99.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/99.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
               <Avatar size="xs">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/116.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/116.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
               <Avatar size="xs">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/98.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/98.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
             </AvatarGroup>
             <AvatarGroup size="sm" max={3} label={true}>
               <Avatar size="sm">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/80.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/80.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
               <Avatar size="sm">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/104.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/104.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
               <Avatar size="sm">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/92.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/92.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
               <Avatar size="sm">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/96.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/96.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
               <Avatar size="sm">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/99.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/99.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
               <Avatar size="sm">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/116.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/116.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
               <Avatar size="sm">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/98.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/98.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
             </AvatarGroup>
             <AvatarGroup size="md" max={3} label={true}>
               <Avatar size="md">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/80.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/80.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
               <Avatar size="md">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/104.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/104.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
               <Avatar size="md">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/92.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/92.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
               <Avatar size="md">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/96.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/96.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
               <Avatar size="md">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/99.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/99.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
               <Avatar size="md">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/116.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/116.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
               <Avatar size="md">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/98.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/98.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
             </AvatarGroup>
             <AvatarGroup size="lg" max={3} label={true}>
               <Avatar size="lg">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/80.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/80.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
               <Avatar size="lg">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/104.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/104.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
               <Avatar size="lg">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/92.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/92.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
               <Avatar size="lg">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/96.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/96.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
               <Avatar size="lg">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/99.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/99.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
               <Avatar size="lg">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/116.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/116.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
               <Avatar size="lg">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/98.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/98.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
             </AvatarGroup>
             <AvatarGroup size="xl" max={3} label={true}>
               <Avatar size="xl">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/80.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/80.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
               <Avatar size="xl">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/104.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/104.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
               <Avatar size="xl">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/92.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/92.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
               <Avatar size="xl">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/96.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/96.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
               <Avatar size="xl">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/99.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/99.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
               <Avatar size="xl">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/116.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/116.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
               <Avatar size="xl">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/98.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/98.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
             </AvatarGroup>
             <AvatarGroup size="2xl" max={3} label={true}>
               <Avatar size="2xl">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/80.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/80.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
               <Avatar size="2xl">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/104.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/104.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
               <Avatar size="2xl">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/92.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/92.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
               <Avatar size="2xl">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/96.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/96.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
               <Avatar size="2xl">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/99.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/99.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
               <Avatar size="2xl">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/116.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/116.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
               <Avatar size="2xl">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/98.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/98.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
             </AvatarGroup>
             <AvatarGroup size="3xl" max={3} label={true}>
               <Avatar size="3xl">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/80.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/80.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
               <Avatar size="3xl">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/104.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/104.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
               <Avatar size="3xl">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/92.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/92.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
               <Avatar size="3xl">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/96.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/96.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
               <Avatar size="3xl">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/99.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/99.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
               <Avatar size="3xl">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/116.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/116.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
               <Avatar size="3xl">
-                <AvatarImage src="https://mighty.tools/mockmind-api/content/human/98.jpg" />
+                <AvatarImage src="https://mockmind-api.uifaces.co/content/human/98.jpg" />
                 <AvatarFallback></AvatarFallback>
               </Avatar>
             </AvatarGroup>
