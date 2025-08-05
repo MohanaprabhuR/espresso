@@ -3,7 +3,7 @@ import * as React from "react";
 import { Slot } from "@radix-ui/react-slot";
 import { ChevronIcon } from "../../../public/images/svg/chevronIcon";
 import { SlashIcon } from "../../../public/images/svg/slashIcon";
-import { BreadcrumbEllipsisIcon } from "../../../public/images/svg/BreadcrumbEllipsisIcon";
+import { BreadcrumbEllipsisIcon } from "../../../public/images/svg/breadcrumbEllipsisIcon";
 import { CommandIcon } from "../../../public/images/svg/commandIcon";
 import { cn } from "@/lib/utils";
 
