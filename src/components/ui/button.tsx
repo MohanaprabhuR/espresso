@@ -13,15 +13,15 @@ const buttonVariants = cva(
     variants: {
       variant: {
         primary:
-          "bg-primary text-primary-foreground hover:bg-accent-foreground active:bg-secondary-foreground disabled:bg-secondary disabled:text-ring",
+          "bg-primary text-primary-foreground hover:bg-primary/86 active:bg-primary/75 disabled:bg-secondary disabled:text-ring",
         secondary:
-          "bg-secondary text-accent-foreground outline-none hover:bg-accent active:bg-accent/80 disabled:bg-secondary disabled:text-ring",
+          "bg-secondary text-accent-foreground outline-none hover:bg-primary/8 active:bg-primary/12 disabled:bg-secondary disabled:text-ring",
         outline:
-          "border bg-background text-accent-foreground hover:border-primary/25 active:bg-accent/80 focus:bg-accent/90 focus:border-none disabled:bg-secondary disabled:text-ring",
+          "border bg-background text-accent-foreground hover:border-primary/25 active:bg-primary/12 focus:bg-primary/5 focus:border-none disabled:bg-secondary disabled:text-ring",
         destructive:
           "bg-destructive text-destructive-foreground focus:ring-destructive/20 hover:bg-destructive/85 active:bg-destructive/90 disabled:bg-destructive/25 disabled:text-destructive/50",
         ghost:
-          "bg-transparent hover:bg-accent text-accent-foreground active:bg-accent active:bg-accent/80 focus:bg-accent/90 disabled:bg-transparent disabled:text-ring",
+          "bg-transparent hover:bg-accent text-accent-foreground hover:bg-primary/8 active:bg-primary/12 focus:bg-primary/5  disabled:bg-transparent disabled:text-ring",
       },
       size: {
         sm: "h-7 rounded-lg text-base font-normal tracking-[0.28px]",
