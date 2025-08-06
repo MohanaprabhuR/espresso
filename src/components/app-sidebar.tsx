@@ -18,11 +18,11 @@ const items = [
     url: "/avatar",
     icon: Home,
   },
-  // {
-  //   title: "Badge",
-  //   url: "/badges",
-  //   icon: Inbox,
-  // },
+  {
+    title: "Badge",
+    url: "/badges",
+    icon: Inbox,
+  },
   {
     title: "Breadcrumb",
     url: "/breadcrumb",
@@ -31,6 +31,16 @@ const items = [
   {
     title: "Button",
     url: "/button",
+    icon: Calendar,
+  },
+  {
+    title: "Button Group",
+    url: "/buttongroup",
+    icon: Calendar,
+  },
+  {
+    title: "Checkbox",
+    url: "/checkbox",
     icon: Calendar,
   },
   {

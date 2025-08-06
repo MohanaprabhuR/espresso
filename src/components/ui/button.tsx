@@ -8,20 +8,20 @@ import { CommandIcon } from "../../../public/images/svg/commandIcon";
 import Image from "next/image";
 
 const buttonVariants = cva(
-  "inline-flex items-center rounded-lg gap-[0_8px] justify-center whitespace-nowrap transition-all ease-in-out disabled:pointer-events-none pointer-events-auto focus:outline-none focus:ring-2 focus:ring-[var(--shadow-shadow)]",
+  "inline-flex items-center rounded-lg gap-[0_8px] justify-center whitespace-nowrap transition-all ease-in-out disabled:pointer-events-none pointer-events-auto focus:outline-none focus:ring-1 focus:ring-ring focus:ring-offset-0",
   {
     variants: {
       variant: {
         primary:
-          "bg-primary text-primary-foreground hover:bg-primary/86 active:bg-primary/75 disabled:bg-secondary disabled:text-ring",
+          "bg-primary text-primary-foreground  hover:bg-primary/86 active:bg-primary/75 disabled:bg-secondary disabled:text-primary/42",
         secondary:
-          "bg-secondary text-accent-foreground outline-none hover:bg-primary/8 active:bg-primary/12 disabled:bg-secondary disabled:text-ring",
+          "bg-secondary text-accent-foreground  hover:bg-primary/8 active:bg-primary/12 disabled:bg-secondary disabled:text-primary/42",
         outline:
-          "border bg-background text-accent-foreground hover:border-primary/25 active:bg-primary/12 focus:bg-primary/5 focus:border-none disabled:bg-secondary disabled:text-ring",
+          "border bg-background text-accent-foreground hover:border-primary/25 active:bg-primary/12 focus:bg-primary/5 focus:border-transparent disabled:bg-secondary disabled:text-primary/42",
         destructive:
-          "bg-destructive text-destructive-foreground focus:ring-destructive/20 hover:bg-destructive/85 active:bg-destructive/90 disabled:bg-destructive/25 disabled:text-destructive/50",
+          "bg-destructive text-destructive-foreground  focus:ring-destructive/20 hover:bg-destructive/85 active:bg-destructive/90 disabled:bg-destructive/25 disabled:text-destructive/50",
         ghost:
-          "bg-transparent hover:bg-accent text-accent-foreground hover:bg-primary/8 active:bg-primary/12 focus:bg-primary/5  disabled:bg-transparent disabled:text-ring",
+          "bg-transparent hover:bg-accent  text-accent-foreground hover:bg-primary/8 active:bg-primary/12 focus:bg-primary/5  disabled:bg-transparent disabled:text-primary/42",
       },
       size: {
         sm: "h-7 rounded-lg text-base font-normal tracking-[0.28px]",
@@ -40,16 +40,16 @@ const buttonVariants = cva(
       { size: "sm", iconOnly: false, className: "px-2 py-1.5" },
       { size: "sm", iconOnly: true, className: "p-1.5" },
 
-      { size: "md", iconOnly: false, className: "py-[7px] px-2.5" },
+      { size: "md", iconOnly: false, className: "py-2 px-2.5" },
       { size: "md", iconOnly: true, className: "p-[7px]" },
 
-      { size: "lg", iconOnly: false, className: "py-2.5 px-3" },
+      { size: "lg", iconOnly: false, className: "py-[11px] px-3" },
       { size: "lg", iconOnly: true, className: "p-2.5" },
 
       { size: "xl", iconOnly: false, className: "py-[11px] px-[14px]" },
       { size: "xl", iconOnly: true, className: "p-[11px]" },
 
-      { size: "2xl", iconOnly: false, className: "py-[14px] px-[16px]" },
+      { size: "2xl", iconOnly: false, className: "py-[14px] px-4" },
       { size: "2xl", iconOnly: true, className: "p-[14px]" },
     ],
     defaultVariants: {
