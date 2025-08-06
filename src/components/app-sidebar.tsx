@@ -43,11 +43,11 @@ const items = [
     url: "/checkbox",
     icon: Calendar,
   },
-  {
-    title: "Search",
-    url: "#",
-    icon: Search,
-  },
+  // {
+  //   title: "Divider",
+  //   url: "/divider",
+  //   icon: Search,
+  // },
   {
     title: "Settings",
     url: "#",
