@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
-import { ButtonGroup } from "@/components/ui/buttongroup";
+import { ButtonGroup } from "@/components/ui/button-group";
 
 const ButtonGroupDemo = () => {
   return (
