@@ -99,6 +99,15 @@
   --color-violet-secondary-foreground: var(--badge-violet-secondary-foreground);
   --color-violet-border: var(--badge-violet-border);
 
+  /* State Color */
+
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-error: var(--error);
+  --color-success-border: var(--success-border);
+  --color-warning-border: var(--warning-border);
+  --color-error-border: var(--error-border);
+
   /* Font Weights */
 
   --font-weight-thin: 100;
@@ -619,6 +628,14 @@
   --badge-violet-secondary: var(--color-light-violet-100);
   --badge-violet-secondary-foreground: var(--color-light-violet-700);
   --badge-violet-border: var(--color-light-violet-300);
+
+  /* State */
+  --success: var(--color-light-green-100);
+  --success-border: var(--color-light-green-400);
+  --warning: var(--color-light-amber-100);
+  --warning-border: var(--color-light-amber-400);
+  --error: var(--color-light-red-100);
+  --error-border: var(--color-light-red-400);
 }
 
 .dark {
@@ -694,7 +711,13 @@
   --badge-violet-secondary-foreground: var(--color-dark-violet-700);
   --badge-violet-border: var(--color-dark-violet-200);
 
-  --shadow-shadow: rgba(201, 201, 201, 1);
+  /* State */
+  --success: var(--color-dark-green-100);
+  --warning: var(--color-dark-amber-100);
+  --error: var(--color-dark-red-100);
+  --success-border: var(--color-light-green-300);
+  --warning-border: var(--color-light-amber-300);
+  --error-border: var(--color-light-red-300);
 }
 
 @utility shadow-focus-light {

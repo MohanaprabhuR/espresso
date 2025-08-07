@@ -6,7 +6,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const avatarVariants = cva(
-  "relative flex shrink-0 overflow-hidden ring-2 ring-[var(--background)]",
+  "relative flex shrink-0 overflow-hidden ring-1 ring-[var(--background)]",
   {
     variants: {
       size: {
@@ -337,7 +337,11 @@ export function AvatarGroup({
         <div
           key={index}
           style={{ zIndex: displayedAvatars.length - index }}
-          className={cn("relative", radiusClass)}
+          className={cn(
+            "relative",
+            radiusClass,
+            label && max === 3 && "ring-1 ring-[var(--background)]"
+          )}
         >
           {child}
         </div>
@@ -348,7 +352,7 @@ export function AvatarGroup({
   const RemainingCircle = (
     <div
       className={cn(
-        "flex items-center justify-center bg-muted text-muted-foreground font-medium border-background ring-2 ring-[var(--background)] relative",
+        "flex items-center justify-center bg-muted text-muted-foreground font-medium border-background ring-1 ring-[var(--background)] relative",
         radiusClass,
         avatarVariants({ size }),
         textSizeMap[size ?? "sm"]

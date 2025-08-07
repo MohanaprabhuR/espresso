@@ -8,6 +8,9 @@ type DividerProps = {
   align?: "start" | "center" | "end";
   children?: React.ReactNode;
   className?: string;
+  slot?: boolean;
+  padded?: boolean;
+  paddingSize?: "sm" | "md" | "lg";
 };
 
 export const Divider: React.FC<DividerProps> = ({
@@ -15,46 +18,63 @@ export const Divider: React.FC<DividerProps> = ({
   align = "center",
   children,
   className,
+  slot = true,
+  padded = false,
+  paddingSize = "md",
 }) => {
   const isHorizontal = orientation === "horizontal";
 
+  const paddingMap = {
+    sm: "p-1",
+    md: "p-1.5",
+    lg: "p-2.5",
+  };
+
   const wrapperClasses = cn(
-    "flex items-center",
-    isHorizontal ? "flex-row  w-full" : "flex-col  h-full",
+    "relative",
+    isHorizontal ? "w-full h-fit" : "h-full w-fit",
+    padded && paddingMap[paddingSize],
     className
   );
 
   const lineClasses = cn(
-    "bg-border",
-    isHorizontal ? "h-px flex-1" : "w-px flex-1"
+    "absolute bg-accent",
+    isHorizontal ? "h-px w-full top-1/2" : "w-px h-full left-1/2"
   );
-  const contentPositionClasses = isHorizontal
-    ? align === "start"
-      ? "left-4"
+
+  const contentWrapperClasses = cn(
+    "absolute bg-background",
+    isHorizontal
+      ? align === "start"
+        ? "left-4 -translate-y-1/2 top-1/2"
+        : align === "end"
+        ? "right-4 -translate-y-1/2 top-1/2"
+        : "left-1/2 -translate-x-1/2 -translate-y-1/2 top-1/2"
+      : align === "start"
+      ? "top-4 -translate-x-1/2 left-1/2"
       : align === "end"
-      ? "right-4"
-      : "px-0"
-    : align === "start"
-    ? "top-4"
-    : align === "end"
-    ? "bottom-4"
-    : "py-0";
+      ? "bottom-4 -translate-x-1/2 left-1/2"
+      : "top-1/2 -translate-x-1/2 -translate-y-1/2 left-1/2"
+  );
 
-  const contentWrapperClasses = cn(contentPositionClasses, "shrink-0 relative");
+  // If no children, just render the line
+  if (!children) {
+    return (
+      <div className={wrapperClasses}>
+        <div className={lineClasses} />
+      </div>
+    );
+  }
 
-  const content = children ? (
-    <div className={contentWrapperClasses}>{children}</div>
-  ) : null;
-
-  const elements = {
-    start: [content, <div key="line-end" className={lineClasses} />],
-    center: [
-      <div key="line-start" className={lineClasses} />,
-      content,
-      <div key="line-end" className={lineClasses} />,
-    ],
-    end: [<div key="line-start" className={lineClasses} />, content],
-  };
-
-  return <div className={wrapperClasses}>{elements[align]}</div>;
+  // With children
+  return (
+    <div className={cn(wrapperClasses, "flex items-center justify-center")}>
+      <div className={lineClasses} />
+      {slot && (
+        <div className={cn(contentWrapperClasses, "flex-shrink-0")}>
+          <div className="relative">{children}</div>
+        </div>
+      )}
+    </div>
+  );
 };

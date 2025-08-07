@@ -10,11 +10,14 @@ const badgeVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground border-transparent",
-        secondary: "bg-secondary text-secondary-foreground border-transparent",
+        default:
+          "bg-[var(--theme-primary)] text-[var(--theme-primary-foreground)] border-transparent",
+        secondary:
+          "bg-[var(--theme-secondary)] text-[var(--theme-secondary-foreground)] border-transparent",
         destructive: "bg-destructive text-white border-transparent",
-        outline: "text-secondary-foreground border-border",
-        ghost: "text-secondary-foreground border-transparent",
+        outline:
+          "text-[var(--theme-secondary-foreground)] border-[var(--theme-border)]",
+        ghost: "text-[var(--theme-secondary-foreground)] border-transparent",
       },
       size: {
         sm: "px-1.5 py-px text-xs font-normal tracking-3 [&>svg]:size-2.5",
@@ -29,16 +32,67 @@ const badgeVariants = cva(
   }
 );
 
+// Theme override styles using CSS custom properties
+const themeVars: Record<
+  "default" | "blue" | "green" | "amber" | "red" | "violet",
+  React.CSSProperties
+> = {
+  default: {
+    "--theme-primary": "var(--color-primary)",
+    "--theme-primary-foreground": "var(--color-primary-foreground)",
+    "--theme-secondary": "var(--color-secondary)",
+    "--theme-secondary-foreground": "var(--color-secondary-foreground)",
+    "--theme-border": "var(--color-border)",
+  } as React.CSSProperties,
+  blue: {
+    "--theme-primary": "var(--color-blue-primary)",
+    "--theme-primary-foreground": "var(--color-blue-primary-foreground)",
+    "--theme-secondary": "var(--color-blue-secondary)",
+    "--theme-secondary-foreground": "var(--color-blue-secondary-foreground)",
+    "--theme-border": "var(--color-blue-border)",
+  } as React.CSSProperties,
+  green: {
+    "--theme-primary": "var(--color-green-primary)",
+    "--theme-primary-foreground": "var(--color-green-primary-foreground)",
+    "--theme-secondary": "var(--color-green-secondary)",
+    "--theme-secondary-foreground": "var(--color-green-secondary-foreground)",
+    "--theme-border": "var(--color-green-border)",
+  } as React.CSSProperties,
+  amber: {
+    "--theme-primary": "var(--color-amber-primary)",
+    "--theme-primary-foreground": "var(--color-amber-primary-foreground)",
+    "--theme-secondary": "var(--color-amber-secondary)",
+    "--theme-secondary-foreground": "var(--color-amber-secondary-foreground)",
+    "--theme-border": "var(--color-amber-border)",
+  } as React.CSSProperties,
+  red: {
+    "--theme-primary": "var(--color-red-primary)",
+    "--theme-primary-foreground": "var(--color-red-primary-foreground)",
+    "--theme-secondary": "var(--color-red-secondary)",
+    "--theme-secondary-foreground": "var(--color-red-secondary-foreground)",
+    "--theme-border": "var(--color-red-border)",
+  } as React.CSSProperties,
+  violet: {
+    "--theme-primary": "var(--color-violet-primary)",
+    "--theme-primary-foreground": "var(--color-violet-primary-foreground)",
+    "--theme-secondary": "var(--color-violet-secondary)",
+    "--theme-secondary-foreground": "var(--color-violet-secondary-foreground)",
+    "--theme-border": "var(--color-violet-border)",
+  } as React.CSSProperties,
+};
+
 function Badge({
   className,
   variant,
   size,
+  theme = "default",
   asChild = false,
   showIcon = false,
   children,
   ...props
 }: React.ComponentProps<"span"> &
   VariantProps<typeof badgeVariants> & {
+    theme?: keyof typeof themeVars;
     asChild?: boolean;
     showIcon?: boolean;
   }) {
@@ -47,6 +101,7 @@ function Badge({
   return (
     <Comp
       data-slot="badge"
+      style={theme ? themeVars[theme] : undefined}
       className={cn(badgeVariants({ variant, size }), className)}
       {...props}
     >

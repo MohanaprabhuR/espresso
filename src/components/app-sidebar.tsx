@@ -48,6 +48,11 @@ const items = [
   //   url: "/divider",
   //   icon: Search,
   // },
+  // {
+  //   title: "Select",
+  //   url: "/select",
+  //   icon: Search,
+  // },
   {
     title: "Settings",
     url: "#",
