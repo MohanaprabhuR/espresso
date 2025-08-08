@@ -15,13 +15,13 @@ const buttonVariants = cva(
         primary:
           "bg-primary text-primary-foreground  hover:bg-primary/86 active:bg-primary/75 disabled:bg-secondary disabled:text-primary/42",
         secondary:
-          "bg-secondary text-accent-foreground  hover:bg-accent active:bg-primary/12 disabled:bg-secondary disabled:text-primary/42",
+          "bg-secondary text-accent-foreground  hover:bg-accent active:bg-primary/12 focus:bg-secondary focus-visible:bg-secondary disabled:bg-secondary disabled:text-primary/42",
         outline:
-          "border bg-background text-accent-foreground hover:border-primary/25 active:bg-primary/12 focus:bg-primary/5 focus:border-transparent disabled:bg-secondary disabled:text-primary/42",
+          "border bg-background text-accent-foreground hover:border-primary/25 active:bg-primary/12 active:border-primary/15 focus:bg-secondary focus:border-none focus-visible:border-none focus-visible:bg-secondary disabled:bg-secondary disabled:text-primary/42",
         destructive:
           "bg-destructive text-destructive-foreground  focus:ring-destructive/20 hover:bg-destructive/85 active:bg-destructive/90 disabled:bg-destructive/25 disabled:text-destructive/50",
         ghost:
-          "bg-transparent hover:bg-accent  text-accent-foreground hover:bg-primary/8 active:bg-primary/12 focus:bg-primary/5 focus-visible:bg-primary/5  disabled:bg-transparent disabled:text-primary/42",
+          "bg-transparent hover:bg-accent  text-accent-foreground  active:bg-primary/12 focus:bg-secondary focus-visible:bg-secondary  disabled:bg-transparent disabled:text-primary/42",
       },
       size: {
         sm: "h-7 rounded-lg text-base font-normal tracking-[0.28px]",
