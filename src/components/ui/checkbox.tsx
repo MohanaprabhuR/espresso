@@ -44,8 +44,8 @@ function Checkbox({
         "border peer border-input hover:border-primary/60 hover:shadow-md focus:shadow-md active:border-primary/75 disabled:border-primary/0 disabled:bg-primary/5 dark:disabled:bg-primary/28 focus:border-primary/98 data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground data-[state=checked]:border-transparent hover:data-[state=checked]:bg-primary/86 active:data-[state=checked]:bg-primary/74 focus:data-[state=checked]:shadow-none focus-visible:data-[state=checked]:ring-ring focus-visible:data-[state=checked]:ring-offset-0 data-[state=indeterminate]:bg-primary data-[state=indeterminate]:border-none data-[state=indeterminate]:text-primary-foreground hover:data-[state=indeterminate]:bg-primary/86 active:data-[state=indeterminate]:bg-primary/74 focus-visible:data-[state=indeterminate]:shadow-none  focus-visible:data-[state=indeterminate]:ring-ring focus-visible:data-[state=indeterminate]:ring-offset-0 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive flex shrink-0 items-center justify-center rounded-xs transition-shadow outline-none disabled:cursor-not-allowed disabled:data-[state=checked]:bg-accent disabled:data-[state=indeterminate]:bg-accent disabled:pointer-events-none",
         checkboxSize,
         withLabel
-          ? "focus-visible:data-[state=checked]:ring-0 focus-visible:data-[state=indeterminate]:ring-0"
-          : "focus-visible:data-[state=checked]:ring-2 focus-visible:data-[state=indeterminate]:ring-2",
+          ? "focus-visible:data-[state=checked]:ring-0  focus-visible:data-[state=indeterminate]:ring-0 "
+          : "focus-visible:data-[state=checked]:ring-2  focus-visible:data-[state=indeterminate]:ring-2",
         className
       )}
       {...props}
@@ -90,7 +90,7 @@ function Checkbox({
       <label
         htmlFor={checkboxId}
         className={cn(
-          "inline-flex items-center text-secondary-foreground font-medium leading-none rounded-lg bg-transparent gap-x-2 hover:bg-accent active:bg-primary/12 focus:bg-primary/5 focus-visible::ring-2 focus-visible::ring-ring focus-visible::ring-offset-0 active:text-accent-foreground focus:text-accent-foreground ",
+          "inline-flex items-center text-secondary-foreground font-medium leading-none rounded-lg bg-transparent gap-x-2 hover:bg-accent active:bg-primary/12 focus:bg-primary/5 focus-visible:bg-primary/5 focus-visible::ring-2 focus-visible::ring-ring focus-visible::ring-offset-0 active:text-accent-foreground focus:text-accent-foreground ",
           labelStyle,
           isDisabled &&
             "pointer-events-none cursor-not-allowed gap-x-2 text-primary/42"
