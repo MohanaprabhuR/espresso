@@ -48,21 +48,16 @@ const items = [
     url: "/divider",
     icon: Search,
   },
-  {
-    title: "Select",
-    url: "/select",
-    icon: Search,
-  },
-  {
-    title: "Input",
-    url: "/input",
-    icon: Search,
-  },
-  {
-    title: "Settings",
-    url: "#",
-    icon: Settings,
-  },
+  // {
+  //   title: "Select",
+  //   url: "/select",
+  //   icon: Search,
+  // },
+  // {
+  //   title: "Input",
+  //   url: "/input",
+  //   icon: Search,
+  // },
 ];
 
 export function AppSidebar() {
