@@ -45,7 +45,7 @@ function Checkbox({
         checkboxSize,
         withLabel
           ? "focus-visible:data-[state=checked]:ring-0 focus-visible:data-[state=indeterminate]:ring-0"
-          : "focus-visible:data-[state=checked]:ring-2 focus-visible:data-[state=indeterminate]:ring-0",
+          : "focus-visible:data-[state=checked]:ring-2 focus-visible:data-[state=indeterminate]:ring-2",
         className
       )}
       {...props}
