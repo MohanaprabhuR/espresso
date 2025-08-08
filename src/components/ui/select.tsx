@@ -26,35 +26,37 @@ function SelectValue({
 
 const statusRingMap = {
   success:
-    "bg-success text-accent-foreground hover:bg-success active:bg-success focus:bg-success focus-visible:ring-0",
+    "data-[status=success]:bg-success data-[status=success]:text-accent-foreground hover:data-[status=success]:bg-success active:data-[status=success]:bg-success focus:data-[status=success]:bg-success focus-visible:data-[status=success]:ring-0",
   warning:
-    "bg-warning text-accent-foreground hover:bg-warning active:bg-warning focus:bg-warning focus-visible:ring-0",
+    "data-[status=warning]:bg-warning data-[status=warning]:text-accent-foreground hover:data-[status=warning]:bg-warning active:data-[status=warning]:bg-warning focus:data-[status=warning]:bg-warning focus-visible:data-[status=warning]:ring-0",
   error:
-    "bg-error text-accent-foreground hover:bg-error active:bg-error focus:bg-error focus-visible:ring-0",
+    "data-[status=error]:bg-error data-[status=error]:text-accent-foreground hover:data-[status=error]:bg-error active:data-[status=error]:bg-error focus:data-[status=error]:bg-error focus-visible:data-[status=error]:ring-0",
 };
 
 const variantClassMap = {
   default:
-    "bg-secondary text-secondary-foreground hover:bg-accent hover:text-secondary-foreground active:bg-primry/12 active:text-accent-foreground focus:text-accent-foreground",
+    "bg-secondary text-secondary-foreground hover:bg-accent hover:text-secondary-foreground active:bg-primary/12 active:text-accent-foreground focus:text-accent-foreground",
   outline:
     "border bg-background text-secondary-foreground hover:border-primary/25 active:border-primary/50 active:bg-background active:text-accent-foreground focus:border-background focus:text-accent-foreground",
   ghost:
-    "bg-transparent text-secondary-foreground hover:bg-accent active:bg-primary/12 active:text-accent-foreground focus:bg-primaey/15 focus:text-accent-foreground focus-visible:bg-primary/5",
+    "bg-transparent text-secondary-foreground hover:bg-accent active:bg-primary/12 active:text-accent-foreground focus:bg-primary/15 focus:text-accent-foreground focus-visible:bg-primary/5",
 };
+
 const statusOutlineMap = {
   success:
-    "border-success-border hover:border-success-border active:border-success-border",
+    "data-[status=success]:border-success-border hover:data-[status=success]:border-success-border active:data-[status=success]:border-success-border focus:data-[status=success]:border-success-border focus-visible:data-[status=success]:ring-0",
   warning:
-    "border-warning-border hover:border-warning-border active:border-warning-border",
+    "data-[status=warning]:border-warning-border hover:data-[status=warning]:border-warning-border active:data-[status=warning]:border-warning-border focus:data-[status=warning]:border-warning-border focus-visible:data-[status=warning]:ring-0",
   error:
-    "border-error-border hover:border-error-border active:border-error-border",
+    "data-[status=error]:border-error-border hover:data-[status=error]:border-error-border active:data-[status=error]:border-error-border focus:data-[status=error]:border-error-border focus-visible:data-[status=error]:ring-0",
 };
 
 const sizeClassMap = {
-  sm: "h-8 text-sm",
-  md: "h-9 text-base",
-  lg: "h-10 text-lg",
+  sm: "h-7 px-2 py-1.5 text-base tracking-3 font-normal rounded-lg",
+  md: "h-8 px-2.5 py-2 text-base tracking-3 font-normal rounded-lg",
+  lg: "h-10 px-3 py-[11px] text-lg tracking-3 font-normal rounded-xl",
 };
+
 function SelectTrigger({
   className,
   size = "sm",
@@ -70,9 +72,11 @@ function SelectTrigger({
   return (
     <SelectPrimitive.Trigger
       data-slot="select-trigger"
+      data-variant={variant}
       data-size={size}
+      data-status={status}
       className={cn(
-        "flex w-fit items-center justify-between gap-2 rounded-lg px-3 py-2 text-base whitespace-nowrap transition-[color,box-shadow] outline-none disabled:cursor-not-allowed disabled:opacity-50 focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-0 aria-invalid:ring-destructive/20 aria-invalid:border-destructive data-[size=default]:h-9 data-[size=sm]:h-8 *:data-[slot=select-value]:line-clamp-1 *:data-[slot=select-value]:flex *:data-[slot=select-value]:items-center *:data-[slot=select-value]:gap-2 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
+        "flex w-fit items-center justify-between gap-2 px-3 py-2 text-base whitespace-nowrap transition-[color,box-shadow] outline-none disabled:cursor-not-allowed disabled:opacity-50 focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-0 aria-invalid:ring-destructive/20 aria-invalid:border-destructive data-[size=default]:h-9 *:data-[slot=select-value]:line-clamp-1 *:data-[slot=select-value]:flex *:data-[slot=select-value]:items-center *:data-[slot=select-value]:gap-2 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4 data-[placeholder]:text-primary/50",
         variantClassMap[variant],
         sizeClassMap[size],
         variant === "outline" && status ? statusOutlineMap[status] : null,
@@ -113,7 +117,7 @@ function SelectContent({
       <SelectPrimitive.Content
         data-slot="select-content"
         className={cn(
-          "rounded-2xl bg-popover   p-1 shadow-sm  text-secondary-foreground data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 relative z-50 max-h-(--radix-select-content-available-height) min-w-[8rem] origin-(--radix-select-content-transform-origin) overflow-x-hidden overflow-y-auto  ",
+          "rounded-2xl bg-popover p-1 shadow-sm text-secondary-foreground data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 relative z-50 max-h-(--radix-select-content-available-height) min-w-[8rem] origin-(--radix-select-content-transform-origin) overflow-x-hidden overflow-y-auto",
           position === "popper" &&
             "data-[side=bottom]:translate-y-1 data-[side=left]:-translate-x-1 data-[side=right]:translate-x-1 data-[side=top]:-translate-y-1",
           className
@@ -160,8 +164,9 @@ function SelectItem({
   return (
     <SelectPrimitive.Item
       data-slot="select-item"
+      data-size={size}
       className={cn(
-        "text-secondary-foreground font-normal leadin-none  relative flex w-full cursor-default items-center gap-2  py-1.5 px-2 text-base leading-none outline-hidden select-none data-[disabled]:pointer-events-none data-[disabled]:bg-primary/5 data-[disabled]:text-primary/20  [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4 *:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-2",
+        "text-secondary-foreground font-normal relative flex w-full cursor-default items-center gap-2 py-1.5 px-2 text-base leading-none outline-hidden select-none data-[disabled]:pointer-events-none data-[disabled]:bg-primary/5 data-[disabled]:text-primary/20 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4 *:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-2",
         sizeClassMap[size],
         className
       )}
