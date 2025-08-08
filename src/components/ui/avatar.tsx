@@ -212,7 +212,7 @@ export function Avatar({
         {status && (
           <span
             className={cn(
-              "absolute bottom-0 right-0 flex items-center justify-center rounded-full bg-background ring-1 ring-[var(--background)] shadow-[var(--shadow-xs)]",
+              "absolute bottom-0 right-0 flex items-center justify-center rounded-full bg-background ring-1 ring-[var(--background)] shadow-xs",
               {
                 "bg-[var(--color-light-green-600)] p-[2px]":
                   status === "checked",

@@ -26,11 +26,11 @@ function SelectValue({
 
 const statusRingMap = {
   success:
-    "data-[status=success]:bg-success data-[status=success]:text-accent-foreground hover:data-[status=success]:bg-success active:data-[status=success]:bg-success focus:data-[status=success]:bg-success focus-visible:data-[status=success]:ring-0",
+    "data-[status=success]:bg-success data-[status=success]:text-accent-foreground hover:data-[status=success]:bg-success active:data-[status=success]:bg-success focus:data-[status=success]:bg-success ",
   warning:
-    "data-[status=warning]:bg-warning data-[status=warning]:text-accent-foreground hover:data-[status=warning]:bg-warning active:data-[status=warning]:bg-warning focus:data-[status=warning]:bg-warning focus-visible:data-[status=warning]:ring-0",
+    "data-[status=warning]:bg-warning data-[status=warning]:text-accent-foreground hover:data-[status=warning]:bg-warning active:data-[status=warning]:bg-warning focus:data-[status=warning]:bg-warning ",
   error:
-    "data-[status=error]:bg-error data-[status=error]:text-accent-foreground hover:data-[status=error]:bg-error active:data-[status=error]:bg-error focus:data-[status=error]:bg-error focus-visible:data-[status=error]:ring-0",
+    "data-[status=error]:bg-error data-[status=error]:text-accent-foreground hover:data-[status=error]:bg-error active:data-[status=error]:bg-error focus:data-[status=error]:bg-error ",
 };
 
 const variantClassMap = {
@@ -44,11 +44,11 @@ const variantClassMap = {
 
 const statusOutlineMap = {
   success:
-    "data-[status=success]:border-success-border hover:data-[status=success]:border-success-border active:data-[status=success]:border-success-border focus:data-[status=success]:border-success-border focus-visible:data-[status=success]:ring-0",
+    "data-[status=success]:border-success-border hover:data-[status=success]:border-success-border active:data-[status=success]:border-success-border focus:data-[status=success]:border-none ",
   warning:
-    "data-[status=warning]:border-warning-border hover:data-[status=warning]:border-warning-border active:data-[status=warning]:border-warning-border focus:data-[status=warning]:border-warning-border focus-visible:data-[status=warning]:ring-0",
+    "data-[status=warning]:border-warning-border hover:data-[status=warning]:border-warning-border active:data-[status=warning]:border-warning-border focus:data-[status=warning]:border-none ",
   error:
-    "data-[status=error]:border-error-border hover:data-[status=error]:border-error-border active:data-[status=error]:border-error-border focus:data-[status=error]:border-error-border focus-visible:data-[status=error]:ring-0",
+    "data-[status=error]:border-error-border hover:data-[status=error]:border-error-border active:data-[status=error]:border-error-border focus:data-[status=error]:border-none ",
 };
 
 const sizeClassMap = {

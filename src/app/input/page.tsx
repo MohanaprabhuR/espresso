@@ -10,6 +10,15 @@ const InputDemo = () => {
         </h1>
         <div className="flex  flex-col justify-center gap-[50px] max-w-[400px] mx-auto">
           <Input type="email" placeholder="Email" />
+          <Input type="email" placeholder="Email" disabled />
+          <Input type="email" placeholder="Email" status="success" />
+          <Input type="email" placeholder="Email" status="error" />
+          <Input type="email" placeholder="Email" status="warning" />
+
+          <Input type="email" placeholder="Small" size="sm" status="success" />
+          <Input type="email" placeholder="Medium" size="md" status="default" />
+          <Input type="email" placeholder="Large" size="lg" status="error" />
+          <Input type="email" placeholder="Small" size="xl" status="success" />
         </div>
       </div>
     </div>
