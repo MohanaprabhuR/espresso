@@ -53,9 +53,14 @@ const items = [
     url: "/select",
     icon: Search,
   },
+  {
+    title: "Input",
+    url: "/input",
+    icon: Search,
+  },
   // {
-  //   title: "Input",
-  //   url: "/input",
+  //   title: "Text Area",
+  //   url: "/textarea",
   //   icon: Search,
   // },
 ];

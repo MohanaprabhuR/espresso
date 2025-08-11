@@ -553,7 +553,7 @@
   --color-dark-violet-950: #cdbeff;
 
   /* Box Shadow */
-
+  --shadow-xxs: 0px 1px 4px rgba(0, 0, 0, 0.1);
   --shadow-xs: 0px 0px 0px 2px #ffffff;
   --shadow-sm: 0px 0px 1px rgba(0, 0, 0, 0.2),
     0px 0px 10px 2px rgba(0, 0, 0, 0.04), 0px 24px 30px -8px rgba(0, 0, 0, 0.1);
@@ -720,9 +720,9 @@
   --success: var(--color-dark-green-100);
   --warning: var(--color-dark-amber-100);
   --error: var(--color-dark-red-100);
-  --success-border: var(--color-light-green-300);
-  --warning-border: var(--color-light-amber-300);
-  --error-border: var(--color-light-red-300);
+  --success-border: var(--color-dark-green-400);
+  --warning-border: var(--color-dark-amber-300);
+  --error-border: var(--color-dark-red-300);
   --autofill: var(--color-dark-orange-100);
   --autofill-border: var(--color-dark-orange-300);
 }

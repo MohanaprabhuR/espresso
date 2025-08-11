@@ -25,23 +25,23 @@ const SelectDemo = () => {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="aaron">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Aaron Menezes
                   </SelectItem>
                   <SelectItem value="vaani">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Vaani Kapoor
                   </SelectItem>
                   <SelectItem value="daniel">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Daniel Kapoor
                   </SelectItem>
                   <SelectItem value="steven">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Steven James
                   </SelectItem>
                   <SelectItem value="dipen">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Dipen Gala
                   </SelectItem>
                 </SelectContent>
@@ -52,23 +52,23 @@ const SelectDemo = () => {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="aaron">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Aaron Menezes
                   </SelectItem>
                   <SelectItem value="vaani">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Vaani Kapoor
                   </SelectItem>
                   <SelectItem value="daniel">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Daniel Kapoor
                   </SelectItem>
                   <SelectItem value="steven">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Steven James
                   </SelectItem>
                   <SelectItem value="dipen">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Dipen Gala
                   </SelectItem>
                 </SelectContent>
@@ -79,23 +79,23 @@ const SelectDemo = () => {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="aaron">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Aaron Menezes
                   </SelectItem>
                   <SelectItem value="vaani">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Vaani Kapoor
                   </SelectItem>
                   <SelectItem value="daniel">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Daniel Kapoor
                   </SelectItem>
                   <SelectItem value="steven">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Steven James
                   </SelectItem>
                   <SelectItem value="dipen">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Dipen Gala
                   </SelectItem>
                 </SelectContent>
@@ -106,23 +106,23 @@ const SelectDemo = () => {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="aaron">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Aaron Menezes
                   </SelectItem>
                   <SelectItem value="vaani">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Vaani Kapoor
                   </SelectItem>
                   <SelectItem value="daniel">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Daniel Kapoor
                   </SelectItem>
                   <SelectItem value="steven">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Steven James
                   </SelectItem>
                   <SelectItem value="dipen">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Dipen Gala
                   </SelectItem>
                 </SelectContent>
@@ -133,23 +133,23 @@ const SelectDemo = () => {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="aaron">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Aaron Menezes
                   </SelectItem>
                   <SelectItem value="vaani">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Vaani Kapoor
                   </SelectItem>
                   <SelectItem value="daniel">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Daniel Kapoor
                   </SelectItem>
                   <SelectItem value="steven">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Steven James
                   </SelectItem>
                   <SelectItem value="dipen">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Dipen Gala
                   </SelectItem>
                 </SelectContent>
@@ -162,23 +162,23 @@ const SelectDemo = () => {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="aaron">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Aaron Menezes
                   </SelectItem>
                   <SelectItem value="vaani">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Vaani Kapoor
                   </SelectItem>
                   <SelectItem value="daniel">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Daniel Kapoor
                   </SelectItem>
                   <SelectItem value="steven">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Steven James
                   </SelectItem>
                   <SelectItem value="dipen">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Dipen Gala
                   </SelectItem>
                 </SelectContent>
@@ -189,23 +189,23 @@ const SelectDemo = () => {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="aaron">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Aaron Menezes
                   </SelectItem>
                   <SelectItem value="vaani">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Vaani Kapoor
                   </SelectItem>
                   <SelectItem value="daniel">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Daniel Kapoor
                   </SelectItem>
                   <SelectItem value="steven">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Steven James
                   </SelectItem>
                   <SelectItem value="dipen">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Dipen Gala
                   </SelectItem>
                 </SelectContent>
@@ -216,23 +216,23 @@ const SelectDemo = () => {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="aaron">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Aaron Menezes
                   </SelectItem>
                   <SelectItem value="vaani">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Vaani Kapoor
                   </SelectItem>
                   <SelectItem value="daniel">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Daniel Kapoor
                   </SelectItem>
                   <SelectItem value="steven">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Steven James
                   </SelectItem>
                   <SelectItem value="dipen">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Dipen Gala
                   </SelectItem>
                 </SelectContent>
@@ -243,23 +243,23 @@ const SelectDemo = () => {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="aaron">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Aaron Menezes
                   </SelectItem>
                   <SelectItem value="vaani">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Vaani Kapoor
                   </SelectItem>
                   <SelectItem value="daniel">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Daniel Kapoor
                   </SelectItem>
                   <SelectItem value="steven">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Steven James
                   </SelectItem>
                   <SelectItem value="dipen">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Dipen Gala
                   </SelectItem>
                 </SelectContent>
@@ -270,23 +270,23 @@ const SelectDemo = () => {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="aaron">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Aaron Menezes
                   </SelectItem>
                   <SelectItem value="vaani">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Vaani Kapoor
                   </SelectItem>
                   <SelectItem value="daniel">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Daniel Kapoor
                   </SelectItem>
                   <SelectItem value="steven">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Steven James
                   </SelectItem>
                   <SelectItem value="dipen">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Dipen Gala
                   </SelectItem>
                 </SelectContent>
@@ -299,23 +299,23 @@ const SelectDemo = () => {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="aaron">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Aaron Menezes
                   </SelectItem>
                   <SelectItem value="vaani">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Vaani Kapoor
                   </SelectItem>
                   <SelectItem value="daniel">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Daniel Kapoor
                   </SelectItem>
                   <SelectItem value="steven">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Steven James
                   </SelectItem>
                   <SelectItem value="dipen">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Dipen Gala
                   </SelectItem>
                 </SelectContent>
@@ -326,23 +326,23 @@ const SelectDemo = () => {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="aaron">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Aaron Menezes
                   </SelectItem>
                   <SelectItem value="vaani">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Vaani Kapoor
                   </SelectItem>
                   <SelectItem value="daniel">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Daniel Kapoor
                   </SelectItem>
                   <SelectItem value="steven">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Steven James
                   </SelectItem>
                   <SelectItem value="dipen">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Dipen Gala
                   </SelectItem>
                 </SelectContent>
@@ -353,23 +353,23 @@ const SelectDemo = () => {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="aaron">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Aaron Menezes
                   </SelectItem>
                   <SelectItem value="vaani">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Vaani Kapoor
                   </SelectItem>
                   <SelectItem value="daniel">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Daniel Kapoor
                   </SelectItem>
                   <SelectItem value="steven">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Steven James
                   </SelectItem>
                   <SelectItem value="dipen">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Dipen Gala
                   </SelectItem>
                 </SelectContent>
@@ -380,23 +380,23 @@ const SelectDemo = () => {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="aaron">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Aaron Menezes
                   </SelectItem>
                   <SelectItem value="vaani">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Vaani Kapoor
                   </SelectItem>
                   <SelectItem value="daniel">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Daniel Kapoor
                   </SelectItem>
                   <SelectItem value="steven">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Steven James
                   </SelectItem>
                   <SelectItem value="dipen">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Dipen Gala
                   </SelectItem>
                 </SelectContent>
@@ -407,23 +407,23 @@ const SelectDemo = () => {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="aaron">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Aaron Menezes
                   </SelectItem>
                   <SelectItem value="vaani">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Vaani Kapoor
                   </SelectItem>
                   <SelectItem value="daniel">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Daniel Kapoor
                   </SelectItem>
                   <SelectItem value="steven">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Steven James
                   </SelectItem>
                   <SelectItem value="dipen">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Dipen Gala
                   </SelectItem>
                 </SelectContent>
@@ -438,23 +438,23 @@ const SelectDemo = () => {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="aaron">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Aaron Menezes
                   </SelectItem>
                   <SelectItem value="vaani">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Vaani Kapoor
                   </SelectItem>
                   <SelectItem value="daniel">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Daniel Kapoor
                   </SelectItem>
                   <SelectItem value="steven">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Steven James
                   </SelectItem>
                   <SelectItem value="dipen">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Dipen Gala
                   </SelectItem>
                 </SelectContent>
@@ -465,23 +465,23 @@ const SelectDemo = () => {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="aaron">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Aaron Menezes
                   </SelectItem>
                   <SelectItem value="vaani">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Vaani Kapoor
                   </SelectItem>
                   <SelectItem value="daniel">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Daniel Kapoor
                   </SelectItem>
                   <SelectItem value="steven">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Steven James
                   </SelectItem>
                   <SelectItem value="dipen">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Dipen Gala
                   </SelectItem>
                 </SelectContent>
@@ -492,23 +492,23 @@ const SelectDemo = () => {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="aaron">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Aaron Menezes
                   </SelectItem>
                   <SelectItem value="vaani">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Vaani Kapoor
                   </SelectItem>
                   <SelectItem value="daniel">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Daniel Kapoor
                   </SelectItem>
                   <SelectItem value="steven">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Steven James
                   </SelectItem>
                   <SelectItem value="dipen">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Dipen Gala
                   </SelectItem>
                 </SelectContent>
@@ -519,23 +519,23 @@ const SelectDemo = () => {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="aaron">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Aaron Menezes
                   </SelectItem>
                   <SelectItem value="vaani">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Vaani Kapoor
                   </SelectItem>
                   <SelectItem value="daniel">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Daniel Kapoor
                   </SelectItem>
                   <SelectItem value="steven">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Steven James
                   </SelectItem>
                   <SelectItem value="dipen">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Dipen Gala
                   </SelectItem>
                 </SelectContent>
@@ -546,23 +546,23 @@ const SelectDemo = () => {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="aaron">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Aaron Menezes
                   </SelectItem>
                   <SelectItem value="vaani">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Vaani Kapoor
                   </SelectItem>
                   <SelectItem value="daniel">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Daniel Kapoor
                   </SelectItem>
                   <SelectItem value="steven">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Steven James
                   </SelectItem>
                   <SelectItem value="dipen">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Dipen Gala
                   </SelectItem>
                 </SelectContent>
@@ -575,23 +575,23 @@ const SelectDemo = () => {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="aaron">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Aaron Menezes
                   </SelectItem>
                   <SelectItem value="vaani">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Vaani Kapoor
                   </SelectItem>
                   <SelectItem value="daniel">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Daniel Kapoor
                   </SelectItem>
                   <SelectItem value="steven">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Steven James
                   </SelectItem>
                   <SelectItem value="dipen">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Dipen Gala
                   </SelectItem>
                 </SelectContent>
@@ -602,23 +602,23 @@ const SelectDemo = () => {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="aaron">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Aaron Menezes
                   </SelectItem>
                   <SelectItem value="vaani">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Vaani Kapoor
                   </SelectItem>
                   <SelectItem value="daniel">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Daniel Kapoor
                   </SelectItem>
                   <SelectItem value="steven">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Steven James
                   </SelectItem>
                   <SelectItem value="dipen">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Dipen Gala
                   </SelectItem>
                 </SelectContent>
@@ -629,23 +629,23 @@ const SelectDemo = () => {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="aaron">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Aaron Menezes
                   </SelectItem>
                   <SelectItem value="vaani">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Vaani Kapoor
                   </SelectItem>
                   <SelectItem value="daniel">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Daniel Kapoor
                   </SelectItem>
                   <SelectItem value="steven">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Steven James
                   </SelectItem>
                   <SelectItem value="dipen">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Dipen Gala
                   </SelectItem>
                 </SelectContent>
@@ -656,23 +656,23 @@ const SelectDemo = () => {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="aaron">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Aaron Menezes
                   </SelectItem>
                   <SelectItem value="vaani">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Vaani Kapoor
                   </SelectItem>
                   <SelectItem value="daniel">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Daniel Kapoor
                   </SelectItem>
                   <SelectItem value="steven">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Steven James
                   </SelectItem>
                   <SelectItem value="dipen">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Dipen Gala
                   </SelectItem>
                 </SelectContent>
@@ -683,23 +683,23 @@ const SelectDemo = () => {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="aaron">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Aaron Menezes
                   </SelectItem>
                   <SelectItem value="vaani">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Vaani Kapoor
                   </SelectItem>
                   <SelectItem value="daniel">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Daniel Kapoor
                   </SelectItem>
                   <SelectItem value="steven">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Steven James
                   </SelectItem>
                   <SelectItem value="dipen">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Dipen Gala
                   </SelectItem>
                 </SelectContent>
@@ -712,23 +712,23 @@ const SelectDemo = () => {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="aaron">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Aaron Menezes
                   </SelectItem>
                   <SelectItem value="vaani">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Vaani Kapoor
                   </SelectItem>
                   <SelectItem value="daniel">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Daniel Kapoor
                   </SelectItem>
                   <SelectItem value="steven">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Steven James
                   </SelectItem>
                   <SelectItem value="dipen">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Dipen Gala
                   </SelectItem>
                 </SelectContent>
@@ -739,23 +739,23 @@ const SelectDemo = () => {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="aaron">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Aaron Menezes
                   </SelectItem>
                   <SelectItem value="vaani">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Vaani Kapoor
                   </SelectItem>
                   <SelectItem value="daniel">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Daniel Kapoor
                   </SelectItem>
                   <SelectItem value="steven">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Steven James
                   </SelectItem>
                   <SelectItem value="dipen">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Dipen Gala
                   </SelectItem>
                 </SelectContent>
@@ -766,23 +766,23 @@ const SelectDemo = () => {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="aaron">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Aaron Menezes
                   </SelectItem>
                   <SelectItem value="vaani">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Vaani Kapoor
                   </SelectItem>
                   <SelectItem value="daniel">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Daniel Kapoor
                   </SelectItem>
                   <SelectItem value="steven">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Steven James
                   </SelectItem>
                   <SelectItem value="dipen">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Dipen Gala
                   </SelectItem>
                 </SelectContent>
@@ -793,23 +793,23 @@ const SelectDemo = () => {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="aaron">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Aaron Menezes
                   </SelectItem>
                   <SelectItem value="vaani">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Vaani Kapoor
                   </SelectItem>
                   <SelectItem value="daniel">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Daniel Kapoor
                   </SelectItem>
                   <SelectItem value="steven">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Steven James
                   </SelectItem>
                   <SelectItem value="dipen">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Dipen Gala
                   </SelectItem>
                 </SelectContent>
@@ -820,23 +820,23 @@ const SelectDemo = () => {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="aaron">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Aaron Menezes
                   </SelectItem>
                   <SelectItem value="vaani">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Vaani Kapoor
                   </SelectItem>
                   <SelectItem value="daniel">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Daniel Kapoor
                   </SelectItem>
                   <SelectItem value="steven">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Steven James
                   </SelectItem>
                   <SelectItem value="dipen">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Dipen Gala
                   </SelectItem>
                 </SelectContent>
@@ -851,23 +851,23 @@ const SelectDemo = () => {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="aaron">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Aaron Menezes
                   </SelectItem>
                   <SelectItem value="vaani">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Vaani Kapoor
                   </SelectItem>
                   <SelectItem value="daniel">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Daniel Kapoor
                   </SelectItem>
                   <SelectItem value="steven">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Steven James
                   </SelectItem>
                   <SelectItem value="dipen">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Dipen Gala
                   </SelectItem>
                 </SelectContent>
@@ -878,23 +878,23 @@ const SelectDemo = () => {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="aaron">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Aaron Menezes
                   </SelectItem>
                   <SelectItem value="vaani">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Vaani Kapoor
                   </SelectItem>
                   <SelectItem value="daniel">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Daniel Kapoor
                   </SelectItem>
                   <SelectItem value="steven">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Steven James
                   </SelectItem>
                   <SelectItem value="dipen">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Dipen Gala
                   </SelectItem>
                 </SelectContent>
@@ -905,23 +905,23 @@ const SelectDemo = () => {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="aaron">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Aaron Menezes
                   </SelectItem>
                   <SelectItem value="vaani">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Vaani Kapoor
                   </SelectItem>
                   <SelectItem value="daniel">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Daniel Kapoor
                   </SelectItem>
                   <SelectItem value="steven">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Steven James
                   </SelectItem>
                   <SelectItem value="dipen">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Dipen Gala
                   </SelectItem>
                 </SelectContent>
@@ -932,23 +932,23 @@ const SelectDemo = () => {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="aaron">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Aaron Menezes
                   </SelectItem>
                   <SelectItem value="vaani">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Vaani Kapoor
                   </SelectItem>
                   <SelectItem value="daniel">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Daniel Kapoor
                   </SelectItem>
                   <SelectItem value="steven">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Steven James
                   </SelectItem>
                   <SelectItem value="dipen">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Dipen Gala
                   </SelectItem>
                 </SelectContent>
@@ -959,23 +959,23 @@ const SelectDemo = () => {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="aaron">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Aaron Menezes
                   </SelectItem>
                   <SelectItem value="vaani">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Vaani Kapoor
                   </SelectItem>
                   <SelectItem value="daniel">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Daniel Kapoor
                   </SelectItem>
                   <SelectItem value="steven">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Steven James
                   </SelectItem>
                   <SelectItem value="dipen">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Dipen Gala
                   </SelectItem>
                 </SelectContent>
@@ -988,23 +988,23 @@ const SelectDemo = () => {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="aaron">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Aaron Menezes
                   </SelectItem>
                   <SelectItem value="vaani">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Vaani Kapoor
                   </SelectItem>
                   <SelectItem value="daniel">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Daniel Kapoor
                   </SelectItem>
                   <SelectItem value="steven">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Steven James
                   </SelectItem>
                   <SelectItem value="dipen">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Dipen Gala
                   </SelectItem>
                 </SelectContent>
@@ -1015,23 +1015,23 @@ const SelectDemo = () => {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="aaron">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Aaron Menezes
                   </SelectItem>
                   <SelectItem value="vaani">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Vaani Kapoor
                   </SelectItem>
                   <SelectItem value="daniel">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Daniel Kapoor
                   </SelectItem>
                   <SelectItem value="steven">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Steven James
                   </SelectItem>
                   <SelectItem value="dipen">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Dipen Gala
                   </SelectItem>
                 </SelectContent>
@@ -1042,23 +1042,23 @@ const SelectDemo = () => {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="aaron">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Aaron Menezes
                   </SelectItem>
                   <SelectItem value="vaani">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Vaani Kapoor
                   </SelectItem>
                   <SelectItem value="daniel">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Daniel Kapoor
                   </SelectItem>
                   <SelectItem value="steven">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Steven James
                   </SelectItem>
                   <SelectItem value="dipen">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Dipen Gala
                   </SelectItem>
                 </SelectContent>
@@ -1069,23 +1069,23 @@ const SelectDemo = () => {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="aaron">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Aaron Menezes
                   </SelectItem>
                   <SelectItem value="vaani">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Vaani Kapoor
                   </SelectItem>
                   <SelectItem value="daniel">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Daniel Kapoor
                   </SelectItem>
                   <SelectItem value="steven">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Steven James
                   </SelectItem>
                   <SelectItem value="dipen">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Dipen Gala
                   </SelectItem>
                 </SelectContent>
@@ -1096,23 +1096,23 @@ const SelectDemo = () => {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="aaron">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Aaron Menezes
                   </SelectItem>
                   <SelectItem value="vaani">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Vaani Kapoor
                   </SelectItem>
                   <SelectItem value="daniel">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Daniel Kapoor
                   </SelectItem>
                   <SelectItem value="steven">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Steven James
                   </SelectItem>
                   <SelectItem value="dipen">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Dipen Gala
                   </SelectItem>
                 </SelectContent>
@@ -1125,23 +1125,23 @@ const SelectDemo = () => {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="aaron">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Aaron Menezes
                   </SelectItem>
                   <SelectItem value="vaani">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Vaani Kapoor
                   </SelectItem>
                   <SelectItem value="daniel">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Daniel Kapoor
                   </SelectItem>
                   <SelectItem value="steven">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Steven James
                   </SelectItem>
                   <SelectItem value="dipen">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Dipen Gala
                   </SelectItem>
                 </SelectContent>
@@ -1152,23 +1152,23 @@ const SelectDemo = () => {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="aaron">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Aaron Menezes
                   </SelectItem>
                   <SelectItem value="vaani">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Vaani Kapoor
                   </SelectItem>
                   <SelectItem value="daniel">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Daniel Kapoor
                   </SelectItem>
                   <SelectItem value="steven">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Steven James
                   </SelectItem>
                   <SelectItem value="dipen">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Dipen Gala
                   </SelectItem>
                 </SelectContent>
@@ -1179,23 +1179,23 @@ const SelectDemo = () => {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="aaron">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Aaron Menezes
                   </SelectItem>
                   <SelectItem value="vaani">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Vaani Kapoor
                   </SelectItem>
                   <SelectItem value="daniel">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Daniel Kapoor
                   </SelectItem>
                   <SelectItem value="steven">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Steven James
                   </SelectItem>
                   <SelectItem value="dipen">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Dipen Gala
                   </SelectItem>
                 </SelectContent>
@@ -1206,23 +1206,23 @@ const SelectDemo = () => {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="aaron">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Aaron Menezes
                   </SelectItem>
                   <SelectItem value="vaani">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Vaani Kapoor
                   </SelectItem>
                   <SelectItem value="daniel">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Daniel Kapoor
                   </SelectItem>
                   <SelectItem value="steven">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Steven James
                   </SelectItem>
                   <SelectItem value="dipen">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Dipen Gala
                   </SelectItem>
                 </SelectContent>
@@ -1233,23 +1233,23 @@ const SelectDemo = () => {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="aaron">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Aaron Menezes
                   </SelectItem>
                   <SelectItem value="vaani">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Vaani Kapoor
                   </SelectItem>
                   <SelectItem value="daniel">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Daniel Kapoor
                   </SelectItem>
                   <SelectItem value="steven">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Steven James
                   </SelectItem>
                   <SelectItem value="dipen">
-                    <CommandIcon fill="currentcolor" />
+                    <CommandIcon fill="currentColor" />
                     Dipen Gala
                   </SelectItem>
                 </SelectContent>

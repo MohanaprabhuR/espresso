@@ -1,5 +1,6 @@
 import React from "react";
 import { Input } from "@/components/ui/input";
+import { MailIcon } from "lucide-react";
 
 const InputDemo = () => {
   return (
@@ -9,16 +10,22 @@ const InputDemo = () => {
           Input Component
         </h1>
         <div className="flex  flex-col justify-center gap-[50px] max-w-[400px] mx-auto">
-          <Input type="email" placeholder="Email" />
-          <Input type="email" placeholder="Email" disabled />
-          <Input type="email" placeholder="Email" status="success" />
-          <Input type="email" placeholder="Email" status="error" />
-          <Input type="email" placeholder="Email" status="warning" />
-
-          <Input type="email" placeholder="Small" size="sm" status="success" />
-          <Input type="email" placeholder="Medium" size="md" status="default" />
-          <Input type="email" placeholder="Large" size="lg" status="error" />
-          <Input type="email" placeholder="Small" size="xl" status="success" />
+          <Input type="text" placeholder="Text" />
+          <Input type="number" placeholder="Number" status="warning" />
+          <Input
+            type="email"
+            placeholder="Email"
+            status="success"
+            variant="outline"
+          />
+          <Input type="date" placeholder="date" />
+          <Input type="datetime-local" placeholder="datetime-local" />
+          <Input type="password" placeholder="Password" />
+          <Input type="search" placeholder="Search" />
+          <Input type="tel" placeholder="Phone" />
+          <Input type="time" />
+          <Input type="url" placeholder="Website" />
+          <Input type="file" placeholder="Website" />
         </div>
       </div>
     </div>
