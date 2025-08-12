@@ -29,11 +29,11 @@ const statusMap: Record<VariantType, Record<StatusType, string>> = {
   default: {
     default: "",
     success:
-      "bg-success text-accent-foreground hover:bg-success active:bg-success active:border-success-border focus:bg-success disabled:bg-primary/5 disabled:text-primary/20",
+      "bg-success text-accent-foreground hover:bg-success active:bg-success active:border-success-border focus:border-success-border focus:bg-success disabled:bg-primary/5 disabled:text-primary/20",
     warning:
-      "bg-warning text-accent-foreground hover:bg-warning active:bg-warning active:border-warning-border focus:bg-warning disabled:bg-primary/5 disabled:text-primary/20",
+      "bg-warning text-accent-foreground hover:bg-warning active:bg-warning active:border-warning-border focus:border-warning-border focus:bg-warning disabled:bg-primary/5 disabled:text-primary/20",
     error:
-      "bg-error text-accent-foreground hover:bg-error active:bg-error active:border-error-border focus:bg-error disabled:bg-primary/5 disabled:text-primary/20",
+      "bg-error text-accent-foreground hover:bg-error active:bg-error active:border-error-border focus:border-error-border focus:bg-error disabled:bg-primary/5 disabled:text-primary/20",
   },
   outline: {
     default: "",
