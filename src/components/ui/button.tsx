@@ -8,7 +8,7 @@ import { CommandIcon } from "../../../public/images/svg/commandIcon";
 import Image from "next/image";
 
 const buttonVariants = cva(
-  "inline-flex items-center rounded-lg gap-[0_8px] justify-center whitespace-nowrap transition-all ease-in-out disabled:pointer-events-none pointer-events-auto focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-0",
+  "inline-flex items-center rounded-lg gap-[0_8px] justify-center whitespace-nowrap transition-all ease-in-out disabled:pointer-events-none pointer-events-auto focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-0",
   {
     variants: {
       variant: {
@@ -17,7 +17,7 @@ const buttonVariants = cva(
         secondary:
           "bg-secondary text-accent-foreground  hover:bg-accent active:bg-primary/12 focus:bg-secondary focus-visible:bg-secondary disabled:bg-secondary disabled:text-primary/42",
         outline:
-          "border bg-background text-accent-foreground hover:border-primary/25 active:bg-primary/12 active:border-primary/15 focus:bg-secondary focus:border-none focus-visible:border-none focus-visible:bg-secondary disabled:bg-secondary disabled:text-primary/42",
+          "border bg-background text-accent-foreground hover:border-primary/25 active:bg-primary/12 active:border-primary/15 focus-visible:bg-secondary focus-visible:bg-secondary focus-visible:border-transparent focus-visible:ring-2 focus-visible:ring-ring disabled:bg-secondary disabled:text-primary/42",
         destructive:
           "bg-destructive text-destructive-foreground  focus:ring-destructive/20 hover:bg-destructive/85 active:bg-destructive/90 disabled:bg-destructive/25 disabled:text-destructive/50",
         ghost:

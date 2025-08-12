@@ -578,7 +578,7 @@
   --muted: var(--color-light-gray-100);
   --muted-foreground: var(--color-light-gray-600);
   --input: var(--color-light-gray-500);
-  --ring: var(--color-light-gray-1000);
+  --ring: rgba(201, 201, 201, 0.9);
   --card: var(--background);
   --card-foreground: var(--color-light-gray-600);
   --popover: var(--color-white);
@@ -662,7 +662,7 @@
   --muted: var(--color-dark-gray-300);
   --muted-foreground: var(--color-dark-gray-700);
   --input: var(--color-dark-gray-600);
-  --ring: var(--color-light-gray-1000);
+  --ring: rgba(201, 201, 201, 0.9);
   --card: var(--color-dark-gray-200);
   --card-foreground: var(--color-dark-gray-700);
   --popover: var(--color-dark-gray-200);
