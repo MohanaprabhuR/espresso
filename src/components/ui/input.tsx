@@ -4,7 +4,10 @@ import { cn } from "@/lib/utils";
 type VariantType = "default" | "outline";
 type StatusType = "default" | "success" | "error" | "warning";
 
-type InputProps = React.ComponentProps<"input"> & {
+type InputProps = Omit<
+  React.ComponentProps<"input">,
+  "size" | "prefix" | "suffix"
+> & {
   variant?: VariantType;
   status?: StatusType;
   size?: "sm" | "md" | "lg" | "xl";
@@ -13,11 +16,11 @@ type InputProps = React.ComponentProps<"input"> & {
 };
 
 const baseStyles =
-  "w-full min-w-0 transition-[color,box-shadow,border] outline-none placeholder:text-primary/50 file:inline-flex file:pr-1 file:border-r  file:border-r-[1px] file:border-primary/20 file:bg-transparent file:font-medium  aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&:-webkit-autofill]:bg-autofill [&:-webkit-autofill]:text-accent-foreground";
+  "w-full min-w-0 transition-[color,box-shadow,border] outline-none placeholder:text-primary/50 file:inline-flex file:pr-1 file:border-r file:border-r-[1px] file:border-primary/20 file:bg-transparent file:font-medium aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&:-webkit-autofill]:bg-autofill [&:-webkit-autofill]:text-accent-foreground";
 
 const variantBaseMap: Record<VariantType, string> = {
   default:
-    "bg-secondary  border border-transparent hover:bg-accent text-secondary-foreground active:bg-transparent active:shadow-lg active:border-primary/50 active:border active:text-accent-foreground focus:border focus:border-primary/50 focus:shadow-lg focus:bg-white focus:text-accent-foreground focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-0 focus-visible:active:border-0 focus-visible:border-0",
+    "bg-secondary border border-transparent hover:bg-accent text-secondary-foreground active:bg-transparent active:shadow-lg active:border-primary/50 active:border active:text-accent-foreground focus:border focus:border-primary/50 focus:shadow-lg focus:bg-white focus:text-accent-foreground focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-0 focus-visible:active:border-0 focus-visible:border-0",
   outline:
     "border bg-background text-secondary-foreground hover:border-primary/25 active:border-primary/50 active:bg-background active:shadow-lg focus:border-primary/50 focus:text-accent-foreground",
 };
@@ -26,11 +29,11 @@ const statusMap: Record<VariantType, Record<StatusType, string>> = {
   default: {
     default: "",
     success:
-      "bg-success text-accent-foreground hover:bg-success active:bg-success focus:bg-success disabled:bg-primary/5 disabled:text-primary/20",
+      "bg-success text-accent-foreground hover:bg-success active:bg-success active:border-success-border focus:bg-success disabled:bg-primary/5 disabled:text-primary/20",
     warning:
-      "bg-warning text-accent-foreground hover:bg-warning active:bg-warning focus:bg-warning disabled:bg-primary/5 disabled:text-primary/20",
+      "bg-warning text-accent-foreground hover:bg-warning active:bg-warning active:border-warning-border focus:bg-warning disabled:bg-primary/5 disabled:text-primary/20",
     error:
-      "bg-error text-accent-foreground hover:bg-error active:bg-error focus:bg-error disabled:bg-primary/5 disabled:text-primary/20",
+      "bg-error text-accent-foreground hover:bg-error active:bg-error active:border-error-border focus:bg-error disabled:bg-primary/5 disabled:text-primary/20",
   },
   outline: {
     default: "",
@@ -75,7 +78,7 @@ function Input({
       data-variant={variant}
       data-status={status}
       className={cn(
-        "flex items-center gap-2  has-[input:disabled]:bg-primary/5 has-[input:disabled]:pointer-events-none has-[input:disabled]:text-primary/20 has-[input:disabled]:cursor-not-allowed",
+        "flex items-center gap-2 has-[input:disabled]:bg-primary/5 has-[input:disabled]:pointer-events-none has-[input:disabled]:text-primary/20 has-[input:disabled]:cursor-not-allowed",
         variantBaseMap[variant],
         statusClasses,
         sizeMap[size]
