@@ -1,6 +1,6 @@
 import React from "react";
 import { Input } from "@/components/ui/input";
-import { MailIcon } from "lucide-react";
+import Image from "next/image";
 
 const InputDemo = () => {
   return (
@@ -26,6 +26,32 @@ const InputDemo = () => {
           <Input type="time" />
           <Input type="url" placeholder="Website" />
           <Input type="file" placeholder="Website" />
+
+          <Input
+            placeholder="Search..."
+            prefix={
+              <Image
+                src="/images/avatar.png"
+                alt="User"
+                width={16}
+                height={16}
+                className="w-5 h-5 rounded-full"
+              />
+            }
+          />
+
+          <Input
+            placeholder="Search..."
+            prefix={
+              <Image
+                src="/images/avatar.png"
+                alt="User"
+                width={16}
+                height={16}
+                className="w-5 h-5 rounded-full"
+              />
+            }
+          />
         </div>
       </div>
     </div>

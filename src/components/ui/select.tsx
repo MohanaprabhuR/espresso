@@ -166,7 +166,7 @@ function SelectItem({
       data-slot="select-item"
       data-size={size}
       className={cn(
-        "text-secondary-foreground font-normal relative flex w-full cursor-default items-center gap-2 py-1.5 px-2 text-base leading-none outline-hidden select-none data-[disabled]:pointer-events-none data-[disabled]:bg-primary/5 data-[disabled]:text-primary/20 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4 *:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-2",
+        "text-secondary-foreground hover:bg-secondary font-normal relative flex w-full cursor-default items-center gap-2 py-1.5 px-2 text-base leading-none outline-hidden select-none data-[disabled]:pointer-events-none data-[disabled]:bg-primary/5 data-[disabled]:text-primary/20 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4 *:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-2",
         sizeClassMap[size],
         className
       )}
