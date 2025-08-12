@@ -5,25 +5,22 @@ import * as AvatarPrimitive from "@radix-ui/react-avatar";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
-const avatarVariants = cva(
-  "relative flex shrink-0 overflow-hidden ring-1 ring-[var(--background)]",
-  {
-    variants: {
-      size: {
-        xs: "size-4",
-        sm: "size-5",
-        md: "size-6",
-        lg: "size-7",
-        xl: "size-8",
-        "2xl": "size-10",
-        "3xl": "size-[46px]",
-      },
+const avatarVariants = cva("relative flex shrink-0 overflow-hidden ", {
+  variants: {
+    size: {
+      xs: "size-4",
+      sm: "size-5",
+      md: "size-6",
+      lg: "size-7",
+      xl: "size-8",
+      "2xl": "size-10",
+      "3xl": "size-[46px]",
     },
-    defaultVariants: {
-      size: "sm",
-    },
-  }
-);
+  },
+  defaultVariants: {
+    size: "xs",
+  },
+});
 
 const radiusMap: Record<string, string> = {
   xs: "rounded-xs",
@@ -167,6 +164,7 @@ const statusIconMap: Record<Status, React.ReactNode> = {
     </svg>
   ),
   null: null,
+  cancel: undefined,
 };
 
 type Shape = "circle" | "square";
@@ -212,7 +210,7 @@ export function Avatar({
         {status && (
           <span
             className={cn(
-              "absolute bottom-0 right-0 flex items-center justify-center rounded-full bg-background ring-1 ring-[var(--background)] shadow-xs",
+              "absolute bottom-0 right-0 flex items-center justify-center rounded-full bg-background ring-1 ring-[var(--background)] shadow-xs)]",
               {
                 "bg-[var(--color-light-green-600)] p-[2px]":
                   status === "checked",
@@ -329,7 +327,9 @@ export function AvatarGroup({
       : 0;
 
   const radiusClass =
-    shape === "square" ? radiusMap[size ?? "sm"] : "rounded-full";
+    shape === "square"
+      ? radiusMap[size ?? "sm"]
+      : "rounded-full ring-1 ring-[var(--background)]";
 
   const AvatarList = (
     <>

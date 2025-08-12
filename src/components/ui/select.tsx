@@ -2,7 +2,6 @@
 
 import * as React from "react";
 import * as SelectPrimitive from "@radix-ui/react-select";
-import { ChevronUpIcon } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 
@@ -35,11 +34,11 @@ const statusRingMap = {
 
 const variantClassMap = {
   default:
-    "bg-secondary text-secondary-foreground hover:bg-accent hover:text-secondary-foreground active:bg-primary/12 active:text-accent-foreground focus:text-accent-foreground",
+    "data-[disabled]:bg-primary/5 data-[disabled]:text-primary/20 disabled:cursor-not-allowed disabled:bg-primary/5 disabled:pointer-events-none disabled:cursor-not-allowed bg-secondary text-secondary-foreground hover:bg-accent hover:text-secondary-foreground active:bg-primary/12 active:text-accent-foreground focus:text-accent-foreground",
   outline:
-    "border bg-background text-secondary-foreground hover:border-primary/25 active:border-primary/50 active:bg-background active:text-accent-foreground focus:border-background focus:text-accent-foreground",
+    "data-[disabled]:bg-primary/5 data-[disabled]:text-primary/20 disabled:cursor-not-allowed disabled:bg-primary/5 disabled:pointer-events-none disabled:cursor-not-allowed border bg-background text-secondary-foreground hover:border-primary/25 active:border-primary/50 active:bg-background active:text-accent-foreground focus:border-background focus:text-accent-foreground",
   ghost:
-    "bg-transparent text-secondary-foreground hover:bg-accent active:bg-primary/12 active:text-accent-foreground focus:bg-primary/15 focus:text-accent-foreground focus-visible:bg-primary/5",
+    "data-[disabled]:bg-primary/5 data-[disabled]:text-primary/20 disabled:cursor-not-allowed disabled:bg-primary/5 disabled:pointer-events-none disabled:cursor-not-allowed bg-transparent text-secondary-foreground hover:bg-accent active:bg-primary/12 active:text-accent-foreground focus:bg-primary/15 focus:text-accent-foreground focus-visible:bg-primary/5",
 };
 
 const statusOutlineMap = {
@@ -76,7 +75,7 @@ function SelectTrigger({
       data-size={size}
       data-status={status}
       className={cn(
-        "flex w-fit items-center justify-between gap-2 px-3 py-2 text-base whitespace-nowrap transition-[color,box-shadow] outline-none disabled:cursor-not-allowed disabled:opacity-50 focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-0 aria-invalid:ring-destructive/20 aria-invalid:border-destructive data-[size=default]:h-9 *:data-[slot=select-value]:line-clamp-1 *:data-[slot=select-value]:flex *:data-[slot=select-value]:items-center *:data-[slot=select-value]:gap-2 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4 data-[placeholder]:text-primary/50",
+        "flex w-fit items-center justify-between gap-2 px-3 py-2 text-base whitespace-nowrap transition-[color,box-shadow] outline-none  focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-0 aria-invalid:ring-destructive/20 aria-invalid:border-destructive data-[size=default]:h-9 *:data-[slot=select-value]:line-clamp-1 *:data-[slot=select-value]:flex *:data-[slot=select-value]:items-center *:data-[slot=select-value]:gap-2 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4 data-[placeholder]:text-primary/50",
         variantClassMap[variant],
         sizeClassMap[size],
         variant === "outline" && status ? statusOutlineMap[status] : null,
@@ -142,12 +141,19 @@ function SelectContent({
 
 function SelectLabel({
   className,
+  size = "md",
   ...props
-}: React.ComponentProps<typeof SelectPrimitive.Label>) {
+}: React.ComponentProps<typeof SelectPrimitive.Label> & {
+  size?: "sm" | "md" | "lg";
+}) {
   return (
     <SelectPrimitive.Label
       data-slot="select-label"
-      className={cn("text-muted-foreground px-2 py-1.5 text-xs", className)}
+      data-size={size}
+      className={cn(
+        "text-secondary-foreground px-2 py-1.5 font-medium relative flex w-full cursor-default items-center",
+        className
+      )}
       {...props}
     />
   );
@@ -166,7 +172,7 @@ function SelectItem({
       data-slot="select-item"
       data-size={size}
       className={cn(
-        "text-secondary-foreground hover:bg-secondary font-normal relative flex w-full cursor-default items-center gap-2 py-1.5 px-2 text-base leading-none outline-hidden select-none data-[disabled]:pointer-events-none data-[disabled]:bg-primary/5 data-[disabled]:text-primary/20 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4 *:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-2",
+        "text-secondary-foreground hover:bg-secondary font-normal relative flex w-full cursor-default items-center gap-2 py-1.5 px-2 text-base leading-none outline-hidden select-none     [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4 *:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-2",
         sizeClassMap[size],
         className
       )}
@@ -200,7 +206,7 @@ function SelectSeparator({
   return (
     <SelectPrimitive.Separator
       data-slot="select-separator"
-      className={cn("bg-border pointer-events-none -mx-1 my-1 h-px", className)}
+      className={cn("bg-border pointer-events-none  my-4  h-px", className)}
       {...props}
     />
   );
@@ -219,7 +225,20 @@ function SelectScrollUpButton({
       )}
       {...props}
     >
-      <ChevronUpIcon className="size-4" />
+      <svg
+        width="16"
+        height="16"
+        viewBox="0 0 16 16"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M12.092 10.3648C11.8905 10.5536 11.5741 10.5434 11.3852 10.342L8 6.73106L4.61477 10.342C4.4259 10.5434 4.10948 10.5536 3.90803 10.3648C3.70657 10.1759 3.69636 9.85948 3.88523 9.65803L7.63523 5.65803C7.72975 5.5572 7.86179 5.5 8 5.5C8.1382 5.5 8.27024 5.5572 8.36477 5.65803L12.1148 9.65803C12.3036 9.85948 12.2934 10.1759 12.092 10.3648Z"
+          fill="currentColor"
+        />
+      </svg>
     </SelectPrimitive.ScrollUpButton>
   );
 }
@@ -247,8 +266,8 @@ function SelectScrollDownButton({
         <path
           fillRule="evenodd"
           clipRule="evenodd"
-          d="M5.85355 10.6464C5.65829 10.4512 5.34171 10.4512 5.14645 10.6464C4.95118 10.8417 4.95118 11.1583 5.14645 11.3536L7.64645 13.8536C7.84171 14.0488 8.15829 14.0488 8.35355 13.8536L10.8536 11.3536C11.0488 11.1583 11.0488 10.8417 10.8536 10.6464C10.6583 10.4512 10.3417 10.4512 10.1464 10.6464L8 12.7929L5.85355 10.6464ZM5.85355 5.35355C5.65829 5.54882 5.34171 5.54882 5.14645 5.35355C4.95118 5.15829 4.95118 4.84171 5.14645 4.64645L7.64645 2.14645C7.84171 1.95118 8.15829 1.95118 8.35355 2.14645L10.8536 4.64645C11.0488 4.84171 11.0488 5.15829 10.8536 5.35355C10.6583 5.54882 10.3417 5.54882 10.1464 5.35355L8 3.20711L5.85355 5.35355Z"
-          fill="currentcolor"
+          d="M3.90803 5.63523C4.10949 5.44637 4.42591 5.45657 4.61477 5.65803L8 9.26894L11.3852 5.65803C11.5741 5.45658 11.8905 5.44637 12.092 5.63523C12.2934 5.8241 12.3036 6.14052 12.1148 6.34197L8.36477 10.342C8.27025 10.4428 8.13821 10.5 8 10.5C7.8618 10.5 7.72976 10.4428 7.63523 10.342L3.88523 6.34197C3.69637 6.14052 3.70657 5.8241 3.90803 5.63523Z"
+          fill="currentColor"
         />
       </svg>
     </SelectPrimitive.ScrollDownButton>

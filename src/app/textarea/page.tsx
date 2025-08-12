@@ -14,11 +14,6 @@ const InputDemo = () => {
               <Textarea placeholder="Enter the text hear...." />
               <Textarea placeholder="Enter the text hear...." size="md" />
               <Textarea placeholder="Enter the text hear...." size="lg" />
-              <Textarea
-                placeholder="Enter the text hear...."
-                size="lg"
-                disabled
-              />
             </div>
             <div className="flex  flex-col justify-center gap-[50px] max-w-[400px] mx-auto">
               <Textarea
@@ -34,11 +29,6 @@ const InputDemo = () => {
                 placeholder="Enter the text hear...."
                 size="lg"
                 variant="outline"
-              />
-              <Textarea
-                placeholder="Enter the text hear...."
-                size="lg"
-                disabled
               />
             </div>
             <div className="flex  flex-col justify-center gap-[50px] max-w-[400px] mx-auto">
@@ -52,11 +42,6 @@ const InputDemo = () => {
                 placeholder="Enter the text hear...."
                 size="lg"
                 variant="ghost"
-              />
-              <Textarea
-                placeholder="Enter the text hear...."
-                size="lg"
-                disabled
               />
             </div>
           </div>
