@@ -172,6 +172,7 @@ function SelectItem({
       data-slot="select-item"
       data-size={size}
       className={cn(
+        "data-[highlighted]:bg-accent data-[highlighted]:text-accent-foreground",
         "text-secondary-foreground hover:bg-secondary font-normal relative flex w-full cursor-default items-center gap-2 py-1.5 px-2 text-base leading-none outline-hidden select-none     [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4 *:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-2",
         sizeClassMap[size],
         className
@@ -198,6 +199,34 @@ function SelectItem({
     </SelectPrimitive.Item>
   );
 }
+
+// function SelectItem({
+//   className,
+//   children,
+//   size = "md",
+//   ...props
+// }: React.ComponentProps<typeof SelectPrimitive.Item> & {
+//   size?: "sm" | "md" | "lg";
+// }) {
+//   return (
+//     <SelectPrimitive.Item
+//       {...props}
+//       data-size={size}
+//       className={cn(
+//         "relative flex w-full cursor-pointer items-center gap-2 select-none rounded-md px-2 py-1.5 text-base leading-none outline-none",
+//         "data-[highlighted]:bg-accent data-[highlighted]:text-accent-foreground",
+//         "data-[state=checked]:font-semibold",
+//         sizeClassMap[size],
+//         className
+//       )}
+//     >
+//       <span className="pointer-events-none absolute right-2 flex size-3.5 items-center justify-center">
+//         <SelectPrimitive.ItemIndicator>✔</SelectPrimitive.ItemIndicator>
+//       </span>
+//       <SelectPrimitive.ItemText>{children}</SelectPrimitive.ItemText>
+//     </SelectPrimitive.Item>
+//   );
+// }
 
 function SelectSeparator({
   className,
