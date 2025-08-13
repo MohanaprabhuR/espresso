@@ -20,9 +20,9 @@ const baseStyles =
 
 const variantBaseMap: Record<VariantType, string> = {
   default:
-    "bg-secondary border border-transparent hover:bg-accent text-secondary-foreground active:bg-transparent active:shadow-lg active:border-primary/50 active:border active:text-accent-foreground focus:border focus:border-primary/50 focus:shadow-lg focus:bg-white focus:text-accent-foreground focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-0 focus-visible:active:border-0 focus-visible:border-0",
+    "bg-secondary border border-transparent hover:bg-accent text-secondary-foreground active:bg-transparent active:shadow-lg active:border-primary/50 active:border active:text-accent-foreground focus:border focus:border-primary/50 focus:shadow-lg focus:bg-white focus:text-accent-foreground focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-0 focus-visible:active:border-0 focus-visible:border-0 has-[input:disabled]:bg-primary/5 has-[input:disabled]:pointer-events-none has-[input:disabled]:text-primary/20 has-[input:disabled]:cursor-not-allowed has-[input:active]:bg-transparent has-[input:active]:border has-[input:active]:border-primary/50 has-[input:active]:shadow-lg has-[input:focus]:bg-transparent has-[input:focus]:border has-[input:focus]:border-primary/50 has-[input:focus]:shadow-lg has-[input:focus-visible]:ring-2 has-[input:focus-visible]:ring-ring has-[input:focus-visible]:ring-offset-0",
   outline:
-    "border bg-background text-secondary-foreground hover:border-primary/25 active:border-primary/50 active:bg-background active:shadow-lg focus:border-primary/50 focus:text-accent-foreground",
+    "border bg-background text-secondary-foreground hover:border-primary/25 active:border-primary/50 active:bg-background active:shadow-lg focus:border-primary/50 focus:text-accent-foreground has-[input:disabled]:bg-primary/5 has-[input:disabled]:pointer-events-none has-[input:disabled]:text-primary/20 has-[input:disabled]:cursor-not-allowed has-[input:active]:bg-transparent has-[input:active]:border  has-[input:active]:shadow-lg has-[input:focus]:bg-transparent has-[input:focus]:border has-[input:focus]:border has-[input:focus]:shadow-lg has-[input:focus-visible]:ring-2 has-[input:focus-visible]:ring-ring has-[input:focus-visible]:ring-offset-0 has-[input:active]:bg-transparent has-[input:active]:border has-[input:active]:border-primary/50 has-[input:active]:shadow-lg has-[input:focus]:bg-transparent has-[input:focus]:border has-[input:focus]:border-primary/50 has-[input:focus]:shadow-lg has-[input:focus-visible]:ring-2 has-[input:focus-visible]:ring-ring has-[input:focus-visible]:ring-offset-0",
 };
 
 const statusMap: Record<VariantType, Record<StatusType, string>> = {
@@ -78,7 +78,7 @@ function Input({
       data-variant={variant}
       data-status={status}
       className={cn(
-        "flex items-center gap-2 has-[input:disabled]:bg-primary/5 has-[input:disabled]:pointer-events-none has-[input:disabled]:text-primary/20 has-[input:disabled]:cursor-not-allowed",
+        "flex items-center gap-2 ",
         variantBaseMap[variant],
         statusClasses,
         sizeMap[size]
