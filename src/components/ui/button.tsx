@@ -5,8 +5,6 @@ import { Slot } from "@radix-ui/react-slot";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
-import Image from "next/image";
-
 const buttonVariants = cva(
   "inline-flex items-center rounded-lg gap-[0_8px] justify-center whitespace-nowrap transition-all ease-in-out disabled:pointer-events-none pointer-events-auto focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-0",
   {
@@ -100,16 +98,13 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     let content: React.ReactNode = children;
 
     if (iconOnly) {
-      // Get only React elements (likely icons)
       const icons = React.Children.toArray(children).filter((child) =>
         React.isValidElement(child)
       );
 
-      // Pick single or last icon
       const chosenIcon =
         icons.length > 1 ? icons[icons.length - 1] : icons[0] || null;
 
-      // Match icon size from iconSizeMap
       if (React.isValidElement(chosenIcon)) {
         const { width, height } = iconSizeMap[size];
         content = React.cloneElement(chosenIcon, { width, height });

@@ -3,21 +3,21 @@ import { cn } from "@/lib/utils";
 import { cva, type VariantProps } from "class-variance-authority";
 
 const textareaVariants = cva(
-  "flex w-full rounded-lg outline-none placeholder:text-primary/50 min-h-19.5 px-2 py-1.5 text-sm tracking-3 font-normal disabled:cursor-not-allowed disabled:pointer-events-none",
+  "flex w-full rounded-lg outline-none placeholder:text-primary/50 text-sm tracking-3 font-normal disabled:cursor-not-allowed disabled:pointer-events-none",
   {
     variants: {
       variant: {
         default:
-          "bg-secondary text-accent-foreground hover:bg-accent active:border-primary/86 active:border active:placeholder:text-accent-foreground active:text-accent-foreground focus:bg-transparent focus:border focus:shadow-xxs focus:border-primary/86  disabled:bg-primary/5 disabled:text-primary/20 disabled:border-transparent disabled:ring-0 focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-0",
+          "bg-secondary text-accent-foreground border border-transparent hover:bg-accent active:border active:border-primary/86 active:placeholder:text-accent-foreground active:text-accent-foreground focus:bg-transparent focus:border focus:shadow-xxs focus:border-primary/86 disabled:bg-primary/5 disabled:text-primary/20 disabled:border-transparent focus-visible:ring-2 focus-visible:ring-ring",
         outline:
-          "border border-primary/12 hover:border-primary/20 active:border-primary/86 active:placeholder:text-accent-foreground active:text-accent-foreground bg-transparent text-accent-foreground focus:border focus:shadow-xxs focus:border-primary/86 focus-visible:ring-ring focus-visible:ring-2 focus-visible:ring-offset-0 disabled:bg-secondary disabled:text-primary/20 disabled:border-primary/12 disabled:ring-0",
+          "border border-primary/12 hover:border-primary/20 active:border-primary/86 active:placeholder:text-accent-foreground active:text-accent-foreground bg-transparent text-accent-foreground focus:border focus:shadow-xxs focus:border-primary/86 focus-visible:ring-2 focus-visible:ring-ring disabled:bg-secondary disabled:text-primary/20 disabled:border-primary/12",
         ghost:
-          "bg-transparent text-accent-foreground active:text-accent-foreground active:placeholder:text-accent-foreground focus-visible:ring-ring focus-visible:ring-2 focus-visible:ring-offset-0 disabled:text-primary/20 disabled:border-transparent disabled:ring-0 focus-visible:focus:border-none",
+          "bg-transparent border border-transparent text-accent-foreground active:text-accent-foreground active:placeholder:text-accent-foreground focus-visible:ring-2 focus-visible:border focus-visible:border-primary/86 focus-visible:ring-ring focus-visible:ring-offset-0 focus-visible:bg-transparent disabled:text-primary/20 disabled:border-transparent",
       },
       size: {
-        sm: "min-h-[72px] text-sm tracking-3 font-normal px-2 py-1.5",
-        md: "min-h-[102px] text-lg tracking-3 font-normal px-3 py-2.5",
-        lg: "min-h-[126px] text-xl tracking-2 font-normal px-3.5 py-3 rounded-xl",
+        sm: "min-h-[72px] px-2 py-1.5 text-sm",
+        md: "min-h-[102px] px-3 py-2.5 text-base",
+        lg: "min-h-[126px] px-3.5 py-3 text-lg rounded-xl",
       },
       state: {
         default: "",
@@ -32,60 +32,41 @@ const textareaVariants = cva(
       state: "default",
     },
     compoundVariants: [
+      // SUCCESS
       {
-        variant: "default",
         state: "success",
-        className:
-          "bg-success text-accent-foreground hover:bg-success active:bg-success focus:bg-success",
+        variant: ["default", "ghost"],
+        className: "bg-success text-accent-foreground hover:bg-success",
       },
       {
-        variant: "outline",
         state: "success",
-        className:
-          "border-success-border text-accent-foreground hover:border-success-border active:border-success-border focus:border-success-border",
-      },
-      {
-        variant: "ghost",
-        state: "success",
-        className:
-          "bg-success text-accent-foreground hover:bg-success active:bg-success focus:bg-success",
-      },
-
-      {
-        variant: "default",
-        state: "error",
-        className:
-          "bg-error text-accent-foreground hover:bg-error active:bg-error focus:bg-error",
-      },
-      {
         variant: "outline",
+        className:
+          "border-success-border text-accent-foreground hover:border-success-border",
+      },
+      // ERROR
+      {
         state: "error",
-        className:
-          "border-error-border text-accent-foreground hover:border-error-border active:border-error-border focus:border-error-border",
+        variant: ["default", "ghost"],
+        className: "bg-error text-accent-foreground hover:bg-error",
       },
       {
-        variant: "ghost",
         state: "error",
-        className:
-          "bg-error text-accent-foreground hover:bg-error active:bg-error focus:bg-error",
-      },
-      {
-        variant: "default",
-        state: "warning",
-        className:
-          "bg-warning text-accent-foreground hover:bg-warning active:bg-warning focus:bg-warning",
-      },
-      {
         variant: "outline",
-        state: "warning",
         className:
-          "border-warning-border text-accent-foreground hover:border-warning-border active:border-warning-border focus:border-warning-border",
+          "border-error-border text-accent-foreground hover:border-error-border",
+      },
+      // WARNING
+      {
+        state: "warning",
+        variant: ["default", "ghost"],
+        className: "bg-warning text-accent-foreground hover:bg-warning",
       },
       {
-        variant: "ghost",
         state: "warning",
+        variant: "outline",
         className:
-          "bg-warning text-accent-foreground hover:bg-warning active:bg-warning focus:bg-warning",
+          "border-warning-border text-accent-foreground hover:border-warning-border",
       },
     ],
   }
@@ -101,6 +82,7 @@ const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
       <textarea
         ref={ref}
         data-slot="textarea"
+        aria-invalid={state === "error" ? true : undefined}
         className={cn(textareaVariants({ variant, size, state }), className)}
         {...props}
       />

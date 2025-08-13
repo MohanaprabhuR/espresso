@@ -3,6 +3,7 @@ import { Input } from "@/components/ui/input";
 import { MailIcon } from "../../../public/images/svg/mailIcon";
 import { FilterIcon } from "../../../public/images/svg/filterIcon";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
+import { Label } from "@/components/ui/label";
 
 const InputDemo = () => {
   return (
@@ -52,6 +53,7 @@ const InputDemo = () => {
             <Input
               type="text"
               placeholder="Text"
+              variant="outline"
               prefix={<MailIcon fill="currentColor" />}
               suffix={<FilterIcon fill="currentColor" />}
             />
@@ -217,6 +219,9 @@ const InputDemo = () => {
             <Input size="lg" type="text" placeholder="Text" disabled />
           </div>
           <div className="flex flex-col gap-[30px] max-w-[400px]">
+            <h1 className="text-base font-bold text-gray-900 dark:text-white pb-1">
+              Xl
+            </h1>
             <Input
               size="xl"
               type="text"
@@ -269,6 +274,19 @@ const InputDemo = () => {
             />
             <Input size="xl" type="email" placeholder="Email" status="error" />
             <Input size="xl" type="text" placeholder="Text" disabled />
+          </div>
+        </div>
+        <div className="*:not-first:mt-2">
+          <Label>Input with start add-on</Label>
+          <div className="flex rounded-md shadow-xs">
+            <span className="border-input bg-background text-muted-foreground -z-10 inline-flex items-center rounded-s-md border px-3 text-sm">
+              https://
+            </span>
+            <Input
+              className="-ms-px rounded-l-none shadow-none"
+              placeholder="google.com"
+              type="text"
+            />
           </div>
         </div>
       </div>

@@ -58,11 +58,11 @@ const items = [
     url: "/input",
     icon: Search,
   },
-  // {
-  //   title: "Text Area",
-  //   url: "/textarea",
-  //   icon: Search,
-  // },
+  {
+    title: "Text Area",
+    url: "/textarea",
+    icon: Search,
+  },
   // {
   //   title: "Progress Bar",
   //   url: "/progress",
