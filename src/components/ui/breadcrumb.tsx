@@ -4,9 +4,8 @@ import { Slot } from "@radix-ui/react-slot";
 import { ChevronIcon } from "../../../public/images/svg/chevronIcon";
 import { SlashIcon } from "../../../public/images/svg/slashIcon";
 import { BreadcrumbEllipsisIcon } from "../../../public/images/svg/breadcrumbEllipsisIcon";
-import { CommandIcon } from "../../../public/images/svg/commandIcon";
-import { cn } from "@/lib/utils";
 
+import { cn } from "@/lib/utils";
 type BreadcrumbSize = "sm" | "md";
 type SeparatorType = "chevron" | "slash";
 
@@ -17,11 +16,6 @@ const BreadcrumbContext = React.createContext<{ size: BreadcrumbSize }>({
 const breadcrumbSizeMap: Record<BreadcrumbSize, string> = {
   sm: "text-base font-normal tracking-3 [&>svg]:size-4",
   md: "text-lg font-normal tracking-2 [&>svg]:size-5",
-};
-
-const iconSizeMap: Record<BreadcrumbSize, string> = {
-  sm: "size-4",
-  md: "size-5",
 };
 
 function Breadcrumb(props: React.ComponentProps<"nav">) {
@@ -61,16 +55,13 @@ function BreadcrumbItem({ className, ...props }: React.ComponentProps<"li">) {
 function BreadcrumbLink({
   asChild,
   className,
-  prefix,
   children,
   ...props
 }: React.ComponentProps<"a"> & {
   asChild?: boolean;
   prefix?: boolean;
 }) {
-  const { size } = React.useContext(BreadcrumbContext);
   const Comp = asChild ? Slot : "a";
-  const iconSize = iconSizeMap[size];
 
   return (
     <Comp
@@ -82,25 +73,18 @@ function BreadcrumbLink({
       )}
       {...props}
     >
-      <span className="flex items-center gap-2">
-        {prefix && <CommandIcon className={cn("shrink-0", iconSize)} />}
-        {children}
-      </span>
+      <span className="flex items-center gap-2">{children}</span>
     </Comp>
   );
 }
 
 function BreadcrumbPage({
   className,
-  prefix,
   children,
   ...props
 }: React.ComponentProps<"span"> & {
   prefix?: boolean;
 }) {
-  const { size } = React.useContext(BreadcrumbContext);
-  const iconSize = iconSizeMap[size];
-
   return (
     <span
       data-slot="breadcrumb-page"
@@ -113,7 +97,6 @@ function BreadcrumbPage({
       )}
       {...props}
     >
-      {prefix && <CommandIcon className={iconSize} />}
       {children}
     </span>
   );

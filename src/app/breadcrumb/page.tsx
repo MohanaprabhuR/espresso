@@ -15,6 +15,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { CommandIcon } from "../../../public/images/svg/commandIcon";
 import Link from "next/link";
 
 const BreadcrumbDemo = () => {
@@ -71,25 +72,31 @@ const BreadcrumbDemo = () => {
             <Breadcrumb>
               <BreadcrumbList size="sm">
                 <BreadcrumbItem>
-                  <BreadcrumbLink href="#" prefix>
+                  <BreadcrumbLink href="#">
+                    <CommandIcon fill="currentColor" />
                     Home
                   </BreadcrumbLink>
                 </BreadcrumbItem>
                 <BreadcrumbSeparator />
                 <BreadcrumbItem>
-                  <BreadcrumbLink href="#" prefix>
+                  <BreadcrumbLink href="#">
+                    <CommandIcon fill="currentColor" />
                     Link
                   </BreadcrumbLink>
                 </BreadcrumbItem>
                 <BreadcrumbSeparator />
                 <BreadcrumbItem>
-                  <BreadcrumbLink href="#" prefix>
+                  <BreadcrumbLink href="#">
+                    <CommandIcon fill="currentColor" />
                     Components
                   </BreadcrumbLink>
                 </BreadcrumbItem>
                 <BreadcrumbSeparator />
                 <BreadcrumbItem>
-                  <BreadcrumbPage prefix>Breadcrumb</BreadcrumbPage>
+                  <BreadcrumbPage>
+                    <CommandIcon fill="currentColor" />
+                    Breadcrumb
+                  </BreadcrumbPage>
                 </BreadcrumbItem>
               </BreadcrumbList>
             </Breadcrumb>
@@ -98,25 +105,31 @@ const BreadcrumbDemo = () => {
             <Breadcrumb>
               <BreadcrumbList size="sm">
                 <BreadcrumbItem>
-                  <BreadcrumbLink href="#" prefix>
+                  <BreadcrumbLink href="#">
+                    <CommandIcon fill="currentColor" />
                     Home
                   </BreadcrumbLink>
                 </BreadcrumbItem>
                 <BreadcrumbSeparator type="slash" />
                 <BreadcrumbItem>
-                  <BreadcrumbLink href="#" prefix>
+                  <BreadcrumbLink href="#">
+                    <CommandIcon fill="currentColor" />
                     Link
                   </BreadcrumbLink>
                 </BreadcrumbItem>
                 <BreadcrumbSeparator type="slash" />
                 <BreadcrumbItem>
-                  <BreadcrumbLink href="#" prefix>
+                  <BreadcrumbLink href="#">
+                    <CommandIcon fill="currentColor" />
                     Components
                   </BreadcrumbLink>
                 </BreadcrumbItem>
                 <BreadcrumbSeparator type="slash" />
                 <BreadcrumbItem>
-                  <BreadcrumbPage prefix>Breadcrumb</BreadcrumbPage>
+                  <BreadcrumbPage>
+                    <CommandIcon fill="currentColor" />
+                    Breadcrumb
+                  </BreadcrumbPage>
                 </BreadcrumbItem>
               </BreadcrumbList>
             </Breadcrumb>
@@ -167,25 +180,30 @@ const BreadcrumbDemo = () => {
             <Breadcrumb>
               <BreadcrumbList size="md">
                 <BreadcrumbItem>
-                  <BreadcrumbLink href="#" prefix>
+                  <BreadcrumbLink href="#">
+                    <CommandIcon fill="currentColor" />
                     Home
                   </BreadcrumbLink>
                 </BreadcrumbItem>
                 <BreadcrumbSeparator />
                 <BreadcrumbItem>
-                  <BreadcrumbLink href="#" prefix>
+                  <BreadcrumbLink href="#">
+                    <CommandIcon fill="currentColor" />
                     Link
                   </BreadcrumbLink>
                 </BreadcrumbItem>
                 <BreadcrumbSeparator />
                 <BreadcrumbItem>
-                  <BreadcrumbLink href="#" prefix>
+                  <BreadcrumbLink href="#">
+                    <CommandIcon fill="currentColor" />
                     Components
                   </BreadcrumbLink>
                 </BreadcrumbItem>
                 <BreadcrumbSeparator />
                 <BreadcrumbItem>
-                  <BreadcrumbPage prefix>Breadcrumb</BreadcrumbPage>
+                  <BreadcrumbPage>
+                    <CommandIcon fill="currentColor" /> Breadcrumb
+                  </BreadcrumbPage>
                 </BreadcrumbItem>
               </BreadcrumbList>
             </Breadcrumb>
@@ -194,25 +212,31 @@ const BreadcrumbDemo = () => {
             <Breadcrumb>
               <BreadcrumbList size="md">
                 <BreadcrumbItem>
-                  <BreadcrumbLink href="#" prefix>
+                  <BreadcrumbLink href="#">
+                    <CommandIcon fill="currentColor" />
                     Home
                   </BreadcrumbLink>
                 </BreadcrumbItem>
                 <BreadcrumbSeparator type="slash" />
                 <BreadcrumbItem>
-                  <BreadcrumbLink href="#" prefix>
+                  <BreadcrumbLink href="#">
+                    <CommandIcon fill="currentColor" />
                     Link
                   </BreadcrumbLink>
                 </BreadcrumbItem>
                 <BreadcrumbSeparator type="slash" />
                 <BreadcrumbItem>
-                  <BreadcrumbLink href="#" prefix>
+                  <BreadcrumbLink href="#">
+                    <CommandIcon fill="currentColor" />
                     Components
                   </BreadcrumbLink>
                 </BreadcrumbItem>
                 <BreadcrumbSeparator type="slash" />
                 <BreadcrumbItem>
-                  <BreadcrumbPage prefix>Breadcrumb</BreadcrumbPage>
+                  <BreadcrumbPage>
+                    <CommandIcon fill="currentColor" />
+                    Breadcrumb
+                  </BreadcrumbPage>
                 </BreadcrumbItem>
               </BreadcrumbList>
             </Breadcrumb>
@@ -221,9 +245,7 @@ const BreadcrumbDemo = () => {
             <Breadcrumb>
               <BreadcrumbList size="sm">
                 <BreadcrumbItem>
-                  <BreadcrumbLink asChild>
-                    <Link href="">Home</Link>
-                  </BreadcrumbLink>
+                  <BreadcrumbLink href="#">Home</BreadcrumbLink>
                 </BreadcrumbItem>
                 <BreadcrumbSeparator />
                 <BreadcrumbItem>
@@ -241,9 +263,7 @@ const BreadcrumbDemo = () => {
                 </BreadcrumbItem>
                 <BreadcrumbSeparator />
                 <BreadcrumbItem>
-                  <BreadcrumbLink asChild>
-                    <Link href="">Components</Link>
-                  </BreadcrumbLink>
+                  <BreadcrumbLink href="#">Components</BreadcrumbLink>
                 </BreadcrumbItem>
                 <BreadcrumbSeparator />
                 <BreadcrumbItem>
@@ -256,9 +276,7 @@ const BreadcrumbDemo = () => {
             <Breadcrumb>
               <BreadcrumbList size="sm">
                 <BreadcrumbItem>
-                  <BreadcrumbLink asChild>
-                    <Link href="">Home</Link>
-                  </BreadcrumbLink>
+                  <BreadcrumbLink href="#">Home</BreadcrumbLink>
                 </BreadcrumbItem>
                 <BreadcrumbSeparator type="slash" />
                 <BreadcrumbItem>
@@ -276,9 +294,7 @@ const BreadcrumbDemo = () => {
                 </BreadcrumbItem>
                 <BreadcrumbSeparator type="slash" />
                 <BreadcrumbItem>
-                  <BreadcrumbLink asChild>
-                    <Link href="">Components</Link>
-                  </BreadcrumbLink>
+                  <BreadcrumbLink href="#">Components</BreadcrumbLink>
                 </BreadcrumbItem>
                 <BreadcrumbSeparator type="slash" />
                 <BreadcrumbItem>
@@ -291,9 +307,7 @@ const BreadcrumbDemo = () => {
             <Breadcrumb>
               <BreadcrumbList size="md">
                 <BreadcrumbItem>
-                  <BreadcrumbLink asChild>
-                    <Link href="">Home</Link>
-                  </BreadcrumbLink>
+                  <BreadcrumbLink href="#">Home</BreadcrumbLink>
                 </BreadcrumbItem>
                 <BreadcrumbSeparator />
                 <BreadcrumbItem>
@@ -311,9 +325,7 @@ const BreadcrumbDemo = () => {
                 </BreadcrumbItem>
                 <BreadcrumbSeparator />
                 <BreadcrumbItem>
-                  <BreadcrumbLink asChild>
-                    <Link href="">Components</Link>
-                  </BreadcrumbLink>
+                  <BreadcrumbLink href="#">Components</BreadcrumbLink>
                 </BreadcrumbItem>
                 <BreadcrumbSeparator />
                 <BreadcrumbItem>
@@ -326,9 +338,7 @@ const BreadcrumbDemo = () => {
             <Breadcrumb>
               <BreadcrumbList size="md">
                 <BreadcrumbItem>
-                  <BreadcrumbLink asChild>
-                    <Link href="">Home</Link>
-                  </BreadcrumbLink>
+                  <BreadcrumbLink href="#">Home</BreadcrumbLink>
                 </BreadcrumbItem>
                 <BreadcrumbSeparator type="slash" />
                 <BreadcrumbItem>
@@ -346,9 +356,7 @@ const BreadcrumbDemo = () => {
                 </BreadcrumbItem>
                 <BreadcrumbSeparator type="slash" />
                 <BreadcrumbItem>
-                  <BreadcrumbLink asChild>
-                    <Link href="">Components</Link>
-                  </BreadcrumbLink>
+                  <BreadcrumbLink href="#">Components</BreadcrumbLink>
                 </BreadcrumbItem>
                 <BreadcrumbSeparator type="slash" />
                 <BreadcrumbItem>
@@ -361,8 +369,9 @@ const BreadcrumbDemo = () => {
             <Breadcrumb>
               <BreadcrumbList size="sm">
                 <BreadcrumbItem>
-                  <BreadcrumbLink asChild prefix="true">
-                    <Link href="">Home</Link>
+                  <BreadcrumbLink href="#">
+                    <CommandIcon fill="currentColor" />
+                    Home
                   </BreadcrumbLink>
                 </BreadcrumbItem>
                 <BreadcrumbSeparator />
@@ -381,13 +390,16 @@ const BreadcrumbDemo = () => {
                 </BreadcrumbItem>
                 <BreadcrumbSeparator />
                 <BreadcrumbItem>
-                  <BreadcrumbLink asChild prefix="true">
-                    <Link href="">Components</Link>
+                  <BreadcrumbLink href="#">
+                    <CommandIcon fill="currentColor" />
+                    Components
                   </BreadcrumbLink>
                 </BreadcrumbItem>
                 <BreadcrumbSeparator />
                 <BreadcrumbItem>
-                  <BreadcrumbPage prefix="true">Breadcrumb</BreadcrumbPage>
+                  <BreadcrumbPage>
+                    <CommandIcon fill="currentColor" /> Breadcrumb
+                  </BreadcrumbPage>
                 </BreadcrumbItem>
               </BreadcrumbList>
             </Breadcrumb>
@@ -396,8 +408,9 @@ const BreadcrumbDemo = () => {
             <Breadcrumb>
               <BreadcrumbList size="md">
                 <BreadcrumbItem>
-                  <BreadcrumbLink asChild prefix="true">
-                    <Link href="">Home</Link>
+                  <BreadcrumbLink href="#">
+                    <CommandIcon fill="currentColor" />
+                    Home
                   </BreadcrumbLink>
                 </BreadcrumbItem>
                 <BreadcrumbSeparator />
@@ -416,13 +429,16 @@ const BreadcrumbDemo = () => {
                 </BreadcrumbItem>
                 <BreadcrumbSeparator />
                 <BreadcrumbItem>
-                  <BreadcrumbLink asChild prefix="true">
-                    <Link href="">Components</Link>
+                  <BreadcrumbLink href="#">
+                    <CommandIcon fill="currentColor" />
+                    Components
                   </BreadcrumbLink>
                 </BreadcrumbItem>
                 <BreadcrumbSeparator />
                 <BreadcrumbItem>
-                  <BreadcrumbPage prefix="true">Breadcrumb</BreadcrumbPage>
+                  <BreadcrumbPage>
+                    <CommandIcon fill="currentColor" /> Breadcrumb
+                  </BreadcrumbPage>
                 </BreadcrumbItem>
               </BreadcrumbList>
             </Breadcrumb>
@@ -445,20 +461,24 @@ const BreadcrumbDemo = () => {
                 </BreadcrumbItem>
                 <BreadcrumbSeparator />
                 <BreadcrumbItem>
-                  <BreadcrumbLink asChild prefix="true">
-                    <Link href="/">Home</Link>
+                  <BreadcrumbLink href="#">
+                    <CommandIcon fill="currentColor" />
+                    Home
                   </BreadcrumbLink>
                 </BreadcrumbItem>
 
                 <BreadcrumbSeparator />
                 <BreadcrumbItem>
-                  <BreadcrumbLink asChild prefix="true">
-                    <Link href="">Components</Link>
+                  <BreadcrumbLink href="#">
+                    <CommandIcon fill="currentColor" />
+                    Components
                   </BreadcrumbLink>
                 </BreadcrumbItem>
                 <BreadcrumbSeparator />
                 <BreadcrumbItem>
-                  <BreadcrumbPage prefix="true">Breadcrumb</BreadcrumbPage>
+                  <BreadcrumbPage>
+                    <CommandIcon fill="currentColor" /> Breadcrumb
+                  </BreadcrumbPage>
                 </BreadcrumbItem>
               </BreadcrumbList>
             </Breadcrumb>
@@ -481,20 +501,24 @@ const BreadcrumbDemo = () => {
                 </BreadcrumbItem>
                 <BreadcrumbSeparator />
                 <BreadcrumbItem>
-                  <BreadcrumbLink asChild prefix="true">
-                    <Link href="">Home</Link>
+                  <BreadcrumbLink href="#">
+                    <CommandIcon fill="currentColor" />
+                    Home
                   </BreadcrumbLink>
                 </BreadcrumbItem>
 
                 <BreadcrumbSeparator />
                 <BreadcrumbItem>
-                  <BreadcrumbLink asChild prefix="true">
-                    <Link href="">Components</Link>
+                  <BreadcrumbLink href="#">
+                    <CommandIcon fill="currentColor" />
+                    Components
                   </BreadcrumbLink>
                 </BreadcrumbItem>
                 <BreadcrumbSeparator />
                 <BreadcrumbItem>
-                  <BreadcrumbPage prefix="true">Breadcrumb</BreadcrumbPage>
+                  <BreadcrumbPage>
+                    <CommandIcon fill="currentColor" /> Breadcrumb
+                  </BreadcrumbPage>
                 </BreadcrumbItem>
               </BreadcrumbList>
             </Breadcrumb>
