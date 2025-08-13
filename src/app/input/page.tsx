@@ -12,7 +12,6 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { SelectItemText } from "@radix-ui/react-select";
 
 const InputDemo = () => {
   return (

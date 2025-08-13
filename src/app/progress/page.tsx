@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 // import React from "react";
 // import { Progress } from "@/components/ui/progress";
 // import { CloudIcon } from "../../../public/images/svg/cloudIcon";
@@ -181,7 +182,6 @@ import {
   ContextMenuItem,
   ContextMenuTrigger,
 } from "@/components/ui/context-menu";
-const capitalize = (str: string) => str.charAt(0).toUpperCase() + str.slice(1);
 const statuses = [
   { id: faker.string.uuid(), name: "Confirmed", color: "#10B981" },
   { id: faker.string.uuid(), name: "Pending", color: "#F59E0B" },
