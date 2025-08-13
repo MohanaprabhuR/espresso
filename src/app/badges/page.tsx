@@ -1,4 +1,5 @@
 import { Badge } from "@/components/ui/badge";
+import { CommandIcon } from "../../../public/images/svg/commandIcon";
 
 const Badges = () => {
   return (
@@ -273,265 +274,389 @@ const Badges = () => {
         </div>
         <div className="flex justify-center  gap-[0px_50px]">
           <div className="flex   items-center gap-[10px_10px]">
-            <Badge variant="default" size="sm" showIcon>
+            <Badge variant="default" size="sm">
+              <CommandIcon fill="currentColor" />
               Badge
+              <CommandIcon fill="currentColor" />
             </Badge>
-            <Badge variant="secondary" size="sm" showIcon>
+            <Badge variant="secondary" size="sm">
+              <CommandIcon fill="currentColor" />
               Badge
+              <CommandIcon fill="currentColor" />
             </Badge>
-            <Badge variant="outline" size="sm" showIcon>
+            <Badge variant="outline" size="sm">
+              <CommandIcon fill="currentColor" />
               Badge
+              <CommandIcon fill="currentColor" />
             </Badge>
-            <Badge variant="ghost" size="sm" showIcon>
+            <Badge variant="ghost" size="sm">
+              <CommandIcon fill="currentColor" />
               Badge
+              <CommandIcon fill="currentColor" />
             </Badge>
           </div>
           <div className="flex   items-center gap-[30px_10px]">
-            <Badge variant="default" size="md" showIcon>
+            <Badge variant="default" size="md">
+              <CommandIcon fill="currentColor" />
               Badge
+              <CommandIcon fill="currentColor" />
             </Badge>
-            <Badge variant="secondary" size="md" showIcon>
+            <Badge variant="secondary" size="md">
+              <CommandIcon fill="currentColor" />
               Badge
+              <CommandIcon fill="currentColor" />
             </Badge>
-            <Badge variant="outline" size="md" showIcon>
+            <Badge variant="outline" size="md">
+              <CommandIcon fill="currentColor" />
               Badge
+              <CommandIcon fill="currentColor" />
             </Badge>
-            <Badge variant="ghost" size="md" showIcon>
+            <Badge variant="ghost" size="md">
+              <CommandIcon fill="currentColor" />
               Badge
+              <CommandIcon fill="currentColor" />
             </Badge>
           </div>
           <div className="flex   items-center gap-[10px_10px]">
-            <Badge variant="default" size="lg" showIcon>
+            <Badge variant="default" size="lg">
+              <CommandIcon fill="currentColor" />
               Badge
+              <CommandIcon fill="currentColor" />
             </Badge>
-            <Badge variant="secondary" size="lg" showIcon>
+            <Badge variant="secondary" size="lg">
+              <CommandIcon fill="currentColor" />
               Badge
+              <CommandIcon fill="currentColor" />
             </Badge>
-            <Badge variant="outline" size="lg" showIcon>
+            <Badge variant="outline" size="lg">
+              <CommandIcon fill="currentColor" />
               Badge
+              <CommandIcon fill="currentColor" />
             </Badge>
-            <Badge variant="ghost" size="lg" showIcon>
+            <Badge variant="ghost" size="lg">
+              <CommandIcon fill="currentColor" />
               Badge
+              <CommandIcon fill="currentColor" />
             </Badge>
           </div>
         </div>
         <div className="flex justify-center  gap-[0px_50px]">
           <div className="flex   items-center gap-[10px_10px]">
             <Badge showIcon theme="blue" variant="default" size="sm">
+              <CommandIcon fill="currentColor" />
               Badge
+              <CommandIcon fill="currentColor" />
             </Badge>
             <Badge showIcon theme="blue" variant="secondary" size="sm">
+              <CommandIcon fill="currentColor" />
               Badge
+              <CommandIcon fill="currentColor" />
             </Badge>
             <Badge showIcon theme="blue" variant="outline" size="sm">
+              <CommandIcon fill="currentColor" />
               Badge
+              <CommandIcon fill="currentColor" />
             </Badge>
             <Badge showIcon theme="blue" variant="ghost" size="sm">
+              <CommandIcon fill="currentColor" />
               Badge
+              <CommandIcon fill="currentColor" />
             </Badge>
           </div>
           <div className="flex   items-center gap-[30px_10px]">
             <Badge showIcon theme="blue" variant="default" size="md">
+              <CommandIcon fill="currentColor" />
               Badge
+              <CommandIcon fill="currentColor" />
             </Badge>
             <Badge showIcon theme="blue" variant="secondary" size="md">
-              Badge
+              <CommandIcon fill="currentColor" /> Badge
+              <CommandIcon fill="currentColor" />
             </Badge>
             <Badge showIcon theme="blue" variant="outline" size="md">
+              <CommandIcon fill="currentColor" />
               Badge
+              <CommandIcon fill="currentColor" />
             </Badge>
             <Badge showIcon theme="blue" variant="ghost" size="md">
+              <CommandIcon fill="currentColor" />
               Badge
+              <CommandIcon fill="currentColor" />
             </Badge>
           </div>
           <div className="flex   items-center gap-[10px_10px]">
             <Badge showIcon theme="blue" variant="default" size="lg">
+              <CommandIcon fill="currentColor" />
               Badge
+              <CommandIcon fill="currentColor" />
             </Badge>
             <Badge showIcon theme="blue" variant="secondary" size="lg">
-              Badge
+              <CommandIcon fill="currentColor" /> Badge
+              <CommandIcon fill="currentColor" />
             </Badge>
             <Badge showIcon theme="blue" variant="outline" size="lg">
+              <CommandIcon fill="currentColor" />
               Badge
+              <CommandIcon fill="currentColor" />
             </Badge>
             <Badge showIcon theme="blue" variant="ghost" size="lg">
+              <CommandIcon fill="currentColor" />
               Badge
+              <CommandIcon fill="currentColor" />
             </Badge>
           </div>
         </div>
         <div className="flex justify-center  gap-[0px_50px]">
           <div className="flex   items-center gap-[10px_10px]">
             <Badge showIcon theme="green" variant="default" size="sm">
+              <CommandIcon fill="currentColor" />
               Badge
+              <CommandIcon fill="currentColor" />
             </Badge>
             <Badge showIcon theme="green" variant="secondary" size="sm">
+              <CommandIcon fill="currentColor" />
               Badge
+              <CommandIcon fill="currentColor" />
             </Badge>
             <Badge showIcon theme="green" variant="outline" size="sm">
+              <CommandIcon fill="currentColor" />
               Badge
+              <CommandIcon fill="currentColor" />
             </Badge>
             <Badge showIcon theme="green" variant="ghost" size="sm">
+              <CommandIcon fill="currentColor" />
               Badge
+              <CommandIcon fill="currentColor" />
             </Badge>
           </div>
           <div className="flex   items-center gap-[30px_10px]">
             <Badge showIcon theme="green" variant="default" size="md">
-              Badge
+              <CommandIcon fill="currentColor" /> Badge
+              <CommandIcon fill="currentColor" />
             </Badge>
             <Badge showIcon theme="green" variant="secondary" size="md">
+              <CommandIcon fill="currentColor" />
               Badge
+              <CommandIcon fill="currentColor" />
             </Badge>
             <Badge showIcon theme="green" variant="outline" size="md">
+              <CommandIcon fill="currentColor" />
               Badge
+              <CommandIcon fill="currentColor" />
             </Badge>
             <Badge showIcon theme="green" variant="ghost" size="md">
+              <CommandIcon fill="currentColor" />
               Badge
+              <CommandIcon fill="currentColor" />
             </Badge>
           </div>
           <div className="flex   items-center gap-[10px_10px]">
             <Badge showIcon theme="green" variant="default" size="lg">
-              Badge
+              <CommandIcon fill="currentColor" /> Badge
+              <CommandIcon fill="currentColor" />
             </Badge>
             <Badge showIcon theme="green" variant="secondary" size="lg">
+              <CommandIcon fill="currentColor" />
               Badge
+              <CommandIcon fill="currentColor" />
             </Badge>
             <Badge showIcon theme="green" variant="outline" size="lg">
+              <CommandIcon fill="currentColor" />
               Badge
+              <CommandIcon fill="currentColor" />
             </Badge>
             <Badge showIcon theme="green" variant="ghost" size="lg">
-              Badge
+              <CommandIcon fill="currentColor" /> Badge
+              <CommandIcon fill="currentColor" />
             </Badge>
           </div>
         </div>
         <div className="flex justify-center  gap-[0px_50px]">
           <div className="flex   items-center gap-[10px_10px]">
             <Badge showIcon theme="amber" variant="default" size="sm">
+              <CommandIcon fill="currentColor" />
               Badge
+              <CommandIcon fill="currentColor" />
             </Badge>
             <Badge showIcon theme="amber" variant="secondary" size="sm">
+              <CommandIcon fill="currentColor" />
               Badge
+              <CommandIcon fill="currentColor" />
             </Badge>
             <Badge showIcon theme="amber" variant="outline" size="sm">
+              <CommandIcon fill="currentColor" />
               Badge
+              <CommandIcon fill="currentColor" />
             </Badge>
             <Badge showIcon theme="amber" variant="ghost" size="sm">
+              <CommandIcon fill="currentColor" />
               Badge
+              <CommandIcon fill="currentColor" />
             </Badge>
           </div>
           <div className="flex   items-center gap-[30px_10px]">
             <Badge showIcon theme="amber" variant="default" size="md">
+              <CommandIcon fill="currentColor" />
               Badge
+              <CommandIcon fill="currentColor" />
             </Badge>
             <Badge showIcon theme="amber" variant="secondary" size="md">
+              <CommandIcon fill="currentColor" />
               Badge
+              <CommandIcon fill="currentColor" />
             </Badge>
             <Badge showIcon theme="amber" variant="outline" size="md">
-              Badge
+              <CommandIcon fill="currentColor" /> Badge
+              <CommandIcon fill="currentColor" />
             </Badge>
             <Badge showIcon theme="amber" variant="ghost" size="md">
-              Badge
+              <CommandIcon fill="currentColor" /> Badge
+              <CommandIcon fill="currentColor" />
             </Badge>
           </div>
           <div className="flex   items-center gap-[10px_10px]">
             <Badge showIcon theme="amber" variant="default" size="lg">
-              Badge
+              <CommandIcon fill="currentColor" /> Badge
+              <CommandIcon fill="currentColor" />
             </Badge>
             <Badge showIcon theme="amber" variant="secondary" size="lg">
+              <CommandIcon fill="currentColor" />
               Badge
+              <CommandIcon fill="currentColor" />
             </Badge>
             <Badge showIcon theme="amber" variant="outline" size="lg">
+              <CommandIcon fill="currentColor" />
               Badge
+              <CommandIcon fill="currentColor" />
             </Badge>
             <Badge showIcon theme="amber" variant="ghost" size="lg">
-              Badge
+              <CommandIcon fill="currentColor" /> Badge
+              <CommandIcon fill="currentColor" />
             </Badge>
           </div>
         </div>
         <div className="flex justify-center  gap-[0px_50px]">
           <div className="flex   items-center gap-[10px_10px]">
             <Badge showIcon theme="red" variant="default" size="sm">
-              Badge
+              <CommandIcon fill="currentColor" /> Badge
+              <CommandIcon fill="currentColor" />
             </Badge>
             <Badge showIcon theme="red" variant="secondary" size="sm">
-              Badge
+              <CommandIcon fill="currentColor" /> Badge
+              <CommandIcon fill="currentColor" />
             </Badge>
             <Badge showIcon theme="red" variant="outline" size="sm">
+              <CommandIcon fill="currentColor" />
               Badge
+              <CommandIcon fill="currentColor" />
             </Badge>
             <Badge showIcon theme="red" variant="ghost" size="sm">
-              Badge
+              <CommandIcon fill="currentColor" /> Badge
+              <CommandIcon fill="currentColor" />
             </Badge>
           </div>
           <div className="flex   items-center gap-[30px_10px]">
             <Badge showIcon theme="red" variant="default" size="md">
-              Badge
+              <CommandIcon fill="currentColor" /> Badge
+              <CommandIcon fill="currentColor" />
             </Badge>
             <Badge showIcon theme="red" variant="secondary" size="md">
+              <CommandIcon fill="currentColor" />
               Badge
+              <CommandIcon fill="currentColor" />
             </Badge>
             <Badge showIcon theme="red" variant="outline" size="md">
+              <CommandIcon fill="currentColor" />
               Badge
+              <CommandIcon fill="currentColor" />
             </Badge>
             <Badge showIcon theme="red" variant="ghost" size="md">
+              <CommandIcon fill="currentColor" />
               Badge
+              <CommandIcon fill="currentColor" />
             </Badge>
           </div>
           <div className="flex   items-center gap-[10px_10px]">
             <Badge showIcon theme="red" variant="default" size="lg">
-              Badge
+              <CommandIcon fill="currentColor" /> Badge
+              <CommandIcon fill="currentColor" />
             </Badge>
             <Badge showIcon theme="red" variant="secondary" size="lg">
+              <CommandIcon fill="currentColor" />
               Badge
+              <CommandIcon fill="currentColor" />
             </Badge>
             <Badge showIcon theme="red" variant="outline" size="lg">
+              <CommandIcon fill="currentColor" />
               Badge
+              <CommandIcon fill="currentColor" />
             </Badge>
             <Badge showIcon theme="red" variant="ghost" size="lg">
+              <CommandIcon fill="currentColor" />
               Badge
+              <CommandIcon fill="currentColor" />
             </Badge>
           </div>
         </div>
         <div className="flex justify-center  gap-[0px_50px]">
           <div className="flex   items-center gap-[10px_10px]">
             <Badge showIcon theme="violet" variant="default" size="sm">
+              <CommandIcon fill="currentColor" />
               Badge
+              <CommandIcon fill="currentColor" />
             </Badge>
             <Badge showIcon theme="violet" variant="secondary" size="sm">
-              Badge
+              <CommandIcon fill="currentColor" /> Badge
+              <CommandIcon fill="currentColor" />
             </Badge>
             <Badge showIcon theme="violet" variant="outline" size="sm">
+              <CommandIcon fill="currentColor" />
               Badge
+              <CommandIcon fill="currentColor" />
             </Badge>
             <Badge showIcon theme="violet" variant="ghost" size="sm">
-              Badge
+              <CommandIcon fill="currentColor" /> Badge
+              <CommandIcon fill="currentColor" />
             </Badge>
           </div>
           <div className="flex   items-center gap-[30px_10px]">
             <Badge showIcon theme="violet" variant="default" size="md">
+              <CommandIcon fill="currentColor" />
               Badge
+              <CommandIcon fill="currentColor" />
             </Badge>
             <Badge showIcon theme="violet" variant="secondary" size="md">
-              Badge
+              <CommandIcon fill="currentColor" /> Badge
+              <CommandIcon fill="currentColor" />
             </Badge>
             <Badge showIcon theme="violet" variant="outline" size="md">
+              <CommandIcon fill="currentColor" />
               Badge
+              <CommandIcon fill="currentColor" />
             </Badge>
             <Badge showIcon theme="violet" variant="ghost" size="md">
+              <CommandIcon fill="currentColor" />
               Badge
+              <CommandIcon fill="currentColor" />
             </Badge>
           </div>
           <div className="flex  items-center gap-[10px_10px]">
             <Badge showIcon theme="violet" variant="default" size="lg">
-              Badge
+              <CommandIcon fill="currentColor" /> Badge
+              <CommandIcon fill="currentColor" />
             </Badge>
             <Badge showIcon theme="violet" variant="secondary" size="lg">
-              Badge
+              <CommandIcon fill="currentColor" /> Badge
+              <CommandIcon fill="currentColor" />
             </Badge>
             <Badge showIcon theme="violet" variant="outline" size="lg">
+              <CommandIcon fill="currentColor" />
               Badge
+              <CommandIcon fill="currentColor" />
             </Badge>
             <Badge showIcon theme="violet" variant="ghost" size="lg">
-              Badge
+              <CommandIcon fill="currentColor" /> Badge
+              <CommandIcon fill="currentColor" />
             </Badge>
           </div>
         </div>

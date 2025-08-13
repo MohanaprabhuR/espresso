@@ -4,7 +4,7 @@ import * as React from "react";
 import { Slot } from "@radix-ui/react-slot";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
-import { CommandIcon } from "../../../public/images/svg/commandIcon";
+
 import Image from "next/image";
 
 const buttonVariants = cva(
@@ -90,49 +90,33 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       size = "sm",
       iconOnly = false,
       asChild = false,
-      loading = false,
-      leftIcon,
-      rightIcon,
       children,
-      showIcon = false,
       ...props
     },
     ref
   ) => {
     const Comp = asChild ? Slot : "button";
-    const iconSize = iconSizeMap[size];
 
-    const renderCommandIcon = () => <CommandIcon {...iconSize} />;
-    const renderLoader = () => {
-      const isWhiteSpinner = variant === "primary" || variant === "destructive";
-      return (
-        <Image
-          src={
-            isWhiteSpinner
-              ? "/images/spinner-white.png"
-              : "/images/spinner-gray.png"
-          }
-          width={iconSize.width}
-          height={iconSize.height}
-          alt="Spinner"
-          className="animate-spin"
-        />
+    let content: React.ReactNode = children;
+
+    if (iconOnly) {
+      // Get only React elements (likely icons)
+      const icons = React.Children.toArray(children).filter((child) =>
+        React.isValidElement(child)
       );
-    };
 
-    const showLeft =
-      showIcon &&
-      (loading
-        ? renderLoader()
-        : leftIcon ??
-          (!iconOnly && children
-            ? renderCommandIcon()
-            : iconOnly
-            ? renderCommandIcon()
-            : null));
+      // Pick single or last icon
+      const chosenIcon =
+        icons.length > 1 ? icons[icons.length - 1] : icons[0] || null;
 
-    const showRight =
-      showIcon && !iconOnly && !loading && (rightIcon ?? renderCommandIcon());
+      // Match icon size from iconSizeMap
+      if (React.isValidElement(chosenIcon)) {
+        const { width, height } = iconSizeMap[size];
+        content = React.cloneElement(chosenIcon, { width, height });
+      } else {
+        content = null;
+      }
+    }
 
     return (
       <Comp
@@ -140,9 +124,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         ref={ref}
         {...props}
       >
-        {showLeft}
-        {!iconOnly && children}
-        {showRight}
+        {content}
       </Comp>
     );
   }
