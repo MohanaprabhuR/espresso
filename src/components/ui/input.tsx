@@ -20,20 +20,20 @@ const baseStyles =
 
 const variantBaseMap: Record<VariantType, string> = {
   default:
-    "bg-secondary border border-transparent hover:bg-accent text-secondary-foreground active:bg-transparent active:shadow-lg active:border-primary/50 active:border active:text-accent-foreground focus:border focus:border-primary/50 focus:shadow-lg focus:bg-white focus:text-accent-foreground focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-0 focus-visible:active:border-0 focus-visible:border-0 has-[input:disabled]:bg-primary/5 has-[input:disabled]:pointer-events-none has-[input:disabled]:text-primary/20 has-[input:disabled]:cursor-not-allowed has-[input:active]:bg-transparent has-[input:active]:border has-[input:active]:border-primary/50 has-[input:active]:shadow-lg has-[input:focus]:bg-transparent has-[input:focus]:border has-[input:focus]:border-primary/50 has-[input:focus]:shadow-lg has-[input:focus-visible]:ring-2 has-[input:focus-visible]:ring-ring has-[input:focus-visible]:ring-offset-0",
+    "bg-secondary border border-transparent hover:bg-accent text-secondary-foreground active:bg-transparent active:shadow-lg active:border-primary/50 active:border active:text-accent-foreground focus:border focus:border-primary/50 focus:shadow-lg focus:bg-white focus-visible:border-primary/50 focus:text-accent-foreground focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-0  focus-visible:bg-transparent  ",
   outline:
-    "border bg-background text-secondary-foreground hover:border-primary/25 active:border-primary/50 active:bg-background active:shadow-lg focus:border-primary/50 focus:text-accent-foreground has-[input:disabled]:bg-primary/5 has-[input:disabled]:pointer-events-none has-[input:disabled]:text-primary/20 has-[input:disabled]:cursor-not-allowed has-[input:active]:bg-transparent has-[input:active]:border  has-[input:active]:shadow-lg has-[input:focus]:bg-transparent has-[input:focus]:border has-[input:focus]:border has-[input:focus]:shadow-lg has-[input:focus-visible]:ring-2 has-[input:focus-visible]:ring-ring has-[input:focus-visible]:ring-offset-0 has-[input:active]:bg-transparent has-[input:active]:border has-[input:active]:border-primary/50 has-[input:active]:shadow-lg has-[input:focus]:bg-transparent has-[input:focus]:border has-[input:focus]:border-primary/50 has-[input:focus]:shadow-lg has-[input:focus-visible]:ring-2 has-[input:focus-visible]:ring-ring has-[input:focus-visible]:ring-offset-0",
+    "border bg-background text-secondary-foreground hover:border-primary/25 active:border-primary/50 active:bg-background active:shadow-lg focus-border focus:border-primary/50 focus:text-accent-foreground focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-0 focus-visible:border-primary/50 focus-visible:bg-transparent",
 };
 
 const statusMap: Record<VariantType, Record<StatusType, string>> = {
   default: {
     default: "",
     success:
-      "bg-success text-accent-foreground hover:bg-success active:bg-success active:border-success-border focus:border-success-border focus:bg-success disabled:bg-primary/5 disabled:text-primary/20",
+      "bg-success text-accent-foreground hover:bg-success active:bg-success  focus:border-success-border focus:bg-success disabled:bg-primary/5 disabled:text-primary/20",
     warning:
-      "bg-warning text-accent-foreground hover:bg-warning active:bg-warning active:border-warning-border focus:border-warning-border focus:bg-warning disabled:bg-primary/5 disabled:text-primary/20",
+      "bg-warning text-accent-foreground hover:bg-warning active:bg-warning  focus:border-warning-border focus:bg-warning disabled:bg-primary/5 disabled:text-primary/20",
     error:
-      "bg-error text-accent-foreground hover:bg-error active:bg-error active:border-error-border focus:border-error-border focus:bg-error disabled:bg-primary/5 disabled:text-primary/20",
+      "bg-error text-accent-foreground hover:bg-error active:bg-error focus:border-error-border focus:bg-error disabled:bg-primary/5 disabled:text-primary/20",
   },
   outline: {
     default: "",
@@ -47,10 +47,30 @@ const statusMap: Record<VariantType, Record<StatusType, string>> = {
 };
 
 const sizeMap = {
-  sm: "h-7 text-base font-normal rounded-lg tracking-3 file:h-6 file:text-xs px-2 py-1.5",
-  md: "h-8 text-base font-normal rounded-lg tracking-3 file:h-7 file:text-sm px-2.5 py-2",
-  lg: "h-10 text-lg font-normal rounded-xl tracking-3 file:h-9 file:text-base px-3 py-[11px]",
-  xl: "h-10 text-xl font-normal rounded-xl tracking-3 file:h-9 file:text-base px-3 py-[9.5px]",
+  sm: {
+    input:
+      "h-7 text-base font-normal rounded-lg tracking-3 file:h-6 file:text-xs px-2 py-1.5",
+    prefix: "pl-8",
+    suffix: "pr-8",
+  },
+  md: {
+    input:
+      "h-8 text-base font-normal rounded-lg tracking-3 file:h-7 file:text-sm px-2.5 py-2",
+    prefix: "pl-[34px]",
+    suffix: "pr-[34px]",
+  },
+  lg: {
+    input:
+      "h-10 text-lg font-normal rounded-xl tracking-3 file:h-9 file:text-base px-3 py-[11px]",
+    prefix: "pl-9",
+    suffix: "pr-9",
+  },
+  xl: {
+    input:
+      "h-10 text-xl font-normal rounded-xl tracking-3 file:h-9 file:text-base px-3 py-[9.5px]",
+    prefix: "pl-10",
+    suffix: "pr-10",
+  },
 };
 
 const iconSizeMap = {
@@ -75,33 +95,43 @@ function Input({
 
   return (
     <div
-      data-variant={variant}
       data-status={status}
-      className={cn(
-        "flex items-center gap-2 ",
-        variantBaseMap[variant],
-        statusClasses,
-        sizeMap[size]
-      )}
+      className={cn("flex items-center gap-2 relative")}
     >
       {prefix && (
-        <span className={cn("flex items-center text-inherit", iconSize)}>
+        <span
+          className={cn(
+            "flex items-center text-inherit absolute left-2",
+            iconSize
+          )}
+        >
           {prefix}
         </span>
       )}
 
       <input
         type={type}
+        data-variant={variant}
         className={cn(
-          "flex-1 bg-transparent border-none focus:outline-none p-0",
+          "flex-1 bg-transparent focus:outline-none p-0",
           baseStyles,
+          variantBaseMap[variant],
+          statusClasses,
+          sizeMap[size].input,
+          prefix && sizeMap[size].prefix,
+          suffix && sizeMap[size].suffix,
           className
         )}
         {...props}
       />
 
       {suffix && (
-        <span className={cn("flex items-center text-inherit", iconSize)}>
+        <span
+          className={cn(
+            "flex items-center text-inherit absolute right-2",
+            iconSize
+          )}
+        >
           {suffix}
         </span>
       )}

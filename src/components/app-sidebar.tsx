@@ -63,11 +63,11 @@ const items = [
     url: "/textarea",
     icon: Search,
   },
-  // {
-  //   title: "Progress Bar",
-  //   url: "/progress",
-  //   icon: Search,
-  // },
+  {
+    title: "Progress Bar",
+    url: "/progress",
+    icon: Search,
+  },
 ];
 
 export function AppSidebar() {

@@ -5,6 +5,15 @@ import { FilterIcon } from "../../../public/images/svg/filterIcon";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { Label } from "@/components/ui/label";
 
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { SelectItemText } from "@radix-ui/react-select";
+
 const InputDemo = () => {
   return (
     <div>
@@ -27,7 +36,6 @@ const InputDemo = () => {
             <Input type="tel" placeholder="Phone" />
             <Input type="time" />
             <Input type="url" placeholder="Website" />
-            <Input type="file" placeholder="Website" />
             <Input
               placeholder="Search..."
               prefix={
@@ -47,7 +55,6 @@ const InputDemo = () => {
             <Input type="number" placeholder="Number" status="warning" />
             <Input type="email" placeholder="Email" status="success" />
             <Input type="email" placeholder="Email" status="error" />
-            <Input type="text" placeholder="Text" disabled />
           </div>
           <div className="flex flex-col gap-[30px] max-w-[400px]">
             <Input
@@ -68,7 +75,6 @@ const InputDemo = () => {
             <Input variant="outline" type="tel" placeholder="Phone" />
             <Input variant="outline" type="time" />
             <Input variant="outline" type="url" placeholder="Website" />
-            <Input variant="outline" type="file" placeholder="Website" />
             <Input
               variant="outline"
               placeholder="Search..."
@@ -108,7 +114,6 @@ const InputDemo = () => {
               status="error"
               suffix={<FilterIcon fill="currentColor" />}
             />
-            <Input variant="outline" type="text" placeholder="Text" disabled />
           </div>
           <div className="flex flex-col gap-[30px] max-w-[400px]">
             <Input
@@ -129,7 +134,6 @@ const InputDemo = () => {
             <Input size="md" type="tel" placeholder="Phone" />
             <Input size="md" type="time" />
             <Input size="md" type="url" placeholder="Website" />
-            <Input size="md" type="file" placeholder="Website" />
             <Input
               size="md"
               placeholder="Search..."
@@ -162,7 +166,6 @@ const InputDemo = () => {
               status="success"
             />
             <Input size="md" type="email" placeholder="Email" status="error" />
-            <Input size="md" type="text" placeholder="Text" disabled />
           </div>
           <div className="flex flex-col gap-[30px] max-w-[400px]">
             <Input
@@ -183,7 +186,6 @@ const InputDemo = () => {
             <Input size="lg" type="tel" placeholder="Phone" />
             <Input size="lg" type="time" />
             <Input size="lg" type="url" placeholder="Website" />
-            <Input size="lg" type="file" placeholder="Website" />
             <Input
               size="lg"
               placeholder="Search..."
@@ -216,7 +218,6 @@ const InputDemo = () => {
               status="success"
             />
             <Input size="lg" type="email" placeholder="Email" status="error" />
-            <Input size="lg" type="text" placeholder="Text" disabled />
           </div>
           <div className="flex flex-col gap-[30px] max-w-[400px]">
             <h1 className="text-base font-bold text-gray-900 dark:text-white pb-1">
@@ -240,7 +241,6 @@ const InputDemo = () => {
             <Input size="xl" type="tel" placeholder="Phone" />
             <Input size="xl" type="time" />
             <Input size="xl" type="url" placeholder="Website" />
-            <Input size="xl" type="file" placeholder="Website" />
             <Input
               size="xl"
               placeholder="Search..."
@@ -273,20 +273,56 @@ const InputDemo = () => {
               status="success"
             />
             <Input size="xl" type="email" placeholder="Email" status="error" />
-            <Input size="xl" type="text" placeholder="Text" disabled />
           </div>
         </div>
-        <div className="*:not-first:mt-2">
-          <Label>Input with start add-on</Label>
-          <div className="flex rounded-md shadow-xs">
-            <span className="border-input bg-background text-muted-foreground -z-10 inline-flex items-center rounded-s-md border px-3 text-sm">
-              https://
-            </span>
-            <Input
-              className="-ms-px rounded-l-none shadow-none"
-              placeholder="google.com"
-              type="text"
-            />
+        <div className="flex flex-col gap-[30px]">
+          <div className="*:not-first:mt-2">
+            <Label>Input with start add-on</Label>
+            <div className="flex rounded-md shadow-xs">
+              <span className="border-border bg-background text-muted-foreground -z-10 inline-flex items-center rounded-s-md border px-3 text-sm">
+                https://
+              </span>
+              <Input
+                className="-ms-px rounded-l-none shadow-none"
+                variant="outline"
+                placeholder="google.com"
+                type="text"
+              />
+            </div>
+          </div>
+          <div className="*:not-first:mt-2">
+            <Label>Input with end add-on</Label>
+            <div className="flex rounded-md shadow-xs">
+              <Input
+                className=" rounded-e-none"
+                placeholder="google"
+                type="text"
+                variant="outline"
+              />
+              <span className="border-border border-l-0 bg-background text-muted-foreground -z-10 inline-flex items-center rounded-e-md border px-3 text-sm">
+                .com
+              </span>
+            </div>
+          </div>
+          <div className="*:not-first:mt-2">
+            <Label>Input with end select</Label>
+            <div className="flex rounded-md shadow-xs">
+              <Input
+                className="-me-px rounded-e-none shadow-none focus-visible:z-10"
+                placeholder="google"
+                type="text"
+              />
+              <Select>
+                <SelectTrigger className="rounded-l-none">
+                  <SelectValue placeholder="Theme" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="com">.com</SelectItem>
+                  <SelectItem value="org">.org</SelectItem>
+                  <SelectItem value="net">.net</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
           </div>
         </div>
       </div>
