@@ -34,11 +34,11 @@ const statusRingMap = {
 
 const variantClassMap = {
   default:
-    "data-[disabled]:bg-primary/5 data-[disabled]:text-primary/20 disabled:cursor-not-allowed disabled:bg-primary/5 disabled:pointer-events-none disabled:cursor-not-allowed bg-secondary text-secondary-foreground hover:bg-accent hover:text-secondary-foreground active:bg-primary/12 active:text-accent-foreground focus:text-accent-foreground",
+    "data-[disabled]:bg-primary/3 data-[disabled]:text-primary/20 disabled:cursor-not-allowed disabled:bg-primary/3 disabled:pointer-events-none disabled:cursor-not-allowed bg-secondary text-secondary-foreground hover:bg-accent hover:text-secondary-foreground active:bg-primary/12 active:text-accent-foreground focus:text-accent-foreground",
   outline:
-    "data-[disabled]:bg-primary/5 data-[disabled]:text-primary/20 disabled:cursor-not-allowed disabled:bg-primary/5 disabled:pointer-events-none disabled:cursor-not-allowed border bg-background text-secondary-foreground hover:border-primary/25 active:border-primary/50 active:bg-background active:text-accent-foreground focus:border-background focus:text-accent-foreground",
+    "data-[disabled]:bg-primary/3 data-[disabled]:text-primary/20 disabled:cursor-not-allowed disabled:bg-primary/3 disabled:pointer-events-none disabled:cursor-not-allowed border bg-background text-secondary-foreground hover:border-primary/25 active:border-primary/50 active:bg-background active:text-accent-foreground focus:border-background focus:text-accent-foreground",
   ghost:
-    "data-[disabled]:bg-primary/5 data-[disabled]:text-primary/20 disabled:cursor-not-allowed disabled:bg-primary/5 disabled:pointer-events-none disabled:cursor-not-allowed bg-transparent text-secondary-foreground hover:bg-accent active:bg-primary/12 active:text-accent-foreground focus:bg-primary/15 focus:text-accent-foreground focus-visible:bg-primary/5",
+    "data-[disabled]:bg-primary/3 data-[disabled]:text-primary/20 disabled:cursor-not-allowed disabled:bg-primary/3 disabled:pointer-events-none disabled:cursor-not-allowed bg-transparent text-secondary-foreground hover:bg-accent active:bg-primary/12 active:text-accent-foreground focus:bg-primary/15 focus:text-accent-foreground focus-visible:bg-primary/3",
 };
 
 const statusOutlineMap = {

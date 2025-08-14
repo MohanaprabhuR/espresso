@@ -3,16 +3,16 @@ import { cn } from "@/lib/utils";
 import { cva, type VariantProps } from "class-variance-authority";
 
 const textareaVariants = cva(
-  "flex w-full rounded-lg outline-none placeholder:text-primary/50 text-sm tracking-3 font-normal disabled:cursor-not-allowed disabled:pointer-events-none",
+  "flex w-full rounded-lg outline-none placeholder:text-primary/50 text-sm tracking-3 font-normal disabled:cursor-not-allowed disabled:pointer-events-none disabled:bg-primary/3 disabled:text-primary/20 disabled:border-transparent",
   {
     variants: {
       variant: {
         default:
-          "bg-secondary text-accent-foreground border border-transparent hover:bg-accent active:border active:border-primary/86 active:placeholder:text-accent-foreground active:text-accent-foreground focus:bg-transparent focus:border focus:shadow-xxs focus:border-primary/86 disabled:bg-primary/5 disabled:text-primary/20 disabled:border-transparent focus-visible:ring-2 focus-visible:ring-ring",
+          "bg-secondary text-accent-foreground border border-transparent hover:bg-accent active:border active:border-primary/50 active:placeholder:text-accent-foreground active:text-accent-foreground focus:bg-transparent focus:border focus:shadow-2xs focus:border-primary/50  focus-visible:ring-2 focus-visible:ring-ring focus-visible:border-primary/50",
         outline:
-          "border border-primary/12 hover:border-primary/20 active:border-primary/86 active:placeholder:text-accent-foreground active:text-accent-foreground bg-transparent text-accent-foreground focus:border focus:shadow-xxs focus:border-primary/86 focus-visible:ring-2 focus-visible:ring-ring disabled:bg-secondary disabled:text-primary/20 disabled:border-primary/12",
+          "border border-primary/12 hover:border-primary/20 active:border-primary/50 active:placeholder:text-accent-foreground active:text-accent-foreground bg-transparent text-accent-foreground focus:border focus:shadow-2xs focus:border-primary/50 focus-visible:ring-2 focus-visible:ring-ring",
         ghost:
-          "bg-transparent border border-transparent text-accent-foreground active:text-accent-foreground active:placeholder:text-accent-foreground focus-visible:ring-2 focus-visible:border focus-visible:border-primary/86 focus-visible:ring-ring focus-visible:ring-offset-0 focus-visible:bg-transparent disabled:text-primary/20 disabled:border-transparent",
+          "bg-transparent border border-transparent text-accent-foreground active:text-accent-foreground active:placeholder:text-accent-foreground focus-visible:ring-2 focus-visible:border focus-visible:border-primary/50 focus-visible:ring-ring focus-visible:ring-offset-0 focus-visible:bg-transparent ",
       },
       size: {
         sm: "min-h-[72px] px-2 py-1.5 text-sm",

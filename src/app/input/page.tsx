@@ -22,6 +22,7 @@ const InputDemo = () => {
         </h1>
         <div className="flex justify-center gap-[30px] max-w-[400px] mx-auto">
           <div className="flex flex-col gap-[30px] max-w-[400px]">
+            <Input disabled type="text" placeholder="Text" />
             <Input
               type="text"
               placeholder="Text"
@@ -56,6 +57,7 @@ const InputDemo = () => {
             <Input type="email" placeholder="Email" status="error" />
           </div>
           <div className="flex flex-col gap-[30px] max-w-[400px]">
+            <Input disabled type="text" placeholder="Text" variant="outline" />
             <Input
               type="text"
               placeholder="Text"
@@ -115,6 +117,7 @@ const InputDemo = () => {
             />
           </div>
           <div className="flex flex-col gap-[30px] max-w-[400px]">
+            <Input disabled size="md" type="text" placeholder="Text" />
             <Input
               size="md"
               type="text"
@@ -167,6 +170,7 @@ const InputDemo = () => {
             <Input size="md" type="email" placeholder="Email" status="error" />
           </div>
           <div className="flex flex-col gap-[30px] max-w-[400px]">
+            <Input disabled size="lg" type="text" placeholder="Text" />
             <Input
               size="lg"
               type="text"
@@ -219,9 +223,7 @@ const InputDemo = () => {
             <Input size="lg" type="email" placeholder="Email" status="error" />
           </div>
           <div className="flex flex-col gap-[30px] max-w-[400px]">
-            <h1 className="text-base font-bold text-gray-900 dark:text-white pb-1">
-              Xl
-            </h1>
+            <Input disabled size="xl" type="text" placeholder="Text" />
             <Input
               size="xl"
               type="text"

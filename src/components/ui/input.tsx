@@ -16,24 +16,24 @@ type InputProps = Omit<
 };
 
 const baseStyles =
-  "w-full min-w-0 transition-[color,box-shadow,border] outline-none placeholder:text-primary/50 file:inline-flex file:pr-1 file:border-r file:border-r-[1px] file:border-primary/20 file:bg-transparent file:font-medium aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&:-webkit-autofill]:bg-autofill [&:-webkit-autofill]:text-accent-foreground";
+  "w-full min-w-0 transition-[color,box-shadow,border] outline-none placeholder:text-primary/50 file:inline-flex file:pr-1 file:border-r file:border-r-[1px] file:border-primary/20 file:bg-transparent file:font-medium aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&:-webkit-autofill]:bg-autofill [&:-webkit-autofill]:text-accent-foreground disabled:bg-primary/3 disabled:border-none disabled:text-primary/20 disabled:cursor-not-allowed disabled:pointer-events-none";
 
 const variantBaseMap: Record<VariantType, string> = {
   default:
     "bg-secondary border border-transparent hover:bg-accent text-secondary-foreground active:bg-transparent active:shadow-lg active:border-primary/50 active:border active:text-accent-foreground focus:border focus:border-primary/50 focus:shadow-lg focus:bg-white focus-visible:border-primary/50 focus:text-accent-foreground focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-0  focus-visible:bg-transparent  ",
   outline:
-    "border bg-background text-secondary-foreground hover:border-primary/25 active:border-primary/50 active:bg-background active:shadow-lg focus-border focus:border-primary/50 focus:text-accent-foreground focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-0 focus-visible:border-primary/50 focus-visible:bg-transparent",
+    "border bg-background text-secondary-foreground hover:border-primary/25 active:border-primary/50 active:bg-background active:shadow-lg focus-border focus:border-primary/50 focus:text-accent-foreground focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-0 focus-visible:border-primary/50 focus-visible:bg-transparent ",
 };
 
 const statusMap: Record<VariantType, Record<StatusType, string>> = {
   default: {
     default: "",
     success:
-      "bg-success text-accent-foreground hover:bg-success active:bg-success  focus:border-success-border focus:bg-success disabled:bg-primary/5 disabled:text-primary/20",
+      "bg-success text-accent-foreground hover:bg-success active:bg-success  focus:border-success-border focus:bg-success",
     warning:
-      "bg-warning text-accent-foreground hover:bg-warning active:bg-warning  focus:border-warning-border focus:bg-warning disabled:bg-primary/5 disabled:text-primary/20",
+      "bg-warning text-accent-foreground hover:bg-warning active:bg-warning  focus:border-warning-border focus:bg-warning",
     error:
-      "bg-error text-accent-foreground hover:bg-error active:bg-error focus:border-error-border focus:bg-error disabled:bg-primary/5 disabled:text-primary/20",
+      "bg-error text-accent-foreground hover:bg-error active:bg-error focus:border-error-border focus:bg-error",
   },
   outline: {
     default: "",
