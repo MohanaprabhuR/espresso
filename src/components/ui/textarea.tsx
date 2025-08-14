@@ -32,7 +32,6 @@ const textareaVariants = cva(
       state: "default",
     },
     compoundVariants: [
-      // SUCCESS
       {
         state: "success",
         variant: ["default", "ghost"],
@@ -44,7 +43,7 @@ const textareaVariants = cva(
         className:
           "border-success-border text-accent-foreground hover:border-success-border",
       },
-      // ERROR
+
       {
         state: "error",
         variant: ["default", "ghost"],
@@ -56,7 +55,7 @@ const textareaVariants = cva(
         className:
           "border-error-border text-accent-foreground hover:border-error-border",
       },
-      // WARNING
+
       {
         state: "warning",
         variant: ["default", "ghost"],
