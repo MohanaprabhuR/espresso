@@ -55,6 +55,7 @@ const InputDemo = () => {
             <Input type="number" placeholder="Number" status="warning" />
             <Input type="email" placeholder="Email" status="success" />
             <Input type="email" placeholder="Email" status="error" />
+            <Input type="file" placeholder="Email" />
           </div>
           <div className="flex flex-col gap-[30px] max-w-[400px]">
             <Input disabled type="text" placeholder="Text" variant="outline" />
@@ -115,6 +116,7 @@ const InputDemo = () => {
               status="error"
               suffix={<FilterIcon fill="currentColor" />}
             />
+            <Input variant="outline" type="file" placeholder="Email" />
           </div>
           <div className="flex flex-col gap-[30px] max-w-[400px]">
             <Input disabled size="md" type="text" placeholder="Text" />
@@ -167,7 +169,9 @@ const InputDemo = () => {
               placeholder="Email"
               status="success"
             />
+
             <Input size="md" type="email" placeholder="Email" status="error" />
+            <Input size="md" type="file" placeholder="Email" />
           </div>
           <div className="flex flex-col gap-[30px] max-w-[400px]">
             <Input disabled size="lg" type="text" placeholder="Text" />
@@ -220,7 +224,9 @@ const InputDemo = () => {
               placeholder="Email"
               status="success"
             />
+
             <Input size="lg" type="email" placeholder="Email" status="error" />
+            <Input size="lg" type="file" placeholder="Email" />
           </div>
           <div className="flex flex-col gap-[30px] max-w-[400px]">
             <Input disabled size="xl" type="text" placeholder="Text" />
@@ -274,12 +280,13 @@ const InputDemo = () => {
               status="success"
             />
             <Input size="xl" type="email" placeholder="Email" status="error" />
+            <Input size="xl" type="file" placeholder="Email" />
           </div>
         </div>
         <div className="flex flex-col gap-[30px]">
           <div className="*:not-first:mt-2">
             <Label>Input with start add-on</Label>
-            <div className="flex rounded-md shadow-xs">
+            <div className="flex rounded-md ">
               <span className="border-border bg-background text-muted-foreground -z-10 inline-flex items-center rounded-s-md border px-3 text-sm">
                 https://
               </span>
@@ -293,7 +300,7 @@ const InputDemo = () => {
           </div>
           <div className="*:not-first:mt-2">
             <Label>Input with end add-on</Label>
-            <div className="flex rounded-md shadow-xs">
+            <div className="flex rounded-md ">
               <Input
                 className=" rounded-e-none"
                 placeholder="google"
@@ -307,7 +314,7 @@ const InputDemo = () => {
           </div>
           <div className="*:not-first:mt-2">
             <Label>Input with end select</Label>
-            <div className="flex rounded-md shadow-xs">
+            <div className="flex rounded-md ">
               <Input
                 className="-me-px rounded-e-none shadow-none focus-visible:z-10"
                 placeholder="google"

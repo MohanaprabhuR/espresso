@@ -16,11 +16,11 @@ type InputProps = Omit<
 };
 
 const baseStyles =
-  "w-full min-w-0 transition-[color,box-shadow,border] outline-none placeholder:text-primary/50 file:inline-flex file:pr-1 file:border-r file:border-r-[1px] file:border-primary/20 file:bg-transparent file:font-medium aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&:-webkit-autofill]:bg-autofill [&:-webkit-autofill]:text-accent-foreground disabled:bg-primary/3 disabled:border-none disabled:text-primary/20 disabled:cursor-not-allowed disabled:pointer-events-none";
+  "w-full min-w-0 transition-[color,box-shadow,border] outline-none placeholder:text-primary/50 file:inline-flex file:pr-1 file:border-r file:border-r-[1px] file:border-primary/20 file:bg-transparent file:font-normal aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&:-webkit-autofill]:bg-autofill [&:-webkit-autofill]:text-accent-foreground disabled:bg-primary/3 disabled:border-none disabled:text-primary/20 disabled:cursor-not-allowed disabled:pointer-events-none ";
 
 const variantBaseMap: Record<VariantType, string> = {
   default:
-    "bg-secondary border border-transparent hover:bg-accent text-secondary-foreground active:bg-transparent active:shadow-lg active:border-primary/50 active:border active:text-accent-foreground focus:border focus:border-primary/50 focus:shadow-lg focus:bg-white focus-visible:border-primary/50 focus:text-accent-foreground focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-0  focus-visible:bg-transparent  ",
+    "bg-secondary border border-transparent hover:bg-accent text-secondary-foreground active:bg-transparent active:shadow-lg active:border-primary/50 active:text-accent-foreground focus:border focus:border-primary/50 focus:shadow-lg focus:bg-white focus-visible:border-primary/50 focus:text-accent-foreground focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-0  focus-visible:bg-transparent file:active:success not-focus-visible:ring-0",
   outline:
     "border bg-background text-secondary-foreground hover:border-primary/25 active:border-primary/50 active:bg-background active:shadow-lg focus-border focus:border-primary/50 focus:text-accent-foreground focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-0 focus-visible:border-primary/50 focus-visible:bg-transparent ",
 };
@@ -49,25 +49,25 @@ const statusMap: Record<VariantType, Record<StatusType, string>> = {
 const sizeMap = {
   sm: {
     input:
-      "h-7 text-base font-normal rounded-lg tracking-3 file:h-6 file:text-xs px-2 py-1.5",
+      "h-7 text-base font-normal rounded-lg tracking-3 px-2 py-1.5 file:text-base ",
     prefix: "pl-8",
     suffix: "pr-8",
   },
   md: {
     input:
-      "h-8 text-base font-normal rounded-lg tracking-3 file:h-7 file:text-sm px-2.5 py-2",
+      "h-8 text-base font-normal rounded-lg tracking-3 px-2.5 py-2 file:text-base",
     prefix: "pl-[34px]",
     suffix: "pr-[34px]",
   },
   lg: {
     input:
-      "h-10 text-lg font-normal rounded-xl tracking-3 file:h-9 file:text-base px-3 py-[11px]",
+      "h-10 text-lg font-normal rounded-xl tracking-3 px-3 py-[11px] file:text-lg",
     prefix: "pl-9",
     suffix: "pr-9",
   },
   xl: {
     input:
-      "h-10 text-xl font-normal rounded-xl tracking-3 file:h-9 file:text-base px-3 py-[9.5px]",
+      "h-10 text-xl font-normal rounded-xl tracking-3 px-3 py-[9.5px] file:text-xl",
     prefix: "pl-10",
     suffix: "pr-10",
   },
