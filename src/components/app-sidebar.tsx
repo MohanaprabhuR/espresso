@@ -73,11 +73,11 @@ const items = [
     url: "/radio",
     icon: Search,
   },
-  {
-    title: "Slider",
-    url: "/slider",
-    icon: Search,
-  },
+  // {
+  //   title: "Slider",
+  //   url: "/slider",
+  //   icon: Search,
+  // },
 ];
 
 export function AppSidebar() {
