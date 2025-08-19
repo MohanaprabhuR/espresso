@@ -9,7 +9,27 @@ const SliderDemo = () => {
           Slider Component
         </h1>
         <div className="flex flex-col  mx-auto gap-[50px]">
-          <Slider defaultValue={[25, 75]} max={100} step={3} />
+          <Slider defaultValue={[20]} size="sm" knob={true} />
+          <Slider defaultValue={[20]} size="md" knob={true} />
+          <Slider defaultValue={[20]} size="lg" knob={true} />
+          <Slider defaultValue={[20]} size="xl" knob={true} />
+          <Slider defaultValue={[20]} size="xl" knob={true} disabled />
+          <Slider defaultValue={[20, 50]} size="sm" knob={true} />
+          <Slider defaultValue={[20, 40]} size="md" knob={true} />
+          <Slider defaultValue={[20, 60]} size="lg" knob={true} />
+          <Slider defaultValue={[20, 70]} size="xl" knob={true} />
+          <Slider defaultValue={[20, 70]} size="xl" knob={true} disabled />
+          <Slider defaultValue={[20]} size="sm" />
+          <Slider defaultValue={[20]} size="md" />
+          <Slider defaultValue={[20]} size="lg" />
+          <Slider defaultValue={[20]} size="xl" />
+          <Slider defaultValue={[20]} size="xl" disabled />
+
+          <Slider defaultValue={[20, 50]} size="sm" />
+          <Slider defaultValue={[20, 40]} size="md" />
+          <Slider defaultValue={[20, 60]} size="lg" />
+          <Slider defaultValue={[20, 70]} size="xl" />
+          <Slider defaultValue={[20, 70]} size="xl" disabled />
         </div>
       </div>
     </div>
