@@ -3,7 +3,7 @@ import { Progress } from "@/components/ui/progress";
 import { CloudIcon } from "../../../public/images/svg/cloudIcon";
 import { Label } from "@/components/ui/label";
 
-const InputDemo = () => {
+const ProgressDemo = () => {
   return (
     <div>
       <div className="pt-10 text-center">
@@ -33,7 +33,7 @@ const InputDemo = () => {
               <Progress value={40} intervals={6} size="lg" square />
             </div>
           </div>
-          {/* <div className="flex gap-[30px]">
+          <div className="flex gap-[30px]">
             <div className="flex flex-col gap-[20px] w-full">
               <Progress value={40} size="xs" showLabel>
                 <Label>
@@ -140,11 +140,11 @@ const InputDemo = () => {
                 </Label>
               </Progress>
             </div>
-          </div> */}
+          </div>
         </div>
       </div>
     </div>
   );
 };
 
-export default InputDemo;
+export default ProgressDemo;

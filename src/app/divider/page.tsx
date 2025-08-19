@@ -2,7 +2,7 @@ import React from "react";
 import { Divider } from "@/components/ui/divider";
 import { Button } from "@/components/ui/button";
 
-const CheckboxDemo = () => {
+const DividerDemo = () => {
   return (
     <div>
       <div className="pt-10 text-center">
@@ -63,4 +63,4 @@ const CheckboxDemo = () => {
   );
 };
 
-export default CheckboxDemo;
+export default DividerDemo;

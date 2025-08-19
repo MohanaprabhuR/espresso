@@ -68,11 +68,16 @@ const items = [
     url: "/progress",
     icon: Search,
   },
-  // {
-  //   title: "Radio Group",
-  //   url: "/radio",
-  //   icon: Search,
-  // },
+  {
+    title: "Radio Group",
+    url: "/radio",
+    icon: Search,
+  },
+  {
+    title: "Slider",
+    url: "/slider",
+    icon: Search,
+  },
 ];
 
 export function AppSidebar() {

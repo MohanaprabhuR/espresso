@@ -70,7 +70,8 @@ function RadioGroupItem({
       className={cn(
         "aspect-square shrink-0 rounded-full border border-primary/50 outline-none transition-[color,box-shadow]",
         "data-[state=checked]:bg-primary data-[state=checked]:border-primary",
-        "hover:border-primary/60 hover:shadow-lg active:border-primary/75 active:bg-secondary",
+        "hover:border-primary/60 hover:shadow-lg active:border-primary/75 active:bg-secondary focus:border-primary/75 focus:bg-secondary",
+        "focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-0",
         "disabled:bg-primary/3 disabled:border-primary/12 disabled:hover:shadow-none disbled:cursor-not-allowed disabled:pointer-events-none",
         radioSizeMap[size],
         className

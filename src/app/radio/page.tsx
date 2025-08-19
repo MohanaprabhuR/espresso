@@ -1,7 +1,6 @@
 import React from "react";
-import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-const InputDemo = () => {
+const RadioDemo = () => {
   return (
     <div>
       <div className="pt-10 text-center">
@@ -69,4 +68,4 @@ const InputDemo = () => {
   );
 };
 
-export default InputDemo;
+export default RadioDemo;

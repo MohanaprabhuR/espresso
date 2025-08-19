@@ -1,7 +1,7 @@
 import React from "react";
 import { Textarea } from "@/components/ui/textarea";
 
-const InputDemo = () => {
+const TextAreaDemo = () => {
   return (
     <div>
       <div className="pt-10 text-center">
@@ -122,4 +122,4 @@ const InputDemo = () => {
   );
 };
 
-export default InputDemo;
+export default TextAreaDemo;
