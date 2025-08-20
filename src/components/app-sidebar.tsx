@@ -1,4 +1,20 @@
-import { Calendar, Home, Inbox, Search } from "lucide-react";
+import {
+  Home,
+  InboxIcon,
+  SplinePointer,
+  Sliders,
+  Radio,
+  Projector,
+  TextSearch,
+  TextCursorInput,
+  TextSelect,
+  DivideIcon,
+  CheckSquare,
+  Badge,
+  LinkIcon,
+  RegexIcon,
+  SwitchCameraIcon,
+} from "lucide-react";
 
 import {
   Sidebar,
@@ -21,63 +37,73 @@ const items = [
   {
     title: "Badge",
     url: "/badges",
-    icon: Inbox,
+    icon: Badge,
   },
   {
     title: "Breadcrumb",
     url: "/breadcrumb",
-    icon: Inbox,
+    icon: LinkIcon,
   },
   {
     title: "Button",
     url: "/button",
-    icon: Calendar,
+    icon: RegexIcon,
   },
   {
     title: "Button Group",
     url: "/buttongroup",
-    icon: Calendar,
+    icon: InboxIcon,
   },
   {
     title: "Checkbox",
     url: "/checkbox",
-    icon: Calendar,
+    icon: CheckSquare,
   },
   {
     title: "Divider",
     url: "/divider",
-    icon: Search,
+    icon: DivideIcon,
   },
   {
     title: "Select",
     url: "/select",
-    icon: Search,
+    icon: TextSelect,
   },
   {
     title: "Input",
     url: "/input",
-    icon: Search,
+    icon: TextCursorInput,
   },
   {
     title: "Text Area",
     url: "/textarea",
-    icon: Search,
+    icon: TextSearch,
   },
   {
     title: "Progress Bar",
     url: "/progress",
-    icon: Search,
+    icon: Projector,
   },
   {
     title: "Radio Group",
     url: "/radio",
-    icon: Search,
+    icon: Radio,
+  },
+  {
+    title: "Slider",
+    url: "/slider",
+    icon: Sliders,
   },
   // {
-  //   title: "Slider",
-  //   url: "/slider",
-  //   icon: Search,
+  //   title: "Spinner",
+  //   url: "/spinner",
+  //   icon: SplinePointer,
   // },
+  {
+    title: "Switch",
+    url: "/switch",
+    icon: SwitchCameraIcon,
+  },
 ];
 
 export function AppSidebar() {
