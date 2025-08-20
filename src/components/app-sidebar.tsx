@@ -14,6 +14,8 @@ import {
   RegexIcon,
   SwitchCameraIcon,
   Tablet,
+  ToolCase,
+  Tags,
 } from "lucide-react";
 
 import {
@@ -108,6 +110,16 @@ const items = [
   //   title: "Tabs",
   //   url: "/tabs",
   //   icon: Tablet,
+  // },
+  // {
+  //   title: "Tags",
+  //   url: "/tags",
+  //   icon: Tags,
+  // },
+  // {
+  //   title: "Tooltip",
+  //   url: "/tooltip",
+  //   icon: ToolCase,
   // },
 ];
 
