@@ -104,11 +104,11 @@ const items = [
     url: "/switch",
     icon: SwitchCameraIcon,
   },
-  {
-    title: "Tabs",
-    url: "/tabs",
-    icon: Tablet,
-  },
+  // {
+  //   title: "Tabs",
+  //   url: "/tabs",
+  //   icon: Tablet,
+  // },
 ];
 
 export function AppSidebar() {
