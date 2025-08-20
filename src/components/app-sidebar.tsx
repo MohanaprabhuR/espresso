@@ -1,7 +1,6 @@
 import {
   Home,
   InboxIcon,
-  SplinePointer,
   Sliders,
   Radio,
   Projector,
@@ -14,6 +13,7 @@ import {
   LinkIcon,
   RegexIcon,
   SwitchCameraIcon,
+  Tablet,
 } from "lucide-react";
 
 import {
@@ -103,6 +103,11 @@ const items = [
     title: "Switch",
     url: "/switch",
     icon: SwitchCameraIcon,
+  },
+  {
+    title: "Tabs",
+    url: "/tabs",
+    icon: Tablet,
   },
 ];
 

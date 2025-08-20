@@ -10,7 +10,7 @@ const textareaVariants = cva(
         default:
           "bg-secondary text-accent-foreground border border-transparent hover:bg-accent active:border active:border-primary/50 active:placeholder:text-accent-foreground active:text-accent-foreground focus:bg-transparent focus:border focus:shadow-2xs focus:border-primary/50  focus-visible:ring-2 focus-visible:ring-ring focus-visible:border-primary/50",
         outline:
-          "border border-primary/12 hover:border-primary/20 active:border-primary/50 active:placeholder:text-accent-foreground active:text-accent-foreground bg-transparent text-accent-foreground focus:border focus:shadow-2xs focus:border-primary/50 focus-visible:ring-2 focus-visible:ring-ring",
+          "border  hover:border-primary/20 active:border-primary/50 active:placeholder:text-accent-foreground active:text-accent-foreground bg-transparent text-accent-foreground focus:border focus:shadow-2xs focus:border-primary/50 focus-visible:ring-2 focus-visible:ring-ring",
         ghost:
           "bg-transparent border border-transparent text-accent-foreground active:text-accent-foreground active:placeholder:text-accent-foreground focus-visible:ring-2 focus-visible:border focus-visible:border-primary/50 focus-visible:ring-ring focus-visible:ring-offset-0 focus-visible:bg-transparent ",
       },

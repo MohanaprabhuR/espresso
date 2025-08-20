@@ -69,7 +69,7 @@ function Slider({
         <SliderPrimitive.Range
           data-slot="slider-range"
           className={cn(
-            "bg-primary/98 absolute outline-none data-[orientation=horizontal]:h-full data-[orientation=vertical]:w-full data-[orientation=vertical]:left-0",
+            "bg-primary absolute outline-none data-[orientation=horizontal]:h-full data-[orientation=vertical]:w-full data-[orientation=vertical]:left-0",
             !knob && "data-[disabled]:bg-primary/20 rounded-full"
           )}
         />

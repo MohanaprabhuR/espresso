@@ -6,7 +6,7 @@ const TextAreaDemo = () => {
     <div>
       <div className="pt-10 text-center">
         <h1 className="text-xl font-bold text-gray-900 dark:text-white pb-4">
-          Textarea Component
+          Tabs Component
         </h1>
         <div className="flex flex-col  mx-auto gap-[50px]">
           <div className="flex  mx-auto gap-[50px]">
