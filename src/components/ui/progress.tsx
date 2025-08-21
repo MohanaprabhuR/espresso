@@ -39,7 +39,7 @@ function Progress({
       {showLabel && children && (
         <Label className={cn("flex justify-between items-center")}>
           <div className="flex items-center gap-x-2 ">{children}</div>
-          <span>{value}%</span>
+          <span className="font-medium text-card-foreground">{value}%</span>
         </Label>
       )}
 

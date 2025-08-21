@@ -54,72 +54,86 @@ function Switch({
 
   const { root, thumb, wrapper, description: descriptionSize } = sizes[size];
 
-  return (
-    <label
-      className={cn(
-        "inline-flex select-none rounded-lg transition-colors text-secondary-foreground font-medium items-center",
-        label &&
-          cn(
-            wrapper,
-            "hover:bg-accent active:bg-primary/12 active:text-accent-foreground focus:bg-secondary focus-visible:ring-2 focus-visible:ring-ring focus-visible:bg-secondary",
-            props.disabled &&
-              "hover:bg-transparent cursor-not-allowed pointer-events-none"
-          )
-      )}
-    >
-      <SwitchPrimitive.Root
-        data-slot="switch"
-        className={cn(
-          "peer p-0.5 inline-flex shrink-0 items-center rounded-full transition-all outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-0",
-          "data-[state=checked]:bg-primary data-[state=checked]:hover:bg-primary/86 data-[state=checked]:active:bg-primary/74 data-[state=checked]:focus:bg-primary",
-          "data-[state=unchecked]:bg-input data-[state=unchecked]:hover:bg-primary/20 data-[state=unchecked]:active:bg-primary/50 data-[state=unchecked]:focus:bg-primary/12",
-          "disabled:data-[state=unchecked]:bg-accent disabled:cursor-not-allowed disabled:pointer-events-none disabled:data-[state=unchecked]:hover:bg-primary/12",
-          "disabled:data-[state=checked]:bg-accent disabled:data-[state=unchecked]:hover:bg-accent",
-          root,
-          className
-        )}
-        checked={currentChecked}
-        onCheckedChange={handleChange}
-        disabled={props.disabled}
-        {...props}
-      >
-        <SwitchPrimitive.Thumb
-          data-slot="switch-thumb"
-          className={cn(
-            "bg-background shadow-4xl pointer-events-none block rounded-full ring-0 transition-transform",
-            thumb
-          )}
-        />
-      </SwitchPrimitive.Root>
+  const switchId = React.useId();
 
-      {(label || description) && (
+  // core switch button
+  const switchControl = (
+    <SwitchPrimitive.Root
+      id={switchId}
+      data-slot="switch"
+      // if label exists → hide from tab order
+      tabIndex={label || description ? -1 : 0}
+      className={cn(
+        "peer p-0.5 inline-flex shrink-0 items-center rounded-full transition-all outline-none",
+        "data-[state=checked]:bg-primary data-[state=checked]:hover:bg-primary/86 data-[state=checked]:active:bg-primary/74 data-[state=checked]:focus:bg-primary",
+        "data-[state=unchecked]:bg-input data-[state=unchecked]:hover:bg-primary/20 data-[state=unchecked]:active:bg-primary/50 data-[state=unchecked]:focus:bg-primary/12",
+        "disabled:data-[state=unchecked]:bg-accent disabled:cursor-not-allowed disabled:pointer-events-none disabled:data-[state=unchecked]:hover:bg-accent",
+        "disabled:data-[state=checked]:bg-accent",
+        root,
+        !label && // only when no label, keep focus ring on the switch
+          "focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-0",
+        className
+      )}
+      checked={currentChecked}
+      onCheckedChange={handleChange}
+      disabled={props.disabled}
+      {...props}
+    >
+      <SwitchPrimitive.Thumb
+        data-slot="switch-thumb"
+        className={cn(
+          "bg-background shadow-4xl pointer-events-none block rounded-full transition-transform",
+          thumb
+        )}
+      />
+    </SwitchPrimitive.Root>
+  );
+
+  // case 1: label or description exists → focus goes to label container
+  if (label || description) {
+    return (
+      <label
+        htmlFor={switchId}
+        // disable focus if disabled
+        tabIndex={props.disabled ? -1 : 0}
+        onKeyDown={(e) => {
+          if (props.disabled) return;
+          if (e.key === " " || e.key === "Enter") {
+            e.preventDefault();
+            (document.getElementById(switchId) as HTMLButtonElement)?.click();
+          }
+        }}
+        className={cn(
+          "inline-flex items-center select-none rounded-lg transition-colors text-secondary-foreground font-medium",
+          wrapper,
+          !props.disabled &&
+            "hover:bg-accent active:bg-primary/12 active:text-accent-foreground focus:bg-secondary focus:ring-ring focus:ring-2 focus:ring-offset-0 focus-visible:ring-ring focus-visible:ring-2 focus-visible:bg-secondary",
+          props.disabled &&
+            "hover:bg-transparent cursor-not-allowed pointer-events-none text-primary/50"
+        )}
+      >
+        {switchControl}
+
         <span className="flex flex-col items-start">
-          {label && (
-            <span
-              className={cn(
-                props.disabled &&
-                  "text-primary/50 cursor-not-allowed pointer-events-none"
-              )}
-            >
-              {label}
-            </span>
-          )}
+          {label && <span>{label}</span>}
           {description && (
             <span
               className={cn(
                 "text-secondary-foreground font-normal pt-1",
                 descriptionSize,
-                props.disabled &&
-                  "text-primary/50 cursor-not-allowed pointer-events-none"
+                props.disabled && "text-primary/50"
               )}
             >
               {description}
             </span>
           )}
         </span>
-      )}
-    </label>
-  );
+      </label>
+    );
+  }
+
+  // case 2: no label → switch alone is focusable
+  return switchControl;
 }
 
 export { Switch };

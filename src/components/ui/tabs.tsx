@@ -105,9 +105,9 @@ function TabsTrigger({ className, ...props }: TabsTriggerProps) {
 
   const variantClasses: Record<TabVariant, string> = {
     subtle:
-      "rounded-lg data-[state=active]:bg-background dark:data-[state=active]:bg-accent data-[state=active]:text-primary data-[state=active]:shadow-sm",
+      "rounded-[7px] data-[state=active]:bg-background dark:data-[state=active]:bg-accent data-[state=active]:text-primary data-[state=active]:shadow-sm",
     outline:
-      "rounded-lg data-[state=active]:bg-background dark:data-[state=active]:bg-accent data-[state=active]:text-primary data-[state=active]:shadow-sm",
+      "rounded-[7px] data-[state=active]:bg-background dark:data-[state=active]:bg-accent data-[state=active]:text-primary data-[state=active]:shadow-sm",
     underline: cn(
       "relative after:absolute after:bg-primary after:scale-x-0 data-[state=active]:after:scale-x-100 data-[state=active]:text-primary",
       orientation === "horizontal"
@@ -115,7 +115,7 @@ function TabsTrigger({ className, ...props }: TabsTriggerProps) {
         : "after:top-0 after:bottom-0 after:-right-0.5 after:w-px"
     ),
     ghost:
-      "bg-background data-[state=active]:bg-background dark:data-[state=active]:bg-accent data-[state=active]:text-primary data-[state=active]:shadow-sm rounded-lg",
+      "bg-background data-[state=active]:bg-background dark:data-[state=active]:bg-accent data-[state=active]:text-primary data-[state=active]:shadow-sm rounded-[7px]",
     browser: cn(
       "relative border border-background data-[state=active]:z-10 data-[state=active]:bg-background data-[state=active]:text-primary",
       orientation === "horizontal"
