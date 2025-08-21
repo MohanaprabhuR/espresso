@@ -56,12 +56,10 @@ function Switch({
 
   const switchId = React.useId();
 
-  // core switch button
   const switchControl = (
     <SwitchPrimitive.Root
       id={switchId}
       data-slot="switch"
-      // if label exists → hide from tab order
       tabIndex={label || description ? -1 : 0}
       className={cn(
         "peer p-0.5 inline-flex shrink-0 items-center rounded-full transition-all outline-none",
@@ -70,7 +68,7 @@ function Switch({
         "disabled:data-[state=unchecked]:bg-accent disabled:cursor-not-allowed disabled:pointer-events-none disabled:data-[state=unchecked]:hover:bg-accent",
         "disabled:data-[state=checked]:bg-accent",
         root,
-        !label && // only when no label, keep focus ring on the switch
+        !label &&
           "focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-0",
         className
       )}
@@ -89,12 +87,10 @@ function Switch({
     </SwitchPrimitive.Root>
   );
 
-  // case 1: label or description exists → focus goes to label container
   if (label || description) {
     return (
       <label
         htmlFor={switchId}
-        // disable focus if disabled
         tabIndex={props.disabled ? -1 : 0}
         onKeyDown={(e) => {
           if (props.disabled) return;
@@ -131,8 +127,6 @@ function Switch({
       </label>
     );
   }
-
-  // case 2: no label → switch alone is focusable
   return switchControl;
 }
 
