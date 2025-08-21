@@ -4,18 +4,18 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const badgeVariants = cva(
-  "inline-flex items-center justify-center rounded-5xl transition-all ease-in-out border text-xs font-medium w-fit whitespace-nowrap shrink-0 [&>svg]:size-3 gap-1 [&>svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden",
+  "inline-flex items-center outline-none justify-center rounded-5xl transition-all ease-in-out  text-xs font-medium w-fit whitespace-nowrap shrink-0 [&>svg]:size-3 gap-1 [&>svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden",
   {
     variants: {
       variant: {
         default:
-          "bg-[var(--theme-primary)] text-[var(--theme-primary-foreground)] border-transparent",
+          "bg-[var(--theme-primary)] text-[var(--theme-primary-foreground)] ",
         secondary:
-          "bg-[var(--theme-secondary)] text-[var(--theme-secondary-foreground)] border-transparent",
-        destructive: "bg-destructive text-white border-transparent",
+          "bg-[var(--theme-secondary)] text-[var(--theme-secondary-foreground)] ",
+        destructive: "bg-destructive text-white ",
         outline:
-          "text-[var(--theme-secondary-foreground)] border-[var(--theme-border)]",
-        ghost: "text-[var(--theme-secondary-foreground)] border-transparent",
+          "text-[var(--theme-secondary-foreground)] border-[var(--theme-border)] border",
+        ghost: "text-[var(--theme-secondary-foreground)] ",
       },
       size: {
         sm: "px-1.5 py-px text-xs font-normal tracking-3 [&>svg]:size-2.5",

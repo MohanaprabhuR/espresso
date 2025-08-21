@@ -72,7 +72,7 @@ function Switch({
         className={cn(
           "peer p-0.5 inline-flex shrink-0 items-center rounded-full transition-all outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-0",
           "data-[state=checked]:bg-primary data-[state=checked]:hover:bg-primary/86 data-[state=checked]:active:bg-primary/74 data-[state=checked]:focus:bg-primary",
-          "data-[state=unchecked]:bg-primary/12 data-[state=unchecked]:hover:bg-primary/20 data-[state=unchecked]:active:bg-primary/50 data-[state=unchecked]:focus:bg-primary/12",
+          "data-[state=unchecked]:bg-input data-[state=unchecked]:hover:bg-primary/20 data-[state=unchecked]:active:bg-primary/50 data-[state=unchecked]:focus:bg-primary/12",
           "disabled:bg-accent disabled:cursor-not-allowed disabled:pointer-events-none disabled:data-[state=unchecked]:hover:bg-primary/12",
           "disabled:data-[state=checked]:bg-accent",
           root,

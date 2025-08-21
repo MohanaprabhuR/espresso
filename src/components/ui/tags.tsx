@@ -7,25 +7,30 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const tagVariants = cva(
-  "inline-flex items-center rounded-full font-medium transition-all ease-in-out border w-fit whitespace-nowrap shrink-0 [&>svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive overflow-hidden",
+  "inline-flex items-center outline-none gap-x-1 rounded-sm font-medium transition-all ease-in-out w-fit whitespace-nowrap shrink-0 [&>svg]:pointer-events-none aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive overflow-hidden data-[disabled=true]:cursor-not-allowed data-[disabled=true]:pointer-events-none",
   {
     variants: {
       variant: {
         solid:
-          "bg-[var(--theme-primary)] text-[var(--theme-primary-foreground)] border-transparent",
-        soft: "bg-[var(--theme-soft)] text-[var(--theme-soft-foreground)] border-transparent",
+          "bg-[var(--theme-primary)] hover:bg-[var(--theme-primary-hover)] active:bg-[var(--theme-primary-active)] focus:bg-[var(--theme-primary)] focus-visible:shadow-blue-ring focus:outline-none text-[var(--theme-primary-foreground)] data-[disabled=true]:bg-[var(--theme-disabled)] data-[disabled=true]:text-[var(--theme-disabled-foreground)] data-[disabled=true]:focus-visible:shadow-none",
+        subtle:
+          "bg-[var(--theme-secondary)] focus:bg-[var(--theme-secondary)] hover:bg-[var(--theme-secondary-hover)] active:bg-[var(--theme-secondary-active)] focus-visible:shadow-blue-ring text-[var(--theme-secondary-foreground)] data-[disabled=true]:bg-[var(--theme-disabled)] data-[disabled=true]:text-[var(--theme-disabled-foreground)] data-[disabled=true]:focus-visible:shadow-none",
+        destructive:
+          "bg-destructive text-white data-[disabled=true]:bg-[var(--theme-disabled)] data-[disabled=true]:text-[var(--theme-disabled-foreground)]",
         outline:
-          "bg-transparent text-[var(--theme-primary)] border-[var(--theme-border)]",
+          "border bg-transparent text-[var(--theme-primary)] hover:border-[var(--theme-border-hover)] active:border-[var(--theme-border-active)] border-[var(--theme-border)] active:bg-[var(--theme-secondary-active)] focus-visible:border-transparent focus-visible:shadow-blue-ring data-[disabled=true]:bg-[var(--theme-disabled)] data-[disabled=true]:text-[var(--theme-disabled-foreground)] data-[disabled=true]:focus-visible:shadow-none",
+        ghost:
+          "text-[var(--theme-secondary-foreground)] hover:bg-[var(--theme-secondary-hover)] active:bg-[var(--theme-secondary-active)] focus-visible:shadow-blue-ring focus:bg-[var(--theme-secondary)] data-[disabled=true]:text-[var(--theme-disabled-foreground)] data-[disabled=true]:focus-visible:shadow-none",
       },
       size: {
-        sm: "px-2 py-0.5 text-xs gap-1 [&>svg]:size-3",
-        md: "px-3 py-1 text-sm gap-1.5 [&>svg]:size-3.5",
-        lg: "px-4 py-1.5 text-base gap-2 [&>svg]:size-4",
+        sm: "px-1.5 py-[3px] text-xs tracking-3 font-normal [&>svg]:size-3",
+        md: "px-1.5 py-1 text-sm tracking-3 font-normal [&>svg]:size-3",
+        lg: "px-2 py-1.5 text-base tracking-3 font-normal [&>svg]:size-3",
       },
     },
     defaultVariants: {
       variant: "solid",
-      size: "md",
+      size: "sm",
     },
   }
 );
@@ -43,10 +48,18 @@ const themeVars: Record<
   } as React.CSSProperties,
   blue: {
     "--theme-primary": "var(--color-blue-primary)",
+    "--theme-primary-hover": "var(--color-blue-primary-hover)",
+    "--theme-primary-active": "var(--color-blue-primary-active)",
     "--theme-primary-foreground": "var(--color-blue-primary-foreground)",
     "--theme-secondary": "var(--color-blue-secondary)",
+    "--theme-secondary-hover": "var(--color-blue-secondary-hover)",
+    "--theme-secondary-active": "var(--color-blue-secondary-active)",
     "--theme-secondary-foreground": "var(--color-blue-secondary-foreground)",
     "--theme-border": "var(--color-blue-border)",
+    "--theme-border-hover": "var(--color-blue-border-hover)",
+    "--theme-border-active": "var(--color-blue-border-active)",
+    "--theme-disabled": "var(--color-blue-disabled)",
+    "--theme-disabled-foreground": "var(--color-blue-disabled-foreground)",
   } as React.CSSProperties,
   green: {
     "--theme-primary": "var(--color-green-primary)",
@@ -79,11 +92,12 @@ const themeVars: Record<
 };
 
 export interface TagProps
-  extends React.HTMLAttributes<HTMLDivElement>,
+  extends React.HTMLAttributes<HTMLSpanElement>,
     VariantProps<typeof tagVariants> {
   theme?: keyof typeof themeVars;
   onRemove?: () => void;
   asChild?: boolean;
+  disabled?: boolean;
 }
 
 export function Tag({
@@ -93,7 +107,7 @@ export function Tag({
   theme = "default",
   asChild = false,
   children,
-  onRemove,
+  disabled = false,
   ...props
 }: TagProps) {
   const Comp = asChild ? Slot : "span";
@@ -103,17 +117,15 @@ export function Tag({
       data-slot="tag"
       style={themeVars[theme]}
       className={cn(tagVariants({ variant, size }), className)}
+      aria-disabled={disabled || undefined}
+      data-disabled={disabled ? "true" : undefined}
       {...props}
     >
       {children}
-      {onRemove && (
-        <button
-          onClick={onRemove}
-          className="ml-1 rounded-full hover:bg-black/10 p-0.5 focus:outline-none"
-        >
-          <X className="size-3" />
-        </button>
-      )}
+
+      <button type="button" className="">
+        <X className="size-3" />
+      </button>
     </Comp>
   );
 }

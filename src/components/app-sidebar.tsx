@@ -106,16 +106,16 @@ const items = [
     url: "/switch",
     icon: SwitchCameraIcon,
   },
-  // {
-  //   title: "Tabs",
-  //   url: "/tabs",
-  //   icon: Tablet,
-  // },
-  // {
-  //   title: "Tags",
-  //   url: "/tags",
-  //   icon: Tags,
-  // },
+  {
+    title: "Tabs",
+    url: "/tabs",
+    icon: Tablet,
+  },
+  {
+    title: "Tags",
+    url: "/tags",
+    icon: Tags,
+  },
   // {
   //   title: "Tooltip",
   //   url: "/tooltip",

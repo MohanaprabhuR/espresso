@@ -66,39 +66,48 @@
   --color-popover-foreground: var(--popover-foreground);
 
   /* Bage Styles - Blue */
-  --color-blue-primary: var(--badge-blue-primary);
-  --color-blue-primary-foreground: var(--badge-blue-primary-foreground);
-  --color-blue-secondary: var(--badge-blue-secondary);
-  --color-blue-secondary-foreground: var(--badge-blue-secondary-foreground);
-  --color-blue-border: var(--badge-blue-border);
+  --color-blue-primary: var(--blue-primary);
+  --color-blue-primary-hover: var(--blue-primary-hover);
+  --color-blue-primary-active: var(--blue-primary-active);
+  --color-blue-primary-foreground: var(--blue-primary-foreground);
+  --color-blue-secondary: var(--blue-secondary);
+  --color-blue-secondary-hover: var(--blue-secondary-hover);
+  --color-blue-secondary-active: var(--blue-secondary-active);
+  --color-blue-secondary-foreground: var(--blue-secondary-foreground);
+  --color-blue-border: var(--blue-border);
+  --color-blue-border-hover: var(--blue-border-hover);
+  --color-blue-border-active: var(--blue-border-hover);
+  --color-blue-ring: var(--blue-ring);
+  --color-blue-disabled: var(--blue-disabled);
+  --color-blue-disabled-foreground: var(--blue-disabled-foreground);
 
   /* Bage Styles - Green */
-  --color-green-primary: var(--badge-green-primary);
-  --color-green-primary-foreground: var(--badge-green-primary-foreground);
-  --color-green-secondary: var(--badge-green-secondary);
-  --color-green-secondary-foreground: var(--badge-green-secondary-foreground);
-  --color-green-border: var(--badge-green-border);
+  --color-green-primary: var(--green-primary);
+  --color-green-primary-foreground: var(--green-primary-foreground);
+  --color-green-secondary: var(--green-secondary);
+  --color-green-secondary-foreground: var(--green-secondary-foreground);
+  --color-green-border: var(--green-border);
 
   /* Bage Styles - Amber */
-  --color-amber-primary: var(--badge-amber-primary);
-  --color-amber-primary-foreground: var(--badge-amber-primary-foreground);
-  --color-amber-secondary: var(--badge-amber-secondary);
-  --color-amber-secondary-foreground: var(--badge-amber-secondary-foreground);
-  --color-amber-border: var(--badge-amber-border);
+  --color-amber-primary: var(--amber-primary);
+  --color-amber-primary-foreground: var(--amber-primary-foreground);
+  --color-amber-secondary: var(--amber-secondary);
+  --color-amber-secondary-foreground: var(--amber-secondary-foreground);
+  --color-amber-border: var(--amber-border);
 
   /* Bage Styles - RED */
-  --color-red-primary: var(--badge-red-primary);
-  --color-red-primary-foreground: var(--badge-red-primary-foreground);
-  --color-red-secondary: var(--badge-red-secondary);
-  --color-red-secondary-foreground: var(--badge-red-secondary-foreground);
-  --color-red-border: var(--badge-red-border);
+  --color-red-primary: var(--red-primary);
+  --color-red-primary-foreground: var(--red-primary-foreground);
+  --color-red-secondary: var(--red-secondary);
+  --color-red-secondary-foreground: var(--red-secondary-foreground);
+  --color-red-border: var(--red-border);
 
   /* Bage Styles - Violet */
-  --color-violet-primary: var(--badge-violet-primary);
-  --color-violet-primary-foreground: var(--badge-violet-primary-foreground);
-  --color-violet-secondary: var(--badge-violet-secondary);
-  --color-violet-secondary-foreground: var(--badge-violet-secondary-foreground);
-  --color-violet-border: var(--badge-violet-border);
+  --color-violet-primary: var(--violet-primary);
+  --color-violet-primary-foreground: var(--violet-primary-foreground);
+  --color-violet-secondary: var(--violet-secondary);
+  --color-violet-secondary-foreground: var(--violet-secondary-foreground);
+  --color-violet-border: var(--violet-border);
 
   /* State Color */
 
@@ -312,6 +321,7 @@
   --color-light-blue-700: #0070cc;
   --color-light-blue-800: #005ca3;
   --color-light-blue-900: #004880;
+  --color-light-blue-950: #65b9fc;
 
   /* Dark Blue Shades */
 
@@ -571,6 +581,7 @@
     0 0 2px rgba(0, 0, 0, 0.2), 0 2px 7px rgba(0, 0, 0, 0.1),
     0 0 0 rgba(56, 56, 56, 1);
   --shadow-4xl: 0 3px 3px rgba(0, 0, 0, 0.05);
+  --shadow-blue-ring: 0 0 0 2px rgba(101, 185, 252, 0.9);
 }
 
 :root {
@@ -579,8 +590,6 @@
   --foreground: var(--color-light-gray-900);
   --primary: var(--color-light-gray-900);
   --primary-foreground: var(--color-white);
-  --primary-hover: var(--color-light-gray-800);
-  --primary-active: var(--color-light-gray-700);
   --secondary: var(--color-light-gray-100);
   --secondary-foreground: var(--color-light-gray-700);
   --destructive: var(--color-light-red-600);
@@ -589,7 +598,7 @@
   --accent-foreground: var(--color-light-gray-800);
   --muted: var(--color-light-gray-100);
   --muted-foreground: var(--color-light-gray-600);
-  --input: var(--color-light-gray-500);
+  --input: var(--color-light-gray-300);
   --ring: rgba(201, 201, 201, 0.9);
   --card: var(--background);
   --card-foreground: var(--color-light-gray-600);
@@ -610,39 +619,47 @@
   --chart-5: var(--color-light-blue-800);
 
   /* Badge Styles - Blue */
-  --badge-blue-primary: var(--color-light-blue-600);
-  --badge-blue-primary-foreground: var(--color-light-blue-50);
-  --badge-blue-secondary: var(--color-light-blue-100);
-  --badge-blue-secondary-foreground: var(--color-light-blue-700);
-  --badge-blue-border: var(--color-light-blue-300);
+  --blue-primary: var(--color-light-blue-600);
+  --blue-primary-hover: var(--color-light-blue-700);
+  --blue-primary-active: var(--color-light-blue-800);
+  --blue-primary-foreground: var(--color-light-blue-50);
+  --blue-secondary: var(--color-light-blue-100);
+  --blue-secondary-hover: var(--color-light-blue-200);
+  --blue-secondary-active: var(--color-light-blue-300);
+  --blue-secondary-foreground: var(--color-light-blue-700);
+  --blue-border: var(--color-light-blue-300);
+  --blue-border-hover: var(--color-light-blue-400);
+  --blue-border-active: var(--color-light-blue-500);
+  --blue-disabled: var(--color-light-blue-100);
+  --blue-disabled-foreground: var(--color-light-blue-400);
 
   /* Badge Styles - Green */
-  --badge-green-primary: var(--color-light-green-600);
-  --badge-green-primary-foreground: var(--color-light-green-50);
-  --badge-green-secondary: var(--color-light-green-100);
-  --badge-green-secondary-foreground: var(--color-light-green-700);
-  --badge-green-border: var(--color-light-green-300);
+  --green-primary: var(--color-light-green-600);
+  --green-primary-foreground: var(--color-light-green-50);
+  --green-secondary: var(--color-light-green-100);
+  --green-secondary-foreground: var(--color-light-green-700);
+  --green-border: var(--color-light-green-300);
 
   /* Badge Styles - Amber */
-  --badge-amber-primary: var(--color-light-amber-600);
-  --badge-amber-primary-foreground: var(--color-light-amber-50);
-  --badge-amber-secondary: var(--color-light-amber-100);
-  --badge-amber-secondary-foreground: var(--color-light-amber-700);
-  --badge-amber-border: var(--color-light-amber-300);
+  --amber-primary: var(--color-light-amber-600);
+  --amber-primary-foreground: var(--color-light-amber-50);
+  --amber-secondary: var(--color-light-amber-100);
+  --amber-secondary-foreground: var(--color-light-amber-700);
+  --amber-border: var(--color-light-amber-300);
 
   /* Badge Styles - Red */
-  --badge-red-primary: var(--color-light-red-600);
-  --badge-red-primary-foreground: var(--color-light-red-50);
-  --badge-red-secondary: var(--color-light-red-100);
-  --badge-red-secondary-foreground: var(--color-light-red-700);
-  --badge-red-border: var(--color-light-red-300);
+  --red-primary: var(--color-light-red-600);
+  --red-primary-foreground: var(--color-light-red-50);
+  --red-secondary: var(--color-light-red-100);
+  --red-secondary-foreground: var(--color-light-red-700);
+  --red-border: var(--color-light-red-300);
 
   /* Badge Styles - Violet */
-  --badge-violet-primary: var(--color-light-violet-600);
-  --badge-violet-primary-foreground: var(--color-light-violet-50);
-  --badge-violet-secondary: var(--color-light-violet-100);
-  --badge-violet-secondary-foreground: var(--color-light-violet-700);
-  --badge-violet-border: var(--color-light-violet-300);
+  --violet-primary: var(--color-light-violet-600);
+  --violet-primary-foreground: var(--color-light-violet-50);
+  --violet-secondary: var(--color-light-violet-100);
+  --violet-secondary-foreground: var(--color-light-violet-700);
+  --violet-border: var(--color-light-violet-300);
 
   /* State */
   --success: var(--color-light-green-100);
@@ -661,8 +678,6 @@
   --foreground: var(--color-dark-gray-950);
   --primary: var(--color-dark-gray-950);
   --primary-foreground: var(--color-dark-gray-50);
-  --primary-hover: var(--color-dark-gray-900);
-  --primary-active: var(--color-dark-gray-800);
   --secondary: var(--color-dark-gray-300);
   --secondary-foreground: var(--color-dark-gray-800);
   --destructive: var(--color-dark-red-500);
@@ -673,7 +688,7 @@
   --border: var(--color-dark-gray-400);
   --muted: var(--color-dark-gray-300);
   --muted-foreground: var(--color-dark-gray-700);
-  --input: var(--color-dark-gray-600);
+  --input: var(--color-dark-gray-500);
   --ring: rgba(201, 201, 201, 0.9);
   --card: var(--color-dark-gray-200);
   --card-foreground: var(--color-dark-gray-700);
@@ -694,39 +709,47 @@
   --chart-5: var(--color-light-blue-500);
 
   /* Badge Styles - Blue */
-  --badge-blue-primary: var(--color-dark-blue-500);
-  --badge-blue-primary-foreground: var(--color-white);
-  --badge-blue-secondary: var(--color-dark-blue-100);
-  --badge-blue-secondary-foreground: var(--color-dark-blue-700);
-  --badge-blue-border: var(--color-dark-blue-200);
+  --blue-primary: var(--color-dark-blue-500);
+  --blue-primary-hover: var(--color-dark-blue-600);
+  --blue-primary-active: var(--color-dark-blue-400);
+  --blue-primary-foreground: var(--color-white);
+  --blue-secondary: var(--color-dark-blue-100);
+  --blue-secondary-hover: var(--color-dark-blue-200);
+  --blue-secondary-active: var(--color-dark-blue-300);
+  --blue-secondary-foreground: var(--color-dark-blue-700);
+  --blue-border: var(--color-dark-blue-200);
+  --blue-border-hover: var(--color-dark-blue-300);
+  --blue-border-active: var(--color-dark-blue-400);
+  --blue-disabled: var(--color-dark-blue-100);
+  --blue-disabled-foreground: var(--color-dark-blue-300);
 
   /* Badge Styles - Green */
-  --badge-green-primary: var(--color-dark-green-500);
-  --badge-green-primary-foreground: var(--color-white);
-  --badge-green-secondary: var(--color-dark-green-100);
-  --badge-green-secondary-foreground: var(--color-dark-green-700);
-  --badge-green-border: var(--color-dark-green-200);
+  --green-primary: var(--color-dark-green-500);
+  --green-primary-foreground: var(--color-white);
+  --green-secondary: var(--color-dark-green-100);
+  --green-secondary-foreground: var(--color-dark-green-700);
+  --green-border: var(--color-dark-green-200);
 
   /* Badge Styles - Amber */
-  --badge-amber-primary: var(--color-dark-amber-500);
-  --badge-amber-primary-foreground: var(--color-white);
-  --badge-amber-secondary: var(--color-dark-amber-100);
-  --badge-amber-secondary-foreground: var(--color-dark-amber-700);
-  --badge-amber-border: var(--color-dark-amber-200);
+  --amber-primary: var(--color-dark-amber-500);
+  --amber-primary-foreground: var(--color-white);
+  --amber-secondary: var(--color-dark-amber-100);
+  --amber-secondary-foreground: var(--color-dark-amber-700);
+  --amber-border: var(--color-dark-amber-200);
 
   /* Badge Styles - Red */
-  --badge-red-primary: var(--color-dark-red-500);
-  --badge-red-primary-foreground: var(--color-white);
-  --badge-red-secondary: var(--color-dark-red-100);
-  --badge-red-secondary-foreground: var(--color-dark-red-700);
-  --badge-red-border: var(--color-dark-red-200);
+  --red-primary: var(--color-dark-red-500);
+  --red-primary-foreground: var(--color-white);
+  --red-secondary: var(--color-dark-red-100);
+  --red-secondary-foreground: var(--color-dark-red-700);
+  --red-border: var(--color-dark-red-200);
 
   /* Badge Styles - Violet */
-  --badge-violet-primary: var(--color-dark-violet-500);
-  --badge-violet-primary-foreground: var(--color-white);
-  --badge-violet-secondary: var(--color-dark-violet-100);
-  --badge-violet-secondary-foreground: var(--color-dark-violet-700);
-  --badge-violet-border: var(--color-dark-violet-200);
+  --violet-primary: var(--color-dark-violet-500);
+  --violet-primary-foreground: var(--color-white);
+  --violet-secondary: var(--color-dark-violet-100);
+  --violet-secondary-foreground: var(--color-dark-violet-700);
+  --violet-border: var(--color-dark-violet-200);
 
   /* State */
   --success: var(--color-dark-green-100);
