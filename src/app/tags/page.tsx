@@ -10,7 +10,7 @@ const TabsDemo = () => {
           Tag Component
         </h1>
         <div className="flex flex-col  mx-auto gap-[50px] items-center">
-          <div className="flex gap-4 items-start">
+          {/* <div className="flex gap-4 items-start">
             <Tag>Discover</Tag>
             <Tag size="md">Discover</Tag>
             <Tag size="lg">Discover</Tag>
@@ -23,7 +23,7 @@ const TabsDemo = () => {
             <Tag size="lg" variant="ghost">
               Discover
             </Tag>
-          </div>
+          </div> */}
           <div className="flex gap-4 items-start">
             <Tag theme="blue">Discover</Tag>
             <Tag size="md" theme="blue">
@@ -42,7 +42,7 @@ const TabsDemo = () => {
               Discover
             </Tag>
           </div>
-          <div className="flex gap-4 items-start">
+          {/* <div className="flex gap-4 items-start">
             <Tag theme="green">Discover</Tag>
             <Tag size="md" theme="green">
               Discover
@@ -113,7 +113,7 @@ const TabsDemo = () => {
             <Tag size="lg" theme="violet" variant="ghost">
               Discover
             </Tag>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
