@@ -15,7 +15,7 @@ const labelVariants = cva(
       },
     },
     defaultVariants: {
-      size: "md",
+      size: "sm",
     },
   }
 );

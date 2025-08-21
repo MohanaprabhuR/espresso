@@ -19,8 +19,6 @@
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
-  --color-primary-hover: var(--primary-hover);
-  --color-primary-active: var(--primary-active);
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);
   --color-destructive: var(--destructive);
@@ -65,7 +63,7 @@
   --color-popover: var(--popover);
   --color-popover-foreground: var(--popover-foreground);
 
-  /* Bage Styles - Blue */
+  /* Badge Styles - Blue */
   --color-blue-primary: var(--blue-primary);
   --color-blue-primary-hover: var(--blue-primary-hover);
   --color-blue-primary-active: var(--blue-primary-active);
@@ -81,28 +79,28 @@
   --color-blue-disabled: var(--blue-disabled);
   --color-blue-disabled-foreground: var(--blue-disabled-foreground);
 
-  /* Bage Styles - Green */
+  /* Badge Styles - Green */
   --color-green-primary: var(--green-primary);
   --color-green-primary-foreground: var(--green-primary-foreground);
   --color-green-secondary: var(--green-secondary);
   --color-green-secondary-foreground: var(--green-secondary-foreground);
   --color-green-border: var(--green-border);
 
-  /* Bage Styles - Amber */
+  /* Badge Styles - Amber */
   --color-amber-primary: var(--amber-primary);
   --color-amber-primary-foreground: var(--amber-primary-foreground);
   --color-amber-secondary: var(--amber-secondary);
   --color-amber-secondary-foreground: var(--amber-secondary-foreground);
   --color-amber-border: var(--amber-border);
 
-  /* Bage Styles - RED */
+  /* Badge Styles - RED */
   --color-red-primary: var(--red-primary);
   --color-red-primary-foreground: var(--red-primary-foreground);
   --color-red-secondary: var(--red-secondary);
   --color-red-secondary-foreground: var(--red-secondary-foreground);
   --color-red-border: var(--red-border);
 
-  /* Bage Styles - Violet */
+  /* Badge Styles - Violet */
   --color-violet-primary: var(--violet-primary);
   --color-violet-primary-foreground: var(--violet-primary-foreground);
   --color-violet-secondary: var(--violet-secondary);
@@ -110,7 +108,6 @@
   --color-violet-border: var(--violet-border);
 
   /* State Color */
-
   --color-success: var(--success);
   --color-warning: var(--warning);
   --color-error: var(--error);
@@ -121,7 +118,6 @@
   --color-autofill-border: var(--autofill-border);
 
   /* Font Weights */
-
   --font-weight-thin: 100;
   --font-weight-extralight: 200;
   --font-weight-light: 300;
