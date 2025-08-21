@@ -2,7 +2,7 @@
 import React from "react";
 import { Tag } from "@/components/ui/tags";
 
-const TabsDemo = () => {
+const TagsDemo = () => {
   return (
     <div>
       <div className="pt-10 text-center">
@@ -120,4 +120,4 @@ const TabsDemo = () => {
   );
 };
 
-export default TabsDemo;
+export default TagsDemo;

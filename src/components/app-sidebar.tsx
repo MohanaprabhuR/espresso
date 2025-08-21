@@ -16,6 +16,7 @@ import {
   Tablet,
   ToolCase,
   Tags,
+  AlertCircleIcon,
 } from "lucide-react";
 
 import {
@@ -116,10 +117,15 @@ const items = [
     url: "/tags",
     icon: Tags,
   },
+  {
+    title: "Tooltip",
+    url: "/tooltip",
+    icon: ToolCase,
+  },
   // {
-  //   title: "Tooltip",
-  //   url: "/tooltip",
-  //   icon: ToolCase,
+  //   title: "Alert",
+  //   url: "/alert",
+  //   icon: AlertCircleIcon,
   // },
 ];
 
