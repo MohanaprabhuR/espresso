@@ -22,21 +22,21 @@ const toolTipDemo = () => {
             </TooltipContent>
           </Tooltip>
           <Tooltip>
-            <TooltipTrigger>Hover</TooltipTrigger>
+            <TooltipTrigger>Hover left</TooltipTrigger>
             <TooltipContent side="left" align="center">
               <p>Open source by default</p>
               <CommandIcon fill="currentColor" />
             </TooltipContent>
           </Tooltip>
           <Tooltip>
-            <TooltipTrigger>Hover</TooltipTrigger>
+            <TooltipTrigger>Hover right</TooltipTrigger>
             <TooltipContent side="right" align="center">
               <p>Open source by default</p>
               <CommandIcon fill="currentColor" />
             </TooltipContent>
           </Tooltip>
           <Tooltip>
-            <TooltipTrigger>Hover</TooltipTrigger>
+            <TooltipTrigger>Hover bottom</TooltipTrigger>
             <TooltipContent side="bottom" align="center">
               <p>Open source by default</p>
               <CommandIcon fill="currentColor" />
@@ -45,12 +45,14 @@ const toolTipDemo = () => {
 
           <Tooltip>
             <TooltipTrigger>Hover me</TooltipTrigger>
-            <TooltipContent>Open source by default</TooltipContent>
+            <TooltipContent arrow={false}>
+              Open source by default
+            </TooltipContent>
           </Tooltip>
 
           <Tooltip>
             <TooltipTrigger>Hover me</TooltipTrigger>
-            <TooltipContent resize={false}>
+            <TooltipContent resize={false} arrow={false}>
               Open source by default
               <CommandIcon fill="currentColor" />
             </TooltipContent>
