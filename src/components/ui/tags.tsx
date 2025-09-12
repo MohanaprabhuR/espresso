@@ -23,9 +23,9 @@ const tagVariants = cva(
           "text-[var(--theme-secondary-foreground)] hover:bg-[var(--theme-secondary-hover)] active:bg-[var(--theme-secondary-active)] focus-visible:shadow-blue-ring focus:bg-[var(--theme-secondary)] data-[disabled=true]:text-[var(--theme-disabled-foreground)] data-[disabled=true]:focus-visible:shadow-none",
       },
       size: {
-        sm: "px-1.5 py-[3px] text-xs tracking-3 font-normal [&>svg]:size-3",
-        md: "px-1.5 py-1 text-sm tracking-3 font-normal [&>svg]:size-3",
-        lg: "px-2 py-1.5 text-base tracking-3 font-normal [&>svg]:size-3",
+        sm: "px-1.5 py-[3px] text-xs tracking-4 font-normal [&>svg]:size-3",
+        md: "px-1.5 py-1 text-sm tracking-4 font-normal [&>svg]:size-3",
+        lg: "px-2 py-1.5 text-base tracking-4 font-normal [&>svg]:size-3",
       },
     },
     defaultVariants: {

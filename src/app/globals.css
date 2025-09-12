@@ -195,22 +195,23 @@
   --tracking-0: 0em; /* 0px */
   --tracking-1: 0.01em; /* 0.16px */
   --tracking-2: 0.016em; /* 0.24px */
-  --tracking-3: 0.02em; /* 0.32px */
-  --tracking-4: 0.03em; /* 0.48px */
-  --tracking-5: 0.04em; /* 0.64px */
-  --tracking-6: 0.05em; /* 0.8px */
-  --tracking-7: 0.06em; /* 0.96px */
-  --tracking-8: 0.07em; /* 1.12px */
-  --tracking-9: 0.08em; /* 1.28px */
-  --tracking-10: 0.09em; /* 1.44px */
-  --tracking-11: 0.1em; /* 1.6px */
-  --tracking-12: 0.11em; /* 1.76px */
-  --tracking-13: 0.12em; /* 1.92px */
-  --tracking-14: 0.14em; /* 2.24px */
-  --tracking-15: 0.16em; /* 2.56px */
-  --tracking-16: 0.2em; /* 3.2px */
-  --tracking-17: 0.24em; /* 3.8px */
-  --tracking-18: 0.26em; /* 4.16px */
+  --tracking-3: 0.0175em; /* 0.28px */
+  --tracking-4: 0.02em; /* 0.32px */
+  --tracking-5: 0.03em; /* 0.48px */
+  --tracking-6: 0.04em; /* 0.64px */
+  --tracking-7: 0.05em; /* 0.8px */
+  --tracking-8: 0.06em; /* 0.96px */
+  --tracking-9: 0.07em; /* 1.12px */
+  --tracking-10: 0.08em; /* 1.28px */
+  --tracking-11: 0.09em; /* 1.44px */
+  --tracking-12: 0.1em; /* 1.6px */
+  --tracking-13: 0.11em; /* 1.76px */
+  --tracking-14: 0.12em; /* 1.92px */
+  --tracking-15: 0.14em; /* 2.24px */
+  --tracking-16: 0.16em; /* 2.56px */
+  --tracking-17: 0.2em; /* 3.2px */
+  --tracking-18: 0.24em; /* 3.8px */
+  --tracking-19: 0.26em; /* 4.16px */
 
   /* Radius */
   --radius-xs: 0.25rem; /* 4px */
@@ -595,8 +596,8 @@
   --muted-foreground: var(--color-light-gray-600);
   --input: var(--color-light-gray-300);
   --ring: rgba(201, 201, 201, 0.9);
-  --card: var(--background);
-  --card-foreground: var(--color-light-gray-600);
+  --card: var(--color-light-gray-50);
+  --card-foreground: var(--color-light-gray-900);
   --popover: var(--color-white);
   --popover-foreground: var(--color-light-gray-700);
   --sidebar: var(--color-light-gray-50);
@@ -686,7 +687,7 @@
   --input: var(--color-dark-gray-500);
   --ring: rgba(201, 201, 201, 0.9);
   --card: var(--color-dark-gray-200);
-  --card-foreground: var(--color-dark-gray-700);
+  --card-foreground: var(--color-dark-gray-950);
   --popover: var(--color-dark-gray-200);
   --popover-foreground: var(--color-dark-gray-900);
   --sidebar: var(--color-dark-gray-950);

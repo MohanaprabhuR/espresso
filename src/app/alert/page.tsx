@@ -1,6 +1,9 @@
+"use client";
 import React from "react";
-import { AlertCircleIcon, CheckCircle2Icon, PopcornIcon } from "lucide-react";
+import { CloseIcon } from "../../../public/images/svg/closeIcon";
+import { ExclamationIcon } from "../../../public/images/svg/exclamationIcon";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import { Button } from "@/components/ui/button";
 
 const AlertDemo = () => {
   return (
@@ -9,31 +12,74 @@ const AlertDemo = () => {
         <h1 className="text-xl font-bold text-gray-900 dark:text-white pb-10 text-center">
           Alert Component
         </h1>
-        <div className="flex flex-col  mx-auto gap-[50px] items-center">
+        <div className="flex flex-col  mx-auto gap-[50px] items-center max-w-120">
           <Alert>
-            <CheckCircle2Icon />
-            <AlertTitle>Success! Your changes have been saved</AlertTitle>
-            <AlertDescription>
-              This is an alert with icon, title and description.
-            </AlertDescription>
+            <AlertTitle>Your trial ends soon! </AlertTitle>
           </Alert>
           <Alert>
-            <PopcornIcon />
-            <AlertTitle>
-              This Alert has a title and an icon. No description.
-            </AlertTitle>
+            <AlertTitle>Your trial ends soon! </AlertTitle>
+            <CloseIcon />
           </Alert>
-          <Alert variant="destructive">
-            <AlertCircleIcon />
-            <AlertTitle>Unable to process your payment.</AlertTitle>
+          <Alert>
+            <ExclamationIcon />
+            <AlertTitle>Your trial ends soon! </AlertTitle>
+          </Alert>
+          <Alert>
+            <ExclamationIcon />
+            <AlertTitle>Your trial ends soon! </AlertTitle>
+            <CloseIcon />
+          </Alert>
+          <Alert action>
+            <AlertTitle>Your trial ends soon!</AlertTitle>
+            <Button variant="ghost"> Update</Button>
+          </Alert>
+          <Alert action>
+            <AlertTitle>Your trial ends soon!</AlertTitle>
+            <Button variant="ghost"> Update</Button>
+            <CloseIcon />
+          </Alert>
+          <Alert action>
+            <ExclamationIcon />
+            <AlertTitle>Your trial ends soon!</AlertTitle>
+            <Button variant="ghost"> Update</Button>
+          </Alert>
+          <Alert action>
+            <ExclamationIcon />
+            <AlertTitle>Your trial ends soon!</AlertTitle>
+            <Button variant="ghost"> Update</Button>
+            <CloseIcon />
+          </Alert>
+          <Alert longText>
+            <AlertTitle>Your trial ends soon!</AlertTitle>
             <AlertDescription>
-              <p>Please verify your billing information and try again.</p>
-              <ul className="list-inside list-disc text-sm">
-                <li>Check your card details</li>
-                <li>Ensure sufficient funds</li>
-                <li>Verify billing address</li>
-              </ul>
+              Upgrade now to continue enjoying all features without
+              interruption.
             </AlertDescription>
+          </Alert>
+          <Alert longText>
+            <AlertTitle>Your trial ends soon!</AlertTitle>
+            <AlertDescription>
+              Upgrade now to continue enjoying all features without
+              interruption.
+            </AlertDescription>
+            <CloseIcon />
+          </Alert>
+          <Alert longText>
+            <ExclamationIcon />
+            <AlertTitle>Your trial ends soon!</AlertTitle>
+            <AlertDescription>
+              Upgrade now to continue enjoying all features without
+              interruption.
+            </AlertDescription>
+          </Alert>
+          <Alert longText>
+            <ExclamationIcon />
+            <AlertTitle>Your trial ends soon!</AlertTitle>
+            <AlertDescription>
+              Upgrade now to continue enjoying all features without
+              interruption.
+            </AlertDescription>
+            <CloseIcon />
           </Alert>
         </div>
       </div>

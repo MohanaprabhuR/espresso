@@ -18,9 +18,9 @@ const badgeVariants = cva(
         ghost: "text-[var(--theme-secondary-foreground)] ",
       },
       size: {
-        sm: "px-1.5 py-px text-xs font-normal tracking-3 [&>svg]:size-2.5",
-        md: "px-1.5 py-[3px] text-xs font-normal tracking-3 [&>svg]:size-3",
-        lg: "px-2 py-[4.5px] text-sm font-normal tracking-3 [&>svg]:size-3",
+        sm: "px-1.5 py-px text-xs font-normal tracking-4 [&>svg]:size-2.5",
+        md: "px-1.5 py-[3px] text-xs font-normal tracking-4 [&>svg]:size-3",
+        lg: "px-2 py-[4.5px] text-sm font-normal tracking-4 [&>svg]:size-3",
       },
     },
     defaultVariants: {

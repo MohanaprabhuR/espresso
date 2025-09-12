@@ -51,9 +51,9 @@ const statusOutlineMap = {
 };
 
 const sizeClassMap = {
-  sm: "h-7 px-2 py-1.5 text-base tracking-3 font-normal rounded-lg",
-  md: "h-8 px-2.5 py-2 text-base tracking-3 font-normal rounded-lg",
-  lg: "h-10 px-3 py-[11px] text-lg tracking-3 font-normal rounded-xl",
+  sm: "h-7 px-2 py-1.5 text-base tracking-4 font-normal rounded-lg",
+  md: "h-8 px-2.5 py-2 text-base tracking-4 font-normal rounded-lg",
+  lg: "h-10 px-3 py-[11px] text-lg tracking-4 font-normal rounded-xl",
 };
 
 function SelectTrigger({

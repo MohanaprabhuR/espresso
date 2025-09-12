@@ -122,11 +122,11 @@ const items = [
     url: "/tooltip",
     icon: ToolCase,
   },
-  // {
-  //   title: "Alert",
-  //   url: "/alert",
-  //   icon: AlertCircleIcon,
-  // },
+  {
+    title: "Alert",
+    url: "/alert",
+    icon: AlertCircleIcon,
+  },
 ];
 
 export function AppSidebar() {

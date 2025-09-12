@@ -10,8 +10,8 @@ const labelVariants = cva(
   {
     variants: {
       size: {
-        sm: "text-base font-normal tracking-3",
-        md: "text-lg fomt-medium tracking-3",
+        sm: "text-base font-normal tracking-4",
+        md: "text-lg fomt-medium tracking-4",
       },
     },
     defaultVariants: {

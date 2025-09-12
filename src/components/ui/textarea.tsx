@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 import { cva, type VariantProps } from "class-variance-authority";
 
 const textareaVariants = cva(
-  "flex w-full rounded-lg outline-none placeholder:text-primary/50 text-sm tracking-3 font-normal disabled:cursor-not-allowed disabled:pointer-events-none disabled:bg-primary/3 disabled:text-primary/20 disabled:border-transparent",
+  "flex w-full rounded-lg outline-none placeholder:text-primary/50 text-sm tracking-4 font-normal disabled:cursor-not-allowed disabled:pointer-events-none disabled:bg-primary/3 disabled:text-primary/20 disabled:border-transparent",
   {
     variants: {
       variant: {

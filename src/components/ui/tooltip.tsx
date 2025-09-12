@@ -60,7 +60,7 @@ function TooltipContent({
             "data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 " +
             "data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 " +
             "z-50 origin-(--radix-tooltip-content-transform-origin) rounded-lg px-2 py-[5px] " +
-            "text-base font-normal tracking-3 flex items-center gap-x-1.5",
+            "text-base font-normal tracking-4 flex items-center gap-x-1.5",
           resize ? "w-full max-w-40" : "w-fit",
           className
         )}
