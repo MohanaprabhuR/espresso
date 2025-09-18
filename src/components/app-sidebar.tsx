@@ -18,7 +18,6 @@ import {
   Tags,
   SplinePointer,
   AlertCircleIcon,
-  NotepadTextIcon,
 } from "lucide-react";
 
 import {
@@ -129,16 +128,16 @@ const items = [
     url: "/alert",
     icon: AlertCircleIcon,
   },
-  {
-    title: "Alert Dialog",
-    url: "/alertDialog",
-    icon: AlertCircleIcon,
-  },
-  {
-    title: "Notification",
-    url: "/notification",
-    icon: NotepadTextIcon,
-  },
+  // {
+  //   title: "Alert Dialog",
+  //   url: "/alertDialog",
+  //   icon: AlertCircleIcon,
+  // },
+  // {
+  //   title: "Notification",
+  //   url: "/notification",
+  //   icon: NotepadTextIcon,
+  // },
   // {
   //   title: "Date Picker",
   //   url: "/datePicker",
