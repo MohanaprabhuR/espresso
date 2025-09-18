@@ -18,7 +18,6 @@ import {
   Tags,
   SplinePointer,
   AlertCircleIcon,
-  Calendar,
   NotepadTextIcon,
 } from "lucide-react";
 

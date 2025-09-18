@@ -3,7 +3,7 @@ import React from "react";
 import { CloseIcon } from "../../../public/images/svg/closeIcon";
 import { ExclamationIcon } from "../../../public/images/svg/exclamationIcon";
 import { Button } from "@/components/ui/button";
-import { Alert, AlertTitle, AlertDescription } from "@/components/ui/alert";
+import { Alert, AlertTitle } from "@/components/ui/alert";
 
 const AlertDemo = () => {
   return (
