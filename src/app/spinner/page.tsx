@@ -5,12 +5,80 @@ const SpinnerDemo = () => {
   return (
     <div>
       <div className="pt-10 text-center">
-        <h1 className="text-xl font-bold text-gray-900 dark:text-white pb-4">
+        <h1 className="text-xl font-bold text-gray-900 dark:text-white pb-10 ">
           Spinner Component
         </h1>
-        <div className="flex flex-col  mx-auto gap-[50px]">
-          <Spinner />
-          <Spinner track />
+        <div className="flex flex-col   mx-auto gap-[50px]">
+          <div className="flex gap-x-10 justify-center">
+            <div className="flex gap-x-3">
+              <Spinner />
+              <Spinner size="md" />
+              <Spinner size="lg" />
+              <Spinner size="xl" />
+            </div>
+            <div className="flex gap-x-3">
+              <Spinner track />
+              <Spinner track size="md" />
+              <Spinner track size="lg" />
+              <Spinner track size="xl" />
+            </div>
+          </div>
+          <div className="flex gap-x-10 justify-center">
+            <div className="flex gap-x-3">
+              <Spinner variant="blue" />
+              <Spinner variant="blue" size="md" />
+              <Spinner variant="blue" size="lg" />
+              <Spinner variant="blue" size="xl" />
+            </div>
+            <div className="flex gap-x-3">
+              <Spinner variant="blue" track />
+              <Spinner variant="blue" track size="md" />
+              <Spinner variant="blue" track size="lg" />
+              <Spinner variant="blue" track size="xl" />
+            </div>
+          </div>
+          <div className="flex gap-x-10 justify-center">
+            <div className="flex gap-x-3">
+              <Spinner variant="green" />
+              <Spinner variant="green" size="md" />
+              <Spinner variant="green" size="lg" />
+              <Spinner variant="green" size="xl" />
+            </div>
+            <div className="flex gap-x-3">
+              <Spinner variant="green" track />
+              <Spinner variant="green" track size="md" />
+              <Spinner variant="green" track size="lg" />
+              <Spinner variant="green" track size="xl" />
+            </div>
+          </div>
+          <div className="flex gap-x-10 justify-center">
+            <div className="flex gap-x-3">
+              <Spinner variant="amber" />
+              <Spinner variant="amber" size="md" />
+              <Spinner variant="amber" size="lg" />
+              <Spinner variant="amber" size="xl" />
+            </div>
+            <div className="flex gap-x-3">
+              <Spinner variant="amber" track />
+              <Spinner variant="amber" track size="md" />
+              <Spinner variant="amber" track size="lg" />
+              <Spinner variant="amber" track size="xl" />
+            </div>
+          </div>
+          <div className="flex gap-x-10 justify-center">
+            <div className="flex gap-x-3">
+              <Spinner variant="red" />
+              <Spinner variant="red" size="md" />
+              <Spinner variant="red" size="lg" />
+              <Spinner variant="red" size="xl" />
+            </div>
+            <div className="flex gap-x-3">
+              <Spinner variant="red" track />
+              <Spinner variant="red" track size="md" />
+              <Spinner variant="red" track size="lg" />
+              <Spinner variant="red" track size="xl" />
+            </div>
+          </div>
         </div>
       </div>
     </div>

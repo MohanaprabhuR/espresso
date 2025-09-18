@@ -7,7 +7,7 @@ export const SpinnerIcon = (
 ) => (
   <Icon fill="none" viewBox="0 0 12 12" {...props}>
     <g
-      clip-path="url(#paint0_angular_33531_13643_clip_path)"
+      clipPath="url(#paint0_angular_33531_13643_clip_path)"
       data-figma-skip-parse="true"
     >
       <g transform="matrix(-0.00424264 0.0059397 -0.0059397 -0.00424264 7 6.99909)">

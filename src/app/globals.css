@@ -107,6 +107,13 @@
   --color-violet-secondary-foreground: var(--violet-secondary-foreground);
   --color-violet-border: var(--violet-border);
 
+  /* Spinner Track Color */
+  --color-spinner-gray: var(--track-gray);
+  --color-spinner-blue: var(--track-blue);
+  --color-spinner-green: var(--track-green);
+  --color-spinner-amber: var(--track-amber);
+  --color-spinner-red: var(--track-red);
+
   /* State Color */
   --color-success: var(--success);
   --color-warning: var(--warning);
@@ -560,7 +567,6 @@
   --color-dark-violet-950: #cdbeff;
 
   /* Box Shadow */
-
   --shadow-2xs: 0px 1px 4px rgba(0, 0, 0, 0.1);
   --shadow-xs: 0px 0px 0px 2px #ffffff;
   --shadow-xss: 0px 1px 3px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.06);
@@ -666,6 +672,13 @@
   --error-border: var(--color-light-red-400);
   --autofill: var(--color-light-orange-100);
   --autofill-border: var(--color-light-orange-400);
+
+  /* Spinner Border Color */
+  --track-gray: var(--color-light-gray-200);
+  --track-blue: var(--color-light-blue-200);
+  --track-green: var(--color-light-green-200);
+  --track-amber: var(--color-light-amber-200);
+  --track-red: var(--color-light-red-200);
 }
 
 .dark {
@@ -756,6 +769,13 @@
   --error-border: var(--color-dark-red-300);
   --autofill: var(--color-dark-orange-100);
   --autofill-border: var(--color-dark-orange-300);
+
+  /* Spinner Border Color */
+  --track-gray: var(--color-dark-gray-500);
+  --track-blue: var(--color-dark-blue-500);
+  --track-green: var(--color-dark-green-500);
+  --track-amber: var(--color-dark-amber-500);
+  --track-red: var(--color-dark-red-500);
 }
 
 @utility shadow-focus-light {

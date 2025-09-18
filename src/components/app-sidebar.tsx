@@ -16,7 +16,10 @@ import {
   Tablet,
   ToolCase,
   Tags,
+  SplinePointer,
   AlertCircleIcon,
+  Calendar,
+  NotepadTextIcon,
 } from "lucide-react";
 
 import {
@@ -97,11 +100,11 @@ const items = [
     url: "/slider",
     icon: Sliders,
   },
-  // {
-  //   title: "Spinner",
-  //   url: "/spinner",
-  //   icon: SplinePointer,
-  // },
+  {
+    title: "Spinner",
+    url: "/spinner",
+    icon: SplinePointer,
+  },
   {
     title: "Switch",
     url: "/switch",
@@ -127,6 +130,21 @@ const items = [
     url: "/alert",
     icon: AlertCircleIcon,
   },
+  {
+    title: "Alert Dialog",
+    url: "/alertDialog",
+    icon: AlertCircleIcon,
+  },
+  {
+    title: "Notification",
+    url: "/notification",
+    icon: NotepadTextIcon,
+  },
+  // {
+  //   title: "Date Picker",
+  //   url: "/datePicker",
+  //   icon: Calendar,
+  // },
 ];
 
 export function AppSidebar() {

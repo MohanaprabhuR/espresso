@@ -2,8 +2,8 @@
 import React from "react";
 import { CloseIcon } from "../../../public/images/svg/closeIcon";
 import { ExclamationIcon } from "../../../public/images/svg/exclamationIcon";
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Button } from "@/components/ui/button";
+import { Alert, AlertTitle, AlertDescription } from "@/components/ui/alert";
 
 const AlertDemo = () => {
   return (
@@ -31,55 +31,87 @@ const AlertDemo = () => {
           </Alert>
           <Alert action>
             <AlertTitle>Your trial ends soon!</AlertTitle>
-            <Button variant="ghost"> Update</Button>
+            <Button variant="ghost" size="sm">
+              {" "}
+              Update
+            </Button>
           </Alert>
           <Alert action>
             <AlertTitle>Your trial ends soon!</AlertTitle>
-            <Button variant="ghost"> Update</Button>
-            <CloseIcon />
+            <Button variant="ghost" size="sm">
+              Update <CloseIcon />
+            </Button>
           </Alert>
           <Alert action>
             <ExclamationIcon />
             <AlertTitle>Your trial ends soon!</AlertTitle>
-            <Button variant="ghost"> Update</Button>
+            <Button variant="ghost" size="sm">
+              {" "}
+              Update
+            </Button>
           </Alert>
           <Alert action>
             <ExclamationIcon />
             <AlertTitle>Your trial ends soon!</AlertTitle>
-            <Button variant="ghost"> Update</Button>
-            <CloseIcon />
+            <Button variant="ghost" size="sm">
+              Update <CloseIcon />
+            </Button>
           </Alert>
-          <Alert longText>
-            <AlertTitle>Your trial ends soon!</AlertTitle>
-            <AlertDescription>
-              Upgrade now to continue enjoying all features without
-              interruption.
-            </AlertDescription>
+          <Alert variant="information">
+            <AlertTitle>Your trial ends soon! </AlertTitle>
           </Alert>
-          <Alert longText>
-            <AlertTitle>Your trial ends soon!</AlertTitle>
-            <AlertDescription>
-              Upgrade now to continue enjoying all features without
-              interruption.
-            </AlertDescription>
-            <CloseIcon />
-          </Alert>
-          <Alert longText>
+          <Alert variant="information">
             <ExclamationIcon />
-            <AlertTitle>Your trial ends soon!</AlertTitle>
-            <AlertDescription>
-              Upgrade now to continue enjoying all features without
-              interruption.
-            </AlertDescription>
-          </Alert>
-          <Alert longText>
-            <ExclamationIcon />
-            <AlertTitle>Your trial ends soon!</AlertTitle>
-            <AlertDescription>
-              Upgrade now to continue enjoying all features without
-              interruption.
-            </AlertDescription>
+            <AlertTitle>Your trial ends soon! </AlertTitle>
             <CloseIcon />
+          </Alert>
+          <Alert action variant="information">
+            <AlertTitle>Your trial ends soon!</AlertTitle>
+            <Button variant="ghost" size="sm">
+              Update <CloseIcon />
+            </Button>
+          </Alert>
+          <Alert variant="success">
+            <AlertTitle>Your trial ends soon! </AlertTitle>
+          </Alert>
+          <Alert variant="success">
+            <ExclamationIcon />
+            <AlertTitle>Your trial ends soon! </AlertTitle>
+            <CloseIcon />
+          </Alert>
+          <Alert action variant="success">
+            <AlertTitle>Your trial ends soon!</AlertTitle>
+            <Button variant="ghost" size="sm">
+              Update <CloseIcon />
+            </Button>
+          </Alert>
+          <Alert variant="warning">
+            <AlertTitle>Your trial ends soon! </AlertTitle>
+          </Alert>
+          <Alert variant="warning">
+            <ExclamationIcon />
+            <AlertTitle>Your trial ends soon! </AlertTitle>
+            <CloseIcon />
+          </Alert>
+          <Alert action variant="warning">
+            <AlertTitle>Your trial ends soon!</AlertTitle>
+            <Button variant="ghost" size="sm">
+              Update <CloseIcon />
+            </Button>
+          </Alert>
+          <Alert variant="error">
+            <AlertTitle>Your trial ends soon! </AlertTitle>
+          </Alert>
+          <Alert variant="error">
+            <ExclamationIcon />
+            <AlertTitle>Your trial ends soon! </AlertTitle>
+            <CloseIcon />
+          </Alert>
+          <Alert action variant="error">
+            <AlertTitle>Your trial ends soon!</AlertTitle>
+            <Button variant="ghost" size="sm">
+              Update <CloseIcon />
+            </Button>
           </Alert>
         </div>
       </div>
