@@ -40,7 +40,7 @@ function DropdownDemo() {
   const [showSvelte, setShowSvelte] = React.useState(false);
   const [showRemix, setShowRemix] = React.useState(false);
   const [showAstro, setShowAstro] = React.useState(true);
-  const [selectedValue, setSelectedValue] = React.useState<string>("");
+  // const [selectedValue, setSelectedValue] = React.useState<string>("");
   const [framework, setFramework] = React.useState("nextjs");
   const [emailNotifications, setEmailNotifications] = React.useState(false);
   const [pushNotifications, setPushNotifications] = React.useState(true);
