@@ -25,42 +25,27 @@ export function Spinner({
 
   const { container, svg } = sizes[size];
 
-  const darkGradientCommon =
-    "conic-gradient(from 90deg,rgba(255, 255, 255, 0.0018) 0deg,rgba(255, 255, 255, 1) 260.571deg,rgba(255, 255, 255, 0) 359.525deg,rgba(255, 255, 255, 0.0018) 360deg)";
-  const blueGradient =
-    "conic-gradient(from 90deg,rgba(0, 109, 219, 0.0018) 0deg,rgba(0, 109, 219, 1) 260.571deg,rgba(0, 109, 219, 0) 359.525deg,rgba(0, 109, 219, 0.0018) 360deg)";
-  const greenGradient =
-    "conic-gradient(from 90deg,rgba(23, 117, 75, 0.0018) 0deg,rgba(23, 117, 75, 1) 260.571deg,rgba(23, 117, 75, 0) 359.525deg,rgba(23, 117, 75, 0.0018) 360deg)";
-  const amberGradient =
-    "conic-gradient(from 90deg,rgba(231, 153, 19, 0.7133) 0deg,rgba(231, 153, 19, 1) 77.4deg,rgba(231, 153, 19, 0) 167.4deg,rgba(231, 153, 19, 0.7133) 360deg)";
-  const redGradient =
-    "conic-gradient(from 90deg,rgba(205, 40, 40, 0.0018) 0deg,rgba(205, 40, 40, 1) 260.571deg,rgba(205, 40, 40, 0) 359.525deg,rgba(205, 40, 40, 0.0018) 360deg)";
-  const grayLightGradient =
-    "conic-gradient(from 90deg,rgba(56, 56, 56, 0.0018) 0deg,rgba(56, 56, 56, 1) 260.571deg,rgba(56, 56, 56, 0) 359.525deg,rgba(56, 56, 56, 0.0018) 360deg)";
-  const grayDarkGradient =
-    "conic-gradient(from 90deg,rgba(255, 255, 255, 0.0018) 0deg,rgba(255, 255, 255, 1) 260.571deg,rgba(255, 255, 255, 0) 359.525deg,rgba(255, 255, 255, 0.0018) 360deg)";
-
   // Gradients for light + dark mode
   const gradients: Record<string, { light: string; dark: string }> = {
     gray: {
-      light: grayLightGradient,
-      dark: track ? darkGradientCommon : grayDarkGradient,
+      light: "var(--spinner-gray)",
+      dark: track ? "var(--spinner-dark-common)" : "var(--spinner-gray)",
     },
     blue: {
-      light: blueGradient,
-      dark: track ? darkGradientCommon : blueGradient,
+      light: "var(--spinner-blue)",
+      dark: track ? "var(--spinner-dark-common)" : "var(--spinner-blue)",
     },
     green: {
-      light: greenGradient,
-      dark: track ? darkGradientCommon : greenGradient,
+      light: "var(--spinner-green)",
+      dark: track ? "var(--spinner-dark-common)" : "var(--spinner-green)",
     },
     amber: {
-      light: amberGradient,
-      dark: track ? darkGradientCommon : amberGradient,
+      light: "var(--spinner-amber)",
+      dark: track ? "var(--spinner-dark-common)" : "var(--spinner-amber)",
     },
     red: {
-      light: redGradient,
-      dark: track ? darkGradientCommon : redGradient,
+      light: "var(--spinner-red)",
+      dark: track ? "var(--spinner-dark-common)" : "var(--spinner-red)",
     },
   };
 

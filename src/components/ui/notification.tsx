@@ -4,12 +4,17 @@ import { cn } from "@/lib/utils";
 function Notification({
   className,
   action = false,
+  longText = false,
   ...props
 }: React.ComponentProps<"div"> & {
   action?: boolean;
   longText?: boolean;
 }) {
-  const paddingClasses = action ? "px-3 py-1.5" : "py-2.5 px-3";
+  const paddingClasses = action
+    ? "px-3 py-1.5"
+    : longText
+      ? "py-3 px-3.5"
+      : "py-2.5 px-3";
 
   return (
     <div

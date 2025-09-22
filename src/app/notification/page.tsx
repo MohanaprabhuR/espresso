@@ -40,7 +40,19 @@ const AvatarDemo = () => {
             <CloseIcon />
           </Button>
         </Notification>
-        <Notification>
+        <Notification longText>
+          <ExclamationIcon />
+          <NotificationContent>
+            <NotificationTitle>
+              Update available. Get new features!
+            </NotificationTitle>
+            <NotificationDescription>
+              A new update is available for the app. Update now to enjoy new
+              features and improvements.
+            </NotificationDescription>
+          </NotificationContent>
+        </Notification>
+        <Notification longText>
           <ExclamationIcon />
           <NotificationContent>
             <NotificationTitle>

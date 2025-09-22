@@ -18,6 +18,7 @@ import {
   Tags,
   SplinePointer,
   AlertCircleIcon,
+  DropletIcon,
 } from "lucide-react";
 
 import {
@@ -128,6 +129,11 @@ const items = [
     url: "/alert",
     icon: AlertCircleIcon,
   },
+  {
+    title: "DropDwon",
+    url: "/dropdown",
+    icon: DropletIcon,
+  },
   // {
   //   title: "Alert Dialog",
   //   url: "/alertDialog",
@@ -141,7 +147,7 @@ const items = [
   // {
   //   title: "Date Picker",
   //   url: "/datePicker",
-  //   icon: Calendar,
+  //   icon: Calendar1Icon,
   // },
 ];
 
