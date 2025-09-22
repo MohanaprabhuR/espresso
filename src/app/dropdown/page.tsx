@@ -35,7 +35,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
-function dropdownDemo() {
+function DropdownDemo() {
   const [showNext, setShowNext] = React.useState(true);
   const [showSvelte, setShowSvelte] = React.useState(false);
   const [showRemix, setShowRemix] = React.useState(false);
@@ -424,4 +424,4 @@ function dropdownDemo() {
   );
 }
 
-export default dropdownDemo;
+export default DropdownDemo;
