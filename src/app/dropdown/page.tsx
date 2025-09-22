@@ -397,7 +397,7 @@ function DropdownDemo() {
               </DropdownMenuCheckboxItem>
             </DropdownMenuContent>
           </DropdownMenu>
-          <DropdownMenu>
+          {/* <DropdownMenu>
             <DropdownMenuTrigger>
               <Button variant="destructive">Select Option</Button>
             </DropdownMenuTrigger>
@@ -417,7 +417,7 @@ function DropdownDemo() {
                 </DropdownMenuRadioItem>
               </DropdownMenuRadioGroup>
             </DropdownMenuContent>
-          </DropdownMenu>
+          </DropdownMenu> */}
         </div>
       </div>
     </div>
