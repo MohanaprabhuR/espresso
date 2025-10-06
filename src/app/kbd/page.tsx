@@ -1,0 +1,82 @@
+import React from "react";
+import { Kbd, KbdGroup } from "@/components/ui/kbd";
+import { Button } from "@/components/ui/button";
+import { ButtonGroup } from "@/components/ui/button-group";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+
+const KbdDemo = () => {
+  return (
+    <div>
+      <div className="pt-10 text-center">
+        <h1 className="text-xl font-bold text-gray-900 dark:text-white pb-4">
+          Kbd Component
+        </h1>
+        <div className="flex flex-col gap-[30px_0] w-full max-w-[500px] mx-auto">
+          <KbdGroup>
+            <Kbd>⌘</Kbd>
+            <Kbd>⇧</Kbd>
+            <Kbd>⌥</Kbd>
+            <Kbd>⌃</Kbd>
+          </KbdGroup>
+          <KbdGroup>
+            <Kbd>Ctrl</Kbd>
+            <span>+</span>
+            <Kbd>B</Kbd>
+          </KbdGroup>
+          <div className="flex flex-wrap items-center gap-4">
+            <Button size="sm" className="pr-2">
+              Accept <Kbd>⏎</Kbd>
+            </Button>
+            <Button size="sm" className="pr-2">
+              Cancel <Kbd>Esc</Kbd>
+            </Button>
+            <Button variant="outline" size="sm" className="pr-2">
+              Accept <Kbd>⏎</Kbd>
+            </Button>
+            <Button variant="outline" size="sm" className="pr-2">
+              Cancel <Kbd>Esc</Kbd>
+            </Button>
+            <div className="flex flex-wrap items-center gap-4">
+              <ButtonGroup>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Button size="sm" variant="outline">
+                      Save
+                    </Button>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <div className="flex items-center gap-2">
+                      Save Changes <Kbd>S</Kbd>
+                    </div>
+                  </TooltipContent>
+                </Tooltip>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Button size="sm" variant="outline">
+                      Print
+                    </Button>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <div className="flex items-center gap-2">
+                      Print Document{" "}
+                      <KbdGroup>
+                        <Kbd>Ctrl</Kbd>
+                        <Kbd>P</Kbd>
+                      </KbdGroup>
+                    </div>
+                  </TooltipContent>
+                </Tooltip>
+              </ButtonGroup>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default KbdDemo;

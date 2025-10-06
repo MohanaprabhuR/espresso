@@ -96,7 +96,7 @@ function Input({
   return (
     <div
       data-status={status}
-      className={cn("flex items-center gap-2 relative")}
+      className={cn("flex items-center gap-2 relative w-full")}
     >
       {prefix && (
         <span

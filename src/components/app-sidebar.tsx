@@ -19,6 +19,12 @@ import {
   SplinePointer,
   AlertCircleIcon,
   DropletIcon,
+  FormInputIcon,
+  EclipseIcon,
+  NotepadTextIcon,
+  FileSlidersIcon,
+  IndentDecreaseIcon,
+  SquareChevronRightIcon,
 } from "lucide-react";
 
 import {
@@ -130,20 +136,50 @@ const items = [
     icon: AlertCircleIcon,
   },
   {
+    title: "Notification",
+    url: "/notification",
+    icon: NotepadTextIcon,
+  },
+  {
     title: "DropDwon",
     url: "/dropdown",
     icon: DropletIcon,
+  },
+  {
+    title: "Input Group",
+    url: "/input-group",
+    icon: FormInputIcon,
+  },
+
+  {
+    title: "Empty",
+    url: "/empty",
+    icon: EclipseIcon,
+  },
+
+  {
+    title: "Field",
+    url: "/field",
+    icon: FileSlidersIcon,
+  },
+
+  {
+    title: "Item",
+    url: "/item",
+    icon: IndentDecreaseIcon,
+  },
+
+  {
+    title: "Kbd",
+    url: "/kbd",
+    icon: SquareChevronRightIcon,
   },
   // {
   //   title: "Alert Dialog",
   //   url: "/alertDialog",
   //   icon: AlertCircleIcon,
   // },
-  // {
-  //   title: "Notification",
-  //   url: "/notification",
-  //   icon: NotepadTextIcon,
-  // },
+
   // {
   //   title: "Date Picker",
   //   url: "/datePicker",

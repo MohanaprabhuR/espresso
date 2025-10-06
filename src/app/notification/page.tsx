@@ -6,7 +6,7 @@ import {
 } from "@/components/ui/notification";
 import { CloseIcon } from "../../../public/images/svg/closeIcon";
 import { ExclamationIcon } from "../../../public/images/svg/exclamationIcon";
-import { ButtonGroup } from "@/components/ui/button-group";
+import { ButtonGroup } from "@/components/ui/button-group-old";
 import { Button } from "@/components/ui/button";
 const AvatarDemo = () => {
   return (
