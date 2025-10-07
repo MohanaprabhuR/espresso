@@ -1,12 +1,16 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import {
   Field,
+  FieldContent,
   FieldDescription,
   FieldGroup,
   FieldLabel,
   FieldLegend,
   FieldSeparator,
   FieldSet,
+  FieldTitle,
 } from "@/components/ui/field";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
@@ -19,11 +23,16 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { Slider } from "@/components/ui/slider";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { Switch } from "@/components/ui/switch";
 
 const FieldDemo = () => {
+  const [value, setValue] = useState([200, 800]);
+
   return (
-    <div className="pt-10 text-center">
-      <h1 className="text-xl font-bold text-gray-900 dark:text-white pb-4">
+    <div className="pt-10">
+      <h1 className="text-xl font-bold  text-center text-gray-900 dark:text-white pb-4">
         Field Component
       </h1>
       <div className="flex flex-col gap-[30px_0] w-full max-w-[500px] mx-auto">
@@ -151,6 +160,217 @@ const FieldDemo = () => {
             </Field>
           </FieldGroup>
         </form>
+        <FieldSet className="p-4 rounded-xl border">
+          <FieldGroup>
+            <Field>
+              <FieldLabel htmlFor="username">Username</FieldLabel>
+              <Input
+                id="username"
+                type="text"
+                placeholder="Max Leiter"
+                size="xl"
+              />
+              <FieldDescription>
+                Choose a unique username for your account.
+              </FieldDescription>
+            </Field>
+            <Field>
+              <FieldLabel htmlFor="password">Password</FieldLabel>
+              <FieldDescription>
+                Must be at least 8 characters long.
+              </FieldDescription>
+              <Input
+                id="password"
+                type="password"
+                placeholder="********"
+                size="xl"
+              />
+            </Field>
+          </FieldGroup>
+        </FieldSet>
+        <FieldSet>
+          <FieldGroup className="p-4 rounded-xl border">
+            <Field>
+              <FieldLabel htmlFor="feedback">Feedback</FieldLabel>
+              <Textarea
+                id="feedback"
+                placeholder="Your feedback helps us improve..."
+                rows={4}
+              />
+              <FieldDescription>
+                Share your thoughts about our service.
+              </FieldDescription>
+            </Field>
+          </FieldGroup>
+        </FieldSet>
+
+        <Field className=" border p-4 rounded-md">
+          <FieldLabel>Department</FieldLabel>
+          <Select>
+            <SelectTrigger>
+              <SelectValue placeholder="Choose department" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="engineering">Engineering</SelectItem>
+              <SelectItem value="design">Design</SelectItem>
+              <SelectItem value="marketing">Marketing</SelectItem>
+              <SelectItem value="sales">Sales</SelectItem>
+              <SelectItem value="support">Customer Support</SelectItem>
+              <SelectItem value="hr">Human Resources</SelectItem>
+              <SelectItem value="finance">Finance</SelectItem>
+              <SelectItem value="operations">Operations</SelectItem>
+            </SelectContent>
+          </Select>
+          <FieldDescription>
+            Select your department or area of work.
+          </FieldDescription>
+        </Field>
+        <Field className=" border p-4 rounded-md">
+          <FieldTitle>Price Range</FieldTitle>
+          <FieldDescription>
+            Set your budget range ($
+            <span className="font-medium tabular-nums">{value[0]}</span> -{" "}
+            <span className="font-medium tabular-nums">{value[1]}</span>).
+          </FieldDescription>
+
+          <Slider defaultValue={[20, 50]} size="sm" />
+        </Field>
+
+        <FieldGroup className="border p-4 rounded-md">
+          <FieldSet>
+            <FieldLegend variant="label">
+              Show these items on the desktop
+            </FieldLegend>
+            <FieldDescription>
+              Select the items you want to show on the desktop.
+            </FieldDescription>
+            <FieldGroup className="gap-3">
+              <Field orientation="horizontal">
+                <Checkbox id="finder-pref-9k2-hard-disks-ljj" />
+                <FieldLabel
+                  htmlFor="finder-pref-9k2-hard-disks-ljj"
+                  className="font-normal"
+                  defaultChecked
+                >
+                  Hard disks
+                </FieldLabel>
+              </Field>
+              <Field orientation="horizontal">
+                <Checkbox id="finder-pref-9k2-external-disks-1yg" />
+                <FieldLabel
+                  htmlFor="finder-pref-9k2-external-disks-1yg"
+                  className="font-normal"
+                >
+                  External disks
+                </FieldLabel>
+              </Field>
+              <Field orientation="horizontal">
+                <Checkbox id="finder-pref-9k2-cds-dvds-fzt" />
+                <FieldLabel
+                  htmlFor="finder-pref-9k2-cds-dvds-fzt"
+                  className="font-normal"
+                >
+                  CDs, DVDs, and iPods
+                </FieldLabel>
+              </Field>
+              <Field orientation="horizontal">
+                <Checkbox id="finder-pref-9k2-connected-servers-6l2" />
+                <FieldLabel
+                  htmlFor="finder-pref-9k2-connected-servers-6l2"
+                  className="font-normal"
+                >
+                  Connected servers
+                </FieldLabel>
+              </Field>
+            </FieldGroup>
+          </FieldSet>
+          <FieldSeparator />
+          <Field orientation="horizontal">
+            <Checkbox id="finder-pref-9k2-sync-folders-nep" defaultChecked />
+            <FieldContent>
+              <FieldLabel htmlFor="finder-pref-9k2-sync-folders-nep">
+                Sync Desktop & Documents folders
+              </FieldLabel>
+              <FieldDescription>
+                Your Desktop & Documents folders are being synced with iCloud
+                Drive. You can access them from other devices.
+              </FieldDescription>
+            </FieldContent>
+          </Field>
+        </FieldGroup>
+
+        <FieldSet className="border p-4 rounded-md">
+          <FieldLabel>Subscription Plan</FieldLabel>
+          <FieldDescription>
+            Yearly and lifetime plans offer significant savings.
+          </FieldDescription>
+          <RadioGroup defaultValue="monthly">
+            <Field orientation="horizontal">
+              <RadioGroupItem value="monthly" id="plan-monthly" />
+              <FieldLabel htmlFor="plan-monthly" className="font-normal">
+                Monthly ($9.99/month)
+              </FieldLabel>
+            </Field>
+            <Field orientation="horizontal">
+              <RadioGroupItem value="yearly" id="plan-yearly" />
+              <FieldLabel htmlFor="plan-yearly" className="font-normal">
+                Yearly ($99.99/year)
+              </FieldLabel>
+            </Field>
+            <Field orientation="horizontal">
+              <RadioGroupItem value="lifetime" id="plan-lifetime" />
+              <FieldLabel htmlFor="plan-lifetime" className="font-normal">
+                Lifetime ($299.99)
+              </FieldLabel>
+            </Field>
+          </RadioGroup>
+        </FieldSet>
+
+        <Field orientation="horizontal" className="border p-4 rounded-md">
+          <FieldContent>
+            <FieldLabel htmlFor="2fa">Multi-factor authentication</FieldLabel>
+            <FieldDescription>
+              Enable multi-factor authentication. If you do not have a
+              two-factor device, you can use a one-time code sent to your email.
+            </FieldDescription>
+          </FieldContent>
+          <Switch id="2fa" />
+        </Field>
+
+        <FieldGroup className="border p-4 rounded-md">
+          <FieldSet>
+            <FieldLabel htmlFor="compute-environment-p8w">
+              Compute Environment
+            </FieldLabel>
+            <FieldDescription>
+              Select the compute environment for your cluster.
+            </FieldDescription>
+            <RadioGroup defaultValue="kubernetes">
+              <FieldLabel htmlFor="kubernetes-r2h">
+                <Field orientation="horizontal">
+                  <FieldContent>
+                    <FieldTitle>Kubernetes</FieldTitle>
+                    <FieldDescription>
+                      Run GPU workloads on a K8s configured cluster.
+                    </FieldDescription>
+                  </FieldContent>
+                  <RadioGroupItem value="kubernetes" id="kubernetes-r2h" />
+                </Field>
+              </FieldLabel>
+              <FieldLabel htmlFor="vm-z4k">
+                <Field orientation="horizontal">
+                  <FieldContent>
+                    <FieldTitle>Virtual Machine</FieldTitle>
+                    <FieldDescription>
+                      Access a VM configured cluster to run GPU workloads.
+                    </FieldDescription>
+                  </FieldContent>
+                  <RadioGroupItem value="vm" id="vm-z4k" />
+                </Field>
+              </FieldLabel>
+            </RadioGroup>
+          </FieldSet>
+        </FieldGroup>
       </div>
     </div>
   );
