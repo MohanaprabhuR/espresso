@@ -4,6 +4,7 @@ import { CloseIcon } from "../../../public/images/svg/closeIcon";
 import { ExclamationIcon } from "../../../public/images/svg/exclamationIcon";
 import { Button } from "@/components/ui/button";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import { ButtonGroup } from "@/components/ui/button-group";
 
 const AlertDemo = () => {
   return (
@@ -12,23 +13,7 @@ const AlertDemo = () => {
         <h1 className="text-xl font-bold text-gray-900 dark:text-white pb-10 text-center">
           Alert Component
         </h1>
-        <div className="flex flex-col  mx-auto gap-[50px] items-center max-w-120">
-          <Alert action longText>
-            <CloseIcon />
-            <div>
-              <AlertTitle>Your trial ends soon!</AlertTitle>
-              <AlertDescription>
-                Upgrade now to continue enjoying all features without
-                interruption.
-              </AlertDescription>
-            </div>
-            <Button variant="ghost" size="sm">
-              Update
-            </Button>
-            <Button variant="ghost" size="sm">
-              <CloseIcon />
-            </Button>
-          </Alert>
+        <div className="flex flex-wrap  mx-auto gap-[50px] items-center ">
           <Alert>
             <AlertTitle>Your trial ends soon! </AlertTitle>
           </Alert>
@@ -53,12 +38,12 @@ const AlertDemo = () => {
           </Alert>
           <Alert action>
             <AlertTitle>Your trial ends soon!</AlertTitle>
-            <Button variant="ghost" size="sm">
-              Update
-            </Button>
-            <Button variant="ghost" size="sm">
-              <CloseIcon />
-            </Button>
+            <ButtonGroup separator>
+              <Button size="sm">Update</Button>
+              <Button size="sm">
+                <CloseIcon />
+              </Button>
+            </ButtonGroup>
           </Alert>
           <Alert action>
             <ExclamationIcon />
@@ -70,12 +55,12 @@ const AlertDemo = () => {
           <Alert action>
             <ExclamationIcon />
             <AlertTitle>Your trial ends soon!</AlertTitle>
-            <Button variant="ghost" size="sm">
-              Update
-            </Button>
-            <Button variant="ghost" size="sm">
-              <CloseIcon />
-            </Button>
+            <ButtonGroup separator>
+              <Button size="sm">Update</Button>
+              <Button size="sm">
+                <CloseIcon />
+              </Button>
+            </ButtonGroup>
           </Alert>
           <Alert variant="information">
             <AlertTitle>Your trial ends soon! </AlertTitle>
@@ -87,9 +72,12 @@ const AlertDemo = () => {
           </Alert>
           <Alert action variant="information">
             <AlertTitle>Your trial ends soon!</AlertTitle>
-            <Button variant="ghost" size="sm">
-              Update <CloseIcon />
-            </Button>
+            <ButtonGroup separator>
+              <Button size="sm">Update</Button>
+              <Button size="sm">
+                <CloseIcon />
+              </Button>
+            </ButtonGroup>
           </Alert>
           <Alert variant="success">
             <AlertTitle>Your trial ends soon! </AlertTitle>
@@ -101,12 +89,12 @@ const AlertDemo = () => {
           </Alert>
           <Alert action variant="success">
             <AlertTitle>Your trial ends soon!</AlertTitle>
-            <Button variant="ghost" size="sm">
-              Update
-            </Button>
-            <Button variant="ghost" size="sm">
-              <CloseIcon />
-            </Button>
+            <ButtonGroup separator>
+              <Button size="sm">Update</Button>
+              <Button size="sm">
+                <CloseIcon />
+              </Button>
+            </ButtonGroup>
           </Alert>
           <Alert variant="warning">
             <AlertTitle>Your trial ends soon! </AlertTitle>
@@ -118,12 +106,12 @@ const AlertDemo = () => {
           </Alert>
           <Alert action variant="warning">
             <AlertTitle>Your trial ends soon!</AlertTitle>
-            <Button variant="ghost" size="sm">
-              Update
-            </Button>
-            <Button variant="ghost" size="sm">
-              <CloseIcon />
-            </Button>
+            <ButtonGroup separator>
+              <Button size="sm">Update</Button>
+              <Button size="sm">
+                <CloseIcon />
+              </Button>
+            </ButtonGroup>
           </Alert>
           <Alert variant="error">
             <AlertTitle>Your trial ends soon! </AlertTitle>
@@ -135,12 +123,12 @@ const AlertDemo = () => {
           </Alert>
           <Alert action variant="error">
             <AlertTitle>Your trial ends soon!</AlertTitle>
-            <Button variant="ghost" size="sm">
-              Update
-            </Button>
-            <Button variant="ghost" size="sm">
-              <CloseIcon />
-            </Button>
+            <ButtonGroup separator>
+              <Button size="sm">Update</Button>
+              <Button size="sm">
+                <CloseIcon />
+              </Button>
+            </ButtonGroup>
           </Alert>
         </div>
       </div>
