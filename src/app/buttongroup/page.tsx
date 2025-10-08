@@ -3,6 +3,7 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import {
   ButtonGroup,
+  ButtonGroupde,
   ButtonGroupSeparator,
 } from "@/components/ui/button-group";
 import { Input } from "@/components/ui/input";
@@ -36,7 +37,7 @@ import {
   DropdownMenuItem,
   DropdownMenuRadioGroup,
   DropdownMenuRadioItem,
-  DropdownMenuSeparator,
+  DropdownMenudestructive,
   DropdownMenuSub,
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
@@ -55,7 +56,7 @@ const ButtonGroupDemo = () => {
         <div className="flex  gap-30 justify-center">
           <div className="flex flex-col gap-[30px_0]">
             <div>
-              <ButtonGroup separator>
+              <ButtonGroup destructive>
                 <ButtonGroup className="hidden sm:flex">
                   <Button variant="outline" aria-label="Go Back">
                     <ArrowLeftIcon className="size-4" />
@@ -84,7 +85,7 @@ const ButtonGroupDemo = () => {
                           Archive
                         </DropdownMenuItem>
                       </DropdownMenuGroup>
-                      <DropdownMenuSeparator />
+                      <DropdownMenudestructive />
                       <DropdownMenuGroup>
                         <DropdownMenuItem>
                           <ClockIcon className="size-4" />
@@ -121,7 +122,7 @@ const ButtonGroupDemo = () => {
                           </DropdownMenuSubContent>
                         </DropdownMenuSub>
                       </DropdownMenuGroup>
-                      <DropdownMenuSeparator />
+                      <DropdownMenudestructive />
                       <DropdownMenuGroup>
                         <DropdownMenuItem variant="destructive">
                           <Trash2Icon />
@@ -135,7 +136,7 @@ const ButtonGroupDemo = () => {
             </div>
             <div className="flex gap-10">
               <ButtonGroup
-                separator
+                destructive
                 orientation="vertical"
                 aria-label="Media controls"
                 className="h-fit"
@@ -149,7 +150,7 @@ const ButtonGroupDemo = () => {
               </ButtonGroup>
 
               <ButtonGroup
-                separator
+                destructive
                 aria-label="Media controls"
                 className="h-fit"
               >
@@ -252,7 +253,7 @@ const ButtonGroupDemo = () => {
                 </ButtonGroup>
               </div>
               <div className="flex flex-col gap-10">
-                <ButtonGroup separator>
+                <ButtonGroup destructive>
                   <Button size="sm">Small</Button>
                   <Button size="sm">Button</Button>
                   <Button size="sm">Group</Button>
@@ -260,7 +261,7 @@ const ButtonGroupDemo = () => {
                     <PlusIcon className="size-4" />
                   </Button>
                 </ButtonGroup>
-                <ButtonGroup separator>
+                <ButtonGroup destructive>
                   <Button variant="secondary" size="md">
                     Default
                   </Button>
@@ -274,7 +275,7 @@ const ButtonGroupDemo = () => {
                     <PlusIcon className="size-4" />
                   </Button>
                 </ButtonGroup>
-                <ButtonGroup separator>
+                <ButtonGroup destructive>
                   <Button variant="outline" size="lg">
                     Large
                   </Button>
@@ -288,7 +289,7 @@ const ButtonGroupDemo = () => {
                     <PlusIcon className="size-4" />
                   </Button>
                 </ButtonGroup>
-                <ButtonGroup separator>
+                <ButtonGroup destructive>
                   <Button variant="ghost" size="xl">
                     Large
                   </Button>
@@ -302,7 +303,7 @@ const ButtonGroupDemo = () => {
                     <PlusIcon className="size-5" />
                   </Button>
                 </ButtonGroup>
-                <ButtonGroup separator>
+                <ButtonGroup destructive>
                   <Button variant="destructive" size="2xl">
                     Large
                   </Button>
@@ -319,7 +320,7 @@ const ButtonGroupDemo = () => {
               </div>
             </div>
             <div className="flex justify-between">
-              <ButtonGroup separator>
+              <ButtonGroup destructive>
                 <ButtonGroup>
                   <Button variant="outline" size="sm">
                     1
@@ -346,8 +347,8 @@ const ButtonGroupDemo = () => {
                   </Button>
                 </ButtonGroup>
               </ButtonGroup>
-              <ButtonGroup separator>
-                <ButtonGroup separator>
+              <ButtonGroup destructive>
+                <ButtonGroup destructive>
                   <Button variant="outline" size="sm">
                     1
                   </Button>
@@ -364,7 +365,7 @@ const ButtonGroupDemo = () => {
                     5
                   </Button>
                 </ButtonGroup>
-                <ButtonGroup separator>
+                <ButtonGroup destructive>
                   <Button variant="outline" aria-label="Previous">
                     <ArrowLeftIcon className="size-4" />
                   </Button>
@@ -435,7 +436,7 @@ const ButtonGroupDemo = () => {
                       Copy Conversation
                     </DropdownMenuItem>
                   </DropdownMenuGroup>
-                  <DropdownMenuSeparator />
+                  <DropdownMenudestructive />
                   <DropdownMenuGroup>
                     <DropdownMenuItem variant="destructive">
                       <TrashIcon className="size-4" />

@@ -15,7 +15,7 @@ const buttonGroupVariants = cva(
         vertical:
           "flex-col [&>*:not(:first-child):not(:last-child)]:rounded-none [&>*:not(:first-child)]:rounded-t-none [&>*:not(:last-child)]:rounded-b-none",
       },
-      separator: {
+      destructive: {
         false: ``,
         true: `
           gap-1
@@ -31,7 +31,7 @@ const buttonGroupVariants = cva(
     },
     defaultVariants: {
       orientation: "horizontal",
-      separator: false,
+      destructive: false,
     },
   }
 );
@@ -45,7 +45,7 @@ interface ButtonGroupProps
 function ButtonGroup({
   className,
   orientation,
-  separator,
+  destructive,
   ...props
 }: ButtonGroupProps) {
   return (
@@ -53,7 +53,10 @@ function ButtonGroup({
       role="group"
       data-slot="button-group"
       data-orientation={orientation}
-      className={cn(buttonGroupVariants({ orientation, separator }), className)}
+      className={cn(
+        buttonGroupVariants({ orientation, destructive }),
+        className
+      )}
       {...props}
     />
   );

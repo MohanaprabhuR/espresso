@@ -38,7 +38,7 @@ const AlertDemo = () => {
           </Alert>
           <Alert action>
             <AlertTitle>Your trial ends soon!</AlertTitle>
-            <ButtonGroup separator>
+            <ButtonGroup destructive>
               <Button variant="ghost" size="sm">
                 Update
               </Button>
@@ -57,7 +57,7 @@ const AlertDemo = () => {
           <Alert action>
             <ExclamationIcon />
             <AlertTitle>Your trial ends soon!</AlertTitle>
-            <ButtonGroup separator>
+            <ButtonGroup destructive>
               <Button size="sm" variant="ghost">
                 Update
               </Button>
@@ -76,7 +76,7 @@ const AlertDemo = () => {
           </Alert>
           <Alert action variant="information">
             <AlertTitle>Your trial ends soon!</AlertTitle>
-            <ButtonGroup separator>
+            <ButtonGroup destructive>
               <Button size="sm" variant="ghost">
                 Update
               </Button>
@@ -95,7 +95,7 @@ const AlertDemo = () => {
           </Alert>
           <Alert action variant="success">
             <AlertTitle>Your trial ends soon!</AlertTitle>
-            <ButtonGroup separator>
+            <ButtonGroup destructive>
               <Button size="sm" variant="ghost">
                 Update
               </Button>
@@ -114,7 +114,7 @@ const AlertDemo = () => {
           </Alert>
           <Alert action variant="warning">
             <AlertTitle>Your trial ends soon!</AlertTitle>
-            <ButtonGroup separator>
+            <ButtonGroup destructive>
               <Button size="sm" variant="ghost">
                 Update
               </Button>
@@ -133,7 +133,7 @@ const AlertDemo = () => {
           </Alert>
           <Alert action variant="error">
             <AlertTitle>Your trial ends soon!</AlertTitle>
-            <ButtonGroup separator>
+            <ButtonGroup destructive>
               <Button size="sm" variant="ghost">
                 Update
               </Button>
