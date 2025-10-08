@@ -25,9 +25,8 @@ const buttonVariants = cva(
         sm: "h-7 rounded-lg text-base font-normal tracking-[0.28px]",
         md: "h-8 rounded-lg text-base font-normal tracking-[0.28px]",
         lg: "h-10 rounded-[10px] text-lg font-medium tracking-[0.24px]",
-        xl: "h-[46px] rounded-[10px] text-xl font-medium-30 tracking-[0.18px]",
-        "2xl":
-          "h-[52px] rounded-[14px] text-2xl font-medium-30 tracking-[0.2px]",
+        xl: "h-[46px] rounded-[10px] text-xl font-medium tracking-[0.18px]",
+        "2xl": "h-[52px] rounded-[14px] text-2xl font-medium tracking-[0.2px]",
       },
       iconOnly: {
         true: "",

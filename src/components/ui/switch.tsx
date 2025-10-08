@@ -37,16 +37,16 @@ function Switch({
 
   const sizes = {
     sm: {
-      root: "h-4 w-[26px]",
+      root: "h-4 w-[26px] p-0.5",
       thumb:
         "size-3 translate-x-[calc(100%-(2px))] data-[state=unchecked]:translate-x-0",
       wrapper: "gap-x-2 p-1.5 text-base tracking-2",
       description: "text-base tracking-2",
     },
     md: {
-      root: "h-5 w-8",
+      root: "h-5 w-8 p-[3px]",
       thumb:
-        "size-[14px] translate-x-[calc(100%-(0px))] data-[state=unchecked]:translate-x-0",
+        "size-[14px] translate-x-[calc(100%-(2px))] data-[state=unchecked]:translate-x-0",
       wrapper: "gap-x-2.5 px-2 py-1.5 text-lg tracking-1",
       description: "text-lg tracking-1",
     },
@@ -62,7 +62,7 @@ function Switch({
       data-slot="switch"
       tabIndex={label || description ? -1 : 0}
       className={cn(
-        "peer p-0.5 inline-flex shrink-0 items-center rounded-full transition-all outline-none",
+        "peer  inline-flex shrink-0 items-center rounded-full transition-all outline-none",
         "data-[state=checked]:bg-primary data-[state=checked]:hover:bg-primary/86 data-[state=checked]:active:bg-primary/74 data-[state=checked]:focus:bg-primary",
         "data-[state=unchecked]:bg-input data-[state=unchecked]:hover:bg-primary/20 data-[state=unchecked]:active:bg-primary/50 data-[state=unchecked]:focus:bg-primary/12",
         "disabled:data-[state=unchecked]:bg-accent disabled:cursor-not-allowed disabled:pointer-events-none disabled:data-[state=unchecked]:hover:bg-accent",

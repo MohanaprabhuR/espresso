@@ -68,7 +68,7 @@ function RadioGroupItem({
       data-slot="radio-group-item"
       disabled={disabled}
       className={cn(
-        "aspect-square shrink-0 rounded-full border border-primary/50 outline-none transition-[color,box-shadow]",
+        "aspect-square shrink-0 rounded-full border border-primary/50 outline-none transition-[color,box-shadow] ",
         "data-[state=checked]:bg-primary data-[state=checked]:border-primary",
         "hover:border-primary/60 hover:shadow-lg active:border-primary/75 active:bg-secondary focus:border-primary/75 focus:bg-secondary",
         "focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-0",
@@ -91,7 +91,7 @@ function RadioGroupItem({
       <label
         htmlFor={id}
         className={cn(
-          "inline-flex items-center gap-x-2 cursor-pointer font-medium tracking-2 text-accent-foreground rounded-lg hover:bg-accent active:bg-primary/12 focus:bg-secondary focus:ring-ring focus:ring-2 focus:ring-offset-0 focus-visible:ring-ring focus-visible:ring-2 focus-visible:bg-secondary",
+          "inline-flex items-center gap-x-2 cursor-pointer font-medium tracking-2 text-accent-foreground rounded-lg hover:bg-accent active:bg-primary/12 w-fit focus:bg-secondary focus:ring-ring focus:ring-2 focus:ring-offset-0 focus-visible:ring-ring focus-visible:ring-2 focus-visible:bg-secondary",
           finalLabelClass,
           disabled &&
             "hover:bg-transparent cursor-not-allowed pointer-events-none text-primary/50"

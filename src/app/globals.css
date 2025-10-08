@@ -14,6 +14,9 @@
   --tw-leading: 1rem;
   /* Fonts */
   --font-sans: "Inter", sans-serif;
+  /* Variations Fonts */
+  --font-sans--font-variation-settings: "opsz" 24;
+
   /* Theme colors */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -128,14 +131,13 @@
   --font-weight-thin: 100;
   --font-weight-extralight: 200;
   --font-weight-light: 300;
+  --font-weight-normal: 420;
+  --font-weight-medium: 500;
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
   --font-weight-extrabold: 800;
   --font-weight-black: 900;
   /* Font Variation Settings */
-  --font-variation-420: "opsz" 24, "wght" 420;
-  --font-variation-500: "opsz" 24, "wght" 500;
-  --font-variation-500-30: "opsz" 30, "wght" 500;
 
   /* Font Size */
   --text-2xs: 0.6875rem; /*11px*/
@@ -834,18 +836,6 @@
 
 @utility shadow-focus-light {
   box-shadow: var(--focus-light);
-}
-
-@layer utilities {
-  .font-normal {
-    font-variation-settings: var(--font-variation-420);
-  }
-  .font-medium {
-    font-variation-settings: var(--font-variation-500);
-  }
-  .font-medium-30 {
-    font-variation-settings: var(--font-variation-500-30);
-  }
 }
 
 @layer base {

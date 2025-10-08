@@ -9,7 +9,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 
 const inputGroupVariants = cva(
-  "group/input-group relative flex w-full items-center rounded-md border border-transparent shadow-xs transition-[color,box-shadow] has-[>[data-align=inline-start]]:[&>input]:pl-2 has-[>[data-align=inline-end]]:[&>input]:pr-2 has-[>[data-align=block-start]]:h-auto has-[>[data-align=block-start]]:flex-col has-[>[data-align=block-start]]:[&>input]:pb-3 has-[>[data-align=block-end]]:h-auto has-[>[data-align=block-end]]:flex-col has-[>[data-align=block-end]]:[&>input]:pt-3",
+  "group/input-group relative outline-none flex w-full items-center rounded-md border border-transparent  transition-[color,box-shadow] has-[>[data-align=inline-start]]:[&>input]:pl-2 has-[>[data-align=inline-end]]:[&>input]:pr-2 has-[>[data-align=block-start]]:h-auto has-[>[data-align=block-start]]:flex-col has-[>[data-align=block-start]]:[&>input]:pb-3 has-[>[data-align=block-end]]:h-auto has-[>[data-align=block-end]]:flex-col has-[>[data-align=block-end]]:[&>input]:pt-3",
   {
     variants: {
       variant: {
@@ -176,7 +176,7 @@ function InputGroupInput({
       data-slot="input-group-control"
       disabled={disabled}
       className={cn(
-        "flex-1 rounded-none border-0 bg-transparent shadow-none focus-visible:ring-0 active:shadow-none focus:border-0 focus:shadow-none",
+        "flex-1 rounded-none border-0 bg-transparent shadow-none focus-visible:ring-0 active:shadow-none active:bg-transparent focus:border-0 focus:shadow-none",
         className
       )}
       {...props}

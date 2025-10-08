@@ -38,8 +38,8 @@ const textSizeMap: Record<string, string> = {
   md: "text-base font-medium text-accent-foreground",
   lg: "text-base font-medium text-accent-foreground",
   xl: "text-lg font-medium text-accent-foreground",
-  "2xl": "text-xl font-medium-30 text-accent-foreground",
-  "3xl": "text-2xl font-medium-30 text-accent-foreground",
+  "2xl": "text-xl font-mediumtext-accent-foreground",
+  "3xl": "text-2xl font-mediumtext-accent-foreground",
 };
 
 const iconSizeMap: Record<string, number> = {

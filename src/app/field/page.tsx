@@ -145,6 +145,7 @@ const FieldDemo = () => {
                     Comments
                   </FieldLabel>
                   <Textarea
+                    variant="outline"
                     id="checkout-7j9-optional-comments"
                     placeholder="Add any additional comments"
                     className="resize-none"
@@ -233,7 +234,7 @@ const FieldDemo = () => {
             <span className="font-medium tabular-nums">{value[1]}</span>).
           </FieldDescription>
 
-          <Slider defaultValue={[20, 50]} size="sm" />
+          <Slider defaultValue={[20, 50]} size="sm" knob={true} />
         </Field>
 
         <FieldGroup className="border p-4 rounded-md">
@@ -246,41 +247,32 @@ const FieldDemo = () => {
             </FieldDescription>
             <FieldGroup className="gap-3">
               <Field orientation="horizontal">
-                <Checkbox id="finder-pref-9k2-hard-disks-ljj" />
-                <FieldLabel
-                  htmlFor="finder-pref-9k2-hard-disks-ljj"
-                  className="font-normal"
-                  defaultChecked
-                >
-                  Hard disks
-                </FieldLabel>
+                <Checkbox
+                  id="finder-pref-9k2-hard-disks-ljj"
+                  label="Hard disks"
+                  size="sm"
+                />
               </Field>
               <Field orientation="horizontal">
-                <Checkbox id="finder-pref-9k2-external-disks-1yg" />
-                <FieldLabel
-                  htmlFor="finder-pref-9k2-external-disks-1yg"
-                  className="font-normal"
-                >
-                  External disks
-                </FieldLabel>
+                <Checkbox
+                  id="finder-pref-9k2-external-disks-1yg"
+                  label="External disks"
+                  size="sm"
+                />
               </Field>
               <Field orientation="horizontal">
-                <Checkbox id="finder-pref-9k2-cds-dvds-fzt" />
-                <FieldLabel
-                  htmlFor="finder-pref-9k2-cds-dvds-fzt"
-                  className="font-normal"
-                >
-                  CDs, DVDs, and iPods
-                </FieldLabel>
+                <Checkbox
+                  id="finder-pref-9k2-cds-dvds-fzt"
+                  label="CDs, DVDs, and iPods"
+                  size="sm"
+                />
               </Field>
               <Field orientation="horizontal">
-                <Checkbox id="finder-pref-9k2-connected-servers-6l2" />
-                <FieldLabel
-                  htmlFor="finder-pref-9k2-connected-servers-6l2"
-                  className="font-normal"
-                >
-                  Connected servers
-                </FieldLabel>
+                <Checkbox
+                  id="finder-pref-9k2-connected-servers-6l2"
+                  label=" Connected servers"
+                  size="sm"
+                />
               </Field>
             </FieldGroup>
           </FieldSet>
@@ -304,25 +296,26 @@ const FieldDemo = () => {
           <FieldDescription>
             Yearly and lifetime plans offer significant savings.
           </FieldDescription>
-          <RadioGroup defaultValue="monthly">
-            <Field orientation="horizontal">
-              <RadioGroupItem value="monthly" id="plan-monthly" />
-              <FieldLabel htmlFor="plan-monthly" className="font-normal">
-                Monthly ($9.99/month)
-              </FieldLabel>
-            </Field>
-            <Field orientation="horizontal">
-              <RadioGroupItem value="yearly" id="plan-yearly" />
-              <FieldLabel htmlFor="plan-yearly" className="font-normal">
-                Yearly ($99.99/year)
-              </FieldLabel>
-            </Field>
-            <Field orientation="horizontal">
-              <RadioGroupItem value="lifetime" id="plan-lifetime" />
-              <FieldLabel htmlFor="plan-lifetime" className="font-normal">
-                Lifetime ($299.99)
-              </FieldLabel>
-            </Field>
+
+          <RadioGroup defaultValue="option1">
+            <RadioGroupItem
+              id="opts1"
+              value="option1"
+              label=" Monthly ($9.99/month)"
+              size="sm"
+            />
+            <RadioGroupItem
+              id="opts2"
+              value="option2"
+              label="Yearly ($99.99/year)"
+              size="sm"
+            />
+            <RadioGroupItem
+              id="opts3"
+              value="option3"
+              label="OLifetime ($299.99)"
+              size="sm"
+            />
           </RadioGroup>
         </FieldSet>
 
