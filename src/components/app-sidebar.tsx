@@ -174,11 +174,6 @@ const items = [
     url: "/kbd",
     icon: SquareChevronRightIcon,
   },
-  // {
-  //   title: "Alert Dialog",
-  //   url: "/alertDialog",
-  //   icon: AlertCircleIcon,
-  // },
 
   // {
   //   title: "Date Picker",
