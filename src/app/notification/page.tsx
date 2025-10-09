@@ -3,16 +3,9 @@ import React from "react";
 import { CloseIcon } from "../../../public/images/svg/closeIcon";
 import { ExclamationIcon } from "../../../public/images/svg/exclamationIcon";
 import { Button } from "@/components/ui/button";
-import {
-  Alert,
-  AlertContent,
-  AlertDescription,
-  AlertTitle,
-} from "@/components/ui/alert";
 import { ButtonGroup } from "@/components/ui/button-group";
 import {
   Notification,
-  NotificationAction,
   NotificationContent,
   NotificationDescription,
   NotificationTimeStamp,
@@ -217,7 +210,7 @@ const AlertDemo = () => {
               </NotificationDescription>
               <NotificationTimeStamp>28 min ago</NotificationTimeStamp>
               <ButtonGroup destructive className="pt-3.5">
-                <Button variant="secondary">join</Button>
+                <Button variant="secondary">Join</Button>
                 <Button variant="outline">Decline</Button>
               </ButtonGroup>
             </NotificationContent>
@@ -250,7 +243,7 @@ const AlertDemo = () => {
               </NotificationDescription>
               <NotificationTimeStamp>28 min ago</NotificationTimeStamp>
               <ButtonGroup destructive className="pt-3.5">
-                <Button variant="secondary">join</Button>
+                <Button variant="secondary">Join</Button>
                 <Button variant="outline">Decline</Button>
               </ButtonGroup>
             </NotificationContent>
