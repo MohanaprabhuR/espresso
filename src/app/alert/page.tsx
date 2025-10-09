@@ -3,7 +3,7 @@ import React from "react";
 import { CloseIcon } from "../../../public/images/svg/closeIcon";
 import { ExclamationIcon } from "../../../public/images/svg/exclamationIcon";
 import { Button } from "@/components/ui/button";
-import { Alert, AlertTitle } from "@/components/ui/alert";
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { ButtonGroup } from "@/components/ui/button-group";
 
 const AlertDemo = () => {
@@ -16,6 +16,10 @@ const AlertDemo = () => {
         <div className="flex flex-wrap  mx-auto gap-[50px] items-center ">
           <Alert>
             <AlertTitle>Your trial ends soon! </AlertTitle>
+            <AlertDescription>
+              Upgrade now to continue enjoying all features without
+              interruption.
+            </AlertDescription>
           </Alert>
           <Alert>
             <AlertTitle>Your trial ends soon! </AlertTitle>
