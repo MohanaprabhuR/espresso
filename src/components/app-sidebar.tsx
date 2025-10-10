@@ -25,6 +25,7 @@ import {
   FileSlidersIcon,
   IndentDecreaseIcon,
   SquareChevronRightIcon,
+  Calendar1Icon,
 } from "lucide-react";
 
 import {
@@ -174,12 +175,11 @@ const items = [
     url: "/kbd",
     icon: SquareChevronRightIcon,
   },
-
-  // {
-  //   title: "Date Picker",
-  //   url: "/datePicker",
-  //   icon: Calendar1Icon,
-  // },
+  {
+    title: "Date Picker",
+    url: "/datePicker",
+    icon: Calendar1Icon,
+  },
 ];
 
 export function AppSidebar() {
