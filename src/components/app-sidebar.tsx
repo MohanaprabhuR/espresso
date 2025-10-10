@@ -180,11 +180,16 @@ const items = [
     url: "/datePicker",
     icon: Calendar1Icon,
   },
+  {
+    title: "Spacer",
+    url: "/spacer",
+    icon: Calendar1Icon,
+  },
 ];
 
 export function AppSidebar() {
   return (
-    <aside className="w-64 bg-muted border-r border-border p-4">
+    <aside className="">
       <Sidebar>
         <SidebarContent>
           <SidebarGroup>
