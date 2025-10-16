@@ -26,14 +26,17 @@ import {
   IndentDecreaseIcon,
   SquareChevronRightIcon,
   Calendar1Icon,
+  ChevronDown,
 } from "lucide-react";
 
 import {
   Sidebar,
   SidebarContent,
+  SidebarFooter,
   SidebarGroup,
   SidebarGroupContent,
   SidebarGroupLabel,
+  SidebarHeader,
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
@@ -176,24 +179,61 @@ const items = [
     icon: SquareChevronRightIcon,
   },
   {
-    title: "Date Picker",
-    url: "/datePicker",
-    icon: Calendar1Icon,
-  },
-  {
     title: "Spacer",
     url: "/spacer",
     icon: Calendar1Icon,
   },
+  {
+    title: "Calendar",
+    url: "/calendar",
+    icon: Calendar1Icon,
+  },
 ];
 
-export function AppSidebar() {
+export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
     <aside className="">
-      <Sidebar>
+      <Sidebar collapsible="offcanvas" {...props}>
+        <SidebarHeader>
+          <div className="relative w-full">
+            <button className="flex w-full items-center gap-3 rounded-lg p-2 transition-colors hover:bg-accent">
+              <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-black">
+                <svg
+                  width="10"
+                  height="14"
+                  viewBox="0 0 10 14"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                    d="M9.47953 2.9432H0.519531V0.416016H9.47953V2.9432Z"
+                    fill="white"
+                  />
+                  <path
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                    d="M0.515625 6.43848H8.77921V8.96566H3.0428V13.5821H0.515625V6.43848Z"
+                    fill="white"
+                  />
+                </svg>
+              </div>
+
+              <div className="flex-1 text-left">
+                <div className="text-sm font-semibold">Name</div>
+                <div className="text-xs text-muted-foreground">Name</div>
+              </div>
+
+              {/* Chevron */}
+              <ChevronDown
+                className={`h-4 w-4 text-muted-foreground transition-transform `}
+              />
+            </button>
+          </div>
+        </SidebarHeader>
         <SidebarContent>
           <SidebarGroup>
-            <SidebarGroupLabel>Application</SidebarGroupLabel>
             <SidebarGroupContent>
               <SidebarMenu>
                 {items.map((item) => (
@@ -210,6 +250,7 @@ export function AppSidebar() {
             </SidebarGroupContent>
           </SidebarGroup>
         </SidebarContent>
+        <SidebarFooter>v0.1.0</SidebarFooter>
       </Sidebar>
     </aside>
   );
