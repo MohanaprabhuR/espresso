@@ -40,6 +40,7 @@ import {
   SidebarFooter,
   SidebarHeader,
   SidebarRail,
+  SidebarTrigger,
 } from "@/components/ui/sidebar";
 // This is sample data.
 const data = {
@@ -218,6 +219,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       </SidebarContent>
       <SidebarFooter>
         <NavUser user={data.user} />
+        <SidebarTrigger />
       </SidebarFooter>
       <SidebarRail />
     </Sidebar>

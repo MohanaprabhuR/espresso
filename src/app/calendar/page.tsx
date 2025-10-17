@@ -7,7 +7,6 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Popover, PopoverContent } from "@/components/ui/popover";
 import { format, subDays, subMonths, subYears } from "date-fns";
-
 import {
   Select,
   SelectContent,
@@ -16,7 +15,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { PopoverTrigger } from "@radix-ui/react-popover";
-import { ChevronDownIcon, ClockIcon } from "lucide-react";
+import { ChevronDownIcon, ClockIcon, CommandIcon } from "lucide-react";
 import React from "react";
 
 const CalendarDemo = () => {
@@ -64,7 +63,7 @@ const CalendarDemo = () => {
         <h1 className="text-xl font-bold text-gray-900 dark:text-white pb-10 text-center">
           Calendar Component
         </h1>
-        <div className="flex flex-wrap justify-center items-center mx-auto gap-x-[20px] gap-y-20  ">
+        <div className="flex flex-wrap justify-center items-center mx-auto gap-x-[50px] gap-y-20  ">
           <Calendar mode="single" selected={date} onSelect={setDate} />
           <Calendar mode="multiple" defaultMonth={date} numberOfMonths={2} />
           <Calendar mode="range" defaultMonth={date} numberOfMonths={2} />
@@ -74,46 +73,7 @@ const CalendarDemo = () => {
             onSelect={setDate}
             captionLayout="dropdown"
           />
-          <div className="flex flex-col gap-3">
-            <Label htmlFor="date-picker" className="px-1">
-              Date
-            </Label>
-            <Popover open={open} onOpenChange={setOpen}>
-              <PopoverTrigger asChild>
-                <Button variant="outline" id="date-picker">
-                  {date ? date.toLocaleDateString() : "Select date"}
-                  <ChevronDownIcon className="size-4" />
-                </Button>
-              </PopoverTrigger>
-              <PopoverContent
-                className="w-auto overflow-hidden p-0"
-                align="start"
-              >
-                <Calendar
-                  mode="single"
-                  className="rounded-none shadow-none"
-                  selected={date}
-                  captionLayout="dropdown"
-                  onSelect={(date) => {
-                    setDate(date);
-                    setOpen(false);
-                  }}
-                />
-              </PopoverContent>
-            </Popover>
-          </div>
-          <div className="flex flex-col gap-3">
-            <Label htmlFor="time-picker" className="px-1">
-              Time
-            </Label>
-            <Input
-              type="time"
-              id="time-picker"
-              step="1"
-              defaultValue="10:30:00"
-              className=" [&::-webkit-calendar-picker-indicator]:hidden [&::-webkit-calendar-picker-indicator]:appearance-none"
-            />
-          </div>
+
           <div className="flex flex-col gap-4">
             <Calendar
               mode="single"
@@ -147,14 +107,14 @@ const CalendarDemo = () => {
               </Select>
             </div>
           </div>
-          <div className="rounded-2xl border overflow-hidden ">
+          <div className="rounded-2xl  overflow-hidden  bg-background border ">
             <Calendar
               mode="single"
               className="border-0 rounded-none"
               selected={date}
               onSelect={setDate}
             />
-            <div className="border-t p-3 bg-white">
+            <div className="border-t p-3 bg-background">
               <div className="flex items-center gap-3">
                 <Label htmlFor={id} className="text-xs">
                   Enter time
@@ -297,6 +257,139 @@ const CalendarDemo = () => {
                   className="p-2 rounded-none"
                 />
               </div>
+            </div>
+          </div>
+          <div className="flex flex-col gap-3">
+            <Label htmlFor="date-picker" className="px-1">
+              Date
+            </Label>
+            <Popover open={open} onOpenChange={setOpen}>
+              <PopoverTrigger asChild>
+                <Button variant="outline" id="date-picker">
+                  {date ? date.toLocaleDateString() : "Select date"}
+                  <ChevronDownIcon className="size-4" />
+                </Button>
+              </PopoverTrigger>
+              <PopoverContent
+                className="w-auto overflow-hidden p-0"
+                align="start"
+              >
+                <Calendar
+                  mode="single"
+                  className="rounded-none shadow-none"
+                  selected={date}
+                  captionLayout="dropdown"
+                  onSelect={(date) => {
+                    setDate(date);
+                    setOpen(false);
+                  }}
+                />
+              </PopoverContent>
+            </Popover>
+          </div>
+          <div className="flex flex-col gap-3">
+            <Label htmlFor="time-picker" className="px-1">
+              Time
+            </Label>
+            <Input
+              type="time"
+              id="time-picker"
+              step="1"
+              defaultValue="10:30:00"
+              className=" [&::-webkit-calendar-picker-indicator]:hidden [&::-webkit-calendar-picker-indicator]:appearance-none"
+            />
+          </div>
+          <div className="rounded-2xl shadow-5xl py-4 px-3.5">
+            <Label>Time</Label>
+            <div className="flex items-center gap-2 mt-2.5">
+              <Select>
+                <SelectTrigger>
+                  <SelectValue placeholder="01" />
+                </SelectTrigger>
+                <SelectContent>
+                  {Array.from({ length: 12 }, (_, i) => {
+                    const value = String(i + 1).padStart(2, "0");
+                    return (
+                      <SelectItem key={value} value={value}>
+                        {value}
+                      </SelectItem>
+                    );
+                  })}
+                </SelectContent>
+              </Select>
+              <Select>
+                <SelectTrigger>
+                  <SelectValue placeholder="00" />
+                </SelectTrigger>
+                <SelectContent>
+                  {Array.from({ length: 60 }, (_, i) => {
+                    const value = String(i).padStart(2, "0");
+                    return (
+                      <SelectItem key={value} value={value}>
+                        {value}
+                      </SelectItem>
+                    );
+                  })}
+                </SelectContent>
+              </Select>
+              <Select>
+                <SelectTrigger>
+                  <SelectValue placeholder="AM" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="AM">AM</SelectItem>
+                  <SelectItem value="PM">PM</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+          </div>
+          <div className="rounded-2xl shadow-5xl py-4 px-3.5">
+            <Label>Time</Label>
+            <div className="flex items-center gap-2 pt-2.5">
+              <Select>
+                <SelectTrigger>
+                  <SelectValue placeholder="00" />
+                </SelectTrigger>
+                <SelectContent>
+                  {Array.from({ length: 60 }, (_, i) => {
+                    const value = String(i).padStart(2, "0");
+                    return (
+                      <SelectItem key={value} value={value}>
+                        {value}
+                      </SelectItem>
+                    );
+                  })}
+                </SelectContent>
+              </Select>
+              <Button variant="ghost" className="px-0">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                >
+                  <path
+                    d="M14.0104 7.6464C14.0722 7.70823 14.1127 7.78272 14.1353 7.86115C14.1481 7.90536 14.1567 7.95162 14.1567 7.99995C14.1567 8.05396 14.1457 8.10521 14.1298 8.15394C14.1256 8.16681 14.1226 8.18005 14.1174 8.19261C14.0921 8.25307 14.056 8.30785 14.0104 8.3535L9.01019 13.3537C8.81495 13.5487 8.4983 13.5488 8.30309 13.3537C8.10789 13.1585 8.10801 12.8418 8.30309 12.6466L12.4497 8.4999H2.34309C2.06699 8.49985 1.84314 8.27606 1.84314 7.99995C1.84316 7.72385 2.067 7.50005 2.34309 7.5H12.4497L8.30309 3.35335C8.10789 3.15809 8.10787 2.84149 8.30309 2.64624C8.49833 2.451 8.81493 2.45104 9.01019 2.64624L14.0104 7.6464Z"
+                    fill="#383838"
+                  />
+                </svg>
+              </Button>
+              <Select>
+                <SelectTrigger>
+                  <SelectValue placeholder="00" />
+                </SelectTrigger>
+                <SelectContent>
+                  {Array.from({ length: 60 }, (_, i) => {
+                    const value = String(i).padStart(2, "0");
+                    return (
+                      <SelectItem key={value} value={value}>
+                        {value}
+                      </SelectItem>
+                    );
+                  })}
+                </SelectContent>
+              </Select>
             </div>
           </div>
         </div>

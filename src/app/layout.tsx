@@ -24,7 +24,7 @@ export default function RootLayout({
           <SidebarProvider>
             <div className="flex min-h-screen w-full">
               <AppSidebar />
-              <SidebarTrigger />
+              {/* <SidebarTrigger /> */}
               <main className="flex-1 p-6 overflow-auto">
                 <Header />
                 {children}
