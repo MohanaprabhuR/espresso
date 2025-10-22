@@ -8,8 +8,6 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
 import Link from "next/link";
-import { Badge } from "@/components/ui/badge"; // <-- import Badge
-
 export function NavMain({
   items,
 }: {
@@ -17,7 +15,6 @@ export function NavMain({
     title: string;
     url: string;
     icon?: LucideIcon;
-    badge?: string | number;
     isActive?: boolean;
     items?: {
       title: string;
@@ -36,17 +33,11 @@ export function NavMain({
             className="group/collapsible"
           >
             <SidebarMenuItem>
-              <Link href={item.url} className="w-full">
-                <SidebarMenuButton
-                  tooltip={item.title}
-                  className="justify-between"
-                >
-                  <div className="flex items-center gap-2">
-                    {item.icon && <item.icon className="w-4 h-4" />}
-                    <span>{item.title}</span>
-                  </div>
+              <Link href={item.url}>
+                <SidebarMenuButton tooltip={item.title}>
+                  {item.icon && <item.icon />}
 
-                  {item.badge && <Badge>{item.badge}</Badge>}
+                  <span>{item.title}</span>
                 </SidebarMenuButton>
               </Link>
             </SidebarMenuItem>
