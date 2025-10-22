@@ -202,6 +202,11 @@ const data = {
       icon: Calendar1Icon,
     },
     // {
+    //   title: "Popover",
+    //   url: "/popover",
+    //   icon: PopcornIcon,
+    // },
+    // {
     //   title: "Toast",
     //   url: "/sonner",
     //   icon: ToolCaseIcon,

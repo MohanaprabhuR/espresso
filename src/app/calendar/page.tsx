@@ -107,14 +107,14 @@ const CalendarDemo = () => {
               </Select>
             </div>
           </div>
-          <div className="rounded-2xl  overflow-hidden  bg-background border ">
+          <div className="rounded-2xl  overflow-hidden    border bg-popover">
             <Calendar
               mode="single"
               className="border-0 rounded-none"
               selected={date}
               onSelect={setDate}
             />
-            <div className="border-t p-3 bg-background">
+            <div className="border-t p-3 bg-popover">
               <div className="flex items-center gap-3">
                 <Label htmlFor={id} className="text-xs">
                   Enter time
@@ -135,7 +135,7 @@ const CalendarDemo = () => {
             </div>
           </div>
           <div>
-            <div className="rounded-2xl border overflow-hidden">
+            <div className="rounded-2xl border overflow-hidden bg-popover">
               <div className="flex max-sm:flex-col">
                 <Calendar
                   mode="single"
@@ -181,7 +181,7 @@ const CalendarDemo = () => {
             </div>
           </div>
           <div>
-            <div className="rounded-2xl overflow-hidden border">
+            <div className="rounded-2xl overflow-hidden border bg-popover">
               <div className="flex max-sm:flex-col">
                 <div className="relative py-4 max-sm:order-1 max-sm:border-t sm:w-32">
                   <div className="h-full sm:border-e">
@@ -287,7 +287,7 @@ const CalendarDemo = () => {
               </PopoverContent>
             </Popover>
           </div>
-          <div className="flex flex-col gap-3">
+          <div className="flex flex-col gap-3 ">
             <Label htmlFor="time-picker" className="px-1">
               Time
             </Label>
@@ -299,7 +299,7 @@ const CalendarDemo = () => {
               className=" [&::-webkit-calendar-picker-indicator]:hidden [&::-webkit-calendar-picker-indicator]:appearance-none"
             />
           </div>
-          <div className="rounded-2xl shadow-5xl py-4 px-3.5">
+          <div className="rounded-2xl shadow-5xl py-4 px-3.5 bg-popover">
             <Label>Time</Label>
             <div className="flex items-center gap-2 mt-2.5">
               <Select>
@@ -343,7 +343,7 @@ const CalendarDemo = () => {
               </Select>
             </div>
           </div>
-          <div className="rounded-2xl shadow-5xl py-4 px-3.5">
+          <div className="rounded-2xl shadow-5xl py-4 px-3.5 bg-popover">
             <Label>Time</Label>
             <div className="flex items-center gap-2 pt-2.5">
               <Select>
