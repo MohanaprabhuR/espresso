@@ -61,26 +61,31 @@ const data = {
       title: "Avatar",
       url: "/avatar",
       icon: UserIcon,
+      badge: "1",
     },
     {
       title: "Badge",
       url: "/badges",
       icon: Badge,
+      badge: "2",
     },
     {
       title: "Breadcrumb",
       url: "/breadcrumb",
       icon: LinkIcon,
+      badge: "3",
     },
     {
       title: "Button",
       url: "/button",
       icon: RegexIcon,
+      badge: "4",
     },
     {
       title: "Button Group",
       url: "/buttongroup",
       icon: InboxIcon,
+      badge: "5",
     },
     {
       title: "Checkbox",
@@ -195,11 +200,13 @@ const data = {
       title: "Spacer",
       url: "/spacer",
       icon: SpaceIcon,
+      badge: "new",
     },
     {
       title: "Calendar",
       url: "/calendar",
       icon: Calendar1Icon,
+      badge: "new",
     },
     // {
     //   title: "Popover",
