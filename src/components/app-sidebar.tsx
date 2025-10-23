@@ -17,17 +17,10 @@ import {
   Sidebar,
   SidebarContent,
   SidebarFooter,
-  SidebarGroup,
-  SidebarGroupContent,
   SidebarHeader,
-  SidebarInput,
-  SidebarMenu,
-  SidebarMenuButton,
-  SidebarMenuItem,
   SidebarRail,
   SidebarSeparator,
 } from "@/components/ui/sidebar";
-import { Badge } from "./ui/badge";
 
 // This is sample data.
 const data = {

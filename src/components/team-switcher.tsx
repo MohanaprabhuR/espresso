@@ -2,6 +2,7 @@ import * as React from "react";
 import { ChevronsUpDown } from "lucide-react";
 
 import {
+  SidebarHeader,
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
@@ -22,18 +23,19 @@ export function TeamSwitcher({
   return (
     <SidebarMenu>
       <SidebarMenuItem>
-        <SidebarMenuButton className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground p-2">
-          <div className="bg-sidebar-primary text-sidebar-primary-foreground flex aspect-square size-7 items-center justify-center rounded-lg">
-            <activeTeam.logo className="size-8" />
-          </div>
+        <SidebarHeader>
+          <activeTeam.logo className="size-8" />
+
           <div className="grid flex-1 gap-y-1 flex-col text-left  text-sm  tracking-2 ">
-            <span className="truncate font-medium">{activeTeam.name}</span>
-            <span className="truncate text-xs font-normal tracking-2">
+            <span className="truncate font-medium text-base text-sidebar-primary-foreground tracking-3">
+              {activeTeam.name}
+            </span>
+            <span className="truncate text-xs font-normal tracking-4 text-sidebar-foreground">
               {activeTeam.plan}
             </span>
           </div>
-          <ChevronsUpDown className="ml-auto" />
-        </SidebarMenuButton>
+          <ChevronsUpDown className="ml-auto size-4" />
+        </SidebarHeader>
       </SidebarMenuItem>
     </SidebarMenu>
   );
