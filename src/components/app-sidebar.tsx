@@ -2,33 +2,12 @@
 import * as React from "react";
 import {
   AlertCircleIcon,
-  Badge,
-  Calendar1Icon,
-  CheckSquare,
-  DivideIcon,
-  DropletIcon,
-  EclipseIcon,
+  Bell,
   FileSlidersIcon,
   FormInputIcon,
-  InboxIcon,
-  IndentDecreaseIcon,
-  LinkIcon,
-  NotepadTextIcon,
-  Projector,
-  Radio,
-  RegexIcon,
-  Sliders,
-  SpaceIcon,
-  SplinePointer,
-  SquareChevronRightIcon,
-  SwitchCameraIcon,
+  Search,
   Tablet,
-  Tags,
-  TextCursorInput,
-  TextSearch,
-  TextSelect,
-  ToolCase,
-  UserIcon,
+  User2Icon,
 } from "lucide-react";
 import { NavMain } from "@/components/nav-main";
 import { NavUser } from "@/components/nav-user";
@@ -38,10 +17,18 @@ import {
   Sidebar,
   SidebarContent,
   SidebarFooter,
+  SidebarGroup,
+  SidebarGroupContent,
   SidebarHeader,
+  SidebarInput,
+  SidebarMenu,
+  SidebarMenuButton,
+  SidebarMenuItem,
   SidebarRail,
-  SidebarTrigger,
+  SidebarSeparator,
 } from "@/components/ui/sidebar";
+import { Badge } from "./ui/badge";
+
 // This is sample data.
 const data = {
   user: {
@@ -56,170 +43,79 @@ const data = {
       plan: "Frappe Inc.",
     },
   ],
-  navMain: [
+  navPrimary: [
     {
-      title: "Avatar",
-      url: "/avatar",
-      icon: UserIcon,
-      badge: "1",
-    },
-    {
-      title: "Badge",
-      url: "/badges",
-      icon: Badge,
-      badge: "2",
-    },
-    {
-      title: "Breadcrumb",
-      url: "/breadcrumb",
-      icon: LinkIcon,
-      badge: "3",
-    },
-    {
-      title: "Button",
-      url: "/button",
-      icon: RegexIcon,
-      badge: "4",
-    },
-    {
-      title: "Button Group",
-      url: "/buttongroup",
-      icon: InboxIcon,
-      badge: "5",
-    },
-    {
-      title: "Checkbox",
-      url: "/checkbox",
-      icon: CheckSquare,
-    },
-    {
-      title: "Divider",
-      url: "/divider",
-      icon: DivideIcon,
-    },
-    {
-      title: "Select",
-      url: "/select",
-      icon: TextSelect,
-    },
-    {
-      title: "Input",
-      url: "/input",
-      icon: TextCursorInput,
-    },
-    {
-      title: "Text Area",
-      url: "/textarea",
-      icon: TextSearch,
-    },
-    {
-      title: "Progress Bar",
-      url: "/progress",
-      icon: Projector,
-    },
-    {
-      title: "Radio Group",
-      url: "/radio",
-      icon: Radio,
-    },
-    {
-      title: "Slider",
-      url: "/slider",
-      icon: Sliders,
-    },
-    {
-      title: "Spinner",
-      url: "/spinner",
-      icon: SplinePointer,
-    },
-    {
-      title: "Switch",
-      url: "/switch",
-      icon: SwitchCameraIcon,
-    },
-    {
-      title: "Tabs",
-      url: "/tabs",
-      icon: Tablet,
-    },
-    {
-      title: "Tags",
-      url: "/tags",
-      icon: Tags,
-    },
-    {
-      title: "Tooltip",
-      url: "/tooltip",
-      icon: ToolCase,
-    },
-    {
-      title: "Alert",
-      url: "/alert",
-      icon: AlertCircleIcon,
+      title: "Search",
+      icon: Search,
     },
     {
       title: "Notification",
-      url: "/notification",
-      icon: NotepadTextIcon,
+      icon: Bell,
+      badge: "2",
     },
+  ],
+
+  navMain: [
     {
-      title: "DropDwon",
-      url: "/dropdown",
-      icon: DropletIcon,
-    },
-    {
-      title: "Input Group",
-      url: "/input-group",
+      title: "Form Components",
       icon: FormInputIcon,
+      isActive: true,
+      items: [
+        { title: "Avatar", url: "/avatar", badge: "1" },
+        { title: "Badge", url: "/badges", badge: "2" },
+        { title: "Breadcrumb", url: "/breadcrumb", badge: "3" },
+        { title: "Button", url: "/button", badge: "4" },
+        { title: "Button Group", url: "/buttongroup", badge: "5" },
+        { title: "Checkbox", url: "/checkbox" },
+        { title: "Select", url: "/select" },
+        { title: "Input", url: "/input" },
+        { title: "Text Area", url: "/textarea" },
+        { title: "Radio Group", url: "/radio" },
+        { title: "Slider", url: "/slider" },
+        { title: "Switch", url: "/switch" },
+      ],
     },
-
     {
-      title: "Empty",
-      url: "/empty",
-      icon: EclipseIcon,
+      title: "Display Components",
+      icon: Tablet,
+      items: [
+        { title: "Divider", url: "/divider" },
+        { title: "Progress Bar", url: "/progress" },
+        { title: "Spinner", url: "/spinner" },
+        { title: "Tabs", url: "/tabs" },
+        { title: "Tags", url: "/tags" },
+        { title: "Tooltip", url: "/tooltip" },
+        { title: "Empty", url: "/empty" },
+        { title: "Kbd", url: "/kbd" },
+      ],
     },
-
     {
-      title: "Field",
-      url: "/field",
+      title: "Feedback",
+      icon: AlertCircleIcon,
+      items: [
+        { title: "Alert", url: "/alert" },
+        { title: "Notification", url: "/notification" },
+        { title: "DropDown", url: "/dropdown" },
+      ],
+    },
+    {
+      title: "Layout & Utilities",
       icon: FileSlidersIcon,
-    },
-
-    {
-      title: "Item",
-      url: "/item",
-      icon: IndentDecreaseIcon,
-    },
-
-    {
-      title: "Kbd",
-      url: "/kbd",
-      icon: SquareChevronRightIcon,
+      items: [
+        { title: "Input Group", url: "/input-group" },
+        { title: "Field", url: "/field" },
+        { title: "Item", url: "/item" },
+        { title: "Spacer", url: "/spacer", badge: "new" },
+        { title: "Calendar", url: "/calendar", badge: "new" },
+      ],
     },
     {
-      title: "Spacer",
-      url: "/spacer",
-      icon: SpaceIcon,
-      badge: "new",
+      title: "My Profile",
+      icon: User2Icon,
     },
-    {
-      title: "Calendar",
-      url: "/calendar",
-      icon: Calendar1Icon,
-      badge: "new",
-    },
-    // {
-    //   title: "Popover",
-    //   url: "/popover",
-    //   icon: PopcornIcon,
-    // },
-    // {
-    //   title: "Toast",
-    //   url: "/sonner",
-    //   icon: ToolCaseIcon,
-    // },
   ],
 };
+
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
     <Sidebar collapsible="icon" {...props}>
@@ -227,11 +123,16 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         <TeamSwitcher teams={data.teams} />
       </SidebarHeader>
       <SidebarContent>
+        <NavMain items={data.navPrimary} />
+
+        <SidebarSeparator />
         <NavMain items={data.navMain} />
+
+        <SidebarSeparator />
       </SidebarContent>
+
       <SidebarFooter>
         <NavUser user={data.user} />
-        <SidebarTrigger className="size-4" />
       </SidebarFooter>
       <SidebarRail />
     </Sidebar>
