@@ -68,6 +68,7 @@ export function NavMain({
                     </SidebarMenuButton>
                   </CollapsibleTrigger>
 
+                  {/* Collapsible content */}
                   <CollapsibleContent className="pl-3  ">
                     <SidebarMenuSub>
                       {item.items.map((subItem) => (
@@ -94,6 +95,7 @@ export function NavMain({
             );
           }
 
+          // Single link (no children)
           return (
             <SidebarMenuItem key={item.title}>
               <SidebarMenuButton asChild tooltip={item.title}>
