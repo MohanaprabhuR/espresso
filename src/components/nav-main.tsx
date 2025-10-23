@@ -61,7 +61,7 @@ export function NavMain({
                       </div>
 
                       {item.badge && (
-                        <Badge variant="secondary">{item.badge}</Badge>
+                        <span className="ml-auto ">{item.badge}</span>
                       )}
 
                       <ChevronRight className="ml-auto w-4 h-4 transition-transform duration-200 group-data-[state=open]/collapsible:rotate-90" />
@@ -80,12 +80,9 @@ export function NavMain({
                             >
                               <span className="truncate">{subItem.title}</span>
                               {subItem.badge && (
-                                <Badge
-                                  variant="secondary"
-                                  className="ml-auto px-1.5 py-0 h-5 text-xs"
-                                >
+                                <span className="ml-auto ">
                                   {subItem.badge}
-                                </Badge>
+                                </span>
                               )}
                             </Link>
                           </SidebarMenuSubButton>
@@ -108,14 +105,7 @@ export function NavMain({
                 >
                   {item.icon && <item.icon className="w-4 h-4" />}
                   <span className="flex-1 truncate">{item.title}</span>
-                  {item.badge && (
-                    <Badge
-                      variant="secondary"
-                      className="ml-auto px-1.5 py-0 h-5 text-xs"
-                    >
-                      {item.badge}
-                    </Badge>
-                  )}
+                  {item.badge && <span className="ml-auto ">{item.badge}</span>}
                 </Link>
               </SidebarMenuButton>
             </SidebarMenuItem>

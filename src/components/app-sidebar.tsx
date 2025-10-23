@@ -117,13 +117,10 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       </SidebarHeader>
       <SidebarContent>
         <NavMain items={data.navPrimary} />
-
         <SidebarSeparator />
         <NavMain items={data.navMain} />
-
         <SidebarSeparator />
       </SidebarContent>
-
       <SidebarFooter>
         <NavUser user={data.user} />
       </SidebarFooter>
