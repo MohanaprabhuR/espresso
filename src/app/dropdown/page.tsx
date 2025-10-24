@@ -269,9 +269,7 @@ function DropdownDemo() {
               <DropdownMenuSeparator />
               <DropdownMenuGroup>
                 <DropdownMenuSub>
-                  <DropdownMenuSubTrigger inset>
-                    Framework
-                  </DropdownMenuSubTrigger>
+                  <DropdownMenuSubTrigger>Framework</DropdownMenuSubTrigger>
                   <DropdownMenuPortal>
                     <DropdownMenuSubContent>
                       <DropdownMenuRadioGroup
@@ -295,9 +293,7 @@ function DropdownDemo() {
                   </DropdownMenuPortal>
                 </DropdownMenuSub>
                 <DropdownMenuSub>
-                  <DropdownMenuSubTrigger inset>
-                    Notifications
-                  </DropdownMenuSubTrigger>
+                  <DropdownMenuSubTrigger>Notifications</DropdownMenuSubTrigger>
                   <DropdownMenuPortal>
                     <DropdownMenuSubContent>
                       <DropdownMenuCheckboxItem

@@ -51,10 +51,8 @@ export function NavMain({
                 <SidebarMenuItem>
                   {/* Trigger */}
                   <CollapsibleTrigger asChild>
-                    <SidebarMenuButton
-                      tooltip={item.title}
-                      className="w-full cursor-pointer"
-                    >
+                    <SidebarMenuButton tooltip={item.title}>
+                      <ChevronRight className=" w-4 h-4 transition-transform duration-200 group-data-[state=open]/collapsible:rotate-90" />
                       <div className="flex items-center gap-2 flex-1">
                         {item.icon && <item.icon className="w-4 h-4" />}
                         <span className="truncate">{item.title}</span>
@@ -63,13 +61,11 @@ export function NavMain({
                       {item.badge && (
                         <span className="ml-auto ">{item.badge}</span>
                       )}
-
-                      <ChevronRight className="ml-auto w-4 h-4 transition-transform duration-200 group-data-[state=open]/collapsible:rotate-90" />
                     </SidebarMenuButton>
                   </CollapsibleTrigger>
 
                   {/* Collapsible content */}
-                  <CollapsibleContent className="pl-3  ">
+                  <CollapsibleContent className="">
                     <SidebarMenuSub>
                       {item.items.map((subItem) => (
                         <SidebarMenuSubItem key={subItem.title}>
