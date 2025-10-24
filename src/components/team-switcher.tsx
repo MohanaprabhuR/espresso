@@ -8,10 +8,8 @@ import {
   Settings,
   User,
   LogOut,
-  BadgeCheck,
-  Bell,
-  CreditCard,
   Sparkles,
+  AlertCircleIcon,
 } from "lucide-react";
 import {
   SidebarHeader,
@@ -25,24 +23,20 @@ import {
   DropdownMenuTrigger,
   DropdownMenuSeparator,
   DropdownMenuLabel,
-  DropdownMenuGroup,
 } from "@/components/ui/dropdown-menu";
 import { useTheme } from "next-themes";
-import { Avatar, AvatarFallback, AvatarImage } from "@radix-ui/react-avatar";
 
 export function TeamSwitcher({
   teams,
 }: {
-  teams: {
-    name: string;
-    logo: React.ElementType;
-    plan: string;
-  }[];
+  teams: { name: string; logo: React.ElementType; plan: string }[];
 }) {
   const [activeTeam] = React.useState(teams[0]);
   const { theme, setTheme } = useTheme();
 
   if (!activeTeam) return null;
+
+  const toggleTheme = () => setTheme(theme === "light" ? "dark" : "light");
 
   return (
     <SidebarMenu>
@@ -51,28 +45,23 @@ export function TeamSwitcher({
           <DropdownMenuTrigger asChild>
             <SidebarHeader className="cursor-pointer">
               <activeTeam.logo className="size-8" />
-
-              <div className="grid flex-1 gap-y-1 flex-col text-left text-sm">
-                <span className="truncate font-medium text-base text-sidebar-primary-foreground">
+              <div className="flex flex-col flex-1 text-left text-sm">
+                <span className="truncate font-medium text-base">
                   {activeTeam.name}
                 </span>
-                <span className="truncate text-xs font-normal text-sidebar-foreground">
+                <span className="truncate text-xs text-muted-foreground">
                   {activeTeam.plan}
                 </span>
               </div>
-
               <ChevronsUpDown className="ml-auto size-4" />
             </SidebarHeader>
           </DropdownMenuTrigger>
 
           <DropdownMenuContent align="start" className="w-[220px]">
-            {/* User Info Section */}
-            <DropdownMenuLabel className="flex  gap-1.5 items-center">
+            <DropdownMenuLabel className="flex items-center gap-2">
               <activeTeam.logo className="size-8" />
-              <div className="flex flex-col gap-1">
-                <span className="font-medium text-sm text-foreground">
-                  {activeTeam.name}
-                </span>
+              <div className="flex flex-col">
+                <span className="font-medium text-sm">{activeTeam.name}</span>
                 <span className="text-xs text-muted-foreground">
                   {activeTeam.plan}
                 </span>
@@ -82,54 +71,44 @@ export function TeamSwitcher({
             <DropdownMenuSeparator />
 
             <DropdownMenuItem>
-              <User className="mr-2 size-4" />
+              <User className="size-4" />
               My Profile
             </DropdownMenuItem>
 
             <DropdownMenuItem>
-              <Settings className="mr-2 size-4" />
+              <Settings className="size-4" />
               Settings
             </DropdownMenuItem>
 
-            <DropdownMenuSeparator />
-
-            <DropdownMenuGroup>
-              <DropdownMenuItem>
-                <Sparkles className="size-4" />
-                Upgrade to Pro
-              </DropdownMenuItem>
-            </DropdownMenuGroup>
-            <DropdownMenuSeparator />
-            <DropdownMenuGroup>
-              <DropdownMenuItem>
-                <BadgeCheck className="size-4" />
-                Account
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                <CreditCard className="size-4" />
-                Billing
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                <Bell className="size-4" />
-                Notifications
-              </DropdownMenuItem>
-            </DropdownMenuGroup>
-            <DropdownMenuSeparator />
-            <DropdownMenuItem onClick={() => setTheme("light")}>
-              <Sun className="mr-2 size-4" />
-              Light Mode
+            <DropdownMenuItem onClick={toggleTheme}>
+              {theme === "light" ? (
+                <>
+                  <Moon className="size-4" />
+                  Dark Mode
+                </>
+              ) : (
+                <>
+                  <Sun className="size-4" />
+                  Light Mode
+                </>
+              )}
             </DropdownMenuItem>
-
-            <DropdownMenuItem onClick={() => setTheme("dark")}>
-              <Moon className="mr-2 size-4" />
-              Dark Mode
-            </DropdownMenuItem>
-
             <DropdownMenuSeparator />
 
-            {/* Logout */}
             <DropdownMenuItem>
-              <LogOut className="mr-2 size-4" />
+              <Sparkles className="size-4" />
+              Upgrade to Pro
+            </DropdownMenuItem>
+
+            <DropdownMenuItem>
+              <AlertCircleIcon className="size-4" />
+              Notifications
+            </DropdownMenuItem>
+
+            <DropdownMenuSeparator />
+
+            <DropdownMenuItem>
+              <LogOut className="size-4" />
               Logout
             </DropdownMenuItem>
           </DropdownMenuContent>
