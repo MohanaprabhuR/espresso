@@ -251,26 +251,8 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         <NavMain items={data.navMain} />
         <SidebarSeparator />
       </SidebarContent>
-      <SidebarFooter className="flex items-center justify-between gap-2.5">
-        <Progress value={40} size="xs" showLabel>
-          <Label>
-            <CloudIcon className="size-4" />
-            Label
-          </Label>
-        </Progress>
-        <div className="flex  gap-1 justify-between w-full">
-          <div className="flex items-center gap-1">
-            <SidebarMenuButton>
-              <Zap className="size-4" />
-            </SidebarMenuButton>
-            <SidebarMenuButton>
-              <MessageCircleQuestionMark className="size-4" />
-            </SidebarMenuButton>
-          </div>
-          <SidebarMenuButton className="w-auto">
-            <SidebarTrigger className="size-4" />
-          </SidebarMenuButton>
-        </div>
+      <SidebarFooter className="flex items-center justify-between gap-1">
+        <NavUser user={data.user} />
       </SidebarFooter>
       <SidebarRail />
     </Sidebar>
