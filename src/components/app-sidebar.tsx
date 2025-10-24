@@ -16,6 +16,7 @@ import {
   CheckSquare,
   Badge,
   LinkIcon,
+  Plus,
   RegexIcon,
   SwitchCameraIcon,
   Tablet,
@@ -44,14 +45,12 @@ import {
   Sidebar,
   SidebarContent,
   SidebarFooter,
+  SidebarGroupLabel,
   SidebarHeader,
   SidebarMenuButton,
   SidebarRail,
   SidebarSeparator,
-  SidebarTrigger,
 } from "@/components/ui/sidebar";
-import { Progress } from "./ui/progress";
-import { Label } from "./ui/label";
 
 // This is sample data.
 const data = {
@@ -246,6 +245,12 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       <SidebarContent>
         <NavMain items={data.navPrimary} />
         <SidebarSeparator />
+        <SidebarGroupLabel>
+          Teams
+          <SidebarMenuButton>
+            <Plus className="size-4" />
+          </SidebarMenuButton>
+        </SidebarGroupLabel>
         <NavMain items={data.navMainDropDown} />
         <SidebarSeparator />
         <NavMain items={data.navMain} />
