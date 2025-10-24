@@ -10,7 +10,7 @@ const TabsDemo = () => {
           Tab Component
         </h1>
         <div className="flex flex-col  mx-auto gap-[50px] items-center">
-          <div className="flex justify-between gap-[50px]">
+          <div className="flex gap-[50px]">
             <Tabs defaultValue="tab1">
               <TabsList>
                 <TabsTrigger value="tab1">
@@ -57,7 +57,7 @@ const TabsDemo = () => {
               <TabsContent value="tab5">Tab 5 Content</TabsContent>
             </Tabs>
           </div>
-          <div className="flex justify-between gap-[50px]">
+          <div className="flex gap-[50px]">
             <Tabs defaultValue="tab1" variant="outline">
               <TabsList>
                 <TabsTrigger value="tab1">Tab 1</TabsTrigger>
@@ -106,7 +106,7 @@ const TabsDemo = () => {
               <TabsContent value="tab5">Tab 5 Content</TabsContent>
             </Tabs>
           </div>
-          <div className="flex justify-between gap-[50px]">
+          <div className="flex gap-[50px]">
             <Tabs defaultValue="tab1" variant="underline">
               <TabsList>
                 <TabsTrigger value="tab1">Tab 1</TabsTrigger>
@@ -155,7 +155,7 @@ const TabsDemo = () => {
               <TabsContent value="tab5">Tab 5 Content</TabsContent>
             </Tabs>
           </div>
-          <div className="flex justify-between gap-[50px]">
+          <div className="flex gap-[50px]">
             <Tabs defaultValue="tab1" variant="ghost">
               <TabsList>
                 <TabsTrigger value="tab1">Tab 1</TabsTrigger>
@@ -204,7 +204,7 @@ const TabsDemo = () => {
               <TabsContent value="tab5">Tab 5 Content</TabsContent>
             </Tabs>
           </div>
-          <div className="flex justify-between gap-[50px]">
+          <div className="flex gap-[50px]">
             <Tabs defaultValue="tab1" variant="browser">
               <TabsList>
                 <TabsTrigger value="tab1">Tab 1</TabsTrigger>

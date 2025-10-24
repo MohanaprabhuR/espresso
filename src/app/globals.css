@@ -594,7 +594,7 @@
 }
 
 :root {
-  --border: var(--color-light-gray-300);
+  --border: var(--color-light-gray-200);
   --background: var(--color-white);
   --foreground: var(--color-light-gray-900);
   --primary: var(--color-light-gray-900);
@@ -615,9 +615,9 @@
   --popover-foreground: var(--color-light-gray-800);
   --sidebar: var(--color-light-gray-50);
   --sidebar-foreground: var(--color-light-gray-700);
-  --sidebar-primary: var(--color-light-gray-50);
+  --sidebar-primary: var(--color-white);
   --sidebar-primary-foreground: var(--color-light-gray-900);
-  --sidebar-accent: var(--color-white);
+  --sidebar-accent: var(--color-light-gray-200);
   --sidebar-accent-foreground: var(--color-light-gray-900);
   --sidebar-border: var(--color-light-gray-200);
   --sidebar-ring: var(--color-light-gray-500);
@@ -727,7 +727,7 @@
 }
 
 .dark {
-  --border: var(--color-dark-gray-50);
+  --border: var(--color-dark-gray-400);
   --background: var(--color-black);
   --foreground: var(--color-dark-gray-950);
   --primary: var(--color-dark-gray-950);
@@ -748,11 +748,11 @@
   --card-foreground: var(--color-dark-gray-950);
   --popover: var(--color-dark-gray-200);
   --popover-foreground: var(--color-dark-gray-800);
-  --sidebar: var(--color-dark-gray-950);
+  --sidebar: var(--color-black);
   --sidebar-foreground: var(--color-dark-gray-800);
-  --sidebar-primary: var(--color-dark-gray-950);
-  --sidebar-primary-foreground: var(--color-light-gray-900);
-  --sidebar-accent: var(--color-dark-gray-400);
+  --sidebar-primary: var(--color-dark-gray-400);
+  --sidebar-primary-foreground: var(--color-light-gray-50);
+  --sidebar-accent: var(--color-dark-gray-300);
   --sidebar-accent-foreground: var(--color-dark-gray-950);
   --sidebar-border: var(--color-dark-gray-200);
   --sidebar-ring: var(--color-light-gray-500);
@@ -845,8 +845,7 @@
 
 @layer utilities {
   .font-normal {
-    font-variation-settings: var(--font-variation-420);
-    font-weight: 400; /* fallback for non-variable fonts */
+    font-weight: 400;
   }
 }
 
